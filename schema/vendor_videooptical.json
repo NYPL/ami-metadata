@@ -212,8 +212,11 @@
           "playbackDeviceModel"
         ],
         "properties": {
+          "playbackDeviceID":  {
+            "type": ["string", "number"]
+          },
           "playbackDeviceSerialNumber": {
-            "type": "string"
+            "type": ["string", "number"]
           },
           "playbackDeviceManufacturer": {
             "type": "string"
