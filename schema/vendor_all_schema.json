@@ -133,7 +133,8 @@
       "id": "#source",
       "oneOf": [
         { "$ref": "vendor_audiooptical#source" },
-        { "$ref": "vendor_videooptical#source" }
+        { "$ref": "vendor_videooptical#source" },
+        { "$ref": "vendor_videocassette#source" }
       ]
     },
     "digitizationProcess": {
@@ -141,7 +142,8 @@
       "id": "#digitizationProcess",
       "anyOf": [
         { "$ref": "vendor_audiooptical#digitizationProcess" },
-        { "$ref": "vendor_videooptical#digitizationProcess" }
+        { "$ref": "vendor_videooptical#digitizationProcess" },
+        { "$ref": "vendor_videocassette#digitizationProcess" }
       ]
     },
     "digitizer": {
