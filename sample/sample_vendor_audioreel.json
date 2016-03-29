@@ -47,7 +47,7 @@
 		},
 		"stock": {
 			"reelDiameter": 7,
-			"stockManufactuer": "Manufacturer A",
+			"stockManufacturer": "Manufacturer A",
 			"stockProductID": "idabc123",
 			"tapeWidth": 0.25,
 			"tapeThickness": 240,

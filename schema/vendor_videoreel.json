@@ -63,7 +63,7 @@
         "additionalProperties": false,
         "required": [
           "reelDiameter",
-          "stockManufactuer",
+          "stockManufacturer",
           "stockProductID",
           "tapeWidth",
           "tapeThickness",
@@ -79,7 +79,7 @@
             "type": "number",
             "multipleOf": 1.0
           },
-          "stockManufactuer": {
+          "stockManufacturer": {
             "enum": [
               "3M",
               "Agfa",

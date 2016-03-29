@@ -75,7 +75,7 @@
         "additionalProperties": false,
         "required": [
           "reelDiameter",
-          "stockManufactuer",
+          "stockManufacturer",
           "stockProductID",
           "tapeWidth",
           "tapeThickness",
@@ -94,7 +94,7 @@
           "stockProductID": {
             "type": "string"
           },
-          "stockManufactuer": {
+          "stockManufacturer": {
             "type": "string"
           },
           "tapeWidth": {
