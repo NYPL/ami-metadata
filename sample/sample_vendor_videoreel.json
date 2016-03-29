@@ -46,7 +46,7 @@
 		"stock": {
 			"reelDiameter": 10.5,
 			"stockLength": 60,
-			"stockManufactuer": "Sony",
+			"stockManufacturer": "Sony",
 			"stockProductID": "KCA-60",
 			"tapeWidth": 1.1,
 			"tapeThickness": 240,
@@ -81,7 +81,7 @@
 		"analogDigitalConverter" : {
       "analogDigitalConverterID": "id12345",
       "analogDigitalConverterSerialNumber": "id12345abc",
-      "analogDigitalConverterManufacturer": "Manufactuere D",
+      "analogDigitalConverterManufacturer": "Manufacturere D",
       "analogDigitalConverterModel": "Model XYZ"
 		},
 		"captureSoftware": {

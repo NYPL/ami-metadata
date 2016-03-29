@@ -46,7 +46,7 @@
 			"partNumber": 1
 		},
 		"stock": {
-			"stockManufactuer": "Manufacturer A",
+			"stockManufacturer": "Manufacturer A",
 			"discDiameter": 4.7,
 			"dyeLayer": "phthalocyanine",
 			"reflectiveLayer": "silver"

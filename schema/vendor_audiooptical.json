@@ -86,13 +86,13 @@
         "type": "object",
         "additionalProperties": false,
         "required": [
-          "stockManufactuer",
+          "stockManufacturer",
           "discDiameter",
           "dyeLayer",
           "reflectiveLayer"
         ],
         "properties": {
-          "stockManufactuer": {
+          "stockManufacturer": {
             "type": "string"
           },
           "discDiameter": {

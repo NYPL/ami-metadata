@@ -80,7 +80,7 @@
         "type": "object",
         "additionalProperties": false,
         "required": [
-          "stockManufactuer",
+          "stockManufacturer",
           "stockProductID",
           "tapeWidth",
           "baseMaterial",
@@ -91,7 +91,7 @@
             "type": "number",
             "multipleOf": 1.0
           },
-          "stockManufactuer": {
+          "stockManufacturer": {
             "enum": [
               "3M",
               "Agfa",
