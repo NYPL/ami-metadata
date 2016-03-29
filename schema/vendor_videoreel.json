@@ -29,27 +29,9 @@
           },
           "format": {
             "enum": [
-              "3/4\" U-matic",
-              "Betacam",
-              "Betacam SP",
-              "Betacam SX",
-              "Betamax",
-              "D-1",
-              "D-2",
-              "D-3",
-              "Digital8",
-              "Digital Betacam",
-              "DVCam",
-              "DVCPRO",
-              "DVCPRO HD",
-              "HDCAM",
-              "HDV",
-              "Hi8",
-              "MII",
-              "MiniDV",
-              "SVHS",
-              "VHS",
-              "Video8"
+              "1/2\" EIAJ",
+              "1/2\" CV",
+              "1\" Type C"
             ]
           },
           "volumeNumber": {
