@@ -9,7 +9,7 @@
     "bibliographic",
     "technical",
     "source",
-    "preservationProcess",
+    "digitizationProcess",
     "digitizer"
   ],
   "properties": {
@@ -136,12 +136,12 @@
         { "$ref": "vendor_videooptical#source" }
       ]
     },
-    "preservationProcess": {
+    "digitizationProcess": {
       "type": "object",
-      "id": "#process",
+      "id": "#digitizationProcess",
       "anyOf": [
-        { "$ref": "vendor_audiooptical#preservationProcess" },
-        { "$ref": "vendor_videooptical#preservationProcess" }
+        { "$ref": "vendor_audiooptical#digitizationProcess" },
+        { "$ref": "vendor_videooptical#digitizationProcess" }
       ]
     },
     "digitizer": {

@@ -149,8 +149,8 @@
       }
     }
   },
-  "preservationProcess" : {
-    "id": "#preservationProcess",
+  "digitizationProcess" : {
+    "id": "#digitizationProcess",
     "type": "object",
     "additionalProperties": false,
     "required": [

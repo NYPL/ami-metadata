@@ -59,7 +59,7 @@
 			"physicalConditionDigitizationNotes": "tape shows XYZ damage"
 		}
 	},
-	"preservationProcess": {
+	"digitizationProcess": {
 		"playbackDevice": {
 			"playbackDeviceSerialNumber": "xyz123",
 			"playbackDeviceManufacturer": "Manufacturer B",
