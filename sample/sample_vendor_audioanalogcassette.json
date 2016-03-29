@@ -1,0 +1,105 @@
+{
+	"asset": {
+		"referenceFilename": "abc.mov",
+		"schemaVersion": 1
+	},
+	"bibliographic": {
+		"primaryID": "abc123",
+		"classmark": "*ABC 123",
+		"formerClassmark": "*NCOW 123",
+		"nonCMSID": "string123",
+		"cmsItemID": 123456,
+		"cmsCollectionID": "string123",
+		"catalogBNumber": "B12345678",
+		"mssID": 12345,
+		"barcode": 33433123456789,
+		"mmsCollectionID": "12345678-1234-1234-1234-123456789abc",
+		"divisionCode": "MYH",
+		"vernacularDivisionCode": "Dance",
+		"projectCode": "projectXYZ",
+		"title": "Dance Video 1",
+		"date": "Late 1970s",
+		"contentNotes": "media is actually Dance Video 2 instead of Dance Video 1"
+	},
+	"technical": {
+		"filename": "abc123.mov",
+		"extensionv": "mov",
+		"dateCreated": "2016-01-01",
+		"fileFormat": "MOV file",
+		"fileCodec": "4cc",
+		"fileSize": 123456789012,
+		"durationMilli": 3600000,
+		"durationHuman": "11:54:54",
+		"signalNotes": "signal undreadable at point 123"
+	},
+	"source": {
+		"object": {
+			"type": "audio analog cassette",
+			"format": "microcassette",
+			"generation": "unknown",
+			"volumeNumber": 1
+		},
+		"subObject": {
+			"faceNumber": 2,
+			"regionNumber": 2,
+			"streamNumber": 1,
+			"partNumber": 1
+		},
+		"stock": {
+			"stockLength": 60,
+			"stockManufacturer": "Manufacturer A",
+			"stockProductID": "idabc123",
+			"tapeWidth": 0.25,
+			"tapeThickness": 240,
+			"baseMaterial": "acetate",
+			"oxideMaterial": "ferrichrome",
+			"backcoatMaterial": "yes"
+		},
+		"audioRecording": {
+			"audioSoundField": "quadrophonic",
+			"numberOfAudioTracks": 4,
+			"trackConfiguration": "full-track",
+			"designatedSpeed": 1.875,
+			"designatedNoiseReduction": "Dolby B",
+			"designatedEQ": "Type II"
+		},
+		"notes": {
+			"physicalConditionPreShipNotes": "reel show XYZ damage",
+			"physicalConditionDigitizationNotes": "tape shows XYZ damage"
+		}
+	},
+	"digitizationProcess": {
+		"playbackDevice": {
+			"playbackDeviceSerialNumber": "xyz123",
+			"playbackDeviceManufacturer": "Manufacturer B",
+			"playbackDeviceModel": "Model XYZ",
+			"playbackTapeHeadType": "full-track",
+			"playbackNoiseReduction": "Dolby B",
+			"playbackEQ": "Type II",
+			"playbackSpeed": 1.875
+		},
+		"captureSoftware": {
+			"captureSoftwareManufacturer": "Manufacturer E",
+			"captureSoftwareProductName": "Product XYZ",
+			"captureSoftwareVersion": "Version 123",
+			"captureSoftwarePlatform": "OS XYZ"
+		},
+		"notes": {
+			"processNotes": "required two takes for reason xyz"
+		}
+	},
+	"digitizer": {
+		"operator": {
+			"operatorLastName": "Doe",
+			"operatorLastName": "Jane"
+		},
+		"organization": {
+			"organizationName": "Organization XYZ",
+			"organizationAddressStreet1": "123 ABC St",
+			"organizationAddressStreet2": "Suite 1234",
+			"organizationAddressCity": "Anytown",
+			"organizationAddressState": "ST",
+			"organzationAddressZip": 12345
+		}
+	}
+}
