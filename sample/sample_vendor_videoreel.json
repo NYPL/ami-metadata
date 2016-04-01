@@ -23,7 +23,7 @@
 	},
 	"technical": {
 		"filename": "abc123.mov",
-		"extensionv": "mov",
+		"extension": "mov",
 		"dateCreated": "2016-01-01",
 		"fileFormat": "MOV file",
 		"fileCodec": "4cc",
