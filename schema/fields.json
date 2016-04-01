@@ -126,46 +126,193 @@
       "id": "#source",
       "type": "object"
     },
-    "digitizationProcess": {
+    "digitizationProcess" : {
       "id": "#digitizationProcess",
-      "type": "object"
+      "type": "object",
+      "additionalItems": false,
+      "properties": {
+        "playbackDevice": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "#playbackDeviceID",
+              "type": ["string", "number"]
+            },
+            "serialNumber": {
+              "id": "#playbackDeviceSerialNumber",
+              "type": "string"
+            },
+            "manufacturer": {
+              "id": "#playbackDeviceManufacturer",
+              "type": "string"
+            },
+            "model": {
+              "id": "#playbackDeviceModel",
+              "type": "string"
+            },
+            "tapeHeadType": {
+              "id": "#playbackDeviceTapeHeadType",
+              "type": "string"
+            },
+            "operatingLevel": {
+              "id": "#playbackDeviceOperatingLevel",
+              "type": "number"
+            },
+            "noiseReduction": {
+              "id": "#playbackDeviceNoiseReduction",
+              "type": "string"
+            },
+            "eq": {
+              "id": "#playbackDeviceEQ",
+              "type": "string"
+            },
+            "speed": {
+              "id": "#playbackDeviceSpeed",
+              "type": "number"
+            }
+          }
+        },
+        "timeBaseCorrector": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "#timeBaseCorrectorID",
+              "type": ["string", "number"]
+            },
+            "serialNumber": {
+              "id": "#timeBaseCorrectorSerialNumber",
+              "type": "string"
+            },
+            "manufacturer": {
+              "id": "#timeBaseCorrectorManufacturer",
+              "type": "string"
+            },
+            "model": {
+              "id": "#timeBaseCorrectorModel",
+              "type": "string"
+            }
+          }
+        },
+        "analogDigitalConverter": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "#analogDigitalConverterID",
+              "type": ["string", "number"]
+            },
+            "serialNumber": {
+              "id": "#analogDigitalConverterSerialNumber",
+              "type": "string"
+            },
+            "manufacturer": {
+              "id": "#analogDigitalConverterManufacturer",
+              "type": "string"
+            },
+            "model": {
+              "id": "#analogDigitalConverterModel",
+              "type": "string"
+            },
+            "operatingLevel": {
+              "id": "#analogDigitalConverterOperatingLevel",
+              "type": "number"
+            }
+          }
+        },
+        "captureSoftware": {
+          "type": "object",
+          "properties": {
+            "manufacturer": {
+              "id": "#captureSoftwareManufacturer",
+              "type": "string"
+            },
+            "productName": {
+              "id": "#captureSoftwareProductName",
+              "type": "string"
+            },
+            "version": {
+              "id": "#captureSoftwareVersion",
+              "type": "string"
+            },
+            "platform": {
+              "id": "#captureSoftwarePlatform",
+              "type": "string"
+            }
+          }
+        },
+        "take": {
+          "type": "object",
+          "properties": {
+            "number" : {
+              "id": "#takeNumber",
+              "type": "number",
+              "multipleOf": 1.0
+            }
+          }
+        },
+        "notes": {
+          "id": "#digitizationProcessNotes",
+          "type": "object",
+          "properties": {
+            "processNotes": {
+              "type": "string"
+            }
+          }
+        }
+      }
     },
     "digitizer": {
       "id": "#digitizer",
       "type": "object",
       "additionalItems": false,
+      "required": [
+        "operator",
+        "organization"
+      ],
       "properties": {
         "operator": {
           "type": "object",
+          "additionalItems": false,
+          "required": [
+            "firstName",
+            "lastName"
+          ],
           "properties": {
-            "operatorLastName": {
+            "firstName": {
               "type": "string"
             },
-            "operatorLastName": {
+            "lastName": {
               "type": "string"
             }
           }
         },
         "organization": {
           "type": "object",
+          "additionalItems": false,
+          "required": [
+            "name",
+            "addressStreet1",
+            "addressCity",
+            "addressState",
+            "addressZip"
+          ],
           "properties": {
-            "organizationName": {
+            "name": {
               "type": "string"
             },
-            "organizationAddressStreet1": {
+            "addressStreet1": {
               "type": "string"
             },
-            "organizationAddressStreet2": {
+            "addressStreet2": {
               "type": "string"
             },
-            "organizationAddressCity": {
+            "addressCity": {
               "type": "string"
             },
-            "organizationAddressState": {
+            "addressState": {
               "type": "string",
               "pattern": "^[A-Z]{2}$"
             },
-            "organizationAddressZip": {
+            "addressZip": {
               "type": "number",
               "minimum": 10000,
               "maximum": 99999

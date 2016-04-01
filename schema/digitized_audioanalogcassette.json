@@ -231,27 +231,27 @@
           "type": "object",
           "additionalProperties": false,
           "required": [
-            "playbackDeviceSerialNumber",
-            "playbackDeviceManufacturer",
-            "playbackDeviceModel",
-            "playbackTapeHeadType",
-            "playbackEQ",
-            "playbackSpeed"
+            "serialNumber",
+            "manufacturer",
+            "model",
+            "tapeHeadType",
+            "eq",
+            "speed"
           ],
           "properties": {
-            "playbackDeviceID":  {
-              "type": ["string", "number"]
+            "id":  {
+              "$ref": "fields#playbackDeviceID"
             },
-            "playbackDeviceSerialNumber": {
-              "type": ["string", "number"]
+            "serialNumber": {
+              "$ref": "fields#playbackDeviceSerialNumber"
             },
-            "playbackDeviceManufacturer": {
-              "type": "string"
+            "manufacturer": {
+              "$ref": "fields#playbackDeviceManufacturer"
             },
-            "playbackDeviceModel": {
-              "type": "string"
+            "model": {
+              "$ref": "fields#playbackDeviceModel"
             },
-            "playbackTapeHeadType": {
+            "tapeHeadType": {
               "enum": [
                 "full-track",
                 "half-track",
@@ -264,7 +264,7 @@
                 "twenty-four-track"
               ]
             },
-            "playbackNoiseReduction": {
+            "noiseReduction": {
               "enum": [
                 "Dolby B",
                 "Dolby C",
@@ -272,7 +272,7 @@
                 "n/a"
               ]
             },
-            "playbackEQ": {
+            "eq": {
               "enum": [
                 "Type I",
                 "Type II",
@@ -280,7 +280,7 @@
                 "Type IV"
               ]
             },
-            "playbackSpeed": {
+            "speed": {
               "enum": [
                 3.75,
                 1.875,
@@ -293,34 +293,28 @@
           "type": "object",
           "additionalProperties": false,
           "required": [
-            "captureSoftwareManufacturer",
-            "captureSoftwareProductName",
-            "captureSoftwareVersion",
-            "captureSoftwarePlatform"
+            "manufacturer",
+            "productName",
+            "version",
+            "platform"
           ],
           "properties": {
-            "captureSoftwareManufacturer": {
-              "type": "string"
+            "manufacturer": {
+              "$ref": "fields#captureSoftwareManufacturer"
             },
-            "captureSoftwareProductName": {
-              "type": "string"
+            "productName": {
+              "$ref": "fields#captureSoftwareProductName"
             },
-            "captureSoftwareVersion": {
-              "type": "string"
+            "version": {
+              "$ref": "fields#captureSoftwareVersion"
             },
-            "captureSoftwarePlatform": {
-              "type": "string"
+            "platform": {
+              "$ref": "fields#captureSoftwarePlatform"
             }
           }
         },
         "notes": {
-          "type": "object",
-          "additionalProperties": false,
-          "properties": {
-            "processNotes": {
-              "type": "string"
-            }
-          }
+          "$ref": "fields#digitizationProcessNotes"
         }
       }
     },
