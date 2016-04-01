@@ -8,6 +8,10 @@
       "id": "#asset",
       "type": "object",
       "additionalItems": false,
+      "required": [
+        "referenceFilename",
+        "schemaVersion"
+      ],
       "properties": {
         "referenceFilename" : {
           "type": "string",
@@ -23,6 +27,11 @@
       "id": "#bibliographic",
       "type": "object",
       "additionalItems": false,
+      "required": [
+        "primaryID",
+        "barcode",
+        "divisionCode"
+      ],
       "properties": {
         "primaryID": {
           "type": "string"
@@ -87,12 +96,22 @@
       "id": "#technical",
       "type": "object",
       "additionalItems": false,
+      "require": [
+        "filename",
+        "extension",
+        "dateCreated",
+        "fileFormat",
+        "fileCodec",
+        "fileSize",
+        "durationMilli",
+        "durationHuman"
+      ],
       "properties": {
         "filename": {
           "type": "string",
           "pattern": "^.+\\.[a-zA-Z0-9]{3}"
         },
-        "extensionv": {
+        "extension": {
           "type": "string",
           "pattern": "[a-zA-Z0-9]{3}"
         },
