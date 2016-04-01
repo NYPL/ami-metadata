@@ -61,15 +61,15 @@
 	},
 	"digitizationProcess": {
 		"playbackDevice": {
-			"playbackDeviceSerialNumber": "xyz123",
-			"playbackDeviceManufacturer": "Manufacturer B",
-			"playbackDeviceModel": "Model XYZ"
+			"serialNumber": "xyz123",
+			"manufacturer": "Manufacturer B",
+			"model": "Model XYZ"
 		},
 		"captureSoftware": {
-			"captureSoftwareManufacturer": "Manufacturer E",
-			"captureSoftwareProductName": "Product XYZ",
-			"captureSoftwareVersion": "Version 123",
-			"captureSoftwarePlatform": "OS XYZ"
+			"manufacturer": "Manufacturer E",
+			"productName": "Product XYZ",
+			"version": "Version 123",
+			"platform": "OS XYZ"
 		},
 		"notes": {
 			"processNotes": "required two takes for reason xyz"
@@ -77,16 +77,16 @@
 	},
 	"digitizer": {
 		"operator": {
-			"operatorLastName": "Doe",
-			"operatorLastName": "Jane"
+			"firstName": "Doe",
+			"lastName": "Jane"
 		},
 		"organization": {
-			"organizationName": "Organization XYZ",
-			"organizationAddressStreet1": "123 ABC St",
-			"organizationAddressStreet2": "Suite 1234",
-			"organizationAddressCity": "Anytown",
-			"organizationAddressState": "ST",
-			"organzationAddressZip": 12345
+			"name": "Organization XYZ",
+			"addressStreet1": "123 ABC St",
+			"addressStreet2": "Suite 1234",
+			"addressCity": "Anytown",
+			"addressState": "ST",
+			"addressZip": 12345
 		}
 	}
 }

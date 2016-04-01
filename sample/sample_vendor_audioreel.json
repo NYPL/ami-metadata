@@ -70,20 +70,20 @@
 	},
 	"digitizationProcess": {
 		"playbackDevice": {
-			"playbackDeviceSerialNumber": "xyz123",
-			"playbackDeviceManufacturer": "Manufacturer B",
-			"playbackDeviceModel": "Model XYZ",
-			"playbackTapeHeadType": "full-track",
-			"playbackDeviceOperatingLevel": 315,
-			"playbackNoiseReduction": "DBX II",
-			"playbackEQ": "NAB",
-			"playbackSpeed": 7.5
+			"serialNumber": "xyz123",
+			"manufacturer": "Manufacturer B",
+			"model": "Model XYZ",
+			"tapeHeadType": "full-track",
+			"operatingLevel": 315,
+			"noiseReduction": "DBX II",
+			"eq": "NAB",
+			"speed": 7.5
 		},
 		"captureSoftware": {
-			"captureSoftwareManufacturer": "Manufacturer E",
-			"captureSoftwareProductName": "Product XYZ",
-			"captureSoftwareVersion": "Version 123",
-			"captureSoftwarePlatform": "OS XYZ"
+			"manufacturer": "Manufacturer E",
+			"productName": "Product XYZ",
+			"version": "Version 123",
+			"platform": "OS XYZ"
 		},
 		"notes": {
 			"processNotes": "required two takes for reason xyz"
@@ -91,16 +91,16 @@
 	},
 	"digitizer": {
 		"operator": {
-			"operatorLastName": "Doe",
-			"operatorLastName": "Jane"
+			"firstName": "Doe",
+			"lastName": "Jane"
 		},
 		"organization": {
-			"organizationName": "Organization XYZ",
-			"organizationAddressStreet1": "123 ABC St",
-			"organizationAddressStreet2": "Suite 1234",
-			"organizationAddressCity": "Anytown",
-			"organizationAddressState": "ST",
-			"organzationAddressZip": 12345
+			"name": "Organization XYZ",
+			"addressStreet1": "123 ABC St",
+			"addressStreet2": "Suite 1234",
+			"addressCity": "Anytown",
+			"addressState": "ST",
+			"addressZip": 12345
 		}
 	}
 }

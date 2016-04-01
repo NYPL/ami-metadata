@@ -244,29 +244,27 @@
           "type": "object",
           "additionalProperties": false,
           "required": [
-            "playbackDeviceSerialNumber",
-            "playbackDeviceManufacturer",
-            "playbackDeviceModel",
-            "playbackTapeHeadType",
-            "playbackDeviceOperatingLevel",
-            "playbackNoiseReduction",
-            "playbackEQ",
-            "playbackSpeed"
+            "serialNumber",
+            "manufacturer",
+            "model",
+            "tapeHeadType",
+            "eq",
+            "speed"
           ],
           "properties": {
-            "playbackDeviceID":  {
-              "type": ["string", "number"]
+            "id":  {
+              "$ref": "fields#playbackDeviceID"
             },
-            "playbackDeviceSerialNumber": {
-              "type": ["string", "number"]
+            "serialNumber": {
+              "$ref": "fields#playbackDeviceSerialNumber"
             },
-            "playbackDeviceManufacturer": {
-              "type": "string"
+            "manufacturer": {
+              "$ref": "fields#playbackDeviceManufacturer"
             },
-            "playbackDeviceModel": {
-              "type": "string"
+            "model": {
+              "$ref": "fields#playbackDeviceModel"
             },
-            "playbackTapeHeadType": {
+            "tapeHeadType": {
               "enum": [
                 "full-track",
                 "half-track",
@@ -279,7 +277,7 @@
                 "twenty-four-track"
               ]
             },
-            "playbackDeviceOperatingLevel": {
+            "operatingLevel": {
               "enum": [
                 185,
                 200,
@@ -294,7 +292,7 @@
                 500
               ]
             },
-            "playbackNoiseReduction": {
+            "noiseReduction": {
               "enum": [
                 "Dolby A",
                 "Dolby B",
@@ -306,14 +304,14 @@
                 "n/a"
               ]
             },
-            "playbackEQ": {
+            "eq": {
               "enum": [
                 "NAB",
                 "IEC",
                 "not specified"
               ]
             },
-            "playbackSpeed": {
+            "speed": {
               "enum": [
                 30,
                 15,
@@ -328,37 +326,10 @@
           }
         },
         "captureSoftware": {
-          "type": "object",
-          "additionalProperties": false,
-          "required": [
-            "captureSoftwareManufacturer",
-            "captureSoftwareProductName",
-            "captureSoftwareVersion",
-            "captureSoftwarePlatform"
-          ],
-          "properties": {
-            "captureSoftwareManufacturer": {
-              "type": "string"
-            },
-            "captureSoftwareProductName": {
-              "type": "string"
-            },
-            "captureSoftwareVersion": {
-              "type": "string"
-            },
-            "captureSoftwarePlatform": {
-              "type": "string"
-            }
-          }
+          "$ref": "fields#captureSoftware"
         },
         "notes": {
-          "type": "object",
-          "additionalProperties": false,
-          "properties": {
-            "processNotes": {
-              "type": "string"
-            }
-          }
+          "$ref": "fields#processNotes"
         }
       }
     },

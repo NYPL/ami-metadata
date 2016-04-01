@@ -176,57 +176,30 @@
           "type": "object",
           "additionalProperties": false,
           "required": [
-            "playbackDeviceSerialNumber",
-            "playbackDeviceManufacturer",
-            "playbackDeviceModel"
+            "serialNumber",
+            "manufacturer",
+            "model"
           ],
           "properties": {
-            "playbackDeviceID":  {
-              "type": ["string", "number"]
+            "id":  {
+              "$ref": "fields#playbackDeviceID"
             },
-            "playbackDeviceSerialNumber": {
-              "type": ["string", "number"]
+            "serialNumber": {
+              "$ref": "fields#playbackDeviceSerialNumber"
             },
-            "playbackDeviceManufacturer": {
-              "type": "string"
+            "manufacturer": {
+              "$ref": "fields#playbackDeviceManufacturer"
             },
-            "playbackDeviceModel": {
-              "type": "string"
+            "model": {
+              "$ref": "fields#playbackDeviceModel"
             }
           }
         },
         "captureSoftware": {
-          "type": "object",
-          "additionalProperties": false,
-          "required": [
-            "captureSoftwareManufacturer",
-            "captureSoftwareProductName",
-            "captureSoftwareVersion",
-            "captureSoftwarePlatform"
-          ],
-          "properties": {
-            "captureSoftwareManufacturer": {
-              "type": "string"
-            },
-            "captureSoftwareProductName": {
-              "type": "string"
-            },
-            "captureSoftwareVersion": {
-              "type": "string"
-            },
-            "captureSoftwarePlatform": {
-              "type": "string"
-            }
-          }
+          "$ref": "fields#captureSoftware"
         },
         "notes": {
-          "type": "object",
-          "additionalProperties": false,
-          "properties": {
-            "processNotes": {
-              "type": "string"
-            }
-          }
+          "$ref": "fields#processNotes"
         }
       }
     },
