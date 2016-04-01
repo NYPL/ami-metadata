@@ -1,0 +1,178 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "fields",
+  "title": "AMI Vendor Schema",
+  "description": "All fields for AMI digitization workflow metadata",
+  "definitions": {
+    "asset": {
+      "id": "#asset",
+      "type": "object",
+      "additionalItems": false,
+      "properties": {
+        "referenceFilename" : {
+          "type": "string",
+          "pattern": "^.+\\.[a-zA-Z0-9]{3}"
+        },
+        "schemaVersion": {
+          "type": "number",
+          "multipleOf": 1.0
+        }
+      }
+    },
+    "bibliographic": {
+      "id": "#bibliographic",
+      "type": "object",
+      "additionalItems": false,
+      "properties": {
+        "primaryID": {
+          "type": "string"
+        },
+        "classmark": {
+          "type": "string"
+        },
+        "danceFormerClassmark": {
+          "type": "string"
+        },
+        "nonCMSItemID": {
+          "type": "string"
+        },
+        "cmsItemID": {
+          "type": "number",
+          "minimum": 100000,
+          "maximum": 999999
+        },
+        "cmsCollectionID": {
+          "type": "string"
+        },
+        "catalogBNumber": {
+          "type": "string",
+          "pattern": "^(b|B)[0-9]{8}$"
+        },
+        "mssID": {
+          "type": "number",
+          "minimum": 10000,
+          "maximum": 99999
+        },
+        "barcode": {
+          "type": "number",
+          "minimum": 33433000000000,
+          "maximum": 33433999999999
+        },
+        "mmsCollectionID": {
+          "type": "string",
+          "pattern": "^[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}$"
+        },
+        "divisionCode": {
+          "type": "string",
+          "pattern": "^[a-zA-Z]{3}$"
+        },
+        "vernacularDivisionCode": {
+          "type": "string"
+        },
+        "projectCode": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "date": {
+          "type": "string"
+        },
+        "contentNotes": {
+          "type": "string"
+        }
+      }
+    },
+    "technical": {
+      "id": "#technical",
+      "type": "object",
+      "additionalItems": false,
+      "properties": {
+        "filename": {
+          "type": "string",
+          "pattern": "^.+\\.[a-zA-Z0-9]{3}"
+        },
+        "extensionv": {
+          "type": "string",
+          "pattern": "[a-zA-Z0-9]{3}"
+        },
+        "dateCreated": {
+          "type": "string",
+          "pattern": "201[6-9]-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])"
+        },
+        "fileFormat": {
+          "type": "string"
+        },
+        "fileCodec": {
+          "type": "string"
+        },
+        "fileSize": {
+          "type": "number",
+          "multipleOf": 1.0
+        },
+        "durationMilli": {
+          "type": "number"
+        },
+        "durationHuman": {
+          "type": "string",
+          "pattern": "[0-9]{2}:[0-5][0-9]:[0-5][0-9]"
+        },
+        "signalNotes": {
+          "type": "string"
+        }
+      }
+    },
+    "source": {
+      "id": "#source",
+      "type": "object"
+    },
+    "digitizationProcess": {
+      "id": "#digitizationProcess",
+      "type": "object"
+    },
+    "digitizer": {
+      "id": "#digitizer",
+      "type": "object",
+      "additionalItems": false,
+      "properties": {
+        "operator": {
+          "type": "object",
+          "properties": {
+            "operatorLastName": {
+              "type": "string"
+            },
+            "operatorLastName": {
+              "type": "string"
+            }
+          }
+        },
+        "organization": {
+          "type": "object",
+          "properties": {
+            "organizationName": {
+              "type": "string"
+            },
+            "organizationAddressStreet1": {
+              "type": "string"
+            },
+            "organizationAddressStreet2": {
+              "type": "string"
+            },
+            "organizationAddressCity": {
+              "type": "string"
+            },
+            "organizationAddressState": {
+              "type": "string",
+              "pattern": "^[A-Z]{2}$"
+            },
+            "organizationAddressZip": {
+              "type": "number",
+              "minimum": 10000,
+              "maximum": 99999
+            }
+          }
+        }
+      }
+    }
+  }
+}

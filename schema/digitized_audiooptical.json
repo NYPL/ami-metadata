@@ -1,0 +1,235 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Digitized Audio Optical Schema",
+  "id": "digitized_audiooptical",
+  "description": "Definitions for audio optical fields",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "asset",
+    "bibliographic",
+    "technical",
+    "source",
+    "digitizationProcess",
+    "digitizer"
+  ],
+  "properties": {
+    "asset": { "$ref": "fields#asset" },
+    "bibliographic": { "$ref": "fields#bibliographic" },
+    "technical": { "$ref": "fields#technical" },
+    "source": {
+      "id": "source",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "object",
+        "subObject",
+        "stock",
+        "audioRecording"
+      ],
+      "properties": {
+        "object": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "type",
+            "format",
+            "volumeNumber"
+          ],
+          "properties": {
+            "type": {
+              "enum": [ "audio optical" ]
+            },
+            "format": {
+              "enum": [
+                "CD-DA",
+                "CD-ROM",
+                "CD-R",
+                "CD-RW",
+                "DVD-Audio",
+                "DVD-R",
+                "DVD+R",
+                "DVD-RW",
+                "DVD+RW",
+                "DVD+R DL",
+                "BD (Blu-ray)",
+                "BD-R",
+                "MiniDisc",
+                "Universal Media Disc (UMD)"]
+            },
+            "generation": {
+              "enum": [
+                "unknown",
+                1,
+                2,
+                3
+              ]
+            },
+            "volumeNumber": {
+              "type": "number",
+              "multipleOf": 1.0
+            }
+          }
+        },
+        "subObject": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "faceNumber"
+          ],
+          "properties": {
+            "faceNumber": {
+              "type": "number",
+              "multipleOf": 1.0
+            },
+            "regionNumber": {
+              "type": "number",
+              "multipleOf": 1.0
+            },
+            "streamNumber": {
+              "type": "number",
+              "multipleOf": 1.0
+            },
+            "partNumber": {
+              "type": "number",
+              "multipleOf": 1.0
+            }
+          }
+        },
+        "stock": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "stockManufacturer",
+            "discDiameter",
+            "dyeLayer",
+            "reflectiveLayer"
+          ],
+          "properties": {
+            "stockManufacturer": {
+              "type": "string"
+            },
+            "discDiameter": {
+              "enum": [
+                4.7,
+                3.1
+              ]
+            },
+            "dyeLayer": {
+              "enum": [
+                "phthalocyanine",
+                "cyanine",
+                "azo"
+              ]
+            },
+            "reflectiveLayer": {
+              "enum": [
+                "gold",
+                "silver",
+                "aluminum"
+              ]
+            }
+          }
+        },
+        "audioRecording": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "audioSoundField"
+          ],
+          "properties": {
+            "audioSoundField": {
+              "enum": [
+                "stereo",
+                "mono",
+                "surround",
+                "quadrophonic",
+                "binaural"
+              ]
+            }
+          }
+        },
+        "notes": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "physicalConditionPreShipNotes": {
+              "type": "string"
+            },
+            "physicalConditionDigitizationNotes": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "digitizationProcess" : {
+      "id": "digitizationProcess",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "playbackDevice",
+        "captureSoftware"
+      ],
+      "properties": {
+        "playbackDevice": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "playbackDeviceSerialNumber",
+            "playbackDeviceManufacturer",
+            "playbackDeviceModel"
+          ],
+          "properties": {
+            "playbackDeviceID":  {
+              "type": ["string", "number"]
+            },
+            "playbackDeviceSerialNumber": {
+              "type": ["string", "number"]
+            },
+            "playbackDeviceManufacturer": {
+              "type": "string"
+            },
+            "playbackDeviceModel": {
+              "type": "string"
+            }
+          }
+        },
+        "captureSoftware": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "captureSoftwareManufacturer",
+            "captureSoftwareProductName",
+            "captureSoftwareVersion",
+            "captureSoftwarePlatform"
+          ],
+          "properties": {
+            "captureSoftwareManufacturer": {
+              "type": "string"
+            },
+            "captureSoftwareProductName": {
+              "type": "string"
+            },
+            "captureSoftwareVersion": {
+              "type": "string"
+            },
+            "captureSoftwarePlatform": {
+              "type": "string"
+            }
+          }
+        },
+        "notes": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "processNotes": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "digitizer": { "$ref": "fields#digitizer" }
+  }
+}
