@@ -290,31 +290,10 @@
           }
         },
         "captureSoftware": {
-          "type": "object",
-          "additionalProperties": false,
-          "required": [
-            "manufacturer",
-            "productName",
-            "version",
-            "platform"
-          ],
-          "properties": {
-            "manufacturer": {
-              "$ref": "fields#captureSoftwareManufacturer"
-            },
-            "productName": {
-              "$ref": "fields#captureSoftwareProductName"
-            },
-            "version": {
-              "$ref": "fields#captureSoftwareVersion"
-            },
-            "platform": {
-              "$ref": "fields#captureSoftwarePlatform"
-            }
-          }
+          "$ref": "fields#captureSoftware"
         },
         "notes": {
-          "$ref": "fields#digitizationProcessNotes"
+          "$ref": "fields#processNotes"
         }
       }
     },

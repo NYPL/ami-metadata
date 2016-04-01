@@ -219,6 +219,15 @@
           }
         },
         "captureSoftware": {
+          "id": "#captureSoftware",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "manufacturer",
+            "productName",
+            "version",
+            "platform"
+          ],
           "type": "object",
           "properties": {
             "manufacturer": {
@@ -250,7 +259,7 @@
           }
         },
         "notes": {
-          "id": "#digitizationProcessNotes",
+          "id": "#processNotes",
           "type": "object",
           "properties": {
             "processNotes": {
