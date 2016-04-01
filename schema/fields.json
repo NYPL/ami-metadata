@@ -140,7 +140,7 @@
             },
             "serialNumber": {
               "id": "#playbackDeviceSerialNumber",
-              "type": "string"
+              "type": ["string", "number"]
             },
             "manufacturer": {
               "id": "#playbackDeviceManufacturer",
@@ -181,7 +181,7 @@
             },
             "serialNumber": {
               "id": "#timeBaseCorrectorSerialNumber",
-              "type": "string"
+              "type": ["string", "number"]
             },
             "manufacturer": {
               "id": "#timeBaseCorrectorManufacturer",
@@ -202,7 +202,7 @@
             },
             "serialNumber": {
               "id": "#analogDigitalConverterSerialNumber",
-              "type": "string"
+              "type": ["string", "number"]
             },
             "manufacturer": {
               "id": "#analogDigitalConverterManufacturer",
@@ -249,10 +249,10 @@
           }
         },
         "take": {
+          "id": "#take",
           "type": "object",
           "properties": {
             "number" : {
-              "id": "#takeNumber",
               "type": "number",
               "multipleOf": 1.0
             }

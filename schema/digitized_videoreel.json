@@ -204,22 +204,22 @@
           "type": "object",
           "additionalProperties": false,
           "required": [
-            "playbackDeviceSerialNumber",
-            "playbackDeviceManufacturer",
-            "playbackDeviceModel"
+            "serialNumber",
+            "manufacturer",
+            "model"
           ],
           "properties": {
-            "playbackDeviceID":  {
-              "type": ["string", "number"]
+            "id":  {
+              "$ref": "fields#playbackDeviceID"
             },
-            "playbackDeviceSerialNumber": {
-              "type": ["string", "number"]
+            "serialNumber": {
+              "$ref": "fields#playbackDeviceSerialNumber"
             },
-            "playbackDeviceManufacturer": {
-              "type": "string"
+            "manufacturer": {
+              "$ref": "fields#playbackDeviceManufacturer"
             },
-            "playbackDeviceModel": {
-              "type": "string"
+            "model": {
+              "$ref": "fields#playbackDeviceModel"
             }
           }
         },
@@ -227,22 +227,22 @@
           "type": "object",
           "additionalProperties": false,
           "required": [
-            "timeBaseCorrectorSerialNumber",
-            "timeBaseCorrectorManufacturer",
-            "timeBaseCorrectorModel"
+            "serialNumber",
+            "manufacturer",
+            "model"
           ],
           "properties": {
-            "timeBaseCorrectorID":  {
-              "type": ["string", "number"]
+            "id":  {
+              "$ref": "fields#timeBaseCorrectorID"
             },
-            "timeBaseCorrectorSerialNumber": {
-              "type": ["string", "number"]
+            "serialNumber": {
+              "$ref": "fields#timeBaseCorrectorSerialNumber"
             },
-            "timeBaseCorrectorManufacturer": {
-              "type": "string"
+            "manufacturer": {
+              "$ref": "fields#timeBaseCorrectorManufacturer"
             },
-            "timeBaseCorrectorModel": {
-              "type": "string"
+            "model": {
+              "$ref": "fields#timeBaseCorrectorModel"
             }
           }
         },
@@ -250,61 +250,28 @@
           "type": "object",
           "additionalProperties": false,
           "properties": {
-            "analogDigitalConverterID":  {
-              "type": ["string", "number"]
+            "id":  {
+              "$ref": "fields#analogDigitalConverterID"
             },
-            "analogDigitalConverterSerialNumber": {
-              "type": ["string", "number"]
+            "serialNumber": {
+              "$ref": "fields#analogDigitalConverterSerialNumber"
             },
-            "analogDigitalConverterManufacturer": {
-              "type": "string"
+            "manufacturer": {
+              "$ref": "fields#analogDigitalConverterManufacturer"
             },
-            "analogDigitalConverterModel": {
-              "type": "string"
+            "model": {
+              "$ref": "fields#analogDigitalConverterModel"
             }
           }
         },
         "captureSoftware": {
-          "type": "object",
-          "additionalProperties": false,
-          "required": [
-            "captureSoftwareManufacturer",
-            "captureSoftwareProductName",
-            "captureSoftwareVersion",
-            "captureSoftwarePlatform"
-          ],
-          "properties": {
-            "captureSoftwareManufacturer": {
-              "type": "string"
-            },
-            "captureSoftwareProductName": {
-              "type": "string"
-            },
-            "captureSoftwareVersion": {
-              "type": "string"
-            },
-            "captureSoftwarePlatform": {
-              "type": "string"
-            }
-          }
+          "$ref": "fields#captureSoftware"
         },
         "take": {
-          "type": "object",
-          "properties": {
-            "takeNumber" : {
-              "type": "number",
-              "multipleOf": 1.0
-            }
-          }
+          "$ref": "fields#take"
         },
         "notes": {
-          "type": "object",
-          "additionalProperties": false,
-          "properties": {
-            "processNotes": {
-              "type": "string"
-            }
-          }
+          "$ref": "fields#processNotes"
         }
       }
     },

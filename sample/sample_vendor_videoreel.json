@@ -68,27 +68,27 @@
 	},
 	"digitizationProcess": {
 		"playbackDevice": {
-			"playbackDeviceSerialNumber": "xyz123",
-			"playbackDeviceManufacturer": "Manufacturer B",
-			"playbackDeviceModel": "Model XYZ"
+			"serialNumber": "xyz123",
+			"manufacturer": "Manufacturer B",
+			"model": "Model XYZ"
 		},
 		"timeBaseCorrector": {
-			"timeBaseCorrectorID": "id12345",
-			"timeBaseCorrectorSerialNumber": 12345,
-      "timeBaseCorrectorManufacturer": "Manufacturer C",
-      "timeBaseCorrectorModel": "Model XYZ"
+			"id": "id12345",
+			"serialNumber": 12345,
+      "manufacturer": "Manufacturer C",
+      "model": "Model XYZ"
 		},
 		"analogDigitalConverter" : {
-      "analogDigitalConverterID": "id12345",
-      "analogDigitalConverterSerialNumber": "id12345abc",
-      "analogDigitalConverterManufacturer": "Manufacturere D",
-      "analogDigitalConverterModel": "Model XYZ"
+      "id": "id12345",
+      "serialNumber": "id12345abc",
+      "manufacturer": "Manufacturere D",
+      "model": "Model XYZ"
 		},
 		"captureSoftware": {
-			"captureSoftwareManufacturer": "Manufacturer E",
-			"captureSoftwareProductName": "Product XYZ",
-			"captureSoftwareVersion": "Version 123",
-			"captureSoftwarePlatform": "OS XYZ"
+			"manufacturer": "Manufacturer E",
+			"productName": "Product XYZ",
+			"version": "Version 123",
+			"platform": "OS XYZ"
 		},
 		"notes": {
 			"processNotes": "required two takes for reason xyz"
@@ -96,16 +96,16 @@
 	},
 	"digitizer": {
 		"operator": {
-			"operatorLastName": "Doe",
-			"operatorLastName": "Jane"
+			"firstName": "Doe",
+			"lastName": "Jane"
 		},
 		"organization": {
-			"organizationName": "Organization XYZ",
-			"organizationAddressStreet1": "123 ABC St",
-			"organizationAddressStreet2": "Suite 1234",
-			"organizationAddressCity": "Anytown",
-			"organizationAddressState": "ST",
-			"organzationAddressZip": 12345
+			"name": "Organization XYZ",
+			"addressStreet1": "123 ABC St",
+			"addressStreet2": "Suite 1234",
+			"addressCity": "Anytown",
+			"addressState": "ST",
+			"addressZip": 12345
 		}
 	}
 }
