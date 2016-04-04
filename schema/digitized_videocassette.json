@@ -106,21 +106,10 @@
               "multipleOf": 1.0
             },
             "stockManufacturer": {
-              "enum": [
-                "3M",
-                "Agfa",
-                "Ampex",
-                "Fuji",
-                "Maxell",
-                "Sony"
-              ]
+              "type": "string"
             },
             "stockProductID": {
-              "enum": [
-                "KCA-30",
-                "KCA-60",
-                "KCS-20"
-              ]
+              "type": "string"
             },
             "tapeWidth": {
               "type": "number",

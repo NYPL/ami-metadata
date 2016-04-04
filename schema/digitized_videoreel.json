@@ -94,14 +94,7 @@
               "multipleOf": 1.0
             },
             "stockManufacturer": {
-              "enum": [
-                "3M",
-                "Agfa",
-                "Ampex",
-                "Fuji",
-                "Maxell",
-                "Sony"
-              ]
+              "type": "string"
             },
             "stockProductID": {
               "type": "string"
