@@ -46,11 +46,20 @@
 			"partNumber": 1
 		},
 		"stock": {
-			"stockLength": 60,
+			"stockLength": {
+				"measure": 60,
+				"unit": "min"
+			},
 			"stockManufacturer": "Manufacturer A",
 			"stockProductID": "idabc123",
-			"tapeWidth": 0.25,
-			"tapeThickness": 240,
+			"tapeWidth": {
+				"measure": 0.25,
+				"unit": "in"
+			},
+			"tapeThickness": {
+				"measure": 240,
+				"unit": "mils"
+			},
 			"baseMaterial": "acetate",
 			"oxideMaterial": "ferrichrome",
 			"backcoatMaterial": "yes"
@@ -60,8 +69,14 @@
 			"numberOfAudioTracks": 4,
 			"trackConfiguration": "full-track",
 			"designatedSpeed": ".3209 (Standard)",
-			"audioBitDepth": 18,
-			"audioSamplingRate": 22500
+			"audioBitDepth": {
+				"measure": 18,
+				"unit": "bit"
+			},
+			"audioSamplingRate": {
+				"measure": 22500,
+				"unit": "hz"
+			}
 		},
 		"notes": {
 			"physicalConditionPreShipNotes": "reel show XYZ damage",

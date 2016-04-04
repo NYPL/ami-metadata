@@ -99,8 +99,23 @@
           ],
           "properties": {
             "stockLength": {
-              "type": "number",
-              "multipleOf": 1.0
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "type": "number",
+                  "multipleOf": 1.0
+                },
+                "unit": {
+                  "enum": [
+                    "min"
+                  ]
+                }
+              }
             },
             "stockProductID": {
               "type": "string"
@@ -109,13 +124,37 @@
               "type": "string"
             },
             "tapeWidth": {
-              "enum": [
-                0.25
-              ]
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "enum": [
+                    0.25
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "in"
+                  ]
+                }
+              }
             },
             "tapeThickness": {
-              "type": "number",
-              "multipleOf": 1.0
+              "properties": {
+                "measure": {
+                  "type": "number",
+                  "multipleOf": 1.0
+                },
+                "unit": {
+                  "enum": [
+                    "mils"
+                  ]
+                }
+              }
             },
             "baseMaterial": {
               "enum": [
@@ -179,12 +218,27 @@
               ]
             },
             "designatedSpeed": {
-              "enum": [
-                3.75,
-                1.875,
-                0.9375,
-                "not specified"
-              ]
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "enum": [
+                    3.75,
+                    1.875,
+                    0.9375,
+                    "not specified"
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "ips"
+                  ]
+                }
+              }
             },
             "designatedNoiseReduction": {
               "enum": [
@@ -281,11 +335,26 @@
               ]
             },
             "speed": {
-              "enum": [
-                3.75,
-                1.875,
-                0.9375
-              ]
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "enum": [
+                    3.75,
+                    1.875,
+                    0.9375
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "ips"
+                  ]
+                }
+              }
             }
           }
         },

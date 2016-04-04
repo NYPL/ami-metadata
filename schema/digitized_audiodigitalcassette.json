@@ -100,8 +100,17 @@
           ],
           "properties": {
             "stockLength": {
-              "type": "number",
-              "multipleOf": 1.0
+              "properties": {
+                "measure": {
+                  "type": "number",
+                  "multipleOf": 1.0
+                },
+                "unit": {
+                  "enum": [
+                    "min"
+                  ]
+                }
+              }
             },
             "stockProductID": {
               "type": "string"
@@ -110,13 +119,31 @@
               "type": "string"
             },
             "tapeWidth": {
-              "enum": [
-                0.25
-              ]
+              "properties": {
+                "measure": {
+                  "enum": [
+                    0.25
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "in"
+                  ]
+                }
+              }
             },
             "tapeThickness": {
-              "type": "number",
-              "multipleOf": 1.0
+              "properties": {
+                "measure": {
+                  "type": "number",
+                  "multipleOf": 1.0
+                },
+                "unit": {
+                  "enum": [
+                    "mils"
+                  ]
+                }
+              }
             },
             "baseMaterial": {
               "enum": [
@@ -187,35 +214,53 @@
               ]
             },
             "audioBitDepth": {
-              "enum": [
-                8,
-                16,
-                18,
-                20,
-                24,
-                32
-              ]
+              "properties": {
+                "measure": {
+                  "enum": [
+                    8,
+                    16,
+                    18,
+                    20,
+                    24,
+                    32
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "bit"
+                  ]
+                }
+              }
             },
             "audioSamplingRate": {
-              "enum": [
-                22500,
-                32000,
-                44056,
-                44100,
-                47925,
-                48000,
-                64000,
-                88000,
-                88112,
-                88200,
-                95904,
-                96000,
-                128000,
-                176224,
-                176400,
-                191808,
-                192000
-              ]
+              "properties": {
+                "measure": {
+                  "enum": [
+                    22500,
+                    32000,
+                    44056,
+                    44100,
+                    47925,
+                    48000,
+                    64000,
+                    88000,
+                    88112,
+                    88200,
+                    95904,
+                    96000,
+                    128000,
+                    176224,
+                    176400,
+                    191808,
+                    192000
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "hz"
+                  ]
+                }
+              }
             }
           }
         },
