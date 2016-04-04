@@ -43,9 +43,9 @@
             },
             "format": {
               "enum": [
-                "1/2\" EIAJ",
-                "1/2\" CV",
-                "1\" Type C"
+                "1/2 inch EIAJ",
+                "1/2 inch CV",
+                "1 inch Type C"
               ]
             },
             "volumeNumber": {

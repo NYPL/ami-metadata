@@ -42,7 +42,7 @@
             },
             "format": {
               "enum": [
-                "1/4\" open reel audio"
+                "1/4-inch open reel audio"
               ]
             },
             "generation": {
