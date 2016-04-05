@@ -340,10 +340,8 @@
               "type": "string",
               "pattern": "^[A-Z]{2}$"
             },
-            "addressZip": {
-              "type": "number",
-              "minimum": 10000,
-              "maximum": 99999
+            "addressPostalCode": {
+              "type": ["number", "string"]
             }
           }
         }
