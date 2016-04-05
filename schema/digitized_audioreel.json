@@ -42,7 +42,7 @@
             },
             "format": {
               "enum": [
-                "1/4-inch open reel audio"
+                "1/4 inch open reel audio"
               ]
             },
             "generation": {
@@ -98,12 +98,27 @@
           ],
           "properties": {
             "reelDiameter": {
-              "enum": [
-                3,
-                5,
-                7,
-                10.5
-              ]
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "enum": [
+                    3,
+                    5,
+                    7,
+                    10.5
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "in"
+                  ]
+                }
+              }
             },
             "stockProductID": {
               "type": "string"
@@ -112,13 +127,43 @@
               "type": "string"
             },
             "tapeWidth": {
-              "enum": [
-                0.25
-              ]
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "enum": [
+                    0.25
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "in"
+                  ]
+                }
+              }
             },
             "tapeThickness": {
-              "type": "number",
-              "multipleOf": 1.0
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "type": "number",
+                  "multipleOf": 1.0
+                },
+                "unit": {
+                  "enum": [
+                    "mils"
+                  ]
+                }
+              }
             },
             "baseMaterial": {
               "enum": [
@@ -187,15 +232,30 @@
               ]
             },
             "designatedSpeed": {
-              "enum": [
-                30,
-                15,
-                7.5,
-                3.75,
-                1.875,
-                0.9375,
-                "not specified"
-              ]
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "enum": [
+                    30,
+                    15,
+                    7.5,
+                    3.75,
+                    1.875,
+                    0.9375,
+                    "not specified"
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "ips"
+                  ]
+                }
+              }
             },
             "designatedNoiseReduction": {
               "enum": [
@@ -278,19 +338,34 @@
               ]
             },
             "operatingLevel": {
-              "enum": [
-                185,
-                200,
-                224,
-                250,
-                280,
-                315,
-                320,
-                355,
-                400,
-                450,
-                500
-              ]
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "enum": [
+                    185,
+                    200,
+                    224,
+                    250,
+                    280,
+                    315,
+                    320,
+                    355,
+                    400,
+                    450,
+                    500
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "nW/m"
+                  ]
+                }
+              }
             },
             "noiseReduction": {
               "enum": [
@@ -312,16 +387,31 @@
               ]
             },
             "speed": {
-              "enum": [
-                30,
-                15,
-                7.5,
-                3.75,
-                1.875,
-                0.9375,
-                3.12,
-                6.25
-              ]
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "enum": [
+                    30,
+                    15,
+                    7.5,
+                    3.75,
+                    1.875,
+                    0.9375,
+                    3.12,
+                    6.25
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "ips"
+                  ]
+                }
+              }
             }
           }
         },

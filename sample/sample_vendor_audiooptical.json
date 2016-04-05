@@ -47,7 +47,10 @@
 		},
 		"stock": {
 			"stockManufacturer": "Manufacturer A",
-			"discDiameter": 4.7,
+			"discDiameter": {
+				"measure": 4.7,
+				"unit": "in"
+			},
 			"dyeLayer": "phthalocyanine",
 			"reflectiveLayer": "silver"
 		},

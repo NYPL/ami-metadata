@@ -110,10 +110,25 @@
               "type": "string"
             },
             "discDiameter": {
-              "enum": [
-                4.7,
-                3.1
-              ]
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "enum": [
+                    4.7,
+                    3.1
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "in"
+                  ]
+                }
+              }
             },
             "dyeLayer": {
               "enum": [

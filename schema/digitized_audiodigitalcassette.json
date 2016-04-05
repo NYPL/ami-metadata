@@ -100,6 +100,12 @@
           ],
           "properties": {
             "stockLength": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
               "properties": {
                 "measure": {
                   "type": "number",
@@ -133,6 +139,12 @@
               }
             },
             "tapeThickness": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
               "properties": {
                 "measure": {
                   "type": "number",
@@ -214,6 +226,12 @@
               ]
             },
             "audioBitDepth": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
               "properties": {
                 "measure": {
                   "enum": [
@@ -233,6 +251,12 @@
               }
             },
             "audioSamplingRate": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
               "properties": {
                 "measure": {
                   "enum": [
