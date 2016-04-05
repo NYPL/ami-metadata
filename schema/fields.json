@@ -89,6 +89,9 @@
         },
         "contentNotes": {
           "type": "string"
+        },
+        "accessNotes": {
+          "type": "string"
         }
       }
     },
