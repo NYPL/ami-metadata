@@ -26,10 +26,10 @@
 		"extension": "mov",
 		"dateCreated": "2016-01-01",
 		"fileFormat": "MOV file",
-		"fileCodec": "4cc",
+		"fileCodec": "v210",
 		"fileSize": 123456789012,
 		"durationMilli": 3600000,
-		"durationHuman": "11:54:54.999",
+		"durationHuman": "1:00:00.000",
 		"signalNotes": "signal undreadable at point 123"
 	},
 	"source": {
@@ -40,8 +40,8 @@
 			"volumeNumber": 1
 		},
 		"subObject": {
-			"faceNumber": 2,
-			"regionNumber": 2,
+			"faceNumber": 1,
+			"regionNumber": 1,
 			"partNumber": 1
 		},
 		"stock": {
@@ -84,7 +84,7 @@
 			"platform": "OS XYZ"
 		},
 		"notes": {
-			"processNotes": "required two takes for reason xyz"
+			"processNotes": "required intervention for reason xyz"
 		}
 	},
 	"digitizer": {
@@ -98,7 +98,7 @@
 			"addressStreet2": "Suite 1234",
 			"addressCity": "Anytown",
 			"addressState": "ST",
-			"addressZip": 12345
+			"addressPostalCode": 12345
 		}
 	}
 }

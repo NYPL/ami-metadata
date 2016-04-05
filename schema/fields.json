@@ -321,7 +321,7 @@
             "addressStreet1",
             "addressCity",
             "addressState",
-            "addressZip"
+            "addressPostalCode"
           ],
           "properties": {
             "name": {

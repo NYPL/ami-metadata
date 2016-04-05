@@ -17,19 +17,19 @@
 		"divisionCode": "MYH",
 		"vernacularDivisionCode": "Dance",
 		"projectCode": "projectXYZ",
-		"title": "Dance Video 1",
+		"title": "Dance Audio 1",
 		"date": "Late 1970s",
-		"contentNotes": "media is actually Dance Video 2 instead of Dance Video 1"
+		"contentNotes": "media is actually Dance Audio 2 instead of Dance Audio 1"
 	},
 	"technical": {
 		"filename": "abc123",
-		"extension": "mov",
+		"extension": "wav",
 		"dateCreated": "2016-01-01",
-		"fileFormat": "MOV file",
-		"fileCodec": "4cc",
+		"fileFormat": "WAV file",
+		"fileCodec": "PCM",
 		"fileSize": 123456789012,
 		"durationMilli": 3600000,
-		"durationHuman": "11:54:54.999",
+		"durationHuman": "1:00:00.000",
 		"signalNotes": "signal undreadable at point 123"
 	},
 	"source": {
@@ -40,7 +40,7 @@
 			"volumeNumber": 1
 		},
 		"subObject": {
-			"faceNumber": 2,
+			"faceNumber": 1,
 			"regionNumber": 2,
 			"streamNumber": 1,
 			"partNumber": 1
@@ -60,7 +60,7 @@
 				"measure": 240,
 				"unit": "mils"
 			},
-			"baseMaterial": "acetate",
+			"baseMaterial": "polyester",
 			"oxideMaterial": "chromium dioxide",
 			"backcoatMaterial": "yes"
 		},
@@ -104,7 +104,7 @@
 			"platform": "OS XYZ"
 		},
 		"notes": {
-			"processNotes": "required two takes for reason xyz"
+			"processNotes": "required intervention for reason xyz"
 		}
 	},
 	"digitizer": {
@@ -118,7 +118,7 @@
 			"addressStreet2": "Suite 1234",
 			"addressCity": "Anytown",
 			"addressState": "ST",
-			"addressZip": 12345
+			"addressPostalCode": 12345
 		}
 	}
 }

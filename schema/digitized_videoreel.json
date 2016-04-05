@@ -143,7 +143,7 @@
               "properties": {
                 "measure": {
                   "type": "number",
-                  "multipleOf": 0.1
+                  "multipleOf": 0.01
                 },
                 "unit": {
                   "enum": [
