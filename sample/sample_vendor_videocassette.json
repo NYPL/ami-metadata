@@ -44,10 +44,16 @@
 			"partNumber": 1
 		},
 		"stock": {
-			"stockLength": 60,
+			"stockLength": {
+				"measure": 60,
+				"unit": "min"
+			},
 			"stockManufacturer": "Sony",
 			"stockProductID": "KCA-60",
-			"tapeWidth": 1.1,
+			"tapeWidth": {
+				"measure": 1.1,
+				"unit": "in"
+			},
 			"baseMaterial": "polyester",
 			"oxideMaterial": "ferric oxide"
 		},

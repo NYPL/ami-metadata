@@ -46,10 +46,16 @@
 		},
 		"stock": {
 			"stockManufacturer": "Manufacturer A",
-			"discDiameter": 4.7,
+			"discDiameter": {
+				"measure": 4.7,
+				"unit": "in"
+			},
 			"dyeLayer": "phthalocyanine",
 			"reflectiveLayer": "silver",
-			"dataCapacity": 4.7
+			"dataCapacity": {
+				"measure": 4.7,
+				"unit": "gb"
+			}
 		},
 		"contentSpecifications": {
 			"broadcastStandard": "NTSC",

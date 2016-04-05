@@ -102,8 +102,23 @@
           ],
           "properties": {
             "stockLength": {
-              "type": "number",
-              "multipleOf": 1.0
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "type": "number",
+                  "multipleOf": 1.0
+                },
+                "unit": {
+                  "enum": [
+                    "min"
+                  ]
+                }
+              }
             },
             "stockManufacturer": {
               "type": "string"
@@ -112,8 +127,23 @@
               "type": "string"
             },
             "tapeWidth": {
-              "type": "number",
-              "multipleOf": 0.1
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "type": "number",
+                  "multipleOf": 0.1
+                },
+                "unit": {
+                  "enum": [
+                    "in"
+                  ]
+                }
+              }
             },
             "baseMaterial": {
               "enum": [

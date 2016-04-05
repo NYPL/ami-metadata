@@ -101,10 +101,25 @@
               "type": "string"
             },
             "discDiameter": {
-              "enum": [
-                4.7,
-                3.1
-              ]
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "enum": [
+                    4.7,
+                    3.1
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "in"
+                  ]
+                }
+              }
             },
             "dyeLayer": {
               "enum": [
@@ -121,13 +136,28 @@
               ]
             },
             "dataCapacity": {
-              "enum": [
-                0.7,
-                4.7,
-                8.54,
-                25,
-                50
-              ]
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "enum": [
+                    0.7,
+                    4.7,
+                    8.54,
+                    25,
+                    50
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "gb"
+                  ]
+                }
+              }
             }
           }
         },

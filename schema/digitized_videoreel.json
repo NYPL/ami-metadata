@@ -86,12 +86,46 @@
           ],
           "properties": {
             "reelDiameter": {
-              "type": "number",
-              "multipleOf": 0.5
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "enum": [
+                    3,
+                    5,
+                    7,
+                    10.5
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "in"
+                  ]
+                }
+              }
             },
             "stockLength": {
-              "type": "number",
-              "multipleOf": 1.0
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "type": "number",
+                  "multipleOf": 1.0
+                },
+                "unit": {
+                  "enum": [
+                    "min"
+                  ]
+                }
+              }
             },
             "stockManufacturer": {
               "type": "string"
@@ -100,12 +134,42 @@
               "type": "string"
             },
             "tapeWidth": {
-              "type": "number",
-              "multipleOf": 0.1
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "type": "number",
+                  "multipleOf": 0.1
+                },
+                "unit": {
+                  "enum": [
+                    "in"
+                  ]
+                }
+              }
             },
             "tapeThickness": {
-              "type": "number",
-              "multipleOf": 1.0
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "type": "number",
+                  "multipleOf": 1.0
+                },
+                "unit": {
+                  "enum": [
+                    "mils"
+                  ]
+                }
+              }
             },
             "baseMaterial": {
               "enum": [
