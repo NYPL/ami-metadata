@@ -1,6 +1,6 @@
 {
 	"asset": {
-		"referenceFilename": "abc.mov",
+		"referenceFilename": "abc",
 		"schemaVersion": 1
 	},
 	"bibliographic": {
@@ -22,14 +22,14 @@
 		"contentNotes": "media is actually Dance Video 2 instead of Dance Video 1"
 	},
 	"technical": {
-		"filename": "abc123.mov",
+		"filename": "abc123",
 		"extension": "mov",
 		"dateCreated": "2016-01-01",
 		"fileFormat": "MOV file",
 		"fileCodec": "4cc",
 		"fileSize": 123456789012,
 		"durationMilli": 3600000,
-		"durationHuman": "11:54:54",
+		"durationHuman": "11:54:54.999",
 		"signalNotes": "signal undreadable at point 123"
 	},
 	"source": {
