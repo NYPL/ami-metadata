@@ -15,7 +15,7 @@
       "properties": {
         "referenceFilename" : {
           "type": "string",
-          "pattern": "^.+\\.[a-zA-Z0-9]{3}"
+          "pattern": "^[a-zA-Z0-9\\-\\*]+"
         },
         "schemaVersion": {
           "type": "number",
@@ -134,7 +134,7 @@
         },
         "durationHuman": {
           "type": "string",
-          "pattern": "[0-9]{2}:[0-5][0-9]:[0-5][0-9]"
+          "pattern": "[0-9]{2}:[0-5][0-9]:[0-5][0-9].[0-9]{3}"
         },
         "signalNotes": {
           "type": "string"
