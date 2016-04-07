@@ -5,11 +5,11 @@
   "description": "Base validation schema for metadata sent with media to digitization",
   "type": "object",
   "oneOf": [
-    { "$ref": "digitized_audiooptical" },
+    { "$ref": "digitized_audioopticaldisc" },
     { "$ref": "digitized_audioreel" },
     { "$ref": "digitized_audioanalogcassette" },
     { "$ref": "digitized_audiodigitalcassette" },
-    { "$ref": "digitized_videooptical" },
+    { "$ref": "digitized_videoopticaldisc" },
     { "$ref": "digitized_videocassette" },
     { "$ref": "digitized_videoreel" }
   ]

@@ -34,7 +34,7 @@
 	},
 	"source": {
 		"object": {
-			"type": "audio optical",
+			"type": "audio optical disc",
 			"format": "CD-R",
 			"generation": 2,
 			"volumeNumber": 1

@@ -34,7 +34,7 @@
 	},
 	"source": {
 		"object": {
-			"type": "video optical",
+			"type": "video optical disc",
 			"format": "DVD-R",
 			"generation": "Master",
 			"volumeNumber": 1
