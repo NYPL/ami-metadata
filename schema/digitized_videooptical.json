@@ -125,14 +125,16 @@
               "enum": [
                 "phthalocyanine",
                 "cyanine",
-                "azo"
+                "azo",
+                "unknown"
               ]
             },
             "reflectiveLayer": {
               "enum": [
                 "gold",
                 "silver",
-                "aluminum"
+                "aluminum",
+                "unknown"
               ]
             },
             "dataCapacity": {
