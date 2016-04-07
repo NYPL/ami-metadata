@@ -67,10 +67,6 @@
           "minimum": 33433000000000,
           "maximum": 33433999999999
         },
-        "mmsCollectionID": {
-          "type": "string",
-          "pattern": "^[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}$"
-        },
         "divisionCode": {
           "type": "string",
           "pattern": "^[a-zA-Z]{3}$"
