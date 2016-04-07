@@ -421,6 +421,9 @@
         "captureSoftware": {
           "$ref": "fields#captureSoftware"
         },
+        "take": {
+          "$ref": "fields#take"
+        },
         "notes": {
           "$ref": "fields#processNotes"
         }

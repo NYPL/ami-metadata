@@ -24,7 +24,7 @@
       "required": [
         "object",
         "subObject",
-        "stock",
+        "physicalDescription",
         "audioRecording"
       ],
       "properties": {
@@ -86,7 +86,7 @@
             }
           }
         },
-        "stock": {
+        "physicalDescription": {
           "type": "object",
           "additionalProperties": false,
           "required": [
@@ -133,7 +133,7 @@
               "properties": {
                 "measure": {
                   "enum": [
-                    0.25
+                    0.125
                   ]
                 },
                 "unit": {
@@ -147,7 +147,7 @@
               "properties": {
                 "measure": {
                   "type": "number",
-                  "multipleOf": 1.0
+                  "multipleOf": 0.5
                 },
                 "unit": {
                   "enum": [
@@ -360,6 +360,9 @@
         },
         "captureSoftware": {
           "$ref": "fields#captureSoftware"
+        },
+        "take": {
+          "$ref": "fields#take"
         },
         "notes": {
           "$ref": "fields#processNotes"
