@@ -43,7 +43,7 @@
 			"regionNumber": 1,
 			"partNumber": 1
 		},
-		"stock": {
+		"physicalDescription": {
 			"stockLength": {
 				"measure": 60,
 				"unit": "min"

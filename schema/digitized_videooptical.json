@@ -24,7 +24,7 @@
       "required": [
         "object",
         "subObject",
-        "stock",
+        "physicalDescription",
         "contentSpecifications",
         "audioRecording"
       ],
@@ -86,7 +86,7 @@
             }
           }
         },
-        "stock": {
+        "physicalDescription": {
           "type": "object",
           "additionalProperties": false,
           "required": [

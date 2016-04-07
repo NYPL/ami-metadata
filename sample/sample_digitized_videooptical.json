@@ -44,7 +44,7 @@
 			"regionNumber": 1,
 			"partNumber": 1
 		},
-		"stock": {
+		"physicalDescription": {
 			"stockManufacturer": "Manufacturer A",
 			"discDiameter": {
 				"measure": 4.7,

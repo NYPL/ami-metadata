@@ -45,7 +45,7 @@
 			"streamNumber": 1,
 			"partNumber": 1
 		},
-		"stock": {
+		"physicalDescription": {
 			"reelDiameter": {
 				"measure": 7,
 				"unit": "in"
