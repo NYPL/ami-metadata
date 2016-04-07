@@ -53,11 +53,11 @@
 			"stockManufacturer": "Manufacturer A",
 			"stockProductID": "idabc123",
 			"tapeWidth": {
-				"measure": 0.25,
+				"measure": 0.125,
 				"unit": "in"
 			},
 			"tapeThickness": {
-				"measure": 240,
+				"measure": 1.5,
 				"unit": "mils"
 			},
 			"baseMaterial": "polyester",

@@ -142,8 +142,12 @@
               ],
               "properties": {
                 "measure": {
-                  "type": "number",
-                  "multipleOf": 0.01
+                  "enum": [
+                    0.25,
+                    0.5,
+                    1,
+                    2
+                  ]
                 },
                 "unit": {
                   "enum": [
@@ -162,7 +166,7 @@
               "properties": {
                 "measure": {
                   "type": "number",
-                  "multipleOf": 1.0
+                  "multipleOf": 0.5
                 },
                 "unit": {
                   "enum": [

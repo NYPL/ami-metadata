@@ -57,7 +57,7 @@
 				"unit": "in"
 			},
 			"tapeThickness": {
-				"measure": 240,
+				"measure": 1.5,
 				"unit": "mils"
 			},
 			"baseMaterial": "polyester",

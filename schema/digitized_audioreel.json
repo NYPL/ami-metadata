@@ -136,7 +136,10 @@
               "properties": {
                 "measure": {
                   "enum": [
-                    0.25
+                    0.25,
+                    0.5,
+                    1,
+                    2
                   ]
                 },
                 "unit": {
@@ -156,7 +159,7 @@
               "properties": {
                 "measure": {
                   "type": "number",
-                  "multipleOf": 1.0
+                  "multipleOf": 0.5
                 },
                 "unit": {
                   "enum": [
