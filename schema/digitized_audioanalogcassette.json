@@ -44,7 +44,7 @@
               "enum": [
                 "compact cassette",
                 "microcassette",
-                "mini cassette"
+                "minicassette"
               ]
             },
             "generation": {
