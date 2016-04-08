@@ -95,6 +95,11 @@
       "manufacturer": "Manufacturere D",
       "model": "Model XYZ"
 		},
+		"analogDigitalConverter": {
+			"serialNumber": "xyz123",
+			"manufacturer": "Manufacturer D",
+			"model": "Model XYZ"
+		},
 		"captureSoftware": {
 			"manufacturer": "Manufacturer E",
 			"productName": "Product XYZ",

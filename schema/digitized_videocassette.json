@@ -254,29 +254,6 @@
             }
           }
         },
-        "analogDigitalConverter": {
-          "type": "object",
-          "additionalProperties": false,
-          "required": [
-            "serialNumber",
-            "manufacturer",
-            "model"
-          ],
-          "properties": {
-            "id":  {
-              "$ref": "fields#analogDigitalConverterID"
-            },
-            "serialNumber": {
-              "$ref": "fields#analogDigitalConverterSerialNumber"
-            },
-            "manufacturer": {
-              "$ref": "fields#analogDigitalConverterManufacturer"
-            },
-            "model": {
-              "$ref": "fields#analogDigitalConverterModel"
-            }
-          }
-        },
         "timeBaseCorrector": {
           "type": "object",
           "additionalProperties": false,

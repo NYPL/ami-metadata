@@ -92,6 +92,16 @@
 				"unit": "ips"
 			}
 		},
+		"analogDigitalConverter": {
+			"serialNumber": "xyz123",
+			"manufacturer": "Manufacturer D",
+			"model": "Model XYZ",
+			"operatingLevel": {
+				"meausure": -20,
+				"unit": "dBFS"
+				}
+			}
+		},
 		"captureSoftware": {
 			"manufacturer": "Manufacturer E",
 			"productName": "Product XYZ",

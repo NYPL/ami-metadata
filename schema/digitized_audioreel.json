@@ -418,6 +418,9 @@
             }
           }
         },
+        "analogDigitalConverter": {
+          "$ref": "#analogDigitalConverter"
+        },
         "captureSoftware": {
           "$ref": "fields#captureSoftware"
         },

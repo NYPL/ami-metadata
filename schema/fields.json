@@ -212,7 +212,16 @@
           }
         },
         "analogDigitalConverter": {
+          "id": "#analogDigitalConverter",
           "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "id",
+            "serialNumber",
+            "manufacturer",
+            "model",
+            "operatingLevel"
+          ],
           "properties": {
             "id": {
               "id": "#analogDigitalConverterID",
@@ -232,7 +241,14 @@
             },
             "operatingLevel": {
               "id": "#analogDigitalConverterOperatingLevel",
-              "type": "number"
+              "enum": [
+                -12,
+                -14,
+                -15,
+                -16,
+                -18,
+                -20
+              ]
             }
           }
         },

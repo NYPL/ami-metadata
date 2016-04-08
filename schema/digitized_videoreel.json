@@ -310,6 +310,11 @@
         "analogDigitalConverter": {
           "type": "object",
           "additionalProperties": false,
+          "required": [
+            "serialNumber",
+            "manufacturer",
+            "model"
+          ],
           "properties": {
             "id":  {
               "$ref": "fields#analogDigitalConverterID"
