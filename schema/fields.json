@@ -216,7 +216,6 @@
           "type": "object",
           "additionalProperties": false,
           "required": [
-            "id",
             "serialNumber",
             "manufacturer",
             "model",
@@ -241,14 +240,29 @@
             },
             "operatingLevel": {
               "id": "#analogDigitalConverterOperatingLevel",
-              "enum": [
-                -12,
-                -14,
-                -15,
-                -16,
-                -18,
-                -20
-              ]
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "enum": [
+                    -12,
+                    -14,
+                    -15,
+                    -16,
+                    -18,
+                    -20
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "dBFS"
+                  ]
+                }
+              }
             }
           }
         },

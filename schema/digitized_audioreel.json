@@ -419,7 +419,7 @@
           }
         },
         "analogDigitalConverter": {
-          "$ref": "#analogDigitalConverter"
+          "$ref": "fields#analogDigitalConverter"
         },
         "captureSoftware": {
           "$ref": "fields#captureSoftware"

@@ -101,9 +101,8 @@
 			"manufacturer": "Manufacturer D",
 			"model": "Model XYZ",
 			"operatingLevel": {
-				"meausure": -20,
+				"measure": -20,
 				"unit": "dBFS"
-				}
 			}
 		},
 		"captureSoftware": {
