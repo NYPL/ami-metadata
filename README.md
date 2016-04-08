@@ -22,7 +22,7 @@ All common fields are defined in fields.json. Schema for media types at a specif
 ## Usage
 To validate a single sample json file with [ajv](https://www.npmjs.com/package/ajv):
 ```
-ajv validate -s schema/digitized_audioreel.json -r schema/fields.json -d sample/digitized_audioreel.json
+ajv validate -s schema/digitized_audioreel.json -r schema/fields.json -d sample/sample_digitized_audioreel.json
 ```
 
 To validate all of the sample json files with [ajv](https://www.npmjs.com/package/ajv):
