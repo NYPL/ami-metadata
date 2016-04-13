@@ -370,7 +370,7 @@
               "pattern": "^[A-Z]{2}$"
             },
             "addressPostalCode": {
-              "type": ["number", "string"]
+              "type": "string"
             }
           }
         }
