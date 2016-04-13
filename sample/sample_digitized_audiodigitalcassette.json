@@ -106,11 +106,13 @@
 		},
 		"organization": {
 			"name": "Organization XYZ",
-			"addressStreet1": "123 ABC St",
-			"addressStreet2": "Suite 1234",
-			"addressCity": "Anytown",
-			"addressState": "ST",
-			"addressPostalCode": 12345
+      "address": {
+        "street1": "123 ABC St",
+        "street2": "Suite 1234",
+        "city":    "Anytown",
+        "state":   "ST",
+        "postalCode": "12345"
+      }
 		}
 	}
 }
