@@ -121,7 +121,7 @@
 			"addressStreet2": "Suite 1234",
 			"addressCity": "Anytown",
 			"addressState": "ST",
-			"addressPostalCode": "12345"
+			"addressPostalCode": 12345
 		}
 	}
 }
