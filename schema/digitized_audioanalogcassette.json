@@ -42,17 +42,20 @@
             },
             "format": {
               "enum": [
-                "compact cassette",
-                "microcassette",
-                "minicassette"
+                "8-track",
+                "Compact cassette",
+                "Microcassette",
+                "Minicassette",
+                "audio cassette, other",
+                "unknown"
               ]
             },
             "generation": {
               "enum": [
                 "unknown",
-                1,
-                2,
-                3
+                "Archive Original",
+                "Preservation Master",
+                "Copy"
               ]
             },
             "volumeNumber": {
@@ -161,7 +164,8 @@
                 "acetate",
                 "polyester",
                 "PVC",
-                "paper"
+                "paper",
+                "unknown"
               ]
             },
             "oxideMaterial": {
@@ -199,7 +203,8 @@
                 "mono",
                 "surround",
                 "quadrophonic",
-                "binaural"
+                "binaural",
+                "unknown"
               ]
             },
             "numberOfAudioTracks": {
@@ -214,7 +219,8 @@
                 "half-track",
                 "two-track",
                 "quarter-track",
-                "four-track"
+                "four-track",
+                "unknown"
               ]
             },
             "designatedSpeed": {
@@ -244,7 +250,8 @@
               "enum": [
                 "Dolby B",
                 "Dolby C",
-                "not specified"
+                "n/a",
+                "unknown"
               ]
             },
             "designatedEQ": {
@@ -253,7 +260,8 @@
                 "Type II",
                 "Type III",
                 "Type IV",
-                "not specified"
+                "n/a",
+                "unknown"
               ]
             }
           }
@@ -315,15 +323,16 @@
                 "four-track",
                 "eight-track",
                 "sixteen-track",
-                "twenty-four-track"
+                "twenty-four-track",
+                "unknown"
               ]
             },
             "noiseReduction": {
               "enum": [
                 "Dolby B",
                 "Dolby C",
-                "not specified",
-                "n/a"
+                "n/a",
+                "unknown"
               ]
             },
             "eq": {
@@ -331,7 +340,8 @@
                 "Type I",
                 "Type II",
                 "Type III",
-                "Type IV"
+                "Type IV",
+                "unknown"
               ]
             },
             "speed": {
@@ -364,8 +374,8 @@
         "captureSoftware": {
           "$ref": "fields#captureSoftware"
         },
-        "take": {
-          "$ref": "fields#take"
+        "takeNumber": {
+          "$ref": "fields#takeNumber"
         },
         "notes": {
           "$ref": "fields#processNotes"

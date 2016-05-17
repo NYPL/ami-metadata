@@ -43,9 +43,21 @@
             },
             "format": {
               "enum": [
-                "1/2 inch EIAJ",
-                "1/2 inch CV",
-                "1 inch Type C"
+                "one-inch open-reel video Type A",
+                "one-inch open-reel video Type C",
+                "half-inch open-reel video CV",
+                "half-inch open-reel video EIAJ/AV",
+                "half-inch open-reel video other",
+                "two-inch open-reel video Quadruplex",
+                "unknown"
+              ]
+            },
+            "generation": {
+              "enum": [
+                "unknown",
+                "Archive Original",
+                "Preservation Master",
+                "Copy"
               ]
             },
             "volumeNumber": {
@@ -180,7 +192,8 @@
                 "acetate",
                 "polyester",
                 "PVC",
-                "paper"
+                "paper",
+                "unknown"
               ]
             },
             "oxideMaterial": {
@@ -211,7 +224,8 @@
               "enum": [
                 "b/w",
                 "color",
-                "color & b/w"
+                "color & b/w",
+                "unknown"
               ]
             }
           }
@@ -228,7 +242,8 @@
               "enum": [
                 "stereo",
                 "mono",
-                "surround"
+                "surround",
+                "unknown"
               ]
             },
             "numberOfAudioTracks": {
@@ -333,8 +348,8 @@
         "captureSoftware": {
           "$ref": "fields#captureSoftware"
         },
-        "take": {
-          "$ref": "fields#take"
+        "takeNumber": {
+          "$ref": "fields#takeNumber"
         },
         "notes": {
           "$ref": "fields#processNotes"

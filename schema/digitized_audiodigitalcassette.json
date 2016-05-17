@@ -42,18 +42,22 @@
             },
             "format": {
               "enum": [
-                "DAT cassette",
+                "ADAT",
+                "DAT",
+                "DA-88",
                 "Digital Compact Cassette",
-                "F1 Audio (Betamax)",
-                "PCM-1630 (U-Matic)"
+                "Betamax/PCM",
+                "U-matic/PCM",
+                "Other cartridge",
+                "unknown"
               ]
             },
             "generation": {
               "enum": [
                 "unknown",
-                1,
-                2,
-                3
+                "Archive Original",
+                "Preservation Master",
+                "Copy"
               ]
             },
             "volumeNumber": {
@@ -162,7 +166,8 @@
                 "acetate",
                 "polyester",
                 "PVC",
-                "paper"
+                "paper",
+                "unknown"
               ]
             },
             "oxideMaterial": {
@@ -206,7 +211,7 @@
             "numberOfAudioTracks": {
               "enum": [
                 4,
-                "n/a"
+                "unknown"
               ]
             },
             "trackConfiguration": {
@@ -215,15 +220,31 @@
                 "half-track",
                 "two-track",
                 "quarter-track",
-                "four-track"
+                "four-track",
+                "unknown"
               ]
             },
             "designatedSpeed": {
-              "enum": [
-                ".3209 (Standard)",
-                ".16043 (Long Play)",
-                "not specified"
-              ]
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "enum": [
+                    ".3209 (Standard)",
+                    ".16043 (Long Play)",
+                    "unknown"
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "ips"
+                  ]
+                }
+              }
             },
             "audioBitDepth": {
               "type": "object",
@@ -334,19 +355,34 @@
               "$ref": "fields#playbackDeviceModel"
             },
             "speed": {
-              "enum": [
-                ".3209 (Standard)",
-                ".16043 (Long Play)",
-                "not specified"
-              ]
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "enum": [
+                    ".3209 (Standard)",
+                    ".16043 (Long Play)",
+                    "unknown"
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "ips"
+                  ]
+                }
+              }
             }
           }
         },
         "captureSoftware": {
           "$ref": "fields#captureSoftware"
         },
-        "take": {
-          "$ref": "fields#take"
+        "takeNumber": {
+          "$ref": "fields#takeNumber"
         },
         "notes": {
           "$ref": "fields#processNotes"

@@ -17,6 +17,14 @@
           "type": "string",
           "pattern": "^[a-zA-Z0-9\\-\\*]+"
         },
+        "fileRole" : {
+          "type": "string",
+          "enum": [
+            "pm",
+            "em",
+            "sc"
+          ]
+        },
         "schemaVersion": {
           "type": "number",
           "multipleOf": 1.0
@@ -46,9 +54,8 @@
           "type": "string"
         },
         "cmsItemID": {
-          "type": "number",
-          "minimum": 100000,
-          "maximum": 999999
+          "type": "string",
+          "pattern": "\\d{6}"
         },
         "cmsCollectionID": {
           "type": "string"
@@ -58,14 +65,12 @@
           "pattern": "^(b|B)[0-9]{8}$"
         },
         "mssID": {
-          "type": "number",
-          "minimum": 10000,
-          "maximum": 99999
+          "type": "string",
+          "pattern": "\\d{5}"
         },
         "barcode": {
-          "type": "number",
-          "minimum": 33433000000000,
-          "maximum": 33433999999999
+          "type": "string",
+          "pattern": "33433\\d{9}"
         },
         "divisionCode": {
           "type": "string",
@@ -125,11 +130,42 @@
           "type": "string"
         },
         "fileSize": {
-          "type": "number",
-          "multipleOf": 1.0
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "measure",
+            "unit"
+          ],
+          "properties": {
+            "measure": {
+              "type": "number",
+              "multipleOf": 1.0
+            },
+            "unit": {
+              "enum": [
+                "B"
+              ]
+            }
+          }
         },
         "durationMilli": {
-          "type": "number"
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "measure",
+            "unit"
+          ],
+          "properties": {
+            "measure": {
+              "type": "number",
+              "multipleOf": 1.0
+            },
+            "unit": {
+              "enum": [
+                "ms"
+              ]
+            }
+          }
         },
         "durationHuman": {
           "type": "string",
@@ -186,7 +222,7 @@
             },
             "speed": {
               "id": "#playbackDeviceSpeed",
-              "type": "number"
+              "type": "object"
             }
           }
         },
@@ -296,8 +332,8 @@
             }
           }
         },
-        "take": {
-          "id": "#take",
+        "takeNumber": {
+          "id": "#takeNumber",
           "type": "object",
           "properties": {
             "number" : {

@@ -1,6 +1,7 @@
 {
 	"asset": {
-		"referenceFilename": "abc",
+		"referenceFilename": "myh_abc123_v01_pm.wav",
+		"fileRole": "pm",
 		"schemaVersion": 1
 	},
 	"bibliographic": {
@@ -8,11 +9,11 @@
 		"classmark": "*ABC 123",
 		"formerClassmark": "*NCOW 123",
 		"nonCMSID": "string123",
-		"cmsItemID": 123456,
+		"cmsItemID": "123456",
 		"cmsCollectionID": "string123",
 		"catalogBNumber": "B12345678",
-		"mssID": 12345,
-		"barcode": 33433123456789,
+		"mssID": "12345",
+		"barcode": "33433123456789",
 		"divisionCode": "MYH",
 		"vernacularDivisionCode": "Dance",
 		"projectCode": "projectXYZ",
@@ -26,16 +27,22 @@
 		"dateCreated": "2016-01-01",
 		"fileFormat": "WAV file",
 		"fileCodec": "PCM",
-		"fileSize": 123456789012,
-		"durationMilli": 3600000,
+		"fileSize": {
+			"measure": 2000000000,
+			"unit": "B"
+		},
+		"durationMilli": {
+			"measure": 3600000,
+			"unit": "ms"
+		},
 		"durationHuman": "1:00:00.000",
 		"signalNotes": "signal undreadable at point 123"
 	},
 	"source": {
 		"object": {
 			"type": "audio optical disc",
-			"format": "CD-R",
-			"generation": 2,
+			"format": "Audio CD-R",
+			"generation": "Archive Original",
 			"volumeNumber": 1
 		},
 		"subObject": {

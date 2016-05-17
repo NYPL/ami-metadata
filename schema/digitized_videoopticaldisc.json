@@ -43,23 +43,22 @@
             },
             "format": {
               "enum": [
-                "DVD",
-                "DVD-R",
-                "DVD+R",
-                "DVD-RW",
-                "DVD+RW",
-                "DVD-RAM",
-                "BD",
-                "BD-R",
-                "VCD"]
+                "Blu-Ray",
+                "Laser Disc",
+                "VCD",
+                "Video DVD-R",
+                "Video DVD, pressed",
+                "Video DVD+R",
+                "Video DVD+RW",
+                "unknown"
+              ]
             },
             "generation": {
               "enum": [
                 "unknown",
-                "Master",
+                "Archive Original",
                 "Preservation Master",
-                "Copy",
-                "Unknown"
+                "Copy"
               ]
             },
             "volumeNumber": {
@@ -151,7 +150,8 @@
                     4.7,
                     8.54,
                     25,
-                    50
+                    50,
+                    "unknown"
                   ]
                 },
                 "unit": {
@@ -176,14 +176,16 @@
               "enum": [
                 "NTSC",
                 "PAL",
-                "SECAM"
+                "SECAM",
+                "unknown"
               ]
             },
             "colorBW": {
               "enum": [
                 "b/w",
                 "color",
-                "color & b/w"
+                "color & b/w",
+                "unknown"
               ]
             },
             "regionCode": {
@@ -198,7 +200,8 @@
                 7,
                 8,
                 "A",
-                "B"
+                "B",
+                "unknown"
               ]
             }
           }
@@ -217,7 +220,8 @@
                 "mono",
                 "surround",
                 "quadrophonic",
-                "binaural"
+                "binaural",
+                "unknown"
               ]
             },
             "numberOfAudioTracks": {

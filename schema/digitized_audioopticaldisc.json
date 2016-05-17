@@ -42,27 +42,18 @@
             },
             "format": {
               "enum": [
-                "CD-DA",
-                "CD-ROM",
-                "CD-R",
-                "CD-RW",
-                "DVD-Audio",
-                "DVD-R",
-                "DVD+R",
-                "DVD-RW",
-                "DVD+RW",
-                "DVD+R DL",
-                "BD (Blu-ray)",
-                "BD-R",
-                "MiniDisc",
-                "Universal Media Disc (UMD)"]
+                "Audio CD-R",
+                "Audio CD, pressed",
+                "Minidisc",
+                "unknown"
+              ]
             },
             "generation": {
               "enum": [
                 "unknown",
-                1,
-                2,
-                3
+                "Archive Original",
+                "Preservation Master",
+                "Copy"
               ]
             },
             "volumeNumber": {
@@ -161,7 +152,8 @@
                 "mono",
                 "surround",
                 "quadrophonic",
-                "binaural"
+                "binaural",
+                "unknown"
               ]
             }
           }

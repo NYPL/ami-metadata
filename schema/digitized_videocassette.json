@@ -43,7 +43,6 @@
             },
             "format": {
               "enum": [
-                "3/4 inch U-matic",
                 "Betacam",
                 "Betacam SP",
                 "Betacam SX",
@@ -51,19 +50,33 @@
                 "D-1",
                 "D-2",
                 "D-3",
-                "Digital8",
+                "D-5",
                 "Digital Betacam",
+                "Digital8",
                 "DVCam",
                 "DVCPRO",
-                "DVCPRO HD",
                 "HDCAM",
+                "HDCAM SR",
                 "HDV",
                 "Hi8",
                 "MII",
                 "MiniDV",
-                "SVHS",
+                "MPEG IMX",
+                "S-VHS",
+                "S-VHS-C",
+                "U-matic",
                 "VHS",
-                "Video8"
+                "VHS-C",
+                "Video8",
+                "unknown"
+              ]
+            },
+            "generation": {
+              "enum": [
+                "unknown",
+                "Archive Original",
+                "Preservation Master",
+                "Copy"
               ]
             },
             "volumeNumber": {
@@ -150,7 +163,8 @@
                 "acetate",
                 "polyester",
                 "PVC",
-                "paper"
+                "paper",
+                "unknown"
               ]
             },
             "oxideMaterial": {
@@ -174,14 +188,16 @@
               "enum": [
                 "NTSC",
                 "PAL",
-                "SECAM"
+                "SECAM",
+                "unknown"
               ]
             },
             "colorBW": {
               "enum": [
                 "b/w",
                 "color",
-                "color & b/w"
+                "color & b/w",
+                "unknown"
               ]
             }
           }
@@ -198,7 +214,8 @@
               "enum": [
                 "stereo",
                 "mono",
-                "surround"
+                "surround",
+                "unknown"
               ]
             },
             "numberOfAudioTracks": {
@@ -303,8 +320,8 @@
         "captureSoftware": {
           "$ref": "fields#captureSoftware"
         },
-        "take": {
-          "$ref": "fields#take"
+        "takeNumber": {
+          "$ref": "fields#takeNumber"
         },
         "notes": {
           "$ref": "fields#processNotes"
