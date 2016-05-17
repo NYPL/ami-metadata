@@ -3,21 +3,29 @@ Schema and samples of the metadata at each stage of the AMI digitization workflo
 
 All common fields are defined in fields.json. Schema for media types at a specific stage are defined in *stage*_*mediatype*.json. A rudimentary stage level schema is defined in *stage*.json.
 
-### Stages
+## Stages
 
-1. Shipped
+1. Shipped (in process)
 2. Digitized
-3. QC'ed
+3. QC'ed (in process)
 
-### Media Types
+## Media Types
 
 * Audio Analog Cassette
 * Audio Digital Cassette
 * Audio Optical Disc
-* Audio Reel
+* Audio Analog Reel
 * Video Cassette
 * Video Optical Disc
 * Video Reel
+
+To Be Defined
+
+* Audio Grooved Belt
+* Audio Grooved Cylinder
+* Audio Grooved Disc
+* Audio Wire
+* Film
 
 ## Usage
 To validate a single sample json file with [ajv](https://www.npmjs.com/package/ajv):
