@@ -38,7 +38,7 @@
           ],
           "properties": {
             "type": {
-              "enum": [ "audio analog cassette" ]
+              "enum": [ "audio cassette analog" ]
             },
             "format": {
               "enum": [

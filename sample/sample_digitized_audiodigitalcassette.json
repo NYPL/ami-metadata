@@ -40,7 +40,7 @@
 	},
 	"source": {
 		"object": {
-			"type": "audio digital cassette",
+			"type": "audio cassette digital",
 			"format": "DAT",
 			"generation": "unknown",
 			"volumeNumber": 1

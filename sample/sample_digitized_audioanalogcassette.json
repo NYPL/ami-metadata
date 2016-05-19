@@ -40,7 +40,7 @@
 	},
 	"source": {
 		"object": {
-			"type": "audio analog cassette",
+			"type": "audio cassette analog",
 			"format": "Compact cassette",
 			"generation": "unknown",
 			"volumeNumber": 1
