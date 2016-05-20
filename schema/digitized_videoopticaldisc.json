@@ -16,7 +16,63 @@
   "properties": {
     "asset": { "$ref": "fields#asset" },
     "bibliographic": { "$ref": "fields#bibliographic" },
-    "technical": { "$ref": "fields#technical" },
+    "technical": {
+      "id": "technical",
+      "type": "object",
+      "additionalProperties": false,
+      "require": [
+        "filename",
+        "extension",
+        "dateCreated",
+        "fileFormat",
+        "audioCodec",
+        "videoCodec",
+        "fileSize",
+        "durationMilli",
+        "durationHuman"
+      ],
+      "properties": {
+        "filename": {
+          "$ref": "fields#technicalFilename"
+        },
+        "extension": {
+          "enum": [
+            "ISO",
+            "MP4"
+          ]
+        },
+        "dateCreated": {
+          "$ref": "fields#technicalDateCreated"
+        },
+        "fileFormat": {
+          "$ref": "fields#technicalFileFormat"
+        },
+        "audioCodec": {
+          "enum": [
+            "AAC",
+            "unknown"
+          ]
+        },
+        "videoCodec": {
+          "enum": [
+            "H264",
+            "ISO 9660"
+          ]
+        },
+        "fileSize": {
+          "$ref": "fields#technicalFileSize"
+        },
+        "durationMilli": {
+          "$ref": "fields#technicalDurationMilli"
+        },
+        "durationHuman": {
+          "$ref": "fields#technicalDurationHuman"
+        },
+        "signalNotes": {
+          "$ref": "fields#technicalSignalNotes"
+        }
+      }
+    },
     "source": {
       "id": "source",
       "type": "object",

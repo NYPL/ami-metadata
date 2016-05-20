@@ -23,10 +23,10 @@
 	},
 	"technical": {
 		"filename": "myh_abc123_v01_pm",
-		"extension": "wav",
+		"extension": "WAV",
 		"dateCreated": "2016-01-01",
-		"fileFormat": "WAV file",
-		"fileCodec": "PCM",
+		"fileFormat": "BWF",
+		"audioCodec": "PCM",
 		"fileSize": {
 			"measure": 2000000000,
 			"unit": "B"

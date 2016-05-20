@@ -23,10 +23,11 @@
 	},
 	"technical": {
 		"filename": "myh_abc123_v01_pm",
-		"extension": "mov",
+		"extension": "MOV",
 		"dateCreated": "2016-01-01",
 		"fileFormat": "MOV file",
-		"fileCodec": "v210",
+		"audioCodec": "PCM",
+		"videoCodec": "V210",
 		"fileSize": {
 			"measure": 100000000000,
 			"unit": "B"

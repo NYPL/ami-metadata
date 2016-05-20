@@ -99,37 +99,36 @@
     "technical": {
       "id": "#technical",
       "type": "object",
-      "additionalItems": false,
-      "require": [
-        "filename",
-        "extension",
-        "dateCreated",
-        "fileFormat",
-        "fileCodec",
-        "fileSize",
-        "durationMilli",
-        "durationHuman"
-      ],
       "properties": {
         "filename": {
+          "id": "#technicalFilename",
           "type": "string",
-          "pattern": "^[a-zA-Z0-9\\-\\*]+"
+          "pattern": "^[a-zA-Z0-9_]+"
         },
         "extension": {
+          "id": "#technicalExtension",
           "type": "string",
           "pattern": "[a-zA-Z0-9]{3}"
         },
         "dateCreated": {
+          "id": "#technicalDateCreated",
           "type": "string",
           "pattern": "201[6-9]-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])"
         },
         "fileFormat": {
+          "id": "#technicalFileFormat",
           "type": "string"
         },
-        "fileCodec": {
+        "audioCodec": {
+          "id": "#technicalAudioCodec",
+          "type": "string"
+        },
+        "videoCodec": {
+          "id": "#technicalVideoCodec",
           "type": "string"
         },
         "fileSize": {
+          "id": "#technicalFileSize",
           "type": "object",
           "additionalProperties": false,
           "required": [
@@ -149,6 +148,7 @@
           }
         },
         "durationMilli": {
+          "id": "#technicalDurationMilli",
           "type": "object",
           "additionalProperties": false,
           "required": [
@@ -168,10 +168,12 @@
           }
         },
         "durationHuman": {
+          "id": "#technicalDurationHuman",
           "type": "string",
           "pattern": "([0-9]+:|)[0-5][0-9]:[0-5][0-9].[0-9]{3}"
         },
         "signalNotes": {
+          "id": "#technicalSignalNotes",
           "type": "string"
         }
       }
