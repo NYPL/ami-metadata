@@ -75,7 +75,7 @@
 			"numberOfAudioTracks": 4,
 			"trackConfiguration": "full-track",
 			"designatedSpeed": {
-				"measure": ".3209 (Standard)",
+				"measure": 0.3209,
 				"unit": "ips"
 			},
 			"audioBitDepth": {
@@ -98,7 +98,7 @@
 			"manufacturer": "Manufacturer B",
 			"model": "Model XYZ",
 			"speed": {
-				"measure": ".3209 (Standard)",
+				"measure": 0.3209,
 				"unit": "ips"
 			}
 		},

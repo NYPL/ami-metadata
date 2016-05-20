@@ -210,7 +210,11 @@
             "numberOfAudioTracks": {
               "enum": [
                 4,
-                "n/a"
+                8,
+                16,
+                32,
+                "n/a",
+                "unknown"
               ]
             },
             "trackConfiguration": {
@@ -236,7 +240,7 @@
                     3.75,
                     1.875,
                     0.9375,
-                    "not specified"
+                    "unknown"
                   ]
                 },
                 "unit": {
@@ -319,20 +323,14 @@
                 "half-track",
                 "two-track",
                 "quarter-track",
-                "three-track",
-                "four-track",
-                "eight-track",
-                "sixteen-track",
-                "twenty-four-track",
-                "unknown"
+                "four-track"
               ]
             },
             "noiseReduction": {
               "enum": [
                 "Dolby B",
                 "Dolby C",
-                "n/a",
-                "unknown"
+                "n/a"
               ]
             },
             "eq": {
@@ -340,8 +338,7 @@
                 "Type I",
                 "Type II",
                 "Type III",
-                "Type IV",
-                "unknown"
+                "Type IV"
               ]
             },
             "speed": {

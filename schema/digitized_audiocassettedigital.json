@@ -205,12 +205,17 @@
                 "mono",
                 "surround",
                 "quadrophonic",
-                "binaural"
+                "binaural",
+                "unknown"
               ]
             },
             "numberOfAudioTracks": {
               "enum": [
                 4,
+                8,
+                16,
+                32,
+                "n/a",
                 "unknown"
               ]
             },
@@ -234,8 +239,8 @@
               "properties": {
                 "measure": {
                   "enum": [
-                    ".3209 (Standard)",
-                    ".16043 (Long Play)",
+                    0.3209,
+                    0.16043,
                     "unknown"
                   ]
                 },
@@ -364,9 +369,8 @@
               "properties": {
                 "measure": {
                   "enum": [
-                    ".3209 (Standard)",
-                    ".16043 (Long Play)",
-                    "unknown"
+                    0.3209,
+                    0.16043
                   ]
                 },
                 "unit": {
