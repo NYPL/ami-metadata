@@ -146,7 +146,7 @@
           "additionalProperties": false,
           "required": [
             "stockManufacturer",
-            "discDiameter",
+            "diameter",
             "dyeLayer",
             "reflectiveLayer",
             "dataCapacity"
@@ -155,7 +155,7 @@
             "stockManufacturer": {
               "type": "string"
             },
-            "discDiameter": {
+            "diameter": {
               "type": "object",
               "additionalProperties": false,
               "required": [
@@ -212,7 +212,7 @@
                 },
                 "unit": {
                   "enum": [
-                    "gb"
+                    "GB"
                   ]
                 }
               }

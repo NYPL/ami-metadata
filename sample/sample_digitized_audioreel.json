@@ -52,7 +52,7 @@
 			"partNumber": 1
 		},
 		"physicalDescription": {
-			"reelDiameter": {
+			"diameter": {
 				"measure": 7,
 				"unit": "in"
 			},

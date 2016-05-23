@@ -53,7 +53,7 @@
 		},
 		"physicalDescription": {
 			"stockManufacturer": "Manufacturer A",
-			"discDiameter": {
+			"diameter": {
 				"measure": 4.7,
 				"unit": "in"
 			},
@@ -61,7 +61,7 @@
 			"reflectiveLayer": "silver",
 			"dataCapacity": {
 				"measure": 4.7,
-				"unit": "gb"
+				"unit": "GB"
 			}
 		},
 		"contentSpecifications": {

@@ -26,7 +26,6 @@
         "dateCreated",
         "fileFormat",
         "audioCodec",
-        "videoCodec",
         "fileSize",
         "durationMilli",
         "durationHuman"
@@ -136,7 +135,7 @@
           "type": "object",
           "additionalProperties": false,
           "required": [
-            "reelDiameter",
+            "diameter",
             "stockManufacturer",
             "stockProductID",
             "tapeWidth",
@@ -145,7 +144,7 @@
             "oxideMaterial"
           ],
           "properties": {
-            "reelDiameter": {
+            "diameter": {
               "type": "object",
               "additionalProperties": false,
               "required": [
@@ -388,8 +387,7 @@
                 "four-track",
                 "eight-track",
                 "sixteen-track",
-                "twenty-four-track",
-                "unknown"
+                "twenty-four-track"
               ]
             },
             "operatingLevel": {
@@ -430,15 +428,13 @@
                 "DBX I",
                 "DBX II",
                 "Tel Com/High Com",
-                "n/a",
-                "unknown"
+                "n/a"
               ]
             },
             "eq": {
               "enum": [
                 "NAB",
-                "IEC",
-                "not specified"
+                "IEC"
               ]
             },
             "speed": {

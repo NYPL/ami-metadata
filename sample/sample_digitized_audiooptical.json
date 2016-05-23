@@ -53,7 +53,7 @@
 		},
 		"physicalDescription": {
 			"stockManufacturer": "Manufacturer A",
-			"discDiameter": {
+			"diameter": {
 				"measure": 4.7,
 				"unit": "in"
 			},

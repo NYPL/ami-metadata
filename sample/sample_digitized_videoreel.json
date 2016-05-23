@@ -51,7 +51,7 @@
 			"partNumber": 1
 		},
 		"physicalDescription": {
-			"reelDiameter": {
+			"diameter": {
 				"measure": 10.5,
 				"unit": "in"
 			},

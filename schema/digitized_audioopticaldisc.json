@@ -135,7 +135,7 @@
           "additionalProperties": false,
           "required": [
             "stockManufacturer",
-            "discDiameter",
+            "diameter",
             "dyeLayer",
             "reflectiveLayer"
           ],
@@ -143,7 +143,7 @@
             "stockManufacturer": {
               "type": "string"
             },
-            "discDiameter": {
+            "diameter": {
               "type": "object",
               "additionalProperties": false,
               "required": [
