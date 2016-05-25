@@ -73,11 +73,32 @@
           "pattern": "33433\\d{9}"
         },
         "divisionCode": {
-          "type": "string",
-          "pattern": "^[a-zA-Z]{3}$"
+          "enum": [
+            "myt",
+            "myd",
+            "mym",
+            "myh",
+            "scb",
+            "scd",
+            "mae",
+            "maf",
+            "mao",
+            "axv"
+          ]
         },
         "vernacularDivisionCode": {
-          "type": "string"
+          "enum": [
+            "THE",
+            "DAN",
+            "MUS",
+            "RHA",
+            "SCL",
+            "SCM",
+            "BRG",
+            "JWS",
+            "MSS",
+            "NYPLarch"
+          ]
         },
         "projectCode": {
           "type": "string"
