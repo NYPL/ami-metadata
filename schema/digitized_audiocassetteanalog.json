@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "Digitized Audio Analog Cassette Schema",
-  "id": "digitized_audioanalogcassette",
+  "id": "digitized_audiocassetteanalog",
   "description": "Definitions for audio analog cassette fields",
   "type": "object",
   "additionalProperties": false,
