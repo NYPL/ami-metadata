@@ -9,6 +9,8 @@
     { "$ref": "digitized_audioreel" },
     { "$ref": "digitized_audioanalogcassette" },
     { "$ref": "digitized_audiodigitalcassette" },
+    { "$ref": "digitized_audiogrooveddisc" },
+    { "$ref": "digitized_audiogroovedcylinder" },
     { "$ref": "digitized_videoopticaldisc" },
     { "$ref": "digitized_videocassette" },
     { "$ref": "digitized_videoreel" }

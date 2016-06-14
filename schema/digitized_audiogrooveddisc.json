@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "Digitized Audio Optical Disc Schema",
-  "id": "digitized_audioopticaldisc",
-  "description": "Definitions for audio optical fields",
+  "title": "Digitized Audio Grooved Disc Schema",
+  "id": "digitized_audiogrooveddisc",
+  "description": "Definitions for audio grooved disc fields",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -81,7 +81,7 @@
           ],
           "properties": {
             "type": {
-              "enum": [ "audio grooved cylinder" ]
+              "enum": [ "audio grooved disc" ]
             },
             "format": {
               "enum": [
@@ -139,12 +139,18 @@
           "additionalProperties": false,
           "required": [
             "stockManufacturer",
+            "stockProductID",
             "diameter",
-            "dyeLayer",
-            "reflectiveLayer"
+            "surfaceMaterial",
+            "baseMaterial",
+            "grooveWidth",
+            "grooveOrientation"
           ],
           "properties": {
             "stockManufacturer": {
+              "type": "string"
+            },
+            "stockProductID": {
               "type": "string"
             },
             "diameter": {
@@ -208,7 +214,7 @@
                 "coarse",
                 "microgroove"
               ]
-            },
+            }
           }
         },
         "audioRecording": {
@@ -238,7 +244,7 @@
               "properties": {
                 "measure": {
                   "enum": [
-                    33
+                    33,
                     45,
                     70,
                     71.29,
@@ -277,6 +283,7 @@
       "additionalProperties": false,
       "required": [
         "playbackDevice",
+        "analogDigitalConverter",
         "captureSoftware"
       ],
       "properties": {
@@ -287,7 +294,11 @@
             "serialNumber",
             "manufacturer",
             "model",
-            "speed"
+            "speed",
+            "trackingWeight",
+            "phonoArm",
+            "phonoCartridge",
+            "phonoPreamp"
           ],
           "properties": {
             "id":  {
@@ -312,7 +323,7 @@
               "properties": {
                 "measure": {
                   "enum": [
-                    33
+                    33,
                     45,
                     70,
                     71.29,
@@ -337,7 +348,7 @@
               ],
               "properties": {
                 "measure": {
-                  "type": "numeric"
+                  "type": "number"
                 },
                 "unit": {
                   "enum": [
@@ -384,12 +395,12 @@
                 },
                 "stylusShape": {
                   "enum": [
-                    "elliptical"
+                    "elliptical",
                     "truncated elliptical",
                     "conical",
                     "truncated conical",
                     "Edison C",
-                    "spherical",
+                    "spherical"
                   ]
                 },
                 "stylusSize": {
@@ -401,7 +412,7 @@
                   ],
                   "properties": {
                     "measure": {
-                      "type": "numeric"
+                      "type": "number"
                     },
                     "unit": {
                       "enum": [
@@ -412,7 +423,7 @@
                 }
               }
             },
-            "phonoPreamp"
+            "phonoPreamp":{
               "serialNumber": {
                 "type": "string"
               },
@@ -494,7 +505,11 @@
                   }
                 }
               }
+            }
           }
+        },
+        "analogDigitalConverter": {
+          "$ref": "fields#analogDigitalConverter"
         },
         "captureSoftware": {
           "$ref": "fields#captureSoftware"

@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "Digitized Audio Optical Disc Schema",
-  "id": "digitized_audioopticaldisc",
-  "description": "Definitions for audio optical fields",
+  "title": "Digitized Audio Grooved Cylinder Schema",
+  "id": "digitized_audiogroovedcylinder",
+  "description": "Definitions for audio grooved cylinder fields",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -81,7 +81,7 @@
           ],
           "properties": {
             "type": {
-              "enum": [ "audio grooved disc" ]
+              "enum": [ "audio grooved cylinder" ]
             },
             "format": {
               "enum": [
@@ -132,13 +132,19 @@
           "additionalProperties": false,
           "required": [
             "stockManufacturer",
+            "stockProductID",
             "diameter",
+            "length",
             "baseMaterial",
             "surfaceMaterial",
             "grooveWidth",
+            "grooveOrientation"
           ],
           "properties": {
             "stockManufacturer": {
+              "type": "string"
+            },
+            "stockProductID": {
               "type": "string"
             },
             "diameter": {
@@ -150,7 +156,7 @@
               ],
               "properties": {
                 "measure": {
-                  "type": "numeric"
+                  "type": "number"
                 },
                 "unit": {
                   "enum": [
@@ -159,7 +165,7 @@
                 }
               }
             },
-            "diameter": {
+            "length": {
               "type": "object",
               "additionalProperties": false,
               "required": [
@@ -168,7 +174,7 @@
               ],
               "properties": {
                 "measure": {
-                  "type": "numeric"
+                  "type": "number"
                 },
                 "unit": {
                   "enum": [
@@ -203,15 +209,14 @@
                 "coarse",
                 "microgroove"
               ]
-            },
+            }
           }
         },
         "audioRecording": {
           "type": "object",
           "additionalProperties": false,
           "required": [
-            "audioSoundField",
-            "designatedSpeed"
+            "audioSoundField"
           ],
           "properties": {
             "audioSoundField": {
@@ -245,6 +250,7 @@
       "additionalProperties": false,
       "required": [
         "playbackDevice",
+        "analogDigitalConverter",
         "captureSoftware"
       ],
       "properties": {
@@ -254,7 +260,11 @@
           "required": [
             "serialNumber",
             "manufacturer",
-            "model"
+            "model",
+            "speed",
+            "trackingWeight",
+            "phonoCartridge",
+            "phonoPreamp"
           ],
           "properties": {
             "id":  {
@@ -268,8 +278,178 @@
             },
             "model": {
               "$ref": "fields#playbackDeviceModel"
+            },
+
+            "speed": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "type": "number"
+                },
+                "unit": {
+                  "enum": [
+                    "rpm"
+                  ]
+                }
+              }
+            },
+            "trackingWeight": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "type": "number"
+                },
+                "unit": {
+                  "enum": [
+                    "g"
+                  ]
+                }
+              }
+            },
+            "phonoCartridge": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "manufacturer",
+                "model",
+                "stylusShape",
+                "stylusSize"
+              ],
+              "properties": {
+                "manufacturer": {
+                  "type": "string"
+                },
+                "model": {
+                  "type": "string"
+                },
+                "stylusShape": {
+                  "enum": [
+                    "elliptical",
+                    "truncated elliptical",
+                    "conical",
+                    "truncated conical",
+                    "Edison C",
+                    "spherical"
+                  ]
+                },
+                "stylusSize": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "measure",
+                    "unit"
+                  ],
+                  "properties": {
+                    "measure": {
+                      "type": "number"
+                    },
+                    "unit": {
+                      "enum": [
+                        "mils"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "phonoPreamp":{
+              "serialNumber": {
+                "type": "string"
+              },
+              "manufacturer": {
+                "type": "string"
+              },
+              "model": {
+                "type": "string"
+              },
+              "eq": {
+                "enum": [
+                  "NAB LP",
+                  "RIAA",
+                  "AES LP",
+                  "CCIR LP",
+                  "FFRR LP",
+                  "NAB 78",
+                  "Decca",
+                  "FFRR 78",
+                  "HMV",
+                  "flat"
+                ]
+              },
+              "eqRolloff": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "measure",
+                  "unit"
+                ],
+                "properties": {
+                  "measure": {
+                    "enum": [
+                      0,
+                      -5,
+                      -6,
+                      -7,
+                      -8.5,
+                      -10,
+                      -12,
+                      -14,
+                      -16,
+                      -18
+                    ]
+                  },
+                  "unit": {
+                    "enum": [
+                      "dB"
+                    ]
+                  }
+                }
+              },
+              "eqTurnover": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "measure",
+                  "unit"
+                ],
+                "properties": {
+                  "measure": {
+                    "enum": [
+                      0,
+                      150,
+                      200,
+                      250,
+                      300,
+                      375,
+                      400,
+                      500,
+                      629,
+                      750,
+                      1000
+                    ]
+                  },
+                  "unit": {
+                    "enum": [
+                      "Hz"
+                    ]
+                  }
+                }
+              }
             }
           }
+        },
+        "analogDigitalConverter": {
+          "$ref": "fields#analogDigitalConverter"
         },
         "captureSoftware": {
           "$ref": "fields#captureSoftware"
