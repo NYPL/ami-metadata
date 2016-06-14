@@ -11,8 +11,10 @@ All common fields are defined in fields.json. Schema for media types at a specif
 
 ## Media Types
 
-* Audio Analog Cassette
-* Audio Digital Cassette
+* Audio Cassette Analog
+* Audio Cassette Digital
+* Audio Grooved Cylinder
+* Audio Grooved Disc
 * Audio Optical Disc
 * Audio Analog Reel
 * Video Cassette
@@ -21,9 +23,6 @@ All common fields are defined in fields.json. Schema for media types at a specif
 
 To Be Defined
 
-* Audio Grooved Belt
-* Audio Grooved Cylinder
-* Audio Grooved Disc
 * Audio Wire
 * Film
 
