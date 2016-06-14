@@ -96,6 +96,7 @@
 				"measure": 0.5,
 				"unit": "g"
 			},
+			"groovedWallPlayback": "left + right",
 			"phonoPreamp": {
 				"serialNumber": "xyz123",
 				"manufacturer": "Manufacturer H",

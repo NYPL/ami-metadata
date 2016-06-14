@@ -296,6 +296,7 @@
             "model",
             "speed",
             "trackingWeight",
+            "groovedWallPlayback",
             "phonoArm",
             "phonoCartridge",
             "phonoPreamp"
@@ -356,6 +357,15 @@
                   ]
                 }
               }
+            },
+            "groovedWallPlayback": {
+              "enum": [
+                "left only",
+                "right only",
+                "left + right",
+                "left - right",
+                "left and right discrete"
+              ]
             },
             "phonoArm": {
               "type": "object",

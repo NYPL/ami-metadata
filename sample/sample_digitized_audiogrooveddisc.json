@@ -85,11 +85,6 @@
 			},
 			"phonoArm": {
 				"serialNumber": "xyz123",
-				"manufacturer": "Manufacturer F",
-				"model": "Model XYZ"
-			},
-			"phonoArm": {
-				"serialNumber": "xyz123",
 				"manufacturer": "Manufacturer I",
 				"model": "Model XYZ"
 			},
@@ -106,6 +101,7 @@
 				"measure": 0.5,
 				"unit": "g"
 			},
+			"groovedWallPlayback": "left + right",
 			"phonoPreamp": {
 				"serialNumber": "xyz123",
 				"manufacturer": "Manufacturer H",
