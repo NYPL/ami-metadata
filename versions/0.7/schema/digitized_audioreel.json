@@ -93,12 +93,7 @@
               ]
             },
             "generation": {
-              "enum": [
-                "unknown",
-                "Archive Original",
-                "Preservation Master",
-                "Copy"
-              ]
+              "type": "string"
             },
             "volumeNumber": {
               "type": "number",
@@ -205,8 +200,11 @@
               ],
               "properties": {
                 "measure": {
-                  "type": "number",
-                  "multipleOf": 0.5
+                  "enum": [
+                    0.5,
+                    1,
+                    1.5
+                  ]
                 },
                 "unit": {
                   "enum": [
@@ -263,7 +261,10 @@
             },
             "numberOfAudioTracks": {
               "enum": [
+                1,
+                2,
                 3,
+                4,
                 8,
                 16,
                 24,
@@ -274,13 +275,13 @@
               "enum": [
                 "full-track",
                 "half-track",
-                "two-track",
+                "2 track",
                 "quarter-track",
-                "three-track",
-                "four-track",
-                "eight-track",
-                "sixteen-track",
-                "twenty-four-track",
+                "3 track",
+                "4 track",
+                "8 track",
+                "16 track",
+                "24 track",
                 "unknown"
               ]
             },
@@ -324,7 +325,7 @@
             "designatedEQ": {
               "enum": [
                 "NAB",
-                "IEC",
+                "IEC/CCIR",
                 "unknown"
               ]
             }
@@ -381,13 +382,13 @@
               "enum": [
                 "full-track",
                 "half-track",
-                "two-track",
+                "2 track",
                 "quarter-track",
-                "three-track",
-                "four-track",
-                "eight-track",
-                "sixteen-track",
-                "twenty-four-track"
+                "3 track",
+                "4 track",
+                "8 track",
+                "16 track",
+                "24 track"
               ]
             },
             "operatingLevel": {

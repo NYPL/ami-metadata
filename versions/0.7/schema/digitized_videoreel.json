@@ -109,12 +109,7 @@
               ]
             },
             "generation": {
-              "enum": [
-                "unknown",
-                "Archive Original",
-                "Preservation Master",
-                "Copy"
-              ]
+              "type": "string"
             },
             "volumeNumber": {
               "type": "number",

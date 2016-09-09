@@ -92,12 +92,7 @@
               ]
             },
             "generation": {
-              "enum": [
-                "unknown",
-                "Archive Original",
-                "Preservation Master",
-                "Copy"
-              ]
+              "type": "string"
             },
             "volumeNumber": {
               "type": "number",
@@ -135,9 +130,7 @@
           "additionalProperties": false,
           "required": [
             "stockManufacturer",
-            "diameter",
-            "dyeLayer",
-            "reflectiveLayer"
+            "diameter"
           ],
           "properties": {
             "stockManufacturer": {
@@ -179,6 +172,31 @@
                 "aluminum",
                 "unknown"
               ]
+            },
+            "dataCapacity": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "enum": [
+                    155,
+                    185,
+                    210,
+                    650,
+                    700,
+                    "unknown"
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "MiB"
+                  ]
+                }
+              }
             }
           }
         },

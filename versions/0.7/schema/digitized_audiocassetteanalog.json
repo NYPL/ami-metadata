@@ -94,12 +94,7 @@
               ]
             },
             "generation": {
-              "enum": [
-                "unknown",
-                "Archive Original",
-                "Preservation Master",
-                "Copy"
-              ]
+              "type": "string"
             },
             "volumeNumber": {
               "type": "number",
@@ -139,8 +134,6 @@
             "stockManufacturer",
             "stockProductID",
             "tapeWidth",
-            "tapeThickness",
-            "baseMaterial",
             "oxideMaterial"
           ],
           "properties": {
@@ -212,18 +205,11 @@
               ]
             },
             "oxideMaterial": {
-              "enum": [
-                "ferric",
-                "chromium",
-                "ferrichrome",
-                "metal",
+              "enum": ["Type I",
+                "Type II",
+                "Type III",
+                "Type IV",
                 "unknown"
-              ]
-            },
-            "backcoatMaterial": {
-              "enum": [
-                "yes",
-                "no"
               ]
             }
           }
@@ -236,8 +222,7 @@
             "numberOfAudioTracks",
             "trackConfiguration",
             "designatedSpeed",
-            "designatedNoiseReduction",
-            "designatedEQ"
+            "designatedNoiseReduction"
           ],
           "properties": {
             "audioSoundField": {
@@ -252,6 +237,8 @@
             },
             "numberOfAudioTracks": {
               "enum": [
+                1,
+                2,
                 4,
                 8,
                 16,

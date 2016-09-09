@@ -96,12 +96,7 @@
               ]
             },
             "generation": {
-              "enum": [
-                "unknown",
-                "Archive Original",
-                "Preservation Master",
-                "Copy"
-              ]
+              "type": "string"
             },
             "volumeNumber": {
               "type": "number",
@@ -141,8 +136,6 @@
             "stockManufacturer",
             "stockProductID",
             "tapeWidth",
-            "tapeThickness",
-            "baseMaterial",
             "oxideMaterial"
           ],
           "properties": {
@@ -221,12 +214,6 @@
                 "metal",
                 "unknown"
               ]
-            },
-            "backcoatMaterial": {
-              "enum": [
-                "yes",
-                "no"
-              ]
             }
           }
         },
@@ -254,6 +241,8 @@
             },
             "numberOfAudioTracks": {
               "enum": [
+                1,
+                2,
                 4,
                 8,
                 16,
