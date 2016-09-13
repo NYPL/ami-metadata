@@ -253,7 +253,7 @@
                 "half-track",
                 "two-track",
                 "quarter-track",
-                "four-track",
+                "4 track",
                 "unknown"
               ]
             },
@@ -351,9 +351,9 @@
               "enum": [
                 "full-track",
                 "half-track",
-                "two-track",
                 "quarter-track",
-                "four-track"
+                "2 track",
+                "4 track"
               ]
             },
             "noiseReduction": {

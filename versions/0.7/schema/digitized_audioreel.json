@@ -148,12 +148,8 @@
               ],
               "properties": {
                 "measure": {
-                  "enum": [
-                    3,
-                    5,
-                    7,
-                    10.5
-                  ]
+                  "type": "number",
+                  "multipleOf": 0.25
                 },
                 "unit": {
                   "enum": [
@@ -275,8 +271,8 @@
               "enum": [
                 "full-track",
                 "half-track",
-                "2 track",
                 "quarter-track",
+                "2 track",
                 "3 track",
                 "4 track",
                 "8 track",
@@ -382,8 +378,8 @@
               "enum": [
                 "full-track",
                 "half-track",
-                "2 track",
                 "quarter-track",
+                "2 track",
                 "3 track",
                 "4 track",
                 "8 track",

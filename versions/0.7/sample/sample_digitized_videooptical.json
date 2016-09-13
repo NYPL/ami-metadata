@@ -71,7 +71,7 @@
 		},
 		"audioRecording": {
 			"audioSoundField": "stereo",
-			"numberOfAudioTracks": 2
+			"numberOfAudioTracks": 0
 		},
 		"notes": {
 			"physicalConditionPreShipNotes": "reel show XYZ damage",
