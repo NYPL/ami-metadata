@@ -35,7 +35,9 @@
           "$ref": "fields#technicalFilename"
         },
         "extension": {
-          "enum": [ "WAV" ]
+          "enum": [
+             "WAV", "wav"
+           ]
         },
         "dateCreated": {
           "$ref": "fields#technicalDateCreated"
@@ -44,7 +46,9 @@
           "enum": [ "BWF" ]
         },
         "audioCodec": {
-          "enum": [ "PCM" ]
+          "enum": [
+            "PCM", "pcm"
+          ]
         },
         "fileSize": {
           "$ref": "fields#technicalFileSize"

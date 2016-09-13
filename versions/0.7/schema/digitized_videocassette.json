@@ -37,8 +37,8 @@
         },
         "extension": {
           "enum": [
-            "MOV",
-            "MP4"
+            "MOV", "mov",
+            "MP4", "mp4"
           ]
         },
         "dateCreated": {
@@ -49,33 +49,33 @@
         },
         "audioCodec": {
           "enum": [
-            "PCM",
-            "AAC"
+            "PCM", "pcm",
+            "AAC", "aac"
           ]
         },
         "videoCodec": {
           "enum": [
-            "2VUY",
-            "AP4H",
-            "APCH",
-            "APCN",
-            "APCS",
-            "AVC1",
-            "CFHD",
-            "DVC",
-            "DVH3",
-            "DVH6",
-            "DVHP",
-            "DVHQ",
-            "HDV2",
-            "HDV6",
-            "ICOD",
-            "V210",
-            "XD5F",
-            "XDV2",
-            "XDVB",
-            "XDVD",
-            "H264"
+            "2VUY", "2vuy",
+            "AP4H", "ap4h",
+            "APCH", "apch",
+            "APCN", "apcn",
+            "APCS", "apcs",
+            "AVC1", "avc1",
+            "CFHD", "cfhd",
+            "DVC", "dvc",
+            "DVH3", "dvh3",
+            "DVH6", "dvh6",
+            "DVHP", "dvhp",
+            "DVHQ", "dvhq",
+            "HDV2", "hdv2",
+            "HDV6", "hdv6",
+            "ICOD", "icod",
+            "V210", "v210",
+            "XD5F", "xd5f",
+            "XDV2", "xdv2",
+            "XDVB", "xdvb",
+            "XDVD", "xdvd",
+            "H264", "h264"
           ]
         },
         "fileSize": {

@@ -37,8 +37,8 @@
         },
         "extension": {
           "enum": [
-            "ISO",
-            "MP4"
+            "ISO", "iso",
+            "MP4", "mp4"
           ]
         },
         "dateCreated": {
@@ -49,14 +49,14 @@
         },
         "audioCodec": {
           "enum": [
-            "AAC",
+            "AAC", "aac",
             "unknown"
           ]
         },
         "videoCodec": {
           "enum": [
-            "H264",
-            "ISO 9660"
+            "ISO 9660",
+            "H264", "h264"
           ]
         },
         "fileSize": {

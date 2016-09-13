@@ -37,8 +37,8 @@
         },
         "extension": {
           "enum": [
-            "MOV",
-            "MP4"
+            "MOV", "mov",
+            "MP4", "mp4"
           ]
         },
         "dateCreated": {
@@ -49,14 +49,14 @@
         },
         "audioCodec": {
           "enum": [
-            "PCM",
-            "AAC"
+            "PCM", "pcm",
+            "AAC", "aac"
           ]
         },
         "videoCodec": {
           "enum": [
-            "V210",
-            "H264"
+            "V210", "v210",
+            "H264", "h264"
           ]
         },
         "fileSize": {
