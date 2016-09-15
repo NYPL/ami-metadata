@@ -27,12 +27,12 @@ To Be Defined
 * Film
 
 ## Usage
-To validate a single sample json file with [ajv](https://www.npmjs.com/package/ajv):
+To validate a single json file against a version of the schema with [ajv](https://www.npmjs.com/package/ajv):
 ```
-ajv validate -s schema/digitized_audioreel.json -r schema/fields.json -d sample/sample_digitized_audioreel.json
+ajv validate -s versions/0.7/schema/digitized_audioreel.json -r versions/0.7/schema/fields.json -d /path/to/sample_digitized_audioreel.json
 ```
 
-To validate all of the sample json files with [ajv](https://www.npmjs.com/package/ajv):
+To validate all of the sample json files against their version of the schema with [ajv](https://www.npmjs.com/package/ajv):
 ```
-ajv validate -s schema/digitized.json -r "schema/*.json" -d "sample/*.json"
+ajv validate -s versions/0.7/schema/digitized.json -r "versions/0.7/schema/*.json" -d "versions/0.7/sample/*.json"
 ```
