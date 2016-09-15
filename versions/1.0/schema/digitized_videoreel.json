@@ -82,7 +82,6 @@
       "additionalProperties": true,
       "required": [
         "object",
-        "subObject",
         "physicalDescription",
         "contentSpecifications",
         "audioRecording"
