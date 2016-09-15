@@ -257,8 +257,8 @@
               "enum": [
                 "full-track",
                 "half-track",
-                "two-track",
                 "quarter-track",
+                "2 track",
                 "4 track",
                 "unknown"
               ]
@@ -326,6 +326,7 @@
       "additionalProperties": false,
       "required": [
         "playbackDevice",
+        "analogDigitalConverter",
         "captureSoftware"
       ],
       "properties": {
