@@ -2,7 +2,7 @@
 	"asset": {
 		"referenceFilename": "myh_abc123_v01_pm.wav",
 		"fileRole": "pm",
-		"schemaVersion": "1.0.0"
+		"schemaVersion": "1.1.0"
 	},
 	"bibliographic": {
 		"primaryID": "abc123",
