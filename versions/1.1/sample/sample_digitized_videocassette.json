@@ -1,0 +1,124 @@
+{
+	"asset": {
+		"referenceFilename": "myh_abc123_v01_pm.mov",
+		"fileRole": "pm",
+		"schemaVersion": "1.0.0"
+	},
+	"bibliographic": {
+		"primaryID": "abc123",
+		"classmark": "*ABC 123",
+		"formerClassmark": "*NCOW 123",
+		"nonCMSID": "string123",
+		"cmsItemID": "123456",
+		"cmsCollectionID": "string123",
+		"catalogBNumber": "B12345678",
+		"mssID": "12345",
+		"barcode": "33433123456789",
+		"divisionCode": "myh",
+		"vernacularDivisionCode": "DAN",
+		"projectCode": "projectXYZ",
+		"title": "Dance Video 1",
+		"date": "Late 1970s",
+		"contentNotes": "media is actually Dance Video 2 instead of Dance Video 1"
+	},
+	"technical": {
+		"filename": "myh_abc123_v01_pm",
+		"extension": "mov",
+		"dateCreated": "2016-01-01",
+		"fileFormat": "MOV file",
+		"audioCodec": "PCM",
+		"videoCodec": "V210",
+		"fileSize": {
+			"measure": 100000000000,
+			"unit": "B"
+		},
+		"durationMilli": {
+			"measure": 3600000,
+			"unit": "ms"
+		},
+		"durationHuman": "1:00:00.000",
+		"signalNotes": "signal undreadable at point 123"
+	},
+	"source": {
+		"object": {
+			"type": "video cassette",
+			"format": "U-matic",
+			"volumeNumber": 1
+		},
+		"subObject": {
+			"faceNumber": 1,
+			"regionNumber": 1,
+			"partNumber": 1
+		},
+		"physicalDescription": {
+			"stockLength": {
+				"measure": 60,
+				"unit": "min"
+			},
+			"stockManufacturer": "Sony",
+			"stockProductID": "KCA-60",
+			"tapeWidth": {
+				"measure": 0.75,
+				"unit": "in"
+			},
+			"baseMaterial": "polyester",
+			"oxideMaterial": "ferric oxide"
+		},
+		"contentSpecifications": {
+			"broadcastStandard": "SECAM",
+			"colorBW": "b/w"
+		},
+		"audioRecording": {
+			"audioSoundField": "mono",
+			"numberOfAudioTracks": 1
+		},
+		"notes": {
+			"physicalConditionPreShipNotes": "cassette shows XYZ damage",
+			"physicalConditionDigitizationNotes": "tape shows ABC damage"
+		}
+	},
+	"digitizationProcess": {
+		"playbackDevice": {
+			"serialNumber": "xyz123",
+			"manufacturer": "Manufacturer B",
+			"model": "Model XYZ"
+		},
+		"timeBaseCorrector": {
+			"id": "id12345",
+			"serialNumber": "12345",
+      "manufacturer": "Manufacturer C",
+      "model": "Model XYZ"
+		},
+		"analogDigitalConverter" : {
+      "id": "id12345",
+      "serialNumber": "id12345abc",
+      "manufacturer": "Manufacturere D",
+      "model": "Model XYZ"
+		},
+		"captureSoftware": {
+			"manufacturer": "Manufacturer E",
+			"productName": "Product XYZ",
+			"version": "Version 123",
+			"platform": "OS XYZ"
+		},
+		"notes": {
+			"processNotes": "required intervention for reason xyz"
+		}
+	},
+	"digitizer": {
+		"operator": {
+			"firstName": "Doe",
+			"lastName": "Jane"
+		},
+		"organization": {
+			"name": "Organization XYZ",
+      "address": {
+        "street1": "123 ABC St",
+        "street2": "Suite 1234",
+        "city":    "Anytown",
+        "state":   "ST",
+        "postalCode": "12345"
+      }
+		}
+	}
+}

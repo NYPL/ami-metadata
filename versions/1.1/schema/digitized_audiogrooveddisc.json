@@ -1,0 +1,538 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Digitized Audio Grooved Disc Schema",
+  "id": "digitized_audiogrooveddisc",
+  "description": "Definitions for audio grooved disc fields",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "asset",
+    "bibliographic",
+    "technical",
+    "source",
+    "digitizationProcess",
+    "digitizer"
+  ],
+  "properties": {
+    "asset": { "$ref": "fields#asset" },
+    "bibliographic": { "$ref": "fields#bibliographic" },
+    "technical": {
+      "id": "technical",
+      "type": "object",
+      "additionalProperties": false,
+      "require": [
+        "filename",
+        "extension",
+        "dateCreated",
+        "fileFormat",
+        "audioCodec",
+        "fileSize",
+        "durationMilli",
+        "durationHuman"
+      ],
+      "properties": {
+        "filename": {
+          "$ref": "fields#technicalFilename"
+        },
+        "extension": {
+          "enum": [
+             "wav", "WAV"
+           ]
+        },
+        "dateCreated": {
+          "$ref": "fields#technicalDateCreated"
+        },
+        "fileFormat": {
+          "enum": [
+            "BWF", "bwf"
+          ]
+        },
+        "audioCodec": {
+          "enum": [
+            "PCM"
+          ]
+        },
+        "fileSize": {
+          "$ref": "fields#technicalFileSize"
+        },
+        "durationMilli": {
+          "$ref": "fields#technicalDurationMilli"
+        },
+        "durationHuman": {
+          "$ref": "fields#technicalDurationHuman"
+        },
+        "signalNotes": {
+          "$ref": "fields#technicalSignalNotes"
+        }
+      }
+    },
+    "source": {
+      "id": "source",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "object",
+        "subObject",
+        "physicalDescription",
+        "audioRecording"
+      ],
+      "properties": {
+        "object": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "type",
+            "format",
+            "volumeNumber"
+          ],
+          "properties": {
+            "type": {
+              "enum": [ "audio grooved disc" ]
+            },
+            "format": {
+              "enum": [
+                "disc, Edison Diamond Disc",
+                "disc, Edison Voicewriter",
+                "disc, flexible",
+                "disc, gelatin",
+                "disc, lacquer, glass base",
+                "disc, lacquer, metal base",
+                "disc, lacquer, paper base",
+                "disc, metal",
+                "disc, metal master",
+                "disc, other",
+                "disc, shellac",
+                "disc, vinyl"
+              ]
+            },
+            "generation": {
+              "type": "string"
+            },
+            "volumeNumber": {
+              "type": "number",
+              "multipleOf": 1.0
+            }
+          }
+        },
+        "subObject": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "faceNumber"
+          ],
+          "properties": {
+            "faceNumber": {
+              "type": "number",
+              "multipleOf": 1.0
+            },
+            "regionNumber": {
+              "type": "number",
+              "multipleOf": 1.0
+            },
+            "partNumber": {
+              "type": "number",
+              "multipleOf": 1.0
+            }
+          }
+        },
+        "physicalDescription": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "stockManufacturer",
+            "stockProductID",
+            "diameter",
+            "surfaceMaterial",
+            "baseMaterial",
+            "grooveWidth",
+            "grooveOrientation"
+          ],
+          "properties": {
+            "stockManufacturer": {
+              "type": "string"
+            },
+            "stockProductID": {
+              "type": "string"
+            },
+            "diameter": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "enum": [
+                    5.5,
+                    7,
+                    10,
+                    10.75,
+                    12,
+                    16,
+                    17.5,
+                    20
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "in"
+                  ]
+                }
+              }
+            },
+            "baseMaterial": {
+              "enum": [
+                "shellac",
+                "vinyl",
+                "aluminum",
+                "glass",
+                "paper",
+                "nickel-plated copper",
+                "zinc",
+                "unknown metal",
+                "unknown"
+              ]
+            },
+            "surfaceMaterial": {
+              "enum": [
+                "cellulose acetate",
+                "cellulose nitrate",
+                "celluloid",
+                "gelatin",
+                "none",
+                "unknown"
+              ]
+            },
+            "grooveOrientation": {
+              "enum": [
+                "lateral",
+                "vertical"
+              ]
+            },
+            "grooveWidth": {
+              "enum": [
+                "coarse",
+                "microgroove"
+              ]
+            }
+          }
+        },
+        "audioRecording": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "audioSoundField",
+            "designatedSpeed"
+          ],
+          "properties": {
+            "audioSoundField": {
+              "enum": [
+                "stereo",
+                "mono",
+                "quadrophonic",
+                "binaural",
+                "unknown"
+              ]
+            },
+            "designatedSpeed": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "enum": [
+                    33,
+                    45,
+                    70,
+                    71.29,
+                    76.59,
+                    78.26,
+                    80,
+                    "unknown"
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "rpm"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "notes": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "physicalConditionPreShipNotes": {
+              "type": "string"
+            },
+            "physicalConditionDigitizationNotes": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "digitizationProcess" : {
+      "id": "digitizationProcess",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "playbackDevice",
+        "analogDigitalConverter",
+        "captureSoftware"
+      ],
+      "properties": {
+        "playbackDevice": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "serialNumber",
+            "manufacturer",
+            "model",
+            "speed",
+            "trackingWeight",
+            "groovedWallPlayback",
+            "phonoArm",
+            "phonoCartridge",
+            "phonoPreamp"
+          ],
+          "properties": {
+            "id":  {
+              "$ref": "fields#playbackDeviceID"
+            },
+            "serialNumber": {
+              "$ref": "fields#playbackDeviceSerialNumber"
+            },
+            "manufacturer": {
+              "$ref": "fields#playbackDeviceManufacturer"
+            },
+            "model": {
+              "$ref": "fields#playbackDeviceModel"
+            },
+            "speed": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "enum": [
+                    33,
+                    45,
+                    70,
+                    71.29,
+                    76.59,
+                    78.26,
+                    80
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "rpm"
+                  ]
+                }
+              }
+            },
+            "trackingWeight": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "type": "number"
+                },
+                "unit": {
+                  "enum": [
+                    "g"
+                  ]
+                }
+              }
+            },
+            "groovedWallPlayback": {
+              "enum": [
+                "left only",
+                "right only",
+                "left + right",
+                "left - right",
+                "left and right discrete"
+              ]
+            },
+            "phonoArm": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "serialNumber",
+                "manufacturer",
+                "model"
+              ],
+              "properties": {
+                "serialNumber": {
+                  "type": "string"
+                },
+                "manufacturer": {
+                  "type": "string"
+                },
+                "model": {
+                  "type": "string"
+                }
+              }
+            },
+            "phonoCartridge": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "manufacturer",
+                "model",
+                "stylusShape",
+                "stylusSize"
+              ],
+              "properties": {
+                "manufacturer": {
+                  "type": "string"
+                },
+                "model": {
+                  "type": "string"
+                },
+                "stylusShape": {
+                  "enum": [
+                    "elliptical",
+                    "truncated elliptical",
+                    "conical",
+                    "truncated conical",
+                    "Edison C",
+                    "spherical"
+                  ]
+                },
+                "stylusSize": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "measure",
+                    "unit"
+                  ],
+                  "properties": {
+                    "measure": {
+                      "type": "number"
+                    },
+                    "unit": {
+                      "enum": [
+                        "mils"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "phonoPreamp":{
+              "serialNumber": {
+                "type": "string"
+              },
+              "manufacturer": {
+                "type": "string"
+              },
+              "model": {
+                "type": "string"
+              },
+              "eq": {
+                "enum": [
+                  "NAB LP",
+                  "RIAA",
+                  "AES LP",
+                  "CCIR LP",
+                  "FFRR LP",
+                  "NAB 78",
+                  "Decca",
+                  "FFRR 78",
+                  "HMV"
+                ]
+              },
+              "eqRolloff": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "measure",
+                  "unit"
+                ],
+                "properties": {
+                  "measure": {
+                    "enum": [
+                      0,
+                      -5,
+                      -6,
+                      -7,
+                      -8.5,
+                      -10,
+                      -12,
+                      -14,
+                      -16,
+                      -18
+                    ]
+                  },
+                  "unit": {
+                    "enum": [
+                      "dB"
+                    ]
+                  }
+                }
+              },
+              "eqTurnover": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "measure",
+                  "unit"
+                ],
+                "properties": {
+                  "measure": {
+                    "enum": [
+                      0,
+                      150,
+                      200,
+                      250,
+                      300,
+                      375,
+                      400,
+                      500,
+                      629,
+                      750,
+                      1000
+                    ]
+                  },
+                  "unit": {
+                    "enum": [
+                      "Hz"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "analogDigitalConverter": {
+          "$ref": "fields#analogDigitalConverter"
+        },
+        "captureSoftware": {
+          "$ref": "fields#captureSoftware"
+        },
+        "takeNumber": {
+          "$ref": "fields#takeNumber"
+        },
+        "notes": {
+          "$ref": "fields#processNotes"
+        }
+      }
+    },
+    "digitizer": { "$ref": "fields#digitizer" }
+  }
+}
