@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "Digitized Audio Analog Cassette Schema",
-  "id": "digitized_audiocassetteanalog",
-  "description": "Definitions for audio analog cassette fields",
+  "title": "Digitized Audio Reel Schema",
+  "id": "digitized_audioreel",
+  "description": "Definitions for audio reel fields",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -36,7 +36,7 @@
         },
         "extension": {
           "enum": [
-             "wav"
+            "wav", "WAV"
            ]
         },
         "dateCreated": {
@@ -44,12 +44,12 @@
         },
         "fileFormat": {
           "enum": [
-            "BWF"
+            "BWF", "bwf"
           ]
         },
         "audioCodec": {
           "enum": [
-            "PCM", "pcm"
+            "PCM"
           ]
         },
         "fileSize": {
@@ -87,15 +87,14 @@
           ],
           "properties": {
             "type": {
-              "enum": [ "audio cassette analog" ]
+              "enum": [ "audio reel" ]
             },
             "format": {
               "enum": [
-                "8-track",
-                "Compact cassette",
-                "Microcassette",
-                "Minicassette",
-                "audio cassette, other",
+                "half-inch open-reel audio",
+                "one-inch open-reel audio",
+                "quarter-inch open-reel audio",
+                "two-inch open-reel audio",
                 "unknown"
               ]
             },
@@ -137,13 +136,16 @@
           "type": "object",
           "additionalProperties": false,
           "required": [
+            "diameter",
             "stockManufacturer",
             "stockProductID",
             "tapeWidth",
+            "tapeThickness",
+            "baseMaterial",
             "oxideMaterial"
           ],
           "properties": {
-            "stockLength": {
+            "diameter": {
               "type": "object",
               "additionalProperties": false,
               "required": [
@@ -153,11 +155,11 @@
               "properties": {
                 "measure": {
                   "type": "number",
-                  "multipleOf": 1.0
+                  "multipleOf": 0.25
                 },
                 "unit": {
                   "enum": [
-                    "min"
+                    "in"
                   ]
                 }
               }
@@ -178,7 +180,10 @@
               "properties": {
                 "measure": {
                   "enum": [
-                    0.125
+                    0.25,
+                    0.5,
+                    1,
+                    2
                   ]
                 },
                 "unit": {
@@ -189,10 +194,19 @@
               }
             },
             "tapeThickness": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
               "properties": {
                 "measure": {
-                  "type": "number",
-                  "multipleOf": 0.5
+                  "enum": [
+                    0.5,
+                    1,
+                    1.5
+                  ]
                 },
                 "unit": {
                   "enum": [
@@ -211,11 +225,16 @@
               ]
             },
             "oxideMaterial": {
-              "enum": ["Type I",
-                "Type II",
-                "Type III",
-                "Type IV",
+              "enum": [
+                "ferric oxide",
+                "chromium dioxide",
                 "unknown"
+              ]
+            },
+            "backcoatMaterial": {
+              "enum": [
+                "yes",
+                "no"
               ]
             }
           }
@@ -228,7 +247,8 @@
             "numberOfAudioTracks",
             "trackConfiguration",
             "designatedSpeed",
-            "designatedNoiseReduction"
+            "designatedNoiseReduction",
+            "designatedEQ"
           ],
           "properties": {
             "audioSoundField": {
@@ -245,12 +265,12 @@
               "enum": [
                 1,
                 2,
+                3,
                 4,
                 8,
                 16,
-                32,
-                "n/a",
-                "unknown"
+                24,
+                "n/a"
               ]
             },
             "trackConfiguration": {
@@ -259,7 +279,11 @@
                 "half-track",
                 "quarter-track",
                 "2 track",
+                "3 track",
                 "4 track",
+                "8 track",
+                "16 track",
+                "24 track",
                 "unknown"
               ]
             },
@@ -273,6 +297,9 @@
               "properties": {
                 "measure": {
                   "enum": [
+                    30,
+                    15,
+                    7.5,
                     3.75,
                     1.875,
                     0.9375,
@@ -288,19 +315,19 @@
             },
             "designatedNoiseReduction": {
               "enum": [
+                "Dolby A",
                 "Dolby B",
-                "Dolby C",
-                "n/a",
+                "Dolby SR",
+                "DBX I",
+                "DBX II",
+                "Tel Com/High Com",
                 "unknown"
               ]
             },
             "designatedEQ": {
               "enum": [
-                "Type I",
-                "Type II",
-                "Type III",
-                "Type IV",
-                "n/a",
+                "NAB",
+                "IEC/CCIR",
                 "unknown"
               ]
             }
@@ -326,7 +353,6 @@
       "additionalProperties": false,
       "required": [
         "playbackDevice",
-        "analogDigitalConverter",
         "captureSoftware"
       ],
       "properties": {
@@ -360,22 +386,58 @@
                 "half-track",
                 "quarter-track",
                 "2 track",
-                "4 track"
+                "3 track",
+                "4 track",
+                "8 track",
+                "16 track",
+                "24 track"
               ]
+            },
+            "operatingLevel": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "enum": [
+                    185,
+                    200,
+                    224,
+                    250,
+                    280,
+                    315,
+                    320,
+                    355,
+                    400,
+                    450,
+                    500
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "nW/m"
+                  ]
+                }
+              }
             },
             "noiseReduction": {
               "enum": [
+                "Dolby A",
                 "Dolby B",
-                "Dolby C",
+                "Dolby SR",
+                "DBX I",
+                "DBX II",
+                "Tel Com/High Com",
                 "n/a"
               ]
             },
             "eq": {
               "enum": [
-                "Type I",
-                "Type II",
-                "Type III",
-                "Type IV"
+                "NAB",
+                "IEC"
               ]
             },
             "speed": {
@@ -388,9 +450,14 @@
               "properties": {
                 "measure": {
                   "enum": [
+                    30,
+                    15,
+                    7.5,
                     3.75,
                     1.875,
-                    0.9375
+                    0.9375,
+                    3.12,
+                    6.25
                   ]
                 },
                 "unit": {

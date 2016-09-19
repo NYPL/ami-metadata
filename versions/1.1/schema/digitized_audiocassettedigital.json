@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "Digitized Audio Analog Cassette Schema",
-  "id": "digitized_audiocassetteanalog",
-  "description": "Definitions for audio analog cassette fields",
+  "title": "AMI Vendor Audio Digital Cassette Schema",
+  "id": "digitized_audiocassettedigital",
+  "description": "Definitions for audio digital cassette fields",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -36,7 +36,7 @@
         },
         "extension": {
           "enum": [
-             "wav"
+             "wav", "WAV"
            ]
         },
         "dateCreated": {
@@ -44,12 +44,12 @@
         },
         "fileFormat": {
           "enum": [
-            "BWF"
+            "BWF", "bwf"
           ]
         },
         "audioCodec": {
           "enum": [
-            "PCM", "pcm"
+            "PCM"
           ]
         },
         "fileSize": {
@@ -87,15 +87,17 @@
           ],
           "properties": {
             "type": {
-              "enum": [ "audio cassette analog" ]
+              "enum": [ "audio cassette digital" ]
             },
             "format": {
               "enum": [
-                "8-track",
-                "Compact cassette",
-                "Microcassette",
-                "Minicassette",
-                "audio cassette, other",
+                "ADAT",
+                "DAT",
+                "DA-88",
+                "Digital Compact Cassette",
+                "Betamax/PCM",
+                "U-matic/PCM",
+                "Other cartridge",
                 "unknown"
               ]
             },
@@ -169,12 +171,6 @@
               "type": "string"
             },
             "tapeWidth": {
-              "type": "object",
-              "additionalProperties": false,
-              "required": [
-                "measure",
-                "unit"
-              ],
               "properties": {
                 "measure": {
                   "enum": [
@@ -189,6 +185,12 @@
               }
             },
             "tapeThickness": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
               "properties": {
                 "measure": {
                   "type": "number",
@@ -211,10 +213,11 @@
               ]
             },
             "oxideMaterial": {
-              "enum": ["Type I",
-                "Type II",
-                "Type III",
-                "Type IV",
+              "enum": [
+                "ferric",
+                "chromium",
+                "ferrichrome",
+                "metal",
                 "unknown"
               ]
             }
@@ -228,7 +231,8 @@
             "numberOfAudioTracks",
             "trackConfiguration",
             "designatedSpeed",
-            "designatedNoiseReduction"
+            "audioBitDepth",
+            "audioSamplingRate"
           ],
           "properties": {
             "audioSoundField": {
@@ -273,9 +277,8 @@
               "properties": {
                 "measure": {
                   "enum": [
-                    3.75,
-                    1.875,
-                    0.9375,
+                    0.3209,
+                    0.16043,
                     "unknown"
                   ]
                 },
@@ -286,23 +289,66 @@
                 }
               }
             },
-            "designatedNoiseReduction": {
-              "enum": [
-                "Dolby B",
-                "Dolby C",
-                "n/a",
-                "unknown"
-              ]
+            "audioBitDepth": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "enum": [
+                    8,
+                    16,
+                    18,
+                    20,
+                    24,
+                    32
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "bit"
+                  ]
+                }
+              }
             },
-            "designatedEQ": {
-              "enum": [
-                "Type I",
-                "Type II",
-                "Type III",
-                "Type IV",
-                "n/a",
-                "unknown"
-              ]
+            "audioSamplingRate": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "enum": [
+                    22500,
+                    32000,
+                    44056,
+                    44100,
+                    47925,
+                    48000,
+                    64000,
+                    88000,
+                    88112,
+                    88200,
+                    95904,
+                    96000,
+                    128000,
+                    176224,
+                    176400,
+                    191808,
+                    192000
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "hz"
+                  ]
+                }
+              }
             }
           }
         },
@@ -326,7 +372,6 @@
       "additionalProperties": false,
       "required": [
         "playbackDevice",
-        "analogDigitalConverter",
         "captureSoftware"
       ],
       "properties": {
@@ -337,8 +382,6 @@
             "serialNumber",
             "manufacturer",
             "model",
-            "tapeHeadType",
-            "eq",
             "speed"
           ],
           "properties": {
@@ -354,30 +397,6 @@
             "model": {
               "$ref": "fields#playbackDeviceModel"
             },
-            "tapeHeadType": {
-              "enum": [
-                "full-track",
-                "half-track",
-                "quarter-track",
-                "2 track",
-                "4 track"
-              ]
-            },
-            "noiseReduction": {
-              "enum": [
-                "Dolby B",
-                "Dolby C",
-                "n/a"
-              ]
-            },
-            "eq": {
-              "enum": [
-                "Type I",
-                "Type II",
-                "Type III",
-                "Type IV"
-              ]
-            },
             "speed": {
               "type": "object",
               "additionalProperties": false,
@@ -388,9 +407,8 @@
               "properties": {
                 "measure": {
                   "enum": [
-                    3.75,
-                    1.875,
-                    0.9375
+                    0.3209,
+                    0.16043
                   ]
                 },
                 "unit": {
@@ -401,9 +419,6 @@
               }
             }
           }
-        },
-        "analogDigitalConverter": {
-          "$ref": "fields#analogDigitalConverter"
         },
         "captureSoftware": {
           "$ref": "fields#captureSoftware"

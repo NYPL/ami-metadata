@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "Digitized Audio Analog Cassette Schema",
-  "id": "digitized_audiocassetteanalog",
-  "description": "Definitions for audio analog cassette fields",
+  "title": "Digitized Video Optical Disc Schema",
+  "id": "digitized_videoopticaldisc",
+  "description": "Definitions for video optical fields",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -26,6 +26,7 @@
         "dateCreated",
         "fileFormat",
         "audioCodec",
+        "videoCodec",
         "fileSize",
         "durationMilli",
         "durationHuman"
@@ -36,20 +37,27 @@
         },
         "extension": {
           "enum": [
-             "wav"
-           ]
+            "iso", "ISO",
+            "mp4", "MP4"
+          ]
         },
         "dateCreated": {
           "$ref": "fields#technicalDateCreated"
         },
         "fileFormat": {
-          "enum": [
-            "BWF"
-          ]
+          "$ref": "fields#technicalFileFormat"
         },
         "audioCodec": {
           "enum": [
-            "PCM", "pcm"
+            "AAC",
+            "aac ",
+            "unknown"
+          ]
+        },
+        "videoCodec": {
+          "enum": [
+            "ISO 9660",
+            "h264"
           ]
         },
         "fileSize": {
@@ -69,11 +77,12 @@
     "source": {
       "id": "source",
       "type": "object",
-      "additionalProperties": false,
+      "additionalProperties": true,
       "required": [
         "object",
         "subObject",
         "physicalDescription",
+        "contentSpecifications",
         "audioRecording"
       ],
       "properties": {
@@ -87,15 +96,17 @@
           ],
           "properties": {
             "type": {
-              "enum": [ "audio cassette analog" ]
+              "enum": [ "video optical disc" ]
             },
             "format": {
               "enum": [
-                "8-track",
-                "Compact cassette",
-                "Microcassette",
-                "Minicassette",
-                "audio cassette, other",
+                "Blu-Ray",
+                "Laser Disc",
+                "VCD",
+                "Video DVD-R",
+                "Video DVD, pressed",
+                "Video DVD+R",
+                "Video DVD+RW",
                 "unknown"
               ]
             },
@@ -111,19 +122,12 @@
         "subObject": {
           "type": "object",
           "additionalProperties": false,
-          "required": [
-            "faceNumber"
-          ],
           "properties": {
             "faceNumber": {
               "type": "number",
               "multipleOf": 1.0
             },
             "regionNumber": {
-              "type": "number",
-              "multipleOf": 1.0
-            },
-            "streamNumber": {
               "type": "number",
               "multipleOf": 1.0
             },
@@ -138,37 +142,16 @@
           "additionalProperties": false,
           "required": [
             "stockManufacturer",
-            "stockProductID",
-            "tapeWidth",
-            "oxideMaterial"
+            "diameter",
+            "dyeLayer",
+            "reflectiveLayer",
+            "dataCapacity"
           ],
           "properties": {
-            "stockLength": {
-              "type": "object",
-              "additionalProperties": false,
-              "required": [
-                "measure",
-                "unit"
-              ],
-              "properties": {
-                "measure": {
-                  "type": "number",
-                  "multipleOf": 1.0
-                },
-                "unit": {
-                  "enum": [
-                    "min"
-                  ]
-                }
-              }
-            },
-            "stockProductID": {
-              "type": "string"
-            },
             "stockManufacturer": {
               "type": "string"
             },
-            "tapeWidth": {
+            "diameter": {
               "type": "object",
               "additionalProperties": false,
               "required": [
@@ -178,7 +161,8 @@
               "properties": {
                 "measure": {
                   "enum": [
-                    0.125
+                    4.7,
+                    3.1
                   ]
                 },
                 "unit": {
@@ -188,33 +172,87 @@
                 }
               }
             },
-            "tapeThickness": {
-              "properties": {
-                "measure": {
-                  "type": "number",
-                  "multipleOf": 0.5
-                },
-                "unit": {
-                  "enum": [
-                    "mils"
-                  ]
-                }
-              }
-            },
-            "baseMaterial": {
+            "dyeLayer": {
               "enum": [
-                "acetate",
-                "polyester",
-                "PVC",
-                "paper",
+                "phthalocyanine",
+                "cyanine",
+                "azo",
                 "unknown"
               ]
             },
-            "oxideMaterial": {
-              "enum": ["Type I",
-                "Type II",
-                "Type III",
-                "Type IV",
+            "reflectiveLayer": {
+              "enum": [
+                "gold",
+                "silver",
+                "aluminum",
+                "unknown"
+              ]
+            },
+            "dataCapacity": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "enum": [
+                    0.7,
+                    4.7,
+                    8.54,
+                    25,
+                    50,
+                    "unknown"
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "GB"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "contentSpecifications": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "broadcastStandard",
+            "colorBW",
+            "regionCode"
+          ],
+          "properties": {
+            "broadcastStandard": {
+              "enum": [
+                "NTSC",
+                "PAL",
+                "SECAM",
+                "unknown"
+              ]
+            },
+            "colorBW": {
+              "enum": [
+                "b/w",
+                "color",
+                "color & b/w",
+                "unknown"
+              ]
+            },
+            "regionCode": {
+              "enum": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                "A",
+                "B",
                 "unknown"
               ]
             }
@@ -225,10 +263,7 @@
           "additionalProperties": false,
           "required": [
             "audioSoundField",
-            "numberOfAudioTracks",
-            "trackConfiguration",
-            "designatedSpeed",
-            "designatedNoiseReduction"
+            "numberOfAudioTracks"
           ],
           "properties": {
             "audioSoundField": {
@@ -238,71 +273,26 @@
                 "surround",
                 "quadrophonic",
                 "binaural",
+                "Ch1: Mono",
+                "Ch1: Mono; Ch2: Mono",
+                "Ch1: Mono; Ch2: Mono; Ch3: Mono",
+                "Ch1: Mono; Ch2: Mono; Ch3: Mono; Ch4: Mono",
+                "Ch1: Mono; Ch2: Mono; Ch3: Mono; Ch4: None",
+                "Ch1: Mono; Ch2: None ",
+                "Ch1: Mono; Ch2: Timecode",
+                "Ch1: None; Ch2: Mono",
+                "Ch1: Stereo Left; Ch2: Mono; Ch3: Stereo Right; Ch4: Mono",
+                "Ch1: Stereo Left; Ch2: Stereo Left; Ch3: Stereo Right; Ch4: Stereo Right",
+                "Ch1: Stereo Left; Ch2: Stereo Right",
+                "Ch1: Stereo Left; Ch2: Stereo Right; Ch3: Timecode",
+                "Ch1: Stereo Left; Ch2: Stereo Right; Ch3: Stereo Left; Ch4: Stereo Right",
+                "Ch1: Timecode; Ch2: Mono",
                 "unknown"
               ]
             },
             "numberOfAudioTracks": {
-              "enum": [
-                1,
-                2,
-                4,
-                8,
-                16,
-                32,
-                "n/a",
-                "unknown"
-              ]
-            },
-            "trackConfiguration": {
-              "enum": [
-                "full-track",
-                "half-track",
-                "quarter-track",
-                "2 track",
-                "4 track",
-                "unknown"
-              ]
-            },
-            "designatedSpeed": {
-              "type": "object",
-              "additionalProperties": false,
-              "required": [
-                "measure",
-                "unit"
-              ],
-              "properties": {
-                "measure": {
-                  "enum": [
-                    3.75,
-                    1.875,
-                    0.9375,
-                    "unknown"
-                  ]
-                },
-                "unit": {
-                  "enum": [
-                    "ips"
-                  ]
-                }
-              }
-            },
-            "designatedNoiseReduction": {
-              "enum": [
-                "Dolby B",
-                "Dolby C",
-                "n/a",
-                "unknown"
-              ]
-            },
-            "designatedEQ": {
-              "enum": [
-                "Type I",
-                "Type II",
-                "Type III",
-                "Type IV",
-                "n/a",
-                "unknown"
-              ]
+              "type": "number",
+              "multipleOf": 1.0
             }
           }
         },
@@ -326,7 +316,6 @@
       "additionalProperties": false,
       "required": [
         "playbackDevice",
-        "analogDigitalConverter",
         "captureSoftware"
       ],
       "properties": {
@@ -336,10 +325,7 @@
           "required": [
             "serialNumber",
             "manufacturer",
-            "model",
-            "tapeHeadType",
-            "eq",
-            "speed"
+            "model"
           ],
           "properties": {
             "id":  {
@@ -353,63 +339,11 @@
             },
             "model": {
               "$ref": "fields#playbackDeviceModel"
-            },
-            "tapeHeadType": {
-              "enum": [
-                "full-track",
-                "half-track",
-                "quarter-track",
-                "2 track",
-                "4 track"
-              ]
-            },
-            "noiseReduction": {
-              "enum": [
-                "Dolby B",
-                "Dolby C",
-                "n/a"
-              ]
-            },
-            "eq": {
-              "enum": [
-                "Type I",
-                "Type II",
-                "Type III",
-                "Type IV"
-              ]
-            },
-            "speed": {
-              "type": "object",
-              "additionalProperties": false,
-              "required": [
-                "measure",
-                "unit"
-              ],
-              "properties": {
-                "measure": {
-                  "enum": [
-                    3.75,
-                    1.875,
-                    0.9375
-                  ]
-                },
-                "unit": {
-                  "enum": [
-                    "ips"
-                  ]
-                }
-              }
             }
           }
         },
-        "analogDigitalConverter": {
-          "$ref": "fields#analogDigitalConverter"
-        },
         "captureSoftware": {
           "$ref": "fields#captureSoftware"
-        },
-        "takeNumber": {
-          "$ref": "fields#takeNumber"
         },
         "notes": {
           "$ref": "fields#processNotes"

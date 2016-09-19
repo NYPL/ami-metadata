@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "Digitized Audio Analog Cassette Schema",
-  "id": "digitized_audiocassetteanalog",
-  "description": "Definitions for audio analog cassette fields",
+  "title": "Digitized Audio Grooved Cylinder Schema",
+  "id": "digitized_audiogroovedcylinder",
+  "description": "Definitions for audio grooved cylinder fields",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -36,7 +36,7 @@
         },
         "extension": {
           "enum": [
-             "wav"
+             "wav", "WAV"
            ]
         },
         "dateCreated": {
@@ -44,12 +44,12 @@
         },
         "fileFormat": {
           "enum": [
-            "BWF"
+            "BWF", "bwf"
           ]
         },
         "audioCodec": {
           "enum": [
-            "PCM", "pcm"
+            "PCM"
           ]
         },
         "fileSize": {
@@ -87,16 +87,15 @@
           ],
           "properties": {
             "type": {
-              "enum": [ "audio cassette analog" ]
+              "enum": [ "audio grooved cylinder" ]
             },
             "format": {
               "enum": [
-                "8-track",
-                "Compact cassette",
-                "Microcassette",
-                "Minicassette",
-                "audio cassette, other",
-                "unknown"
+                "dictabelt",
+                "cylinder",
+                "cylinder, black wax",
+                "cylinder, brown wax",
+                "cylinder, celluloid"
               ]
             },
             "generation": {
@@ -123,10 +122,6 @@
               "type": "number",
               "multipleOf": 1.0
             },
-            "streamNumber": {
-              "type": "number",
-              "multipleOf": 1.0
-            },
             "partNumber": {
               "type": "number",
               "multipleOf": 1.0
@@ -139,36 +134,21 @@
           "required": [
             "stockManufacturer",
             "stockProductID",
-            "tapeWidth",
-            "oxideMaterial"
+            "diameter",
+            "length",
+            "baseMaterial",
+            "surfaceMaterial",
+            "grooveWidth",
+            "grooveOrientation"
           ],
           "properties": {
-            "stockLength": {
-              "type": "object",
-              "additionalProperties": false,
-              "required": [
-                "measure",
-                "unit"
-              ],
-              "properties": {
-                "measure": {
-                  "type": "number",
-                  "multipleOf": 1.0
-                },
-                "unit": {
-                  "enum": [
-                    "min"
-                  ]
-                }
-              }
+            "stockManufacturer": {
+              "type": "string"
             },
             "stockProductID": {
               "type": "string"
             },
-            "stockManufacturer": {
-              "type": "string"
-            },
-            "tapeWidth": {
+            "diameter": {
               "type": "object",
               "additionalProperties": false,
               "required": [
@@ -177,9 +157,7 @@
               ],
               "properties": {
                 "measure": {
-                  "enum": [
-                    0.125
-                  ]
+                  "type": "number"
                 },
                 "unit": {
                   "enum": [
@@ -188,82 +166,7 @@
                 }
               }
             },
-            "tapeThickness": {
-              "properties": {
-                "measure": {
-                  "type": "number",
-                  "multipleOf": 0.5
-                },
-                "unit": {
-                  "enum": [
-                    "mils"
-                  ]
-                }
-              }
-            },
-            "baseMaterial": {
-              "enum": [
-                "acetate",
-                "polyester",
-                "PVC",
-                "paper",
-                "unknown"
-              ]
-            },
-            "oxideMaterial": {
-              "enum": ["Type I",
-                "Type II",
-                "Type III",
-                "Type IV",
-                "unknown"
-              ]
-            }
-          }
-        },
-        "audioRecording": {
-          "type": "object",
-          "additionalProperties": false,
-          "required": [
-            "audioSoundField",
-            "numberOfAudioTracks",
-            "trackConfiguration",
-            "designatedSpeed",
-            "designatedNoiseReduction"
-          ],
-          "properties": {
-            "audioSoundField": {
-              "enum": [
-                "stereo",
-                "mono",
-                "surround",
-                "quadrophonic",
-                "binaural",
-                "unknown"
-              ]
-            },
-            "numberOfAudioTracks": {
-              "enum": [
-                1,
-                2,
-                4,
-                8,
-                16,
-                32,
-                "n/a",
-                "unknown"
-              ]
-            },
-            "trackConfiguration": {
-              "enum": [
-                "full-track",
-                "half-track",
-                "quarter-track",
-                "2 track",
-                "4 track",
-                "unknown"
-              ]
-            },
-            "designatedSpeed": {
+            "length": {
               "type": "object",
               "additionalProperties": false,
               "required": [
@@ -272,35 +175,57 @@
               ],
               "properties": {
                 "measure": {
-                  "enum": [
-                    3.75,
-                    1.875,
-                    0.9375,
-                    "unknown"
-                  ]
+                  "type": "number"
                 },
                 "unit": {
                   "enum": [
-                    "ips"
+                    "in"
                   ]
                 }
               }
             },
-            "designatedNoiseReduction": {
+            "baseMaterial": {
               "enum": [
-                "Dolby B",
-                "Dolby C",
-                "n/a",
+                "wax, brown",
+                "wax, black",
+                "plaster",
                 "unknown"
               ]
             },
-            "designatedEQ": {
+            "surfaceMaterial": {
               "enum": [
-                "Type I",
-                "Type II",
-                "Type III",
-                "Type IV",
-                "n/a",
+                "celluloid",
+                "none",
+                "unknown"
+              ]
+            },
+            "grooveOrientation": {
+              "enum": [
+                "lateral",
+                "vertical"
+              ]
+            },
+            "grooveWidth": {
+              "enum": [
+                "coarse",
+                "microgroove"
+              ]
+            }
+          }
+        },
+        "audioRecording": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "audioSoundField"
+          ],
+          "properties": {
+            "audioSoundField": {
+              "enum": [
+                "stereo",
+                "mono",
+                "quadrophonic",
+                "binaural",
                 "unknown"
               ]
             }
@@ -337,9 +262,11 @@
             "serialNumber",
             "manufacturer",
             "model",
-            "tapeHeadType",
-            "eq",
-            "speed"
+            "speed",
+            "trackingWeight",
+            "groovedWallPlayback",
+            "phonoCartridge",
+            "phonoPreamp"
           ],
           "properties": {
             "id":  {
@@ -354,30 +281,7 @@
             "model": {
               "$ref": "fields#playbackDeviceModel"
             },
-            "tapeHeadType": {
-              "enum": [
-                "full-track",
-                "half-track",
-                "quarter-track",
-                "2 track",
-                "4 track"
-              ]
-            },
-            "noiseReduction": {
-              "enum": [
-                "Dolby B",
-                "Dolby C",
-                "n/a"
-              ]
-            },
-            "eq": {
-              "enum": [
-                "Type I",
-                "Type II",
-                "Type III",
-                "Type IV"
-              ]
-            },
+
             "speed": {
               "type": "object",
               "additionalProperties": false,
@@ -387,16 +291,169 @@
               ],
               "properties": {
                 "measure": {
-                  "enum": [
-                    3.75,
-                    1.875,
-                    0.9375
-                  ]
+                  "type": "number"
                 },
                 "unit": {
                   "enum": [
-                    "ips"
+                    "rpm"
                   ]
+                }
+              }
+            },
+            "trackingWeight": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "type": "number"
+                },
+                "unit": {
+                  "enum": [
+                    "g"
+                  ]
+                }
+              }
+            },
+            "groovedWallPlayback": {
+              "enum": [
+                "left only",
+                "right only",
+                "left + right",
+                "left - right",
+                "left and right discrete"
+              ]
+            },
+            "phonoCartridge": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "manufacturer",
+                "model",
+                "stylusShape",
+                "stylusSize"
+              ],
+              "properties": {
+                "manufacturer": {
+                  "type": "string"
+                },
+                "model": {
+                  "type": "string"
+                },
+                "stylusShape": {
+                  "enum": [
+                    "elliptical",
+                    "truncated elliptical",
+                    "conical",
+                    "truncated conical",
+                    "Edison C",
+                    "spherical"
+                  ]
+                },
+                "stylusSize": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "measure",
+                    "unit"
+                  ],
+                  "properties": {
+                    "measure": {
+                      "type": "number"
+                    },
+                    "unit": {
+                      "enum": [
+                        "mils"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "phonoPreamp":{
+              "serialNumber": {
+                "type": "string"
+              },
+              "manufacturer": {
+                "type": "string"
+              },
+              "model": {
+                "type": "string"
+              },
+              "eq": {
+                "enum": [
+                  "NAB LP",
+                  "RIAA",
+                  "AES LP",
+                  "CCIR LP",
+                  "FFRR LP",
+                  "NAB 78",
+                  "Decca",
+                  "FFRR 78",
+                  "HMV",
+                  "flat"
+                ]
+              },
+              "eqRolloff": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "measure",
+                  "unit"
+                ],
+                "properties": {
+                  "measure": {
+                    "enum": [
+                      0,
+                      -5,
+                      -6,
+                      -7,
+                      -8.5,
+                      -10,
+                      -12,
+                      -14,
+                      -16,
+                      -18
+                    ]
+                  },
+                  "unit": {
+                    "enum": [
+                      "dB"
+                    ]
+                  }
+                }
+              },
+              "eqTurnover": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "measure",
+                  "unit"
+                ],
+                "properties": {
+                  "measure": {
+                    "enum": [
+                      0,
+                      150,
+                      200,
+                      250,
+                      300,
+                      375,
+                      400,
+                      500,
+                      629,
+                      750,
+                      1000
+                    ]
+                  },
+                  "unit": {
+                    "enum": [
+                      "Hz"
+                    ]
+                  }
                 }
               }
             }
