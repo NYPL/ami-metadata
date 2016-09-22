@@ -93,7 +93,7 @@
               "enum": [
                 "ProDigi",
                 "DASH"
-                "NagraD"
+                "NAGRA-D"
                 "unknown"
               ]
             },
@@ -253,7 +253,6 @@
           "required": [
             "audioSoundField",
             "numberOfAudioTracks",
-            "trackConfiguration",
             "designatedSpeed",
             "audioBitDepth"
             "audioSamplingRate"
@@ -263,9 +262,6 @@
               "enum": [
                 "stereo",
                 "mono",
-                "surround",
-                "quadrophonic",
-                "binaural",
                 "unknown"
                 "multitrack"
               ]
@@ -282,22 +278,6 @@
                 32,
                 48,
                 "n/a"
-              ]
-            },
-            "trackConfiguration": {
-              "enum": [
-                "full-track",
-                "half-track",
-                "quarter-track",
-                "2 track",
-                "3 track",
-                "4 track",
-                "8 track",
-                "16 track",
-                "24 track",
-                "32 track",
-                "48 track",
-                "unknown"
               ]
             },
             "designatedSpeed": {
@@ -416,7 +396,6 @@
             "serialNumber",
             "manufacturer",
             "model",
-            "tapeHeadType",
             "speed"
           ],
           "properties": {
@@ -431,22 +410,6 @@
             },
             "model": {
               "$ref": "fields#playbackDeviceModel"
-            },
-            "tapeHeadType": {
-              "enum": [
-                "full-track",
-                "half-track",
-                "two-track",
-                "quarter-track",
-                "two-track",
-                "three-track",
-                "four-track",
-                "eight-track",
-                "sixteen-track",
-                "twenty-four-track"
-                "thirty-two-track",
-                "forty-eight-track"
-              ]
             },
             "speed": {
               "type": "object",
