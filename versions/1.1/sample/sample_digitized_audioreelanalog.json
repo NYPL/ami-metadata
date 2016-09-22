@@ -40,7 +40,7 @@
 	},
 	"source": {
 		"object": {
-			"type": "audio reel",
+			"type": "audio reel analog",
 			"format": "quarter-inch open-reel audio",
 			"generation": "unknown",
 			"volumeNumber": 1

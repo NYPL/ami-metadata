@@ -93,6 +93,7 @@
               "enum": [
                 "ProDigi",
                 "DASH"
+                "NagraD"
                 "unknown"
               ]
             },
@@ -266,6 +267,7 @@
                 "quadrophonic",
                 "binaural",
                 "unknown"
+                "multitrack"
               ]
             },
             "numberOfAudioTracks": {
