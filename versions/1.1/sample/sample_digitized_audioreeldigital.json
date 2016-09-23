@@ -72,7 +72,6 @@
 		"audioRecording": {
 			"audioSoundField": "multitrack",
 			"numberOfAudioTracks": 48,
-			"trackConfiguration": "full-track",
 			"designatedSpeed": {
 				"measure": 7.5,
 				"unit": "ips"
@@ -95,7 +94,6 @@
 			"serialNumber": "xyz123",
 			"manufacturer": "Manufacturer B",
 			"model": "Model XYZ",
-			"tapeHeadType": "full-track",
 			"operatingLevel": {
 				"measure": 315,
 				"unit": "nW/m"
