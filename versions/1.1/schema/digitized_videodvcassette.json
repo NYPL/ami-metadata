@@ -263,6 +263,7 @@
                 "surround",
                 "quadrophonic",
                 "binaural",
+                "none",
                 "Ch1: Mono",
                 "Ch1: Mono; Ch2: Mono",
                 "Ch1: Mono; Ch2: Mono; Ch3: Mono",
