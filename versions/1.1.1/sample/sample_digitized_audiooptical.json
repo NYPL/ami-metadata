@@ -1,0 +1,103 @@
+{
+	"asset": {
+		"referenceFilename": "myh_abc123_v01_pm.wav",
+		"fileRole": "pm",
+		"schemaVersion": "1.1.0"
+	},
+	"bibliographic": {
+		"primaryID": "abc123",
+		"classmark": "*ABC 123",
+		"formerClassmark": "*NCOW 123",
+		"nonCMSID": "string123",
+		"cmsItemID": "123456",
+		"cmsCollectionID": "string123",
+		"catalogBNumber": "B12345678",
+		"mssID": "12345",
+		"barcode": "33433123456789",
+		"divisionCode": "myh",
+		"vernacularDivisionCode": "DAN",
+		"projectCode": "projectXYZ",
+		"title": "Dance Audio 1",
+		"date": "Late 1970s",
+		"contentNotes": "media is actually Dance Audio 2 instead of Dance Audio 1"
+	},
+	"technical": {
+		"filename": "abc123",
+		"extension": "wav",
+		"dateCreated": "2016-01-01",
+		"fileFormat": "BWF",
+		"audioCodec": "PCM",
+		"fileSize": {
+			"measure": 2000000000,
+			"unit": "B"
+		},
+		"durationMilli": {
+			"measure": 3600000,
+			"unit": "ms"
+		},
+		"durationHuman": "1:00:00.000",
+		"signalNotes": "signal undreadable at point 123"
+	},
+	"source": {
+		"object": {
+			"type": "audio optical disc",
+			"format": "Audio CD-R",
+			"generation": "Archive Original",
+			"volumeNumber": 1
+		},
+		"subObject": {
+			"faceNumber": 1,
+			"regionNumber": 1,
+			"streamNumber": 1,
+			"partNumber": 1
+		},
+		"physicalDescription": {
+			"stockManufacturer": "Manufacturer A",
+			"diameter": {
+				"measure": 4.7,
+				"unit": "in"
+			},
+			"dyeLayer": "phthalocyanine",
+			"reflectiveLayer": "silver"
+		},
+		"audioRecording": {
+			"audioSoundField": "stereo"
+		},
+		"notes": {
+			"physicalConditionPreShipNotes": "disc shows XYZ damage",
+			"physicalConditionDigitizationNotes": "medium shows ABC damage"
+		}
+	},
+	"digitizationProcess": {
+		"playbackDevice": {
+			"serialNumber": "xyz123",
+			"manufacturer": "Manufacturer B",
+			"model": "Model XYZ"
+		},
+		"captureSoftware": {
+			"manufacturer": "Manufacturer E",
+			"productName": "Product XYZ",
+			"version": "Version 123",
+			"platform": "OS XYZ"
+		},
+		"notes": {
+			"processNotes": "required intervention for reason xyz"
+		}
+	},
+	"digitizer": {
+		"operator": {
+			"firstName": "Doe",
+			"lastName": "Jane"
+		},
+		"organization": {
+			"name": "Organization XYZ",
+      "address": {
+        "street1": "123 ABC St",
+        "street2": "Suite 1234",
+        "city":    "Anytown",
+        "state":   "ST",
+        "postalCode": "12345"
+      }
+		}
+	}
+}
