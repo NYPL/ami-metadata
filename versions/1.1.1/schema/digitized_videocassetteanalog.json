@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "Digitized Video Cassette Schema",
-  "id": "digitized_videocassette",
+  "title": "Digitized Video Cassette Analog Schema",
+  "id": "digitized_videocassetteanalog",
   "description": "Definitions for audio optical fields",
   "type": "object",
   "additionalProperties": false,
@@ -65,21 +65,9 @@
             "apcs",
             "avc1",
             "CFHD",
-            "DV",
-            "dvc",
-            "dvh3",
-            "dvh6",
-            "dvhp",
-            "dvhq",
-            "hdv2",
-            "hdv6",
             "icod",
             "V210",
             "v210",
-            "xd5f",
-            "xdv2",
-            "xdvb",
-            "xdvd",
             "h264"
           ]
         },
@@ -118,25 +106,14 @@
           ],
           "properties": {
             "type": {
-              "enum": [ "video cassette" ]
+              "enum": [ "video cassette analog" ]
             },
             "format": {
               "enum": [
                 "Betacam",
                 "Betacam SP",
-                "Betacam SX",
                 "Betamax",
-                "D-1",
-                "D-2",
-                "D-3",
-                "D-5",
-                "Digital Betacam",
-                "Digital8",
-                "HDCAM",
-                "HDCAM SR",
                 "Hi8",
-                "MII",
-                "MPEG IMX",
                 "S-VHS",
                 "S-VHS-C",
                 "U-matic",
@@ -283,6 +260,7 @@
           "properties": {
             "audioSoundField": {
               "enum": [
+                "none"
                 "stereo",
                 "mono",
                 "surround",
