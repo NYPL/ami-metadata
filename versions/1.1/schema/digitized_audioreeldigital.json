@@ -92,8 +92,8 @@
             "format": {
               "enum": [
                 "ProDigi",
-                "DASH"
-                "NAGRA-D"
+                "DASH",
+                "NAGRA-D",
                 "unknown"
               ]
             },
@@ -136,33 +136,12 @@
           "additionalProperties": false,
           "required": [
             "diameter",
-            "stockLength"
             "stockManufacturer",
             "stockProductID",
             "tapeWidth",
             "tapeThickness",
             "baseMaterial"
           ],
-        "properties": {
-          "stockLength": {
-            "type": "object",
-            "additionalProperties": false,
-            "required": [
-              "measure",
-              "unit"
-            ],
-            "properties": {
-              "measure": {
-                "type": "number",
-                "multipleOf": 1.0
-              },
-              "unit": {
-                "enum": [
-                  "min"
-                ]
-              }
-            }
-          },
           "properties": {
             "diameter": {
               "type": "object",
@@ -179,6 +158,25 @@
                 "unit": {
                   "enum": [
                     "in"
+                  ]
+                }
+              }
+            },
+            "stockLength": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "type": "number",
+                  "multipleOf": 1.0
+                },
+                "unit": {
+                  "enum": [
+                    "min"
                   ]
                 }
               }
@@ -254,7 +252,7 @@
             "audioSoundField",
             "numberOfAudioTracks",
             "designatedSpeed",
-            "audioBitDepth"
+            "audioBitDepth",
             "audioSamplingRate"
           ],
           "properties": {
@@ -262,7 +260,7 @@
               "enum": [
                 "stereo",
                 "mono",
-                "unknown"
+                "unknown",
                 "multitrack"
               ]
             },
