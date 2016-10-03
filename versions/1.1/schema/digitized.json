@@ -14,7 +14,7 @@
     { "$ref": "digitized_audiogroovedcylinder" },
     { "$ref": "digitized_videoopticaldisc" },
     { "$ref": "digitized_videodvcassette" },
-    { "$ref": "digitized_videocassette" },
+    { "$ref": "digitized_videocassetteanalog" },
     { "$ref": "digitized_videoreel" }
   ]
 }

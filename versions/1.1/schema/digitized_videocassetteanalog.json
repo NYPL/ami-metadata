@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "Digitized Video Cassette Schema",
-  "id": "digitized_videocassette",
+  "id": "digitized_videocassetteanalog",
   "description": "Definitions for audio optical fields",
   "type": "object",
   "additionalProperties": false,
@@ -118,7 +118,7 @@
           ],
           "properties": {
             "type": {
-              "enum": [ "video cassette" ]
+              "enum": [ "video cassette", "video cassette analog" ]
             },
             "format": {
               "enum": [
