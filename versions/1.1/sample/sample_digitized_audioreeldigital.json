@@ -73,7 +73,7 @@
 			"audioSoundField": "multitrack",
 			"numberOfAudioTracks": 48,
 			"designatedSpeed": {
-				"measure": 7.5,
+				"measure": 3.75,
 				"unit": "ips"
 			},
 			"audioBitDepth": {
@@ -83,6 +83,7 @@
 			"audioSamplingRate": {
 				"measure": 22500,
 				"unit": "hz"
+			}
 		},
 		"notes": {
 			"physicalConditionPreShipNotes": "reel show XYZ damage",
@@ -94,10 +95,6 @@
 			"serialNumber": "xyz123",
 			"manufacturer": "Manufacturer B",
 			"model": "Model XYZ",
-			"operatingLevel": {
-				"measure": 315,
-				"unit": "nW/m"
-			},
 			"speed": {
 				"measure": 7.5,
 				"unit": "ips"
