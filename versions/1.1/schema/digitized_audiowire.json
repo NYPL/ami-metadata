@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "AMI Vendor Audio Digital Reel Schema",
-  "id": "digitized_audioreeldigital",
-  "description": "Definitions for audio digital reel fields",
+  "title": "Digitized Analog Audio Reel Schema",
+  "id": "digitized_audioreelanalog",
+  "description": "Definitions for analog audio reel fields",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -36,7 +36,7 @@
         },
         "extension": {
           "enum": [
-            "wav"
+            "wav", "WAV"
            ]
         },
         "dateCreated": {
@@ -87,13 +87,14 @@
           ],
           "properties": {
             "type": {
-              "enum": [ "audio reel digital" ]
+              "enum": [ "audio reel analog" ]
             },
             "format": {
               "enum": [
-                "ProDigi",
-                "DASH",
-                "NAGRA-D",
+                "half-inch open-reel audio",
+                "one-inch open-reel audio",
+                "quarter-inch open-reel audio",
+                "two-inch open-reel audio",
                 "unknown"
               ]
             },
@@ -140,7 +141,8 @@
             "stockProductID",
             "tapeWidth",
             "tapeThickness",
-            "baseMaterial"
+            "baseMaterial",
+            "oxideMaterial"
           ],
           "properties": {
             "diameter": {
@@ -158,25 +160,6 @@
                 "unit": {
                   "enum": [
                     "in"
-                  ]
-                }
-              }
-            },
-            "stockLength": {
-              "type": "object",
-              "additionalProperties": false,
-              "required": [
-                "measure",
-                "unit"
-              ],
-              "properties": {
-                "measure": {
-                  "type": "number",
-                  "multipleOf": 1.0
-                },
-                "unit": {
-                  "enum": [
-                    "min"
                   ]
                 }
               }
@@ -234,7 +217,18 @@
             },
             "baseMaterial": {
               "enum": [
-                "polyester"
+                "acetate",
+                "polyester",
+                "PVC",
+                "paper",
+                "unknown"
+              ]
+            },
+            "oxideMaterial": {
+              "enum": [
+                "ferric oxide",
+                "chromium dioxide",
+                "unknown"
               ]
             },
             "backcoatMaterial": {
@@ -251,17 +245,20 @@
           "required": [
             "audioSoundField",
             "numberOfAudioTracks",
+            "trackConfiguration",
             "designatedSpeed",
-            "audioBitDepth",
-            "audioSamplingRate"
+            "designatedNoiseReduction",
+            "designatedEQ"
           ],
           "properties": {
             "audioSoundField": {
               "enum": [
                 "stereo",
                 "mono",
-                "unknown",
-                "multitrack"
+                "surround",
+                "quadrophonic",
+                "binaural",
+                "unknown"
               ]
             },
             "numberOfAudioTracks": {
@@ -273,9 +270,21 @@
                 8,
                 16,
                 24,
-                32,
-                48,
                 "n/a"
+              ]
+            },
+            "trackConfiguration": {
+              "enum": [
+                "full-track",
+                "half-track",
+                "quarter-track",
+                "2 track",
+                "3 track",
+                "4 track",
+                "8 track",
+                "16 track",
+                "24 track",
+                "unknown"
               ]
             },
             "designatedSpeed": {
@@ -288,6 +297,8 @@
               "properties": {
                 "measure": {
                   "enum": [
+                    30,
+                    15,
                     7.5,
                     3.75,
                     1.875,
@@ -302,66 +313,23 @@
                 }
               }
             },
-            "audioBitDepth": {
-              "type": "object",
-              "additionalProperties": false,
-              "required": [
-                "measure",
-                "unit"
-              ],
-              "properties": {
-                "measure": {
-                  "enum": [
-                    8,
-                    16,
-                    18,
-                    20,
-                    24,
-                    32
-                  ]
-                },
-                "unit": {
-                  "enum": [
-                    "bit"
-                  ]
-                }
-              }
+            "designatedNoiseReduction": {
+              "enum": [
+                "Dolby A",
+                "Dolby B",
+                "Dolby SR",
+                "DBX I",
+                "DBX II",
+                "Tel Com/High Com",
+                "unknown"
+              ]
             },
-            "audioSamplingRate": {
-              "type": "object",
-              "additionalProperties": false,
-              "required": [
-                "measure",
-                "unit"
-              ],
-              "properties": {
-                "measure": {
-                  "enum": [
-                    22500,
-                    32000,
-                    44056,
-                    44100,
-                    47925,
-                    48000,
-                    64000,
-                    88000,
-                    88112,
-                    88200,
-                    95904,
-                    96000,
-                    128000,
-                    176224,
-                    176400,
-                    191808,
-                    192000
-                  ]
-                },
-                "unit": {
-                  "enum": [
-                    "hz"
-                  ]
-                }
-              }
+            "designatedEQ": {
+              "enum": [
+                "NAB",
+                "IEC/CCIR",
+                "unknown"
+              ]
             }
           }
         },
@@ -395,6 +363,8 @@
             "serialNumber",
             "manufacturer",
             "model",
+            "tapeHeadType",
+            "eq",
             "speed"
           ],
           "properties": {
@@ -410,6 +380,66 @@
             "model": {
               "$ref": "fields#playbackDeviceModel"
             },
+            "tapeHeadType": {
+              "enum": [
+                "full-track",
+                "half-track",
+                "quarter-track",
+                "2 track",
+                "3 track",
+                "4 track",
+                "8 track",
+                "16 track",
+                "24 track"
+              ]
+            },
+            "operatingLevel": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "enum": [
+                    185,
+                    200,
+                    224,
+                    250,
+                    280,
+                    315,
+                    320,
+                    355,
+                    400,
+                    450,
+                    500
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "nW/m"
+                  ]
+                }
+              }
+            },
+            "noiseReduction": {
+              "enum": [
+                "Dolby A",
+                "Dolby B",
+                "Dolby SR",
+                "DBX I",
+                "DBX II",
+                "Tel Com/High Com",
+                "n/a"
+              ]
+            },
+            "eq": {
+              "enum": [
+                "NAB",
+                "IEC"
+              ]
+            },
             "speed": {
               "type": "object",
               "additionalProperties": false,
@@ -420,10 +450,14 @@
               "properties": {
                 "measure": {
                   "enum": [
+                    30,
+                    15,
                     7.5,
                     3.75,
                     1.875,
-                    0.9375
+                    0.9375,
+                    3.12,
+                    6.25
                   ]
                 },
                 "unit": {
@@ -434,6 +468,9 @@
               }
             }
           }
+        },
+        "analogDigitalConverter": {
+          "$ref": "fields#analogDigitalConverter"
         },
         "captureSoftware": {
           "$ref": "fields#captureSoftware"
