@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "Digitized Analog Audio Reel Schema",
-  "id": "digitized_audioreelanalog",
-  "description": "Definitions for analog audio reel fields",
+  "title": "Digitized Magnetic Audio Wire Schema",
+  "id": "digitized_audiowire",
+  "description": "Definitions for audio wire fields",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -87,15 +87,11 @@
           ],
           "properties": {
             "type": {
-              "enum": [ "audio reel analog" ]
+              "enum": [ "audio wire" ]
             },
             "format": {
               "enum": [
-                "half-inch open-reel audio",
-                "one-inch open-reel audio",
-                "quarter-inch open-reel audio",
-                "two-inch open-reel audio",
-                "unknown"
+                "magnetic audio wire"
               ]
             },
             "generation": {
@@ -138,11 +134,7 @@
           "required": [
             "diameter",
             "stockManufacturer",
-            "stockProductID",
-            "tapeWidth",
-            "tapeThickness",
-            "baseMaterial",
-            "oxideMaterial"
+            "stockProductID"
           ],
           "properties": {
             "diameter": {
@@ -169,73 +161,6 @@
             },
             "stockManufacturer": {
               "type": "string"
-            },
-            "tapeWidth": {
-              "type": "object",
-              "additionalProperties": false,
-              "required": [
-                "measure",
-                "unit"
-              ],
-              "properties": {
-                "measure": {
-                  "enum": [
-                    0.25,
-                    0.5,
-                    1,
-                    2
-                  ]
-                },
-                "unit": {
-                  "enum": [
-                    "in"
-                  ]
-                }
-              }
-            },
-            "tapeThickness": {
-              "type": "object",
-              "additionalProperties": false,
-              "required": [
-                "measure",
-                "unit"
-              ],
-              "properties": {
-                "measure": {
-                  "enum": [
-                    0.5,
-                    1,
-                    1.5
-                  ]
-                },
-                "unit": {
-                  "enum": [
-                    "mils"
-                  ]
-                }
-              }
-            },
-            "baseMaterial": {
-              "enum": [
-                "acetate",
-                "polyester",
-                "PVC",
-                "paper",
-                "unknown"
-              ]
-            },
-            "oxideMaterial": {
-              "enum": [
-                "ferric oxide",
-                "chromium dioxide",
-                "unknown"
-              ]
-            },
-            "backcoatMaterial": {
-              "enum": [
-                "yes",
-                "no"
-              ]
             }
           }
         },
@@ -244,47 +169,12 @@
           "additionalProperties": false,
           "required": [
             "audioSoundField",
-            "numberOfAudioTracks",
-            "trackConfiguration",
-            "designatedSpeed",
-            "designatedNoiseReduction",
-            "designatedEQ"
+            "designatedSpeed"
           ],
           "properties": {
             "audioSoundField": {
               "enum": [
-                "stereo",
-                "mono",
-                "surround",
-                "quadrophonic",
-                "binaural",
-                "unknown"
-              ]
-            },
-            "numberOfAudioTracks": {
-              "enum": [
-                1,
-                2,
-                3,
-                4,
-                8,
-                16,
-                24,
-                "n/a"
-              ]
-            },
-            "trackConfiguration": {
-              "enum": [
-                "full-track",
-                "half-track",
-                "quarter-track",
-                "2 track",
-                "3 track",
-                "4 track",
-                "8 track",
-                "16 track",
-                "24 track",
-                "unknown"
+                "mono"
               ]
             },
             "designatedSpeed": {
@@ -297,8 +187,7 @@
               "properties": {
                 "measure": {
                   "enum": [
-                    30,
-                    15,
+                    24,
                     7.5,
                     3.75,
                     1.875,
@@ -312,24 +201,6 @@
                   ]
                 }
               }
-            },
-            "designatedNoiseReduction": {
-              "enum": [
-                "Dolby A",
-                "Dolby B",
-                "Dolby SR",
-                "DBX I",
-                "DBX II",
-                "Tel Com/High Com",
-                "unknown"
-              ]
-            },
-            "designatedEQ": {
-              "enum": [
-                "NAB",
-                "IEC/CCIR",
-                "unknown"
-              ]
             }
           }
         },
@@ -363,8 +234,6 @@
             "serialNumber",
             "manufacturer",
             "model",
-            "tapeHeadType",
-            "eq",
             "speed"
           ],
           "properties": {
@@ -379,19 +248,6 @@
             },
             "model": {
               "$ref": "fields#playbackDeviceModel"
-            },
-            "tapeHeadType": {
-              "enum": [
-                "full-track",
-                "half-track",
-                "quarter-track",
-                "2 track",
-                "3 track",
-                "4 track",
-                "8 track",
-                "16 track",
-                "24 track"
-              ]
             },
             "operatingLevel": {
               "type": "object",
@@ -423,23 +279,6 @@
                 }
               }
             },
-            "noiseReduction": {
-              "enum": [
-                "Dolby A",
-                "Dolby B",
-                "Dolby SR",
-                "DBX I",
-                "DBX II",
-                "Tel Com/High Com",
-                "n/a"
-              ]
-            },
-            "eq": {
-              "enum": [
-                "NAB",
-                "IEC"
-              ]
-            },
             "speed": {
               "type": "object",
               "additionalProperties": false,
@@ -450,14 +289,7 @@
               "properties": {
                 "measure": {
                   "enum": [
-                    30,
-                    15,
-                    7.5,
-                    3.75,
-                    1.875,
-                    0.9375,
-                    3.12,
-                    6.25
+                    24
                   ]
                 },
                 "unit": {
