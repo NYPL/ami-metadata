@@ -16,7 +16,7 @@
 		"barcode": "33433123456789",
 		"divisionCode": "myh",
 		"vernacularDivisionCode": "DAN",
-		"projectCode": "projectXYZ",
+		"projectCode": "project123",
 		"title": "Dance Audio 1",
 		"date": "Late 1970s",
 		"contentNotes": "media is actually Dance Audio 2 instead of Dance Audio 1"
@@ -40,76 +40,43 @@
 	},
 	"source": {
 		"object": {
-			"type": "audio reel analog",
-			"format": "quarter-inch open-reel audio",
+			"type": "audio magnetic wire",
+			"format": "audio magnetic wire",
 			"generation": "unknown",
 			"volumeNumber": 1
 		},
 		"subObject": {
 			"faceNumber": 1,
-			"regionNumber": 2,
+			"regionNumber": 1,
 			"streamNumber": 1,
 			"partNumber": 1
 		},
 		"physicalDescription": {
 			"diameter": {
-				"measure": 7,
+				"measure": 2.75,
 				"unit": "in"
 			},
 			"stockManufacturer": "Manufacturer A",
-			"stockProductID": "idabc123",
-			"tapeWidth": {
-				"measure": 0.25,
-				"unit": "in"
-			},
-			"tapeThickness": {
-				"measure": 1.5,
-				"unit": "mils"
-			},
-			"baseMaterial": "polyester",
-			"oxideMaterial": "chromium dioxide",
-			"backcoatMaterial": "yes"
+			"stockProductID": "idabc123"
 		},
 		"audioRecording": {
-			"audioSoundField": "quadrophonic",
-			"numberOfAudioTracks": 24,
-			"trackConfiguration": "full-track",
-			"designatedSpeed": {
-				"measure": 7.5,
-				"unit": "ips"
-			},
-			"designatedNoiseReduction": "DBX II",
-			"designatedEQ": "NAB"
+			"audioSoundField": "mono",
+			"numberOfAudioTracks": 1
 		},
 		"notes": {
-			"physicalConditionPreShipNotes": "reel show XYZ damage",
-			"physicalConditionDigitizationNotes": "tape shows XYZ damage"
+			"physicalConditionPreShipNotes": "wire show XYZ damage",
+			"physicalConditionDigitizationNotes": "wire shows XYZ damage"
 		}
 	},
 	"digitizationProcess": {
 		"playbackDevice": {
 			"serialNumber": "xyz123",
 			"manufacturer": "Manufacturer B",
-			"model": "Model XYZ",
-			"tapeHeadType": "full-track",
-			"operatingLevel": {
-				"measure": 315,
-				"unit": "nW/m"
+			"model": "Model XYZ"
 			},
-			"noiseReduction": "DBX II",
-			"eq": "NAB",
 			"speed": {
-				"measure": 7.5,
+				"measure": 24,
 				"unit": "ips"
-			}
-		},
-		"analogDigitalConverter": {
-			"serialNumber": "xyz123",
-			"manufacturer": "Manufacturer D",
-			"model": "Model XYZ",
-			"operatingLevel": {
-				"measure": -20,
-				"unit": "dBFS"
 			}
 		},
 		"captureSoftware": {
@@ -120,22 +87,21 @@
 		},
 		"notes": {
 			"processNotes": "required intervention for reason xyz"
-		}
-	},
-	"digitizer": {
+		},
+		"digitizer": {
 		"operator": {
 			"firstName": "Doe",
 			"lastName": "Jane"
 		},
 		"organization": {
 			"name": "Organization XYZ",
-      "address": {
-        "street1": "123 ABC St",
-        "street2": "Suite 1234",
-        "city":    "Anytown",
-        "state":   "ST",
-        "postalCode": "12345"
-      }
+			"address": {
+				"street1": "123 ABC St",
+				"street2": "Suite 1234",
+				"city": "Anytown",
+				"state": "ST",
+				"postalCode": "12345"
+			}
 		}
 	}
 }

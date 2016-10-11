@@ -87,11 +87,11 @@
           ],
           "properties": {
             "type": {
-              "enum": [ "audio wire" ]
+              "enum": [ "audio magnetic wire" ]
             },
             "format": {
               "enum": [
-                "magnetic audio wire"
+                "audio magnetic wire"
               ]
             },
             "generation": {
@@ -248,36 +248,6 @@
             },
             "model": {
               "$ref": "fields#playbackDeviceModel"
-            },
-            "operatingLevel": {
-              "type": "object",
-              "additionalProperties": false,
-              "required": [
-                "measure",
-                "unit"
-              ],
-              "properties": {
-                "measure": {
-                  "enum": [
-                    185,
-                    200,
-                    224,
-                    250,
-                    280,
-                    315,
-                    320,
-                    355,
-                    400,
-                    450,
-                    500
-                  ]
-                },
-                "unit": {
-                  "enum": [
-                    "nW/m"
-                  ]
-                }
-              }
             },
             "speed": {
               "type": "object",
