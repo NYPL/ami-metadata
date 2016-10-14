@@ -114,14 +114,6 @@
               "type": "number",
               "multipleOf": 1.0
             },
-            "regionNumber": {
-              "type": "number",
-              "multipleOf": 1.0
-            },
-            "streamNumber": {
-              "type": "number",
-              "multipleOf": 1.0
-            },
             "partNumber": {
               "type": "number",
               "multipleOf": 1.0
