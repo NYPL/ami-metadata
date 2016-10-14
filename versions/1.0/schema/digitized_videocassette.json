@@ -37,8 +37,8 @@
         },
         "extension": {
           "enum": [
-            "mov",
-            "mp4"
+            "mov", "MOV",
+            "mp4", "MP4"
           ]
         },
         "dateCreated": {
