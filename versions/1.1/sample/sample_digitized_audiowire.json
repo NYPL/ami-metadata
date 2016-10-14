@@ -75,8 +75,7 @@
 		"playbackDevice": {
 			"serialNumber": "xyz123",
 			"manufacturer": "Manufacturer B",
-			"model": "Model XYZ"
-			},
+			"model": "Model XYZ",
 			"speed": {
 				"measure": 24,
 				"unit": "ips"
@@ -90,8 +89,9 @@
 		},
 		"notes": {
 			"processNotes": "required intervention for reason xyz"
-		},
-		"digitizer": {
+		}
+	},
+	"digitizer": {
 		"operator": {
 			"firstName": "Doe",
 			"lastName": "Jane"
