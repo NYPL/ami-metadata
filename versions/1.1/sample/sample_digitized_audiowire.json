@@ -61,7 +61,10 @@
 		},
 		"audioRecording": {
 			"audioSoundField": "mono",
-			"numberOfAudioTracks": 1
+			"designatedSpeed": {
+				"measure": 24,
+				"unit": "ips"
+			}
 		},
 		"notes": {
 			"physicalConditionPreShipNotes": "wire show XYZ damage",

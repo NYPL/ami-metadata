@@ -187,12 +187,7 @@
               "properties": {
                 "measure": {
                   "enum": [
-                    24,
-                    7.5,
-                    3.75,
-                    1.875,
-                    0.9375,
-                    "unknown"
+                    24
                   ]
                 },
                 "unit": {
