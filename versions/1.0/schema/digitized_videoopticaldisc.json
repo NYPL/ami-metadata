@@ -37,8 +37,8 @@
         },
         "extension": {
           "enum": [
-            "iso",
-            "mp4"
+            "iso", "ISO",
+            "mp4", "MP4"
           ]
         },
         "dateCreated": {
