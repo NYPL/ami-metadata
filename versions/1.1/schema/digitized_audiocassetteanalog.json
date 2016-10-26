@@ -375,7 +375,8 @@
                 "Type I",
                 "Type II",
                 "Type III",
-                "Type IV"
+                "Type IV",
+                "n/a"
               ]
             },
             "speed": {

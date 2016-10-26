@@ -397,6 +397,12 @@
             "model": {
               "$ref": "fields#playbackDeviceModel"
             },
+            "eq": {
+              "enum": [
+                "with pre-emphasis",
+                "without pre-emphasis"
+              ]
+            },
             "speed": {
               "type": "object",
               "additionalProperties": false,
