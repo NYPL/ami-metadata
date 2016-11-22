@@ -65,21 +65,9 @@
             "apcs",
             "avc1",
             "CFHD",
-            "DV",
-            "dvc",
-            "dvh3",
-            "dvh6",
-            "dvhp",
-            "dvhq",
-            "hdv2",
-            "hdv6",
             "icod",
             "V210",
             "v210",
-            "xd5f",
-            "xdv2",
-            "xdvb",
-            "xdvd",
             "h264"
           ]
         },
@@ -181,7 +169,6 @@
             "stockManufacturer",
             "stockProductID",
             "tapeWidth",
-            "baseMaterial",
             "oxideMaterial"
           ],
           "properties": {
