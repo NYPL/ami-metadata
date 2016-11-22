@@ -249,7 +249,6 @@
                 8,
                 16,
                 32,
-                "n/a",
                 "unknown"
               ]
             },
@@ -290,7 +289,7 @@
               "enum": [
                 "Dolby B",
                 "Dolby C",
-                "n/a",
+                "none",
                 "unknown"
               ]
             },
@@ -300,7 +299,7 @@
                 "Type II",
                 "Type III",
                 "Type IV",
-                "n/a",
+                "none",
                 "unknown"
               ]
             }
@@ -367,7 +366,7 @@
               "enum": [
                 "Dolby B",
                 "Dolby C",
-                "n/a"
+                "none"
               ]
             },
             "eq": {
@@ -376,7 +375,7 @@
                 "Type II",
                 "Type III",
                 "Type IV",
-                "n/a"
+                "none"
               ]
             },
             "speed": {

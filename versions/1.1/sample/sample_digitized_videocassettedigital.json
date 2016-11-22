@@ -41,7 +41,7 @@
 	},
 	"source": {
 		"object": {
-			"type": "video dv cassette",
+			"type": "video cassette digital",
 			"format": "DVCPRO",
 			"volumeNumber": 1
 		},

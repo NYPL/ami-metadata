@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "Digitized Video Cassette Schema",
-  "id": "digitized_videodvcassette",
-  "description": "Definitions for audio optical fields",
+  "title": "Digitized Magnetic Audio Wire Schema",
+  "id": "digitized_audiomagneticwire",
+  "description": "Definitions for audio wire fields",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -26,7 +26,6 @@
         "dateCreated",
         "fileFormat",
         "audioCodec",
-        "videoCodec",
         "fileSize",
         "durationMilli",
         "durationHuman"
@@ -37,39 +36,20 @@
         },
         "extension": {
           "enum": [
-            "mov", "MOV",
-            "mp4", "MP4"
-          ]
+            "wav", "WAV"
+           ]
         },
         "dateCreated": {
           "$ref": "fields#technicalDateCreated"
         },
         "fileFormat": {
-          "$ref": "fields#technicalFileFormat"
+          "enum": [
+            "BWF", "bwf"
+          ]
         },
         "audioCodec": {
           "enum": [
-            "PCM",
-            "lpcm",
-            "AAC",
-            "aac "
-          ]
-        },
-        "videoCodec": {
-          "enum": [
-            "DV",
-            "dvc",
-            "dvh3",
-            "dvh6",
-            "dvhp",
-            "dvhq",
-            "hdv2",
-            "hdv6",
-            "xd5f",
-            "xdv2",
-            "xdvb",
-            "xdvd",
-            "h264"
+            "PCM"
           ]
         },
         "fileSize": {
@@ -89,11 +69,11 @@
     "source": {
       "id": "source",
       "type": "object",
-      "additionalProperties": true,
+      "additionalProperties": false,
       "required": [
         "object",
+        "subObject",
         "physicalDescription",
-        "contentSpecifications",
         "audioRecording"
       ],
       "properties": {
@@ -107,17 +87,11 @@
           ],
           "properties": {
             "type": {
-              "enum": [ "video dv cassette" ]
+              "enum": [ "audio magnetic wire" ]
             },
             "format": {
               "enum": [
-                "DVCam",
-                "DVCPRO",
-                "DVCPRO 50",
-                "DVCPRO HD",
-                "HDV",
-                "MiniDV",
-                "unknown"
+                "audio magnetic wire"
               ]
             },
             "generation": {
@@ -132,12 +106,11 @@
         "subObject": {
           "type": "object",
           "additionalProperties": false,
+          "required": [
+            "faceNumber"
+          ],
           "properties": {
             "faceNumber": {
-              "type": "number",
-              "multipleOf": 1.0
-            },
-            "regionNumber": {
               "type": "number",
               "multipleOf": 1.0
             },
@@ -151,14 +124,12 @@
           "type": "object",
           "additionalProperties": false,
           "required": [
+            "diameter",
             "stockManufacturer",
-            "stockProductID",
-            "tapeWidth",
-            "baseMaterial",
-            "oxideMaterial"
+            "stockProductID"
           ],
           "properties": {
-            "stockLength": {
+            "diameter": {
               "type": "object",
               "additionalProperties": false,
               "required": [
@@ -168,32 +139,7 @@
               "properties": {
                 "measure": {
                   "type": "number",
-                  "multipleOf": 1.0
-                },
-                "unit": {
-                  "enum": [
-                    "min"
-                  ]
-                }
-              }
-            },
-            "stockManufacturer": {
-              "type": "string"
-            },
-            "stockProductID": {
-              "type": "string"
-            },
-            "tapeWidth": {
-              "type": "object",
-              "additionalProperties": false,
-              "required": [
-                "measure",
-                "unit"
-              ],
-              "properties": {
-                "measure": {
-                  "type": "number",
-                  "multipleOf": 0.01
+                  "multipleOf": 0.25
                 },
                 "unit": {
                   "enum": [
@@ -202,47 +148,29 @@
                 }
               }
             },
-            "baseMaterial": {
-              "enum": [
-                "acetate",
-                "polyester",
-                "PVC",
-                "paper",
-                "unknown"
-              ]
+            "length": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "type": "number"
+                },
+                "unit": {
+                  "enum": [
+                    "in"
+                  ]
+                }
+              }
             },
-            "oxideMaterial": {
-              "enum": [
-                "ferric oxide",
-                "chromium dioxide",
-                "unknown"
-              ]
-            }
-          }
-        },
-        "contentSpecifications": {
-          "type": "object",
-          "additionalProperties": false,
-          "required": [
-            "broadcastStandard",
-            "colorBW"
-          ],
-          "properties": {
-            "broadcastStandard": {
-              "enum": [
-                "NTSC",
-                "PAL",
-                "SECAM",
-                "unknown"
-              ]
+            "stockProductID": {
+              "type": "string"
             },
-            "colorBW": {
-              "enum": [
-                "b/w",
-                "color",
-                "color & b/w",
-                "unknown"
-              ]
+            "stockManufacturer": {
+              "type": "string"
             }
           }
         },
@@ -251,41 +179,15 @@
           "additionalProperties": false,
           "required": [
             "audioSoundField",
-            "numberOfAudioTracks",
-            "audioBitDepth",
-            "audioSamplingRate"
+            "designatedSpeed"
           ],
           "properties": {
             "audioSoundField": {
               "enum": [
-                "stereo",
-                "mono",
-                "surround",
-                "quadrophonic",
-                "binaural",
-                "none",
-                "Ch1: Mono",
-                "Ch1: Mono; Ch2: Mono",
-                "Ch1: Mono; Ch2: Mono; Ch3: Mono",
-                "Ch1: Mono; Ch2: Mono; Ch3: Mono; Ch4: Mono",
-                "Ch1: Mono; Ch2: Mono; Ch3: Mono; Ch4: None",
-                "Ch1: Mono; Ch2: None",
-                "Ch1: Mono; Ch2: Timecode",
-                "Ch1: None; Ch2: Mono",
-                "Ch1: Stereo Left; Ch2: Mono; Ch3: Stereo Right; Ch4: Mono",
-                "Ch1: Stereo Left; Ch2: Stereo Left; Ch3: Stereo Right; Ch4: Stereo Right",
-                "Ch1: Stereo Left; Ch2: Stereo Right",
-                "Ch1: Stereo Left; Ch2: Stereo Right; Ch3: Timecode",
-                "Ch1: Stereo Left; Ch2: Stereo Right; Ch3: Stereo Left; Ch4: Stereo Right",
-                "Ch1: Timecode; Ch2: Mono",
-                "unknown"
+                "mono"
               ]
             },
-            "numberOfAudioTracks": {
-              "type": "number",
-              "multipleOf": 1.0
-            },
-            "audioBitDepth": {
+            "designatedSpeed": {
               "type": "object",
               "additionalProperties": false,
               "required": [
@@ -295,54 +197,12 @@
               "properties": {
                 "measure": {
                   "enum": [
-                    8,
-                    16,
-                    18,
-                    20,
-                    24,
-                    32,
-                    48
+                    24
                   ]
                 },
                 "unit": {
                   "enum": [
-                    "bit"
-                  ]
-                }
-              }
-            },
-            "audioSamplingRate": {
-              "type": "object",
-              "additionalProperties": false,
-              "required": [
-                "measure",
-                "unit"
-              ],
-              "properties": {
-                "measure": {
-                  "enum": [
-                    22500,
-                    32000,
-                    44056,
-                    44100,
-                    47925,
-                    48000,
-                    64000,
-                    88000,
-                    88112,
-                    88200,
-                    95904,
-                    96000,
-                    128000,
-                    176224,
-                    176400,
-                    191808,
-                    192000
-                  ]
-                },
-                "unit": {
-                  "enum": [
-                    "hz"
+                    "ips"
                   ]
                 }
               }
@@ -378,7 +238,8 @@
           "required": [
             "serialNumber",
             "manufacturer",
-            "model"
+            "model",
+            "speed"
           ],
           "properties": {
             "id":  {
@@ -392,8 +253,31 @@
             },
             "model": {
               "$ref": "fields#playbackDeviceModel"
+            },
+            "speed": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "enum": [
+                    24
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "ips"
+                  ]
+                }
+              }
             }
           }
+        },
+        "analogDigitalConverter": {
+          "$ref": "fields#analogDigitalConverter"
         },
         "captureSoftware": {
           "$ref": "fields#captureSoftware"

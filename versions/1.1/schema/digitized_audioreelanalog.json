@@ -205,6 +205,7 @@
                   "enum": [
                     0.5,
                     1,
+                    1.25,
                     1.5
                   ]
                 },
@@ -270,7 +271,7 @@
                 8,
                 16,
                 24,
-                "n/a"
+                "unknown"
               ]
             },
             "trackConfiguration": {
@@ -321,6 +322,7 @@
                 "DBX I",
                 "DBX II",
                 "Tel Com/High Com",
+                "none",
                 "unknown"
               ]
             },
@@ -431,7 +433,7 @@
                 "DBX I",
                 "DBX II",
                 "Tel Com/High Com",
-                "n/a"
+                "none"
               ]
             },
             "eq": {
