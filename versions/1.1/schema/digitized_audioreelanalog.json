@@ -271,6 +271,7 @@
                 8,
                 16,
                 24,
+                "n/a",
                 "unknown"
               ]
             },
@@ -322,6 +323,7 @@
                 "DBX I",
                 "DBX II",
                 "Tel Com/High Com",
+                "n/a",
                 "none",
                 "unknown"
               ]
