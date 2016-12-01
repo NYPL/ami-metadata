@@ -211,26 +211,7 @@
               }
             },
             "tapeThickness": {
-              "type": "object",
-              "additionalProperties": false,
-              "required": [
-                "measure",
-                "unit"
-              ],
-              "properties": {
-                "measure": {
-                  "enum": [
-                    0.5,
-                    1,
-                    1.5
-                  ]
-                },
-                "unit": {
-                  "enum": [
-                    "mils"
-                  ]
-                }
-              }
+              "type": "string"
             },
             "baseMaterial": {
               "enum": [
@@ -240,7 +221,8 @@
             "backcoatMaterial": {
               "enum": [
                 "yes",
-                "no"
+                "no",
+                "unknown"
               ]
             }
           }
