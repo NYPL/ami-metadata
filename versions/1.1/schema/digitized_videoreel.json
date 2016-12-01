@@ -145,7 +145,6 @@
             "stockManufacturer",
             "stockProductID",
             "tapeWidth",
-            "tapeThickness",
             "baseMaterial",
             "oxideMaterial"
           ],
