@@ -139,7 +139,6 @@
             "stockManufacturer",
             "stockProductID",
             "tapeWidth",
-            "tapeThickness",
             "baseMaterial"
           ],
           "properties": {
