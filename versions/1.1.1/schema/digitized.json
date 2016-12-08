@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "digitized",
+  "title": "Digitized AMI Schema",
+  "description": "Base validation schema for metadata sent with media to digitization",
+  "type": "object",
+  "oneOf": [
+    { "$ref": "digitized_audioopticaldisc" },
+    { "$ref": "digitized_audioreelanalog" },
+    { "$ref": "digitized_audioreeldigital" },
+    { "$ref": "digitized_audiocassetteanalog" },
+    { "$ref": "digitized_audiocassettedigital" },
+    { "$ref": "digitized_audiogrooveddisc" },
+    { "$ref": "digitized_audiogroovedcylinder" },
+    { "$ref": "digitized_videoopticaldisc" },
+    { "$ref": "digitized_videodvcassette" },
+    { "$ref": "digitized_videocassette" },
+    { "$ref": "digitized_videoreel" }
+  ]
+}
