@@ -207,6 +207,7 @@
               "enum": [
                 "acetate",
                 "polyester",
+                "acetate and poloyester",
                 "PVC",
                 "paper",
                 "unknown"

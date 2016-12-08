@@ -233,7 +233,9 @@
             },
             "baseMaterial": {
               "enum": [
-                "polyester"
+                "polyester",
+                "acetate",
+                "acetate and poloyester"
               ]
             },
             "backcoatMaterial": {
