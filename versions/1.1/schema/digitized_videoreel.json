@@ -145,7 +145,6 @@
             "stockManufacturer",
             "stockProductID",
             "tapeWidth",
-            "tapeThickness",
             "baseMaterial",
             "oxideMaterial"
           ],
@@ -240,6 +239,7 @@
               "enum": [
                 "acetate",
                 "polyester",
+                "acetate and polyester",
                 "PVC",
                 "paper",
                 "unknown"

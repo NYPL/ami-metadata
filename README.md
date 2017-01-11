@@ -18,6 +18,7 @@ All common fields are defined in fields.json. Schema for media types at a specif
 * Audio Optical Disc
 * Audio Reel Analog
 * Audio Reel Digital
+* Audio Wire
 * Video Cassette Analog
 * Video Cassette DV
 * Video Optical Disc
@@ -26,7 +27,6 @@ All common fields are defined in fields.json. Schema for media types at a specif
 To Be Defined
 
 * Audio Magnetic Cylinder
-* Audio Wire
 * Film
 
 ## Usage

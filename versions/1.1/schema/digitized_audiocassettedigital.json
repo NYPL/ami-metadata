@@ -207,6 +207,7 @@
               "enum": [
                 "acetate",
                 "polyester",
+                "acetate and polyester",
                 "PVC",
                 "paper",
                 "unknown"
@@ -253,6 +254,7 @@
                 8,
                 16,
                 32,
+                "n/a",
                 "unknown"
               ]
             },
@@ -395,6 +397,12 @@
             },
             "model": {
               "$ref": "fields#playbackDeviceModel"
+            },
+            "eq": {
+              "enum": [
+                "with pre-emphasis",
+                "without pre-emphasis"
+              ]
             },
             "speed": {
               "type": "object",

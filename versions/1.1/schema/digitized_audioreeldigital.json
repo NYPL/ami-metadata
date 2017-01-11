@@ -139,7 +139,6 @@
             "stockManufacturer",
             "stockProductID",
             "tapeWidth",
-            "tapeThickness",
             "baseMaterial"
           ],
           "properties": {
@@ -234,7 +233,9 @@
             },
             "baseMaterial": {
               "enum": [
-                "polyester"
+                "polyester",
+                "acetate",
+                "acetate and polyester"
               ]
             },
             "backcoatMaterial": {
@@ -275,6 +276,7 @@
                 24,
                 32,
                 48,
+                "n/a",
                 "unknown"
               ]
             },
