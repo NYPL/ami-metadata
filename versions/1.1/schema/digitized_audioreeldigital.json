@@ -137,7 +137,6 @@
           "required": [
             "diameter",
             "stockManufacturer",
-            "stockProductID",
             "tapeWidth",
             "baseMaterial"
           ],
@@ -179,9 +178,6 @@
                   ]
                 }
               }
-            },
-            "stockProductID": {
-              "type": "string"
             },
             "stockManufacturer": {
               "type": "string"

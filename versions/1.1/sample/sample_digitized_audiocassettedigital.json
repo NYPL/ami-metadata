@@ -57,7 +57,6 @@
 				"unit": "min"
 			},
 			"stockManufacturer": "Manufacturer A",
-			"stockProductID": "idabc123",
 			"tapeWidth": {
 				"measure": 0.125,
 				"unit": "in"

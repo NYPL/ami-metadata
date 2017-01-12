@@ -177,7 +177,6 @@
           "additionalProperties": false,
           "required": [
             "stockManufacturer",
-            "stockProductID",
             "tapeWidth",
             "oxideMaterial"
           ],
@@ -202,9 +201,6 @@
               }
             },
             "stockManufacturer": {
-              "type": "string"
-            },
-            "stockProductID": {
               "type": "string"
             },
             "tapeWidth": {
