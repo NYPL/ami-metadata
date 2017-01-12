@@ -60,6 +60,7 @@
 				"unit": "in"
 			},
 			"stockManufacturer": "Manufacturer A",
+			"stockProductID": "xyz123",
 			"baseMaterial": "plaster",
 			"surfaceMaterial": "celluloid",
 			"grooveOrientation": "lateral",

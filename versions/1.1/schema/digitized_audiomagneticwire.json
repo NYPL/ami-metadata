@@ -125,7 +125,8 @@
           "additionalProperties": false,
           "required": [
             "diameter",
-            "stockManufacturer"
+            "stockManufacturer",
+            "stockProductID"
           ],
           "properties": {
             "diameter": {
@@ -164,6 +165,9 @@
                   ]
                 }
               }
+            },
+            "stockProductID": {
+              "type": "string"
             },
             "stockManufacturer": {
               "type": "string"

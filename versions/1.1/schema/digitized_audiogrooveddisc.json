@@ -140,6 +140,7 @@
           "additionalProperties": false,
           "required": [
             "stockManufacturer",
+            "stockProductID",
             "diameter",
             "surfaceMaterial",
             "baseMaterial",
@@ -148,6 +149,9 @@
           ],
           "properties": {
             "stockManufacturer": {
+              "type": "string"
+            },
+            "stockProductID": {
               "type": "string"
             },
             "diameter": {

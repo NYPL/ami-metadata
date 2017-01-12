@@ -143,6 +143,7 @@
           "required": [
             "diameter",
             "stockManufacturer",
+            "stockProductID",
             "tapeWidth",
             "baseMaterial",
             "oxideMaterial"
@@ -187,6 +188,9 @@
               }
             },
             "stockManufacturer": {
+              "type": "string"
+            },
+            "stockProductID": {
               "type": "string"
             },
             "tapeWidth": {
