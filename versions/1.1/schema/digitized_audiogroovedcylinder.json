@@ -133,7 +133,6 @@
           "additionalProperties": false,
           "required": [
             "stockManufacturer",
-            "stockProductID",
             "diameter",
             "length",
             "baseMaterial",

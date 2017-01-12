@@ -177,7 +177,6 @@
           "additionalProperties": false,
           "required": [
             "stockManufacturer",
-            "stockProductID",
             "tapeWidth",
             "oxideMaterial"
           ],
