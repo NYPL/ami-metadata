@@ -300,6 +300,7 @@
                 "Ch1: Mono; Ch2: Mono; Ch3: Mono",
                 "Ch1: Mono; Ch2: Mono; Ch3: Mono; Ch4: Mono",
                 "Ch1: Mono; Ch2: Mono; Ch3: Mono; Ch4: None",
+                "Ch1: Mono; Ch2: None; Ch3: Mono; Ch4: None",
                 "Ch1: Mono; Ch2: None",
                 "Ch1: Mono; Ch2: Timecode",
                 "Ch1: None; Ch2: Mono",

@@ -69,7 +69,7 @@
 			"colorBW": "b/w"
 		},
 		"audioRecording": {
-			"audioSoundField": "mono",
+			"audioSoundField": "Ch1: Mono; Ch2: None; Ch3: Mono; Ch4: None",
 			"numberOfAudioTracks": 1
 		},
 		"notes": {
