@@ -102,29 +102,7 @@
           }
         },
         "subObject": {
-          "type": "object",
-          "additionalProperties": false,
-          "required": [
-            "faceNumber"
-          ],
-          "properties": {
-            "faceNumber": {
-              "type": "number",
-              "multipleOf": 1.0
-            },
-            "regionNumber": {
-              "type": "number",
-              "multipleOf": 1.0
-            },
-            "streamNumber": {
-              "type": "number",
-              "multipleOf": 1.0
-            },
-            "partNumber": {
-              "type": "number",
-              "multipleOf": 1.0
-            }
-          }
+          "$ref": "fields#subObjectWithStreams"
         },
         "physicalDescription": {
           "type": "object",

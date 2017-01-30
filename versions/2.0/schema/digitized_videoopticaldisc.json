@@ -120,22 +120,7 @@
           }
         },
         "subObject": {
-          "type": "object",
-          "additionalProperties": false,
-          "properties": {
-            "faceNumber": {
-              "type": "number",
-              "multipleOf": 1.0
-            },
-            "regionNumber": {
-              "type": "number",
-              "multipleOf": 1.0
-            },
-            "partNumber": {
-              "type": "number",
-              "multipleOf": 1.0
-            }
-          }
+          "$ref": "fields#subObjectWithoutStreams"
         },
         "physicalDescription": {
           "type": "object",
