@@ -23,11 +23,11 @@
 	},
 	"technical": {
 		"filename": "myh_abc123_v01_pm",
-		"extension": "mov",
+		"extension": "mkv",
 		"dateCreated": "2016-01-01",
-		"fileFormat": "MOV file",
+		"fileFormat": "MKV file",
 		"audioCodec": "PCM",
-		"videoCodec": "dvc",
+		"videoCodec": "FFV1",
 		"fileSize": {
 			"measure": 30000000000,
 			"unit": "B"

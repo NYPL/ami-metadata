@@ -36,10 +36,7 @@
           "$ref": "fields#technicalFilename"
         },
         "extension": {
-          "enum": [
-            "mov", "MOV",
-            "mp4", "MP4"
-          ]
+          "$ref": "fields#technicalExtensionForVideo"
         },
         "dateCreated": {
           "$ref": "fields#technicalDateCreated"
@@ -48,40 +45,10 @@
           "$ref": "fields#technicalFileFormat"
         },
         "audioCodec": {
-          "enum": [
-            "PCM",
-            "lpcm",
-            "AAC",
-            "aac "
-          ]
+          "$ref": "fields#technicalAudioCodecForVideo"
         },
         "videoCodec": {
-          "enum": [
-            "2vuy",
-            "2Vuy",
-            "ap4h",
-            "apch",
-            "apcn",
-            "apcs",
-            "avc1",
-            "CFHD",
-            "icod",
-            "V210",
-            "v210",
-            "DV",
-            "dvc",
-            "dvh3",
-            "dvh6",
-            "dvhp",
-            "dvhq",
-            "hdv2",
-            "hdv6",
-            "xd5f",
-            "xdv2",
-            "xdvb",
-            "xdvd",
-            "h264"
-          ]
+          "$ref": "fields#technicalVideoCodecForVideo"
         },
         "fileSize": {
           "$ref": "fields#technicalFileSize"

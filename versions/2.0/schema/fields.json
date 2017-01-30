@@ -126,10 +126,18 @@
           "type": "string",
           "pattern": "^[a-zA-Z0-9_]+"
         },
-        "extension": {
-          "id": "#technicalExtension",
-          "type": "string",
-          "pattern": "[a-zA-Z0-9]{3}"
+        "extensionForAudio": {
+          "id": "#technicalExtensionForAudio",
+          "enum": [
+            "wav", "WAV"
+          ]
+        },
+        "extensionForVideo": {
+          "id": "#technicalExtensionForVideo",
+          "enum": [
+            "mkv", "MKV",
+            "mp4", "MP4"
+          ]
         },
         "dateCreated": {
           "id": "#technicalDateCreated",
@@ -140,13 +148,33 @@
           "id": "#technicalFileFormat",
           "type": "string"
         },
-        "audioCodec": {
-          "id": "#technicalAudioCodec",
-          "type": "string"
+        "fileFormatForAudio": {
+          "id": "#technicalFileFormatForAudio",
+          "enum": [
+            "BWF", "bwf"
+          ]
         },
-        "videoCodec": {
-          "id": "#technicalVideoCodec",
-          "type": "string"
+        "audioCodecForAudio": {
+          "id": "#technicalAudioCodecForAudio",
+          "enum": [
+            "PCM"
+          ]
+        },
+        "audioCodecForVideo": {
+          "id": "#technicalAudioCodecForVideo",
+          "enum": [
+            "PCM",
+            "lpcm",
+            "AAC",
+            "aac"
+          ]
+        },
+        "videoCodecForVideo": {
+          "id": "#technicalVideoCodecForVideo",
+          "enum": [
+            "FFV1",
+            "h264"
+          ]
         },
         "fileSize": {
           "id": "#technicalFileSize",

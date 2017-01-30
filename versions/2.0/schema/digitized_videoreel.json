@@ -36,10 +36,7 @@
           "$ref": "fields#technicalFilename"
         },
         "extension": {
-          "enum": [
-            "mov", "MOV",
-            "mp4", "MP4"
-          ]
+          "$ref": "fields#technicalExtensionForVideo"
         },
         "dateCreated": {
           "$ref": "fields#technicalDateCreated"
@@ -48,19 +45,10 @@
           "$ref": "fields#technicalFileFormat"
         },
         "audioCodec": {
-          "enum": [
-            "PCM",
-            "lpcm",
-            "AAC",
-            "aac "
-          ]
+          "$ref": "fields#technicalAudioCodecForVideo"
         },
         "videoCodec": {
-          "enum": [
-            "V210",
-            "v210",
-            "h264"
-          ]
+          "$ref": "fields#technicalVideoCodecForVideo"
         },
         "fileSize": {
           "$ref": "fields#technicalFileSize"
