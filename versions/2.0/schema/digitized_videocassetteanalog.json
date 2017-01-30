@@ -85,7 +85,7 @@
           ],
           "properties": {
             "type": {
-              "enum": [ "video cassette", "video cassette analog" ]
+              "enum": [ "video cassette analog" ]
             },
             "format": {
               "enum": [

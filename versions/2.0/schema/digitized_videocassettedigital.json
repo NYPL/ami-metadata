@@ -86,7 +86,6 @@
           "properties": {
             "type": {
               "enum": [
-                "video dv cassette",
                 "video cassette digital"
               ]
             },
@@ -194,11 +193,8 @@
             },
             "baseMaterial": {
               "enum": [
-                "acetate",
                 "polyester",
-                "acetate and polyester",
                 "PVC",
-                "paper",
                 "unknown"
               ]
             },
