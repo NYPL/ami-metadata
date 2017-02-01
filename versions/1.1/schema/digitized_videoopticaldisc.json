@@ -57,6 +57,9 @@
         "videoCodec": {
           "enum": [
             "ISO 9660",
+            "AVC1",
+            "avc1",
+            "H264",
             "h264"
           ]
         },
