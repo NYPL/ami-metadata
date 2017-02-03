@@ -64,6 +64,7 @@
             "apcn",
             "apcs",
             "avc1",
+            "AVC1",
             "CFHD",
             "icod",
             "V210",
@@ -80,8 +81,6 @@
             "xdv2",
             "xdvb",
             "xdvd",
-            "avc1",
-            "AVC1",
             "H264",
             "h264"
           ]
