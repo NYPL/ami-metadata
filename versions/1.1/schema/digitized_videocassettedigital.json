@@ -20,7 +20,7 @@
       "id": "technical",
       "type": "object",
       "additionalProperties": false,
-      "require": [
+      "required": [
         "filename",
         "extension",
         "dateCreated",
@@ -64,6 +64,7 @@
             "apcn",
             "apcs",
             "avc1",
+            "AVC1",
             "CFHD",
             "icod",
             "V210",
@@ -80,6 +81,7 @@
             "xdv2",
             "xdvb",
             "xdvd",
+            "H264",
             "h264"
           ]
         },

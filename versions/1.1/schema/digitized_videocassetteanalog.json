@@ -20,7 +20,7 @@
       "id": "technical",
       "type": "object",
       "additionalProperties": false,
-      "require": [
+      "required": [
         "filename",
         "extension",
         "dateCreated",
@@ -63,11 +63,13 @@
             "apch",
             "apcn",
             "apcs",
-            "avc1",
             "CFHD",
             "icod",
             "V210",
             "v210",
+            "avc1",
+            "AVC1",
+            "H264",
             "h264"
           ]
         },

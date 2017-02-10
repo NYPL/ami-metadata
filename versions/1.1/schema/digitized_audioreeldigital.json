@@ -20,7 +20,7 @@
       "id": "technical",
       "type": "object",
       "additionalProperties": false,
-      "require": [
+      "required": [
         "filename",
         "extension",
         "dateCreated",
