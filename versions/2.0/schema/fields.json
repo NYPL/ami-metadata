@@ -15,7 +15,7 @@
       "properties": {
         "referenceFilename" : {
           "type": "string",
-          "pattern": "^[a-zA-Z0-9\\-\\*]+"
+          "pattern": "^[a-zA-Z\\d\\-\\*]+"
         },
         "fileRole" : {
           "type": "string",
@@ -62,7 +62,7 @@
         },
         "catalogBNumber": {
           "type": "string",
-          "pattern": "^(b|B)[0-9]{8}$"
+          "pattern": "^(b|B)[\\d]{8}$"
         },
         "mssID": {
           "type": "string",
@@ -124,7 +124,7 @@
         "filename": {
           "id": "#technicalFilename",
           "type": "string",
-          "pattern": "^[a-zA-Z0-9_]+"
+          "pattern": "^[\\w]+"
         },
         "extensionForAudio": {
           "id": "#technicalExtensionForAudio",
@@ -142,7 +142,7 @@
         "dateCreated": {
           "id": "#technicalDateCreated",
           "type": "string",
-          "pattern": "201[6-9]-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])"
+          "pattern": "201[6-9]-(0\\d|1[0-2])-(0\\d|[1-2]\\d|3[0-1])"
         },
         "fileFormat": {
           "id": "#technicalFileFormat",
@@ -219,7 +219,7 @@
         "durationHuman": {
           "id": "#technicalDurationHuman",
           "type": "string",
-          "pattern": "([0-9]+:|)[0-5][0-9]:[0-5][0-9](|\\.[0-9]{3})"
+          "pattern": "([\\d]+:|)[0-5][\\d]:[0-5][\\d](|\\.\\d+)"
         },
         "signalNotes": {
           "id": "#technicalSignalNotes",
