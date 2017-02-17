@@ -260,8 +260,9 @@
               "enum": [
                 "stereo",
                 "mono",
-                "unknown",
-                "multitrack"
+                "multitrack",
+                "multi-track",
+                "unknown"
               ]
             },
             "numberOfAudioTracks": {
