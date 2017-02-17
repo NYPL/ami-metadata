@@ -243,6 +243,7 @@
                 "surround",
                 "quadrophonic",
                 "binaural",
+                "multi-track",
                 "unknown"
               ]
             },
