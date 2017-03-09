@@ -369,6 +369,7 @@
             },
             "noiseReduction": {
               "enum": [
+                "Dolby A",
                 "Dolby B",
                 "Dolby C",
                 "n/a",
