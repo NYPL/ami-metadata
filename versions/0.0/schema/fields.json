@@ -39,9 +39,7 @@
       "type": "object",
       "additionalItems": false,
       "required": [
-        "primaryID",
-        "barcode",
-        "divisionCode"
+        "primaryID"
       ],
       "properties": {
         "primaryID": {
@@ -86,7 +84,8 @@
             "mae",
             "maf",
             "mao",
-            "axv"
+            "axv",
+            "mya"
           ]
         },
         "vernacularDivisionCode": {
@@ -112,10 +111,16 @@
         "date": {
           "type": "string"
         },
+        "disposition": {
+          "type": "string"
+        },
         "contentNotes": {
           "type": "string"
         },
         "accessNotes": {
+          "type": "string"
+        },
+        "curatorialNotes": {
           "type": "string"
         }
       }
