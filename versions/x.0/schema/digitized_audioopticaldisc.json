@@ -1,0 +1,256 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Digitized Audio Optical Disc Schema",
+  "id": "digitized_audioopticaldisc",
+  "description": "Definitions for audio optical fields",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "asset",
+    "bibliographic",
+    "technical",
+    "source",
+    "digitizationProcess",
+    "digitizer"
+  ],
+  "properties": {
+    "asset": { "$ref": "fields#asset" },
+    "bibliographic": { "$ref": "fields#bibliographic" },
+    "technical": {
+      "id": "technical",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "filename",
+        "extension",
+        "dateCreated",
+        "fileFormat",
+        "audioCodec",
+        "fileSize",
+        "durationMilli",
+        "durationHuman"
+      ],
+      "properties": {
+        "filename": {
+          "$ref": "fields#technicalFilename"
+        },
+        "extension": {
+          "$ref": "fields#technicalExtensionForAudio"
+        },
+        "dateCreated": {
+          "$ref": "fields#technicalDateCreated"
+        },
+        "fileFormat": {
+          "$ref": "fields#technicalFileFormatForAudio"
+        },
+        "audioCodec": {
+          "$ref": "fields#technicalAudioCodecForAudio"
+        },
+        "fileSize": {
+          "$ref": "fields#technicalFileSize"
+        },
+        "durationMilli": {
+          "$ref": "fields#technicalDurationMilli"
+        },
+        "durationHuman": {
+          "$ref": "fields#technicalDurationHuman"
+        },
+        "signalNotes": {
+          "$ref": "fields#technicalSignalNotes"
+        }
+      }
+    },
+    "source": {
+      "id": "source",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "object",
+        "subObject",
+        "physicalDescription",
+        "audioRecording"
+      ],
+      "properties": {
+        "object": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "type",
+            "format",
+            "volumeNumber"
+          ],
+          "properties": {
+            "type": {
+              "enum": [ "audio optical disc" ]
+            },
+            "format": {
+              "enum": [
+                "Audio CD-R",
+                "Audio CD, pressed",
+                "Minidisc",
+                "unknown"
+              ]
+            },
+            "generation": {
+              "type": "string"
+            },
+            "volumeNumber": {
+              "type": "number",
+              "multipleOf": 1.0
+            }
+          }
+        },
+        "subObject": {
+          "$ref": "fields#subObjectWithoutStreams"
+        },
+        "physicalDescription": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "stockManufacturer",
+            "diameter"
+          ],
+          "properties": {
+            "stockManufacturer": {
+              "type": "string"
+            },
+            "diameter": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "enum": [
+                    4.7,
+                    3.1
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "in"
+                  ]
+                }
+              }
+            },
+            "dyeLayer": {
+              "enum": [
+                "phthalocyanine",
+                "cyanine",
+                "azo",
+                "unknown"
+              ]
+            },
+            "reflectiveLayer": {
+              "enum": [
+                "gold",
+                "silver",
+                "aluminum",
+                "unknown"
+              ]
+            },
+            "dataCapacity": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "enum": [
+                    155,
+                    185,
+                    210,
+                    650,
+                    700,
+                    "unknown"
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "MiB"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "audioRecording": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "audioSoundField"
+          ],
+          "properties": {
+            "audioSoundField": {
+              "enum": [
+                "stereo",
+                "mono",
+                "surround",
+                "quadrophonic",
+                "binaural",
+                "unknown"
+              ]
+            }
+          }
+        },
+        "notes": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "physicalConditionPreShipNotes": {
+              "type": "string"
+            },
+            "physicalConditionDigitizationNotes": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "digitizationProcess" : {
+      "id": "digitizationProcess",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "playbackDevice",
+        "captureSoftware"
+      ],
+      "properties": {
+        "playbackDevice": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "serialNumber",
+            "manufacturer",
+            "model"
+          ],
+          "properties": {
+            "id":  {
+              "$ref": "fields#playbackDeviceID"
+            },
+            "serialNumber": {
+              "$ref": "fields#playbackDeviceSerialNumber"
+            },
+            "manufacturer": {
+              "$ref": "fields#playbackDeviceManufacturer"
+            },
+            "model": {
+              "$ref": "fields#playbackDeviceModel"
+            }
+          }
+        },
+        "captureSoftware": {
+          "$ref": "fields#captureSoftware"
+        },
+        "notes": {
+          "$ref": "fields#processNotes"
+        }
+      }
+    },
+    "digitizer": { "$ref": "fields#digitizer" }
+  }
+}
