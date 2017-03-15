@@ -237,6 +237,8 @@
             "broadcastStandard": {
               "enum": [
                 "NTSC",
+                "NTSC 4.43",
+                "NTSC/PAL-M",
                 "PAL",
                 "SECAM",
                 "unknown"
