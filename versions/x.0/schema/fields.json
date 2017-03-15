@@ -232,6 +232,70 @@
         "signalNotes": {
           "id": "#technicalSignalNotes",
           "type": "string"
+        },
+        "audioBitDepth": {
+          "id": "#technicalAudioBitDepth",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "measure": {
+              "type": "number",
+              "multipleOf": 1.0
+            },
+            "unit": {
+              "enum": [
+                "bit"
+              ]
+            }
+          }
+        },
+        "audioBitRate": {
+          "id": "#technicalAudioBitRate",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "measure": {
+              "type": "number",
+              "multipleOf": 1.0
+            },
+            "unit": {
+              "enum": [
+                "bit/s"
+              ]
+            },
+            "mode": {
+              "enum": [
+                "VBR",
+                "CBR"
+              ]
+            }
+          },
+          "audioCodecVersion": {
+            "id": "#technicalAudioCodecVersion",
+            "type": "string",
+            "additionalProperties": false
+          },
+          "audioDataEncoding": {
+            "id": "#technicalAudioDataEncoding",
+            "type": "string",
+            "additionalProperties": false
+          },
+          "audioSamplingRate": {
+            "id": "#technicalAudioSamplingRate",
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "measure": {
+                "type": "number",
+                "multipleOf": 1.0
+              },
+              "unit": {
+                "enum": [
+                  "hz"
+                ]
+              }
+            }
+          }
         }
       }
     },
