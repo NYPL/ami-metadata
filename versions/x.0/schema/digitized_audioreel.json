@@ -19,7 +19,7 @@
     "technical": {
       "id": "technical",
       "type": "object",
-      "additionalProperties": false,
+      "additionalProperties": true,
       "require": [
         "filename",
         "extension",
@@ -67,7 +67,7 @@
     "source": {
       "id": "source",
       "type": "object",
-      "additionalProperties": false,
+      "additionalProperties": true,
       "required": [
         "object",
         "subObject",
