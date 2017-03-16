@@ -39,7 +39,10 @@
       "type": "object",
       "additionalItems": false,
       "required": [
-        "primaryID"
+        "primaryID",
+        "title",
+        "divisionCode",
+        "projectCode"
       ],
       "properties": {
         "primaryID": {
@@ -255,8 +258,7 @@
           "additionalProperties": false,
           "properties": {
             "measure": {
-              "type": "number",
-              "multipleOf": 1.0
+              "type": "number"
             },
             "unit": {
               "enum": [
@@ -414,9 +416,6 @@
           "id": "#subObjectWithoutStreams",
           "type": "object",
           "additionalProperties": false,
-          "required": [
-            "faceNumber"
-          ],
           "properties": {
             "faceNumber": {
               "type": "number",
@@ -437,9 +436,6 @@
         "id": "#subObjectWithStreams",
         "type": "object",
         "additionalProperties": false,
-        "required": [
-          "faceNumber"
-        ],
         "properties": {
           "faceNumber": {
             "type": "number",
@@ -531,12 +527,6 @@
           "id": "#analogDigitalConverter",
           "type": "object",
           "additionalProperties": false,
-          "required": [
-            "serialNumber",
-            "manufacturer",
-            "model",
-            "operatingLevel"
-          ],
           "properties": {
             "id": {
               "id": "#analogDigitalConverterID",
@@ -586,12 +576,6 @@
           "id": "#captureSoftware",
           "type": "object",
           "additionalProperties": false,
-          "required": [
-            "manufacturer",
-            "productName",
-            "version",
-            "platform"
-          ],
           "type": "object",
           "properties": {
             "manufacturer": {
@@ -645,10 +629,6 @@
         "operator": {
           "type": "object",
           "additionalItems": false,
-          "required": [
-            "firstName",
-            "lastName"
-          ],
           "properties": {
             "firstName": {
               "type": "string"
@@ -661,22 +641,12 @@
         "organization": {
           "type": "object",
           "additionalItems": false,
-          "required": [
-            "name",
-            "address"
-          ],
           "properties": {
             "name": {
               "type": "string"
             },
             "address": {
               "type": "object",
-              "required": [
-                "street1",
-                "city",
-                "state",
-                "postalCode"
-              ],
               "properties": {
                 "street1":  {
                   "type": "string"

@@ -22,13 +22,9 @@
       "additionalProperties": true,
       "required": [
         "filename",
-        "extension",
-        "dateCreated",
         "fileFormat",
         "audioCodec",
         "videoCodec",
-        "fileSize",
-        "durationMilli",
         "durationHuman"
       ],
       "properties": {
@@ -126,9 +122,7 @@
       "required": [
         "object",
         "subObject",
-        "physicalDescription",
-        "contentSpecifications",
-        "audioRecording"
+        "contentSpecifications"
       ],
       "properties": {
         "object": {
@@ -170,13 +164,6 @@
         "physicalDescription": {
           "type": "object",
           "additionalProperties": false,
-          "required": [
-            "stockManufacturer",
-            "diameter",
-            "dyeLayer",
-            "reflectiveLayer",
-            "dataCapacity"
-          ],
           "properties": {
             "stockManufacturer": {
               "type": "string"
@@ -250,8 +237,7 @@
           "additionalProperties": false,
           "required": [
             "broadcastStandard",
-            "colorBW",
-            "regionCode"
+            "colorBW"
           ],
           "properties": {
             "broadcastStandard": {
@@ -293,10 +279,6 @@
         "audioRecording": {
           "type": "object",
           "additionalProperties": false,
-          "required": [
-            "audioSoundField",
-            "numberOfAudioTracks"
-          ],
           "properties": {
             "audioSoundField": {
               "enum": [
@@ -348,19 +330,10 @@
       "id": "digitizationProcess",
       "type": "object",
       "additionalProperties": false,
-      "required": [
-        "playbackDevice",
-        "captureSoftware"
-      ],
       "properties": {
         "playbackDevice": {
           "type": "object",
           "additionalProperties": false,
-          "required": [
-            "serialNumber",
-            "manufacturer",
-            "model"
-          ],
           "properties": {
             "id":  {
               "$ref": "fields#playbackDeviceID"

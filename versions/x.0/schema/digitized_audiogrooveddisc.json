@@ -23,11 +23,8 @@
       "required": [
         "filename",
         "extension",
-        "dateCreated",
         "fileFormat",
-        "audioCodec",
         "fileSize",
-        "durationMilli",
         "durationHuman"
       ],
       "properties": {
@@ -81,9 +78,7 @@
       "additionalProperties": true,
       "required": [
         "object",
-        "subObject",
-        "physicalDescription",
-        "audioRecording"
+        "subObject"
       ],
       "properties": {
         "object": {
@@ -129,14 +124,6 @@
         "physicalDescription": {
           "type": "object",
           "additionalProperties": false,
-          "required": [
-            "stockManufacturer",
-            "diameter",
-            "surfaceMaterial",
-            "baseMaterial",
-            "grooveWidth",
-            "grooveOrientation"
-          ],
           "properties": {
             "stockManufacturer": {
               "type": "string"
@@ -211,10 +198,6 @@
         "audioRecording": {
           "type": "object",
           "additionalProperties": false,
-          "required": [
-            "audioSoundField",
-            "designatedSpeed"
-          ],
           "properties": {
             "audioSoundField": {
               "enum": [
@@ -272,26 +255,10 @@
       "id": "digitizationProcess",
       "type": "object",
       "additionalProperties": false,
-      "required": [
-        "playbackDevice",
-        "analogDigitalConverter",
-        "captureSoftware"
-      ],
       "properties": {
         "playbackDevice": {
           "type": "object",
           "additionalProperties": false,
-          "required": [
-            "serialNumber",
-            "manufacturer",
-            "model",
-            "speed",
-            "trackingWeight",
-            "groovedWallPlayback",
-            "phonoArm",
-            "phonoCartridge",
-            "phonoPreamp"
-          ],
           "properties": {
             "id":  {
               "$ref": "fields#playbackDeviceID"
@@ -361,11 +328,6 @@
             "phonoArm": {
               "type": "object",
               "additionalProperties": false,
-              "required": [
-                "serialNumber",
-                "manufacturer",
-                "model"
-              ],
               "properties": {
                 "serialNumber": {
                   "type": "string"
@@ -381,12 +343,6 @@
             "phonoCartridge": {
               "type": "object",
               "additionalProperties": false,
-              "required": [
-                "manufacturer",
-                "model",
-                "stylusShape",
-                "stylusSize"
-              ],
               "properties": {
                 "manufacturer": {
                   "type": "string"

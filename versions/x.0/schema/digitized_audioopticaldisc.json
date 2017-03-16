@@ -23,11 +23,8 @@
       "required": [
         "filename",
         "extension",
-        "dateCreated",
         "fileFormat",
-        "audioCodec",
         "fileSize",
-        "durationMilli",
         "durationHuman"
       ],
       "properties": {
@@ -81,9 +78,7 @@
       "additionalProperties": true,
       "required": [
         "object",
-        "subObject",
-        "physicalDescription",
-        "audioRecording"
+        "subObject"
       ],
       "properties": {
         "object": {
@@ -121,10 +116,6 @@
         "physicalDescription": {
           "type": "object",
           "additionalProperties": false,
-          "required": [
-            "stockManufacturer",
-            "diameter"
-          ],
           "properties": {
             "stockManufacturer": {
               "type": "string"
@@ -196,9 +187,6 @@
         "audioRecording": {
           "type": "object",
           "additionalProperties": false,
-          "required": [
-            "audioSoundField"
-          ],
           "properties": {
             "audioSoundField": {
               "enum": [
@@ -230,19 +218,10 @@
       "id": "digitizationProcess",
       "type": "object",
       "additionalProperties": false,
-      "required": [
-        "playbackDevice",
-        "captureSoftware"
-      ],
       "properties": {
         "playbackDevice": {
           "type": "object",
           "additionalProperties": false,
-          "required": [
-            "serialNumber",
-            "manufacturer",
-            "model"
-          ],
           "properties": {
             "id":  {
               "$ref": "fields#playbackDeviceID"
@@ -260,6 +239,9 @@
         },
         "captureSoftware": {
           "$ref": "fields#captureSoftware"
+        },
+        "adlFilename": {
+          "type": "string"
         },
         "notes": {
           "$ref": "fields#processNotes"

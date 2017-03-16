@@ -23,11 +23,8 @@
       "required": [
         "filename",
         "extension",
-        "dateCreated",
         "fileFormat",
-        "audioCodec",
         "fileSize",
-        "durationMilli",
         "durationHuman"
       ],
       "properties": {
@@ -81,9 +78,7 @@
       "additionalProperties": true,
       "required": [
         "object",
-        "subObject",
-        "physicalDescription",
-        "audioRecording"
+        "subObject"
       ],
       "properties": {
         "object": {
@@ -123,11 +118,6 @@
         "physicalDescription": {
           "type": "object",
           "additionalProperties": false,
-          "required": [
-            "stockManufacturer",
-            "tapeWidth",
-            "oxideMaterial"
-          ],
           "properties": {
             "stockLength": {
               "type": "object",
@@ -198,10 +188,11 @@
               ]
             },
             "oxideMaterial": {
-              "enum": ["Type I",
-                "Type II",
-                "Type III",
-                "Type IV",
+              "enum": [
+                "ferric",
+                "chromium",
+                "ferrichrome",
+                "metal",
                 "unknown"
               ]
             }
@@ -210,13 +201,6 @@
         "audioRecording": {
           "type": "object",
           "additionalProperties": false,
-          "required": [
-            "audioSoundField",
-            "numberOfAudioTracks",
-            "trackConfiguration",
-            "designatedSpeed",
-            "designatedNoiseReduction"
-          ],
           "properties": {
             "audioSoundField": {
               "enum": [
@@ -313,23 +297,10 @@
       "id": "digitizationProcess",
       "type": "object",
       "additionalProperties": false,
-      "required": [
-        "playbackDevice",
-        "analogDigitalConverter",
-        "captureSoftware"
-      ],
       "properties": {
         "playbackDevice": {
           "type": "object",
           "additionalProperties": false,
-          "required": [
-            "serialNumber",
-            "manufacturer",
-            "model",
-            "tapeHeadType",
-            "eq",
-            "speed"
-          ],
           "properties": {
             "id":  {
               "$ref": "fields#playbackDeviceID"

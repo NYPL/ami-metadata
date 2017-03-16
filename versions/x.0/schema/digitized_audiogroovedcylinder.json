@@ -23,11 +23,8 @@
       "required": [
         "filename",
         "extension",
-        "dateCreated",
         "fileFormat",
-        "audioCodec",
         "fileSize",
-        "durationMilli",
         "durationHuman"
       ],
       "properties": {
@@ -81,9 +78,7 @@
       "additionalProperties": true,
       "required": [
         "object",
-        "subObject",
-        "physicalDescription",
-        "audioRecording"
+        "subObject"
       ],
       "properties": {
         "object": {
@@ -122,15 +117,6 @@
         "physicalDescription": {
           "type": "object",
           "additionalProperties": false,
-          "required": [
-            "stockManufacturer",
-            "diameter",
-            "length",
-            "baseMaterial",
-            "surfaceMaterial",
-            "grooveWidth",
-            "grooveOrientation"
-          ],
           "properties": {
             "stockManufacturer": {
               "type": "string"
@@ -206,9 +192,6 @@
         "audioRecording": {
           "type": "object",
           "additionalProperties": false,
-          "required": [
-            "audioSoundField"
-          ],
           "properties": {
             "audioSoundField": {
               "enum": [
@@ -239,25 +222,10 @@
       "id": "digitizationProcess",
       "type": "object",
       "additionalProperties": false,
-      "required": [
-        "playbackDevice",
-        "analogDigitalConverter",
-        "captureSoftware"
-      ],
       "properties": {
         "playbackDevice": {
           "type": "object",
           "additionalProperties": false,
-          "required": [
-            "serialNumber",
-            "manufacturer",
-            "model",
-            "speed",
-            "trackingWeight",
-            "groovedWallPlayback",
-            "phonoCartridge",
-            "phonoPreamp"
-          ],
           "properties": {
             "id":  {
               "$ref": "fields#playbackDeviceID"
@@ -320,12 +288,6 @@
             "phonoCartridge": {
               "type": "object",
               "additionalProperties": false,
-              "required": [
-                "manufacturer",
-                "model",
-                "stylusShape",
-                "stylusSize"
-              ],
               "properties": {
                 "manufacturer": {
                   "type": "string"

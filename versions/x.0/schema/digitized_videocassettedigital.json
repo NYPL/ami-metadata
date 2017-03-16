@@ -22,13 +22,8 @@
       "additionalProperties": true,
       "required": [
         "filename",
-        "extension",
-        "dateCreated",
-        "fileFormat",
         "audioCodec",
         "videoCodec",
-        "fileSize",
-        "durationMilli",
         "durationHuman"
       ],
       "properties": {
@@ -115,9 +110,7 @@
       "additionalProperties": true,
       "required": [
         "object",
-        "physicalDescription",
-        "contentSpecifications",
-        "audioRecording"
+        "contentSpecifications"
       ],
       "properties": {
         "object": {
@@ -170,11 +163,6 @@
         "physicalDescription": {
           "type": "object",
           "additionalProperties": false,
-          "required": [
-            "stockManufacturer",
-            "tapeWidth",
-            "oxideMaterial"
-          ],
           "properties": {
             "stockLength": {
               "type": "object",
@@ -267,12 +255,6 @@
         "audioRecording": {
           "type": "object",
           "additionalProperties": false,
-          "required": [
-            "audioSoundField",
-            "numberOfAudioTracks",
-            "audioBitDepth",
-            "audioSamplingRate"
-          ],
           "properties": {
             "audioSoundField": {
               "enum": [
@@ -386,19 +368,10 @@
       "id": "digitizationProcess",
       "type": "object",
       "additionalProperties": false,
-      "required": [
-        "playbackDevice",
-        "captureSoftware"
-      ],
       "properties": {
         "playbackDevice": {
           "type": "object",
           "additionalProperties": false,
-          "required": [
-            "serialNumber",
-            "manufacturer",
-            "model"
-          ],
           "properties": {
             "id":  {
               "$ref": "fields#playbackDeviceID"

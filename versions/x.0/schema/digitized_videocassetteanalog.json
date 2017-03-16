@@ -22,13 +22,9 @@
       "additionalProperties": true,
       "required": [
         "filename",
-        "extension",
-        "dateCreated",
-        "fileFormat",
         "audioCodec",
         "videoCodec",
         "fileSize",
-        "durationMilli",
         "durationHuman"
       ],
       "properties": {
