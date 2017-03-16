@@ -337,6 +337,7 @@
                 "px"
               ]
             }
+          }
         },
         "frameRate": {
           "id": "#technicalFrameRate",
@@ -358,6 +359,7 @@
                 "CFR"
               ]
             }
+          }
         },
         "frameWidth": {
           "id": "#technicalFrameWidth",
@@ -373,7 +375,36 @@
                 "px"
               ]
             }
+          }
         },
+        "pixelRatio": {
+          "id": "#technicalPixelRatio",
+          "type": "number"
+        },
+        "videoBitRate": {
+          "id": "#technicalVideoBitRate",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "measure": {
+              "type": "number"
+            },
+            "mode": {
+              "enum": [
+                "CBR",
+                "VBR"
+              ]
+            }
+          }
+        },
+        "videoStandard": {
+          "id": "#technicalVideoStandard",
+          "type": "string",
+          "enum": [
+            "NTSC",
+            "PAL"
+          ]
+        }
       }
     },
     "source": {
