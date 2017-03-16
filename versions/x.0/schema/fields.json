@@ -322,7 +322,58 @@
             "PAL",
             "NTSC"
           ]
-        }
+        },
+        "frameHeight": {
+          "id": "#technicalFrameHeight",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "measure": {
+              "type": "number",
+              "multipleOf": 1.0
+            },
+            "unit": {
+              "enum": [
+                "px"
+              ]
+            }
+        },
+        "frameRate": {
+          "id": "#technicalFrameRate",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "measure": {
+              "type": "number",
+              "multipleOf": 1.0
+            },
+            "unit": {
+              "enum": [
+                "bit/s"
+              ]
+            },
+            "mode": {
+              "enum": [
+                "VFR",
+                "CFR"
+              ]
+            }
+        },
+        "frameWidth": {
+          "id": "#technicalFrameWidth",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "measure": {
+              "type": "number",
+              "multipleOf": 1.0
+            },
+            "unit": {
+              "enum": [
+                "px"
+              ]
+            }
+        },
       }
     },
     "source": {
