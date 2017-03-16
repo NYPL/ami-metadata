@@ -296,6 +296,32 @@
               }
             }
           }
+        },
+        "chromaSubsampling": {
+          "id": "#technicalChromaSubsampling",
+          "type": "string",
+          "pattern": "\\d+:\\d+:\\d+"
+        },
+        "colorSpace": {
+          "id": "#technicalColorSpace",
+          "type": "string",
+          "enum": [
+            "YUV",
+            "MPEG-4"
+          ]
+        },
+        "displayAspectRatio": {
+          "id": "#technicalDisplayAspectRatio",
+          "type": "number"
+        },
+        "fieldOrder": {
+          "id": "#technicalFieldOrder",
+          "type": "string",
+          "enum": [
+            "Lower",
+            "PAL",
+            "NTSC"
+          ]
         }
       }
     },
