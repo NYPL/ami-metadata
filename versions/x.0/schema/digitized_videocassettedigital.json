@@ -61,6 +61,51 @@
         },
         "signalNotes": {
           "$ref": "fields#technicalSignalNotes"
+        },
+        "audioBitDepth": {
+          "$ref": "fields#technicalAudioBitDepth"
+        },
+        "audioBitRate": {
+          "$ref": "fields#technicalAudioBitRate"
+        },
+        "audioCodecVersion": {
+          "$ref": "fields#technicalAudioCodecVersion"
+        },
+        "audioDataEncoding": {
+          "$ref": "fields#technicalAudioDataEncoding"
+        },
+        "audioSamplingRate": {
+          "$ref": "fields#technicalAudioSamplingRate"
+        },
+        "chromaSubsampling": {
+          "$ref": "fields#technicalChromaSubsampling"
+        },
+        "colorSpace": {
+          "$ref": "fields#technicalColorSpace"
+        },
+        "displayAspectRatio": {
+          "$ref": "fields#technicalDisplayAspectRatio"
+        },
+        "fieldOrder": {
+          "$ref": "fields#technicalFieldOrder"
+        },
+        "frameHeight": {
+          "$ref": "fields#technicalFrameHeight"
+        },
+        "frameRate": {
+          "$ref": "fields#technicalFrameRate"
+        },
+        "frameWidth": {
+          "$ref": "fields#technicalFrameWidth"
+        },
+        "pixelRatio": {
+          "$ref": "fields#technicalPixelRatio"
+        },
+        "videoBitRate": {
+          "$ref": "fields#technicalVideoBitRate"
+        },
+        "videoStandard": {
+          "$ref": "fields#technicalVideoStandard"
         }
       }
     },

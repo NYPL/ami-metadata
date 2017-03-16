@@ -269,31 +269,31 @@
                 "CBR"
               ]
             }
-          },
-          "audioCodecVersion": {
-            "id": "#technicalAudioCodecVersion",
-            "type": "string",
-            "additionalProperties": false
-          },
-          "audioDataEncoding": {
-            "id": "#technicalAudioDataEncoding",
-            "type": "string",
-            "additionalProperties": false
-          },
-          "audioSamplingRate": {
-            "id": "#technicalAudioSamplingRate",
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-              "measure": {
-                "type": "number",
-                "multipleOf": 1.0
-              },
-              "unit": {
-                "enum": [
-                  "hz"
-                ]
-              }
+          }
+        },
+        "audioCodecVersion": {
+          "id": "#technicalAudioCodecVersion",
+          "type": "string",
+          "additionalProperties": false
+        },
+        "audioDataEncoding": {
+          "id": "#technicalAudioDataEncoding",
+          "type": "string",
+          "additionalProperties": false
+        },
+        "audioSamplingRate": {
+          "id": "#technicalAudioSamplingRate",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "measure": {
+              "type": "number",
+              "multipleOf": 1.0
+            },
+            "unit": {
+              "enum": [
+                "hz"
+              ]
             }
           }
         },

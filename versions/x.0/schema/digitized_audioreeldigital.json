@@ -57,6 +57,21 @@
         },
         "signalNotes": {
           "$ref": "fields#technicalSignalNotes"
+        },
+        "audioBitDepth": {
+          "$ref": "fields#technicalAudioBitDepth"
+        },
+        "audioBitRate": {
+          "$ref": "fields#technicalAudioBitRate"
+        },
+        "audioCodecVersion": {
+          "$ref": "fields#technicalAudioCodecVersion"
+        },
+        "audioDataEncoding": {
+          "$ref": "fields#technicalAudioDataEncoding"
+        },
+        "audioSamplingRate": {
+          "$ref": "fields#technicalAudioSamplingRate"
         }
       }
     },
