@@ -106,7 +106,7 @@
               "enum": [
                 "one-inch open-reel video Type A",
                 "one-inch open-reel video Type C",
-                "one-inch open-reel video EV"
+                "one-inch open-reel video EV",
                 "half-inch open-reel video CV",
                 "half-inch open-reel video EIAJ/AV",
                 "half-inch open-reel video other",
