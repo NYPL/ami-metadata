@@ -50,8 +50,7 @@
         "audioCodec": {
           "enum": [
             "AAC",
-            "aac ",
-            "unknown"
+            "aac "
           ]
         },
         "videoCodec": {
@@ -109,8 +108,7 @@
                 "Video DVD-R",
                 "Video DVD, pressed",
                 "Video DVD+R",
-                "Video DVD+RW",
-                "unknown"
+                "Video DVD+RW"
               ]
             },
             "generation": {

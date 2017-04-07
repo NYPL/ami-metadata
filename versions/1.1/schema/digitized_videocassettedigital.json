@@ -143,8 +143,7 @@
                 "HDV",
                 "MII",
                 "MiniDV",
-                "MPEG IMX",
-                "unknown"
+                "MPEG IMX"
               ]
             },
             "generation": {
