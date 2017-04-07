@@ -42,7 +42,7 @@
 	"source": {
 		"object": {
 			"type": "video cassette",
-			"format": "U-matic",
+			"format": "unknown",
 			"volumeNumber": 1
 		},
 		"subObject": {
