@@ -93,8 +93,7 @@
               "enum": [
                 "ProDigi",
                 "DASH",
-                "NAGRA-D",
-                "unknown"
+                "NAGRA-D"
               ]
             },
             "generation": {
