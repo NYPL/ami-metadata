@@ -96,7 +96,8 @@
                 "disc, metal master",
                 "disc, other",
                 "disc, shellac",
-                "disc, vinyl"
+                "disc, vinyl",
+                "disc, Gray Audograph"
               ]
             },
             "generation": {
@@ -165,8 +166,7 @@
                 "paper",
                 "nickel-plated copper",
                 "zinc",
-                "unknown metal",
-                "unknown"
+                "unknown metal"
               ]
             },
             "surfaceMaterial": {
