@@ -207,8 +207,7 @@
                 "mono",
                 "surround",
                 "quadrophonic",
-                "binaural",
-                "unknown"
+                "binaural"
               ]
             },
             "numberOfAudioTracks": {
@@ -219,8 +218,7 @@
                 8,
                 16,
                 32,
-                "n/a",
-                "unknown"
+                "none"
               ]
             },
             "trackConfiguration": {
@@ -230,8 +228,7 @@
                 "quarter-track",
                 "2 track",
                 "4 track",
-                "multi-track",
-                "unknown"
+                "multi-track"
               ]
             },
             "designatedSpeed": {
@@ -247,7 +244,7 @@
                     3.75,
                     1.875,
                     0.9375,
-                    "unknown"
+                    "none"
                   ]
                 },
                 "unit": {
@@ -264,7 +261,8 @@
                 "Dolby C",
                 "Dolby S",
                 "n/a",
-                "none"
+                "none",
+                "unknown"
               ]
             },
             "designatedEQ": {
