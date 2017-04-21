@@ -88,9 +88,7 @@
                 "8-track",
                 "Compact cassette",
                 "Microcassette",
-                "Minicassette",
-                "audio cassette, other",
-                "unknown"
+                "Minicassette"
               ]
             },
             "generation": {
@@ -232,6 +230,7 @@
                 "quarter-track",
                 "2 track",
                 "4 track",
+                "multi-track",
                 "unknown"
               ]
             },
@@ -260,8 +259,10 @@
             },
             "designatedNoiseReduction": {
               "enum": [
+                "Dolby A",
                 "Dolby B",
                 "Dolby C",
+                "Dolby S",
                 "n/a",
                 "none",
                 "unknown"
@@ -339,8 +340,10 @@
             },
             "noiseReduction": {
               "enum": [
+                "Dolby A",
                 "Dolby B",
                 "Dolby C",
+                "Dolby S",
                 "n/a",
                 "none"
               ]
