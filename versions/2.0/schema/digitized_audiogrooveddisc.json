@@ -96,7 +96,8 @@
                 "disc, metal master",
                 "disc, other",
                 "disc, shellac",
-                "disc, vinyl"
+                "disc, vinyl",
+                "disc, Gray Audograph"
               ]
             },
             "generation": {
@@ -165,8 +166,7 @@
                 "paper",
                 "nickel-plated copper",
                 "zinc",
-                "unknown metal",
-                "unknown"
+                "unknown metal"
               ]
             },
             "surfaceMaterial": {
@@ -259,6 +259,7 @@
       "additionalProperties": false,
       "required": [
         "playbackDevice",
+        "phonoPreamp",
         "analogDigitalConverter",
         "captureSoftware"
       ],
@@ -271,11 +272,9 @@
             "manufacturer",
             "model",
             "speed",
-            "trackingWeight",
             "groovedWallPlayback",
             "phonoArm",
-            "phonoCartridge",
-            "phonoPreamp"
+            "phonoCartridge"
           ],
           "properties": {
             "id":  {
@@ -316,32 +315,11 @@
                 }
               }
             },
-            "trackingWeight": {
-              "type": "object",
-              "additionalProperties": false,
-              "required": [
-                "measure",
-                "unit"
-              ],
-              "properties": {
-                "measure": {
-                  "type": "number"
-                },
-                "unit": {
-                  "enum": [
-                    "g"
-                  ]
-                }
-              }
-            },
             "groovedWallPlayback": {
-              "enum": [
-                "left only",
-                "right only",
-                "left + right",
-                "left - right",
-                "left and right discrete"
-              ]
+              "$ref": "fields#groovedWallPlayback"
+            },
+            "phonoCartridge": {
+              "$ref": "fields#phonoCartridge"
             },
             "phonoArm": {
               "type": "object",
@@ -349,7 +327,8 @@
               "required": [
                 "serialNumber",
                 "manufacturer",
-                "model"
+                "model",
+                "trackingWeight"
               ],
               "properties": {
                 "serialNumber": {
@@ -360,36 +339,8 @@
                 },
                 "model": {
                   "type": "string"
-                }
-              }
-            },
-            "phonoCartridge": {
-              "type": "object",
-              "additionalProperties": false,
-              "required": [
-                "manufacturer",
-                "model",
-                "stylusShape",
-                "stylusSize"
-              ],
-              "properties": {
-                "manufacturer": {
-                  "type": "string"
                 },
-                "model": {
-                  "type": "string"
-                },
-                "stylusShape": {
-                  "enum": [
-                    "elliptical",
-                    "truncated elliptical",
-                    "conical",
-                    "truncated conical",
-                    "Edison C",
-                    "spherical"
-                  ]
-                },
-                "stylusSize": {
+                "trackingWeight": {
                   "type": "object",
                   "additionalProperties": false,
                   "required": [
@@ -402,97 +353,17 @@
                     },
                     "unit": {
                       "enum": [
-                        "mils"
+                        "g"
                       ]
                     }
                   }
                 }
               }
-            },
-            "phonoPreamp":{
-              "serialNumber": {
-                "type": "string"
-              },
-              "manufacturer": {
-                "type": "string"
-              },
-              "model": {
-                "type": "string"
-              },
-              "eq": {
-                "enum": [
-                  "NAB LP",
-                  "RIAA",
-                  "AES LP",
-                  "CCIR LP",
-                  "FFRR LP",
-                  "NAB 78",
-                  "Decca",
-                  "FFRR 78",
-                  "HMV"
-                ]
-              },
-              "eqRolloff": {
-                "type": "object",
-                "additionalProperties": false,
-                "required": [
-                  "measure",
-                  "unit"
-                ],
-                "properties": {
-                  "measure": {
-                    "enum": [
-                      0,
-                      -5,
-                      -6,
-                      -7,
-                      -8.5,
-                      -10,
-                      -12,
-                      -14,
-                      -16,
-                      -18
-                    ]
-                  },
-                  "unit": {
-                    "enum": [
-                      "dB"
-                    ]
-                  }
-                }
-              },
-              "eqTurnover": {
-                "type": "object",
-                "additionalProperties": false,
-                "required": [
-                  "measure",
-                  "unit"
-                ],
-                "properties": {
-                  "measure": {
-                    "enum": [
-                      0,
-                      150,
-                      200,
-                      250,
-                      300,
-                      375,
-                      400,
-                      500,
-                      629,
-                      750,
-                      1000
-                    ]
-                  },
-                  "unit": {
-                    "enum": [
-                      "Hz"
-                    ]
-                  }
-                }
-              }
             }
           }
+        },
+        "phonoPreamp": {
+          "$ref": "fields#phonoPreamp"
         },
         "analogDigitalConverter": {
           "$ref": "fields#analogDigitalConverter"

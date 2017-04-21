@@ -90,7 +90,8 @@
                 "DA-88",
                 "Digital Compact Cassette",
                 "Betamax/PCM",
-                "U-matic/PCM"
+                "U-matic/PCM",
+                "VHS/PCM"
               ]
             },
             "generation": {
@@ -179,7 +180,6 @@
                 "polyester",
                 "acetate and polyester",
                 "PVC",
-                "paper",
                 "unknown"
               ]
             },
@@ -212,8 +212,7 @@
                 "mono",
                 "surround",
                 "quadrophonic",
-                "binaural",
-                "unknown"
+                "binaural"
               ]
             },
             "numberOfAudioTracks": {
@@ -224,8 +223,7 @@
                 8,
                 16,
                 32,
-                "n/a",
-                "unknown"
+                "n/a"
               ]
             },
             "trackConfiguration": {
@@ -236,8 +234,7 @@
                 "2 track",
                 "4 track",
                 "helical",
-                "multi-track",
-                "unknown"
+                "multi-track"
               ]
             },
             "designatedSpeed": {
@@ -255,7 +252,7 @@
                     3.75,
                     1.875,
                     0.63,
-                    "unknown"
+                    "none"
                   ]
                 },
                 "unit": {
@@ -407,6 +404,29 @@
         },
         "captureSoftware": {
           "$ref": "fields#captureSoftware"
+        },
+        "digitalAudioProcessor": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": ["string", "number"]
+            },
+            "serialNumber": {
+              "type": ["string", "number"]
+            },
+            "manufacturer": {
+              "type": "string"
+            },
+            "model": {
+              "type": "string",
+              "enum":[
+                "PCM-1610",
+                "PCM-1630",
+                "PCM-F1",
+                "DAS-900"
+              ]
+            }
+          }
         },
         "takeNumber": {
           "$ref": "fields#takeNumber"

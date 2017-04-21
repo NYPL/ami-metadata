@@ -231,7 +231,6 @@
               "enum": [
                 "stereo",
                 "mono",
-                "unknown",
                 "multi-track"
               ]
             },

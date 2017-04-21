@@ -358,6 +358,160 @@
             "speed": {
               "id": "#playbackDeviceSpeed",
               "type": "object"
+            },
+            "groovedWallPlayback": {
+              "id": "#groovedWallPlayback",
+              "enum": [
+                "left only",
+                "right only",
+                "left + right",
+                "left - right",
+                "left and right discrete"
+              ]
+            },
+            "phonoCartridge": {
+              "id": "#phonoCartridge",
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "manufacturer",
+                "model",
+                "stylusShape",
+                "stylusSize"
+              ],
+              "properties": {
+                "manufacturer": {
+                  "type": "string"
+                },
+                "model": {
+                  "type": "string"
+                },
+                "stylusShape": {
+                  "enum": [
+                    "elliptical",
+                    "truncated elliptical",
+                    "conical",
+                    "truncated conical",
+                    "Edison C",
+                    "spherical"
+                  ]
+                },
+                "stylusSize": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "measure",
+                    "unit"
+                  ],
+                  "properties": {
+                    "measure": {
+                      "type": "number"
+                    },
+                    "unit": {
+                      "enum": [
+                        "mils"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "phonoPreamp":{
+          "id": "#phonoPreamp",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "manufacturer",
+            "model",
+            "serialNumber"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "serialNumber": {
+              "type": "string"
+            },
+            "manufacturer": {
+              "type": "string"
+            },
+            "model": {
+              "type": "string"
+            },
+            "eq": {
+              "enum": [
+                "NAB LP",
+                "RIAA",
+                "AES LP",
+                "CCIR LP",
+                "FFRR LP",
+                "NAB 78",
+                "Decca",
+                "FFRR 78",
+                "HMV",
+                "flat"
+              ]
+            },
+            "eqRolloff": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "enum": [
+                    0,
+                    -5,
+                    -6,
+                    -7,
+                    -8.5,
+                    -10,
+                    -12,
+                    -14,
+                    -16,
+                    -18
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "dB"
+                  ]
+                }
+              }
+            },
+            "eqTurnover": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "enum": [
+                    0,
+                    150,
+                    200,
+                    250,
+                    300,
+                    375,
+                    400,
+                    500,
+                    629,
+                    750,
+                    1000
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "Hz"
+                  ]
+                }
+              }
             }
           }
         },

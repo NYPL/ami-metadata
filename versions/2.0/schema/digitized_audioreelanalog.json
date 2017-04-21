@@ -256,8 +256,7 @@
                 "8 track",
                 "16 track",
                 "24 track",
-                "multi-track",
-                "unknown"
+                "multi-track"
               ]
             },
             "designatedSpeed": {
@@ -294,16 +293,14 @@
                 "DBX I",
                 "DBX II",
                 "Tel Com/High Com",
-                "n/a",
-                "none",
-                "unknown"
+                "none"
               ]
             },
             "designatedEQ": {
               "enum": [
                 "NAB",
                 "IEC/CCIR",
-                "unknown"
+                "none"
               ]
             }
           }

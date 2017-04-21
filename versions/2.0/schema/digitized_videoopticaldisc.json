@@ -212,16 +212,14 @@
               "enum": [
                 "NTSC",
                 "PAL",
-                "SECAM",
-                "unknown"
+                "SECAM"
               ]
             },
             "colorBW": {
               "enum": [
                 "b/w",
                 "color",
-                "color & b/w",
-                "unknown"
+                "color & b/w"
               ]
             },
             "regionCode": {
@@ -236,8 +234,7 @@
                 7,
                 8,
                 "A",
-                "B",
-                "unknown"
+                "B"
               ]
             }
           }
