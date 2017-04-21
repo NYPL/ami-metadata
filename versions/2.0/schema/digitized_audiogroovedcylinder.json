@@ -197,11 +197,7 @@
           "properties": {
             "audioSoundField": {
               "enum": [
-                "stereo",
-                "mono",
-                "quadrophonic",
-                "binaural",
-                "unknown"
+                "mono"
               ]
             }
           }
