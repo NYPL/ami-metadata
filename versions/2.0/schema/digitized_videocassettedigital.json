@@ -201,16 +201,14 @@
               "enum": [
                 "NTSC",
                 "PAL",
-                "SECAM",
-                "unknown"
+                "SECAM"
               ]
             },
             "colorBW": {
               "enum": [
                 "b/w",
                 "color",
-                "color & b/w",
-                "unknown"
+                "color & b/w"
               ]
             }
           }

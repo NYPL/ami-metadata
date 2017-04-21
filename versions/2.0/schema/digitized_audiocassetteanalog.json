@@ -260,9 +260,7 @@
                 "Dolby B",
                 "Dolby C",
                 "Dolby S",
-                "n/a",
-                "none",
-                "unknown"
+                "none"
               ]
             },
             "designatedEQ": {
@@ -271,9 +269,7 @@
                 "Type II",
                 "Type III",
                 "Type IV",
-                "n/a",
-                "none",
-                "unknown"
+                "none"
               ]
             }
           }
@@ -341,7 +337,6 @@
                 "Dolby B",
                 "Dolby C",
                 "Dolby S",
-                "n/a",
                 "none"
               ]
             },
