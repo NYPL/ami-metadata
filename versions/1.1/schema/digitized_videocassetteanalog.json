@@ -63,11 +63,13 @@
             "apch",
             "apcn",
             "apcs",
-            "avc1",
             "CFHD",
             "icod",
             "V210",
             "v210",
+            "avc1",
+            "AVC1",
+            "H264",
             "h264"
           ]
         },
@@ -128,11 +130,12 @@
                 "S-VHS",
                 "S-VHS-C",
                 "U-matic",
+                "U-Matic",
+                "U-matic S",
                 "U-matic SP",
                 "VHS",
                 "VHS-C",
-                "Video8",
-                "unknown"
+                "Video8"
               ]
             },
             "generation": {
@@ -269,30 +272,7 @@
           ],
           "properties": {
             "audioSoundField": {
-              "enum": [
-                "stereo",
-                "mono",
-                "surround",
-                "quadrophonic",
-                "binaural",
-                "none",
-                "Ch1: Mono",
-                "Ch1: Mono; Ch2: Mono",
-                "Ch1: Mono; Ch2: Mono; Ch3: Mono",
-                "Ch1: Mono; Ch2: Mono; Ch3: Mono; Ch4: Mono",
-                "Ch1: Mono; Ch2: Mono; Ch3: Mono; Ch4: None",
-                "Ch1: Mono; Ch2: None; Ch3: Mono; Ch4: None",
-                "Ch1: Mono; Ch2: None",
-                "Ch1: Mono; Ch2: Timecode",
-                "Ch1: None; Ch2: Mono",
-                "Ch1: Stereo Left; Ch2: Mono; Ch3: Stereo Right; Ch4: Mono",
-                "Ch1: Stereo Left; Ch2: Stereo Left; Ch3: Stereo Right; Ch4: Stereo Right",
-                "Ch1: Stereo Left; Ch2: Stereo Right",
-                "Ch1: Stereo Left; Ch2: Stereo Right; Ch3: Timecode",
-                "Ch1: Stereo Left; Ch2: Stereo Right; Ch3: Stereo Left; Ch4: Stereo Right",
-                "Ch1: Timecode; Ch2: Mono",
-                "unknown"
-              ]
+              "$ref": "fields#audioSoundFieldForVideo"
             },
             "numberOfAudioTracks": {
               "type": "number",

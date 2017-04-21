@@ -94,8 +94,7 @@
                 "half-inch open-reel audio",
                 "one-inch open-reel audio",
                 "quarter-inch open-reel audio",
-                "two-inch open-reel audio",
-                "unknown"
+                "two-inch open-reel audio"
               ]
             },
             "generation": {
@@ -258,6 +257,7 @@
                 "surround",
                 "quadrophonic",
                 "binaural",
+                "multi-track",
                 "unknown"
               ]
             },
