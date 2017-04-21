@@ -405,6 +405,29 @@
         "captureSoftware": {
           "$ref": "fields#captureSoftware"
         },
+        "digitalAudioProcessor": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": ["string", "number"]
+            },
+            "serialNumber": {
+              "type": ["string", "number"]
+            },
+            "manufacturer": {
+              "type": "string"
+            },
+            "model": {
+              "type": "string",
+              "enum":[
+                "PCM-1610",
+                "PCM-1630",
+                "PCM-F1"
+                "DAS-900"
+              ]
+            }
+          }
+        },
         "takeNumber": {
           "$ref": "fields#takeNumber"
         },
