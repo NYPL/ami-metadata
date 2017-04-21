@@ -87,8 +87,7 @@
               "enum": [
                 "Audio CD-R",
                 "Audio CD, pressed",
-                "Minidisc",
-                "unknown"
+                "Minidisc"
               ]
             },
             "generation": {

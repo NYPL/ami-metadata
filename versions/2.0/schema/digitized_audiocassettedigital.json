@@ -90,9 +90,7 @@
                 "DA-88",
                 "Digital Compact Cassette",
                 "Betamax/PCM",
-                "U-matic/PCM",
-                "Other cartridge",
-                "unknown"
+                "U-matic/PCM"
               ]
             },
             "generation": {
@@ -238,6 +236,7 @@
                 "2 track",
                 "4 track",
                 "helical",
+                "multi-track",
                 "unknown"
               ]
             },
