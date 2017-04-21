@@ -93,8 +93,7 @@
               "enum": [
                 "ProDigi",
                 "DASH",
-                "NAGRA-D",
-                "unknown"
+                "NAGRA-D"
               ]
             },
             "generation": {
@@ -260,8 +259,9 @@
               "enum": [
                 "stereo",
                 "mono",
-                "unknown",
-                "multitrack"
+                "multitrack",
+                "multi-track",
+                "unknown"
               ]
             },
             "numberOfAudioTracks": {

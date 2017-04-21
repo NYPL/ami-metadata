@@ -71,7 +71,7 @@
 			"backcoatMaterial": "yes"
 		},
 		"audioRecording": {
-			"audioSoundField": "quadrophonic",
+			"audioSoundField": "multi-track",
 			"numberOfAudioTracks": 24,
 			"trackConfiguration": "full-track",
 			"designatedSpeed": {
