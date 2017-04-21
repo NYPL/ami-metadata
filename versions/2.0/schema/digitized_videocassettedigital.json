@@ -177,7 +177,6 @@
             "baseMaterial": {
               "enum": [
                 "polyester",
-                "PVC",
                 "unknown"
               ]
             },
