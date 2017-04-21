@@ -79,6 +79,7 @@
 			"serialNumber": "xyz123",
 			"manufacturer": "Manufacturer B",
 			"model": "Model XYZ",
+			"groovedWallPlayback": "left + right",
 			"speed": {
 				"measure": 45,
 				"unit": "rpm"
@@ -86,7 +87,11 @@
 			"phonoArm": {
 				"serialNumber": "xyz123",
 				"manufacturer": "Manufacturer I",
-				"model": "Model XYZ"
+				"model": "Model XYZ",
+				"trackingWeight": {
+					"measure": 0.5,
+					"unit": "g"
+				}
 			},
 			"phonoCartridge": {
 				"manufacturer": "Manufacturer G",
@@ -96,25 +101,20 @@
 					"measure": 12,
 					"unit": "mils"
 				}
+			}
+		},
+		"phonoPreamp": {
+			"serialNumber": "xyz123",
+			"manufacturer": "Manufacturer H",
+			"model": "Model XYZ",
+			"eq": "RIAA",
+			"eqRolloff": {
+				"measure": -6,
+				"unit": "dB"
 			},
-			"trackingWeight": {
-				"measure": 0.5,
-				"unit": "g"
-			},
-			"groovedWallPlayback": "left + right",
-			"phonoPreamp": {
-				"serialNumber": "xyz123",
-				"manufacturer": "Manufacturer H",
-				"model": "Model XYZ",
-				"eq": "RIAA LP",
-				"eqRolloff": {
-					"measure": -6,
-					"unit": "dB"
-				},
-				"eqTurnover": {
-					"measure": 250,
-					"unit": "Hz"
-				}
+			"eqTurnover": {
+				"measure": 250,
+				"unit": "Hz"
 			}
 		},
 		"analogDigitalConverter": {
