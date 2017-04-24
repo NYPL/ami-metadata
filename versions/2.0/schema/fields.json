@@ -1,0 +1,711 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "fields",
+  "title": "AMI Vendor Schema",
+  "description": "All fields for AMI digitization workflow metadata",
+  "definitions": {
+    "asset": {
+      "id": "#asset",
+      "type": "object",
+      "additionalItems": false,
+      "required": [
+        "referenceFilename",
+        "schemaVersion"
+      ],
+      "properties": {
+        "referenceFilename" : {
+          "type": "string",
+          "pattern": "^[a-zA-Z\\d\\-\\*]+"
+        },
+        "fileRole" : {
+          "type": "string",
+          "enum": [
+            "pm",
+            "em",
+            "sc"
+          ]
+        },
+        "schemaVersion": {
+          "type": "string",
+          "pattern": "2\\.0\\.\\d+"
+        }
+      }
+    },
+    "bibliographic": {
+      "id": "#bibliographic",
+      "type": "object",
+      "additionalItems": false,
+      "required": [
+        "primaryID",
+        "barcode",
+        "divisionCode"
+      ],
+      "properties": {
+        "primaryID": {
+          "type": "string"
+        },
+        "classmark": {
+          "type": "string"
+        },
+        "danceFormerClassmark": {
+          "type": "string"
+        },
+        "nonCMSItemID": {
+          "type": "string"
+        },
+        "cmsItemID": {
+          "type": "string",
+          "pattern": "\\d{6}"
+        },
+        "cmsCollectionID": {
+          "type": "string"
+        },
+        "catalogBNumber": {
+          "type": "string",
+          "pattern": "^(b|B)[\\d]{8}$"
+        },
+        "mssID": {
+          "type": "string",
+          "pattern": "\\d{5}"
+        },
+        "barcode": {
+          "type": "string",
+          "pattern": "33433\\d{9}"
+        },
+        "divisionCode": {
+          "enum": [
+            "myt",
+            "myd",
+            "mym",
+            "myh",
+            "scb",
+            "scd",
+            "mae",
+            "maf",
+            "mao",
+            "axv"
+          ]
+        },
+        "vernacularDivisionCode": {
+          "enum": [
+            "THE",
+            "DAN",
+            "MUS",
+            "RHA",
+            "SCL",
+            "SCM",
+            "BRG",
+            "JWS",
+            "MSS",
+            "NYPLarch"
+          ]
+        },
+        "projectCode": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "date": {
+          "type": "string"
+        },
+        "contentNotes": {
+          "type": "string"
+        },
+        "accessNotes": {
+          "type": "string"
+        }
+      }
+    },
+    "technical": {
+      "id": "#technical",
+      "type": "object",
+      "properties": {
+        "filename": {
+          "id": "#technicalFilename",
+          "type": "string",
+          "pattern": "^[\\w]+"
+        },
+        "extensionForAudio": {
+          "id": "#technicalExtensionForAudio",
+          "enum": [
+            "wav", "WAV"
+          ]
+        },
+        "extensionForVideo": {
+          "id": "#technicalExtensionForVideo",
+          "enum": [
+            "mkv", "MKV",
+            "mp4", "MP4"
+          ]
+        },
+        "dateCreated": {
+          "id": "#technicalDateCreated",
+          "type": "string",
+          "pattern": "201[6-9]-(0\\d|1[0-2])-(0\\d|[1-2]\\d|3[0-1])"
+        },
+        "fileFormat": {
+          "id": "#technicalFileFormat",
+          "type": "string"
+        },
+        "fileFormatForAudio": {
+          "id": "#technicalFileFormatForAudio",
+          "enum": [
+            "BWF", "bwf"
+          ]
+        },
+        "audioCodecForAudio": {
+          "id": "#technicalAudioCodecForAudio",
+          "enum": [
+            "PCM"
+          ]
+        },
+        "audioCodecForVideo": {
+          "id": "#technicalAudioCodecForVideo",
+          "enum": [
+            "PCM",
+            "lpcm",
+            "AAC",
+            "aac"
+          ]
+        },
+        "videoCodecForVideo": {
+          "id": "#technicalVideoCodecForVideo",
+          "enum": [
+            "FFV1",
+            "h264"
+          ]
+        },
+        "fileSize": {
+          "id": "#technicalFileSize",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "measure",
+            "unit"
+          ],
+          "properties": {
+            "measure": {
+              "type": "number",
+              "multipleOf": 1.0
+            },
+            "unit": {
+              "enum": [
+                "B"
+              ]
+            }
+          }
+        },
+        "durationMilli": {
+          "id": "#technicalDurationMilli",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "measure",
+            "unit"
+          ],
+          "properties": {
+            "measure": {
+              "type": "number",
+              "multipleOf": 1.0
+            },
+            "unit": {
+              "enum": [
+                "ms"
+              ]
+            }
+          }
+        },
+        "durationHuman": {
+          "id": "#technicalDurationHuman",
+          "type": "string",
+          "pattern": "([\\d]+:|)[0-5][\\d]:[0-5][\\d](|\\.\\d+)"
+        },
+        "signalNotes": {
+          "id": "#technicalSignalNotes",
+          "type": "string"
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "subObjectWithoutStreams": {
+          "id": "#subObjectWithoutStreams",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "faceNumber"
+          ],
+          "properties": {
+            "faceNumber": {
+              "type": "number",
+              "multipleOf": 1.0
+            },
+            "regionNumber": {
+              "type": "number",
+              "multipleOf": 1.0
+            },
+            "partNumber": {
+              "type": "number",
+              "multipleOf": 1.0
+            }
+          }
+        },
+        "audioSoundField": {
+          "id": "#audioSoundFieldForVideo",
+          "enum": [
+            "stereo",
+            "mono",
+            "surround",
+            "quadrophonic",
+            "binaural",
+            "none",
+            "Ch1: None; Ch2: None",
+            "Ch1: Mono",
+            "Ch1: Mono; Ch2: Mono",
+            "Ch1: Mono; Ch2: Mono; Ch3: Mono",
+            "Ch1: Mono; Ch2: None; Ch3: Timecode",
+            "Ch1: Mono; Ch2: Mono; Ch3: Mono; Ch4: Mono",
+            "Ch1: Mono; Ch2: Mono; Ch3: Mono; Ch4: None",
+            "Ch1: Mono; Ch2: Mono; Ch3: None; Ch4: None",
+            "Ch1: Mono; Ch2: None; Ch3: Mono; Ch4: None",
+            "Ch1: None; Ch2: None; Ch3: None; Ch4: None",
+            "Ch1: Mono; Ch2: None; Ch3: None; Ch4: None",
+            "Ch1: Mono; Ch2: None",
+            "Ch1: Mono; Ch2: Timecode",
+            "Ch1: None; Ch2: Mono",
+            "Ch1: Stereo Left; Ch2: Mono; Ch3: Stereo Right; Ch4: Mono",
+            "Ch1: Stereo Left; Ch2: Stereo Left; Ch3: Stereo Right; Ch4: Stereo Right",
+            "Ch1: Stereo Left; Ch2: Stereo Right",
+            "Ch1: Mono; Ch2: Mono; Ch3: Timecode",
+            "Ch1: Stereo Left; Ch2: Stereo Right; Ch3: Timecode",
+            "Ch1: Stereo Left; Ch2: Stereo Right; Ch3: Mono",
+            "Ch1: Stereo Left; Ch2: Stereo Right; Ch3: Stereo Left; Ch4: Stereo Right",
+            "Ch1: Stereo Left; Ch2: Stereo Right; Ch3: None; Ch4: None",
+            "Ch1: Timecode; Ch2: Mono",
+            "unknown"
+          ]
+        }
+      },
+      "subObjectWithStreams": {
+        "id": "#subObjectWithStreams",
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "faceNumber"
+        ],
+        "properties": {
+          "faceNumber": {
+            "type": "number",
+            "multipleOf": 1.0
+          },
+          "regionNumber": {
+            "type": "number",
+            "multipleOf": 1.0
+          },
+          "streamNumber": {
+            "type": "number",
+            "multipleOf": 1.0
+          },
+          "partNumber": {
+            "type": "number",
+            "multipleOf": 1.0
+          }
+        }
+      }
+    },
+    "digitizationProcess" : {
+      "id": "#digitizationProcess",
+      "type": "object",
+      "additionalItems": false,
+      "properties": {
+        "playbackDevice": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "#playbackDeviceID",
+              "type": ["string", "number"]
+            },
+            "serialNumber": {
+              "id": "#playbackDeviceSerialNumber",
+              "type": ["string", "number"]
+            },
+            "manufacturer": {
+              "id": "#playbackDeviceManufacturer",
+              "type": "string"
+            },
+            "model": {
+              "id": "#playbackDeviceModel",
+              "type": "string"
+            },
+            "tapeHeadType": {
+              "id": "#playbackDeviceTapeHeadType",
+              "type": "string"
+            },
+            "operatingLevel": {
+              "id": "#playbackDeviceOperatingLevel",
+              "type": "number"
+            },
+            "noiseReduction": {
+              "id": "#playbackDeviceNoiseReduction",
+              "type": "string"
+            },
+            "eq": {
+              "id": "#playbackDeviceEQ",
+              "type": "string"
+            },
+            "speed": {
+              "id": "#playbackDeviceSpeed",
+              "type": "object"
+            },
+            "groovedWallPlayback": {
+              "id": "#groovedWallPlayback",
+              "enum": [
+                "left only",
+                "right only",
+                "left + right",
+                "left - right",
+                "left and right discrete"
+              ]
+            },
+            "phonoCartridge": {
+              "id": "#phonoCartridge",
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "manufacturer",
+                "model",
+                "stylusShape",
+                "stylusSize"
+              ],
+              "properties": {
+                "manufacturer": {
+                  "type": "string"
+                },
+                "model": {
+                  "type": "string"
+                },
+                "stylusShape": {
+                  "enum": [
+                    "elliptical",
+                    "truncated elliptical",
+                    "conical",
+                    "truncated conical",
+                    "Edison C",
+                    "spherical"
+                  ]
+                },
+                "stylusSize": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "measure",
+                    "unit"
+                  ],
+                  "properties": {
+                    "measure": {
+                      "type": "number"
+                    },
+                    "unit": {
+                      "enum": [
+                        "mils"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "phonoPreamp":{
+          "id": "#phonoPreamp",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "manufacturer",
+            "model",
+            "serialNumber"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "serialNumber": {
+              "type": "string"
+            },
+            "manufacturer": {
+              "type": "string"
+            },
+            "model": {
+              "type": "string"
+            },
+            "eq": {
+              "enum": [
+                "NAB LP",
+                "RIAA",
+                "AES LP",
+                "CCIR LP",
+                "FFRR LP",
+                "NAB 78",
+                "Decca",
+                "FFRR 78",
+                "HMV",
+                "flat"
+              ]
+            },
+            "eqRolloff": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "enum": [
+                    0,
+                    -5,
+                    -6,
+                    -7,
+                    -8.5,
+                    -10,
+                    -12,
+                    -14,
+                    -16,
+                    -18
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "dB"
+                  ]
+                }
+              }
+            },
+            "eqTurnover": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "enum": [
+                    0,
+                    150,
+                    200,
+                    250,
+                    300,
+                    375,
+                    400,
+                    500,
+                    629,
+                    750,
+                    1000
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "Hz"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "timeBaseCorrector": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "#timeBaseCorrectorID",
+              "type": ["string", "number"]
+            },
+            "serialNumber": {
+              "id": "#timeBaseCorrectorSerialNumber",
+              "type": ["string", "number"]
+            },
+            "manufacturer": {
+              "id": "#timeBaseCorrectorManufacturer",
+              "type": "string"
+            },
+            "model": {
+              "id": "#timeBaseCorrectorModel",
+              "type": "string"
+            }
+          }
+        },
+        "analogDigitalConverter": {
+          "id": "#analogDigitalConverter",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "serialNumber",
+            "manufacturer",
+            "model",
+            "operatingLevel"
+          ],
+          "properties": {
+            "id": {
+              "id": "#analogDigitalConverterID",
+              "type": ["string", "number"]
+            },
+            "serialNumber": {
+              "id": "#analogDigitalConverterSerialNumber",
+              "type": ["string", "number"]
+            },
+            "manufacturer": {
+              "id": "#analogDigitalConverterManufacturer",
+              "type": "string"
+            },
+            "model": {
+              "id": "#analogDigitalConverterModel",
+              "type": "string"
+            },
+            "operatingLevel": {
+              "id": "#analogDigitalConverterOperatingLevel",
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "enum": [
+                    -12,
+                    -14,
+                    -15,
+                    -16,
+                    -18,
+                    -20
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "dBFS"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "captureSoftware": {
+          "id": "#captureSoftware",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "manufacturer",
+            "productName",
+            "version",
+            "platform"
+          ],
+          "type": "object",
+          "properties": {
+            "manufacturer": {
+              "id": "#captureSoftwareManufacturer",
+              "type": "string"
+            },
+            "productName": {
+              "id": "#captureSoftwareProductName",
+              "type": "string"
+            },
+            "version": {
+              "id": "#captureSoftwareVersion",
+              "type": "string"
+            },
+            "platform": {
+              "id": "#captureSoftwarePlatform",
+              "type": "string"
+            }
+          }
+        },
+        "takeNumber": {
+          "id": "#takeNumber",
+          "type": "object",
+          "properties": {
+            "number" : {
+              "type": "number",
+              "multipleOf": 1.0
+            }
+          }
+        },
+        "notes": {
+          "id": "#processNotes",
+          "type": "object",
+          "properties": {
+            "processNotes": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "digitizer": {
+      "id": "#digitizer",
+      "type": "object",
+      "additionalItems": false,
+      "required": [
+        "operator",
+        "organization"
+      ],
+      "properties": {
+        "operator": {
+          "type": "object",
+          "additionalItems": false,
+          "required": [
+            "firstName",
+            "lastName"
+          ],
+          "properties": {
+            "firstName": {
+              "type": "string"
+            },
+            "lastName": {
+              "type": "string"
+            }
+          }
+        },
+        "organization": {
+          "type": "object",
+          "additionalItems": false,
+          "required": [
+            "name",
+            "address"
+          ],
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "address": {
+              "type": "object",
+              "required": [
+                "street1",
+                "city",
+                "state",
+                "postalCode"
+              ],
+              "street1":  {
+                "type": "string"
+              },
+              "street2":  {
+                "type": "string"
+              },
+              "city": {
+                "type": "string"
+              },
+              "state":  {
+                "type": "string",
+                "pattern":  "^[A-Z]{2}$"
+              },
+              "postalCode": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

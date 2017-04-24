@@ -1,0 +1,336 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Digitized Video Cassette Schema",
+  "id": "digitized_videocassetteanalog",
+  "description": "Definitions for audio optical fields",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "asset",
+    "bibliographic",
+    "technical",
+    "source",
+    "digitizationProcess",
+    "digitizer"
+  ],
+  "properties": {
+    "asset": { "$ref": "fields#asset" },
+    "bibliographic": { "$ref": "fields#bibliographic" },
+    "technical": {
+      "id": "technical",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "filename",
+        "extension",
+        "dateCreated",
+        "fileFormat",
+        "audioCodec",
+        "videoCodec",
+        "fileSize",
+        "durationMilli",
+        "durationHuman"
+      ],
+      "properties": {
+        "filename": {
+          "$ref": "fields#technicalFilename"
+        },
+        "extension": {
+          "$ref": "fields#technicalExtensionForVideo"
+        },
+        "dateCreated": {
+          "$ref": "fields#technicalDateCreated"
+        },
+        "fileFormat": {
+          "$ref": "fields#technicalFileFormat"
+        },
+        "audioCodec": {
+          "$ref": "fields#technicalAudioCodecForVideo"
+        },
+        "videoCodec": {
+          "$ref": "fields#technicalVideoCodecForVideo"
+        },
+        "fileSize": {
+          "$ref": "fields#technicalFileSize"
+        },
+        "durationMilli": {
+          "$ref": "fields#technicalDurationMilli"
+        },
+        "durationHuman": {
+          "$ref": "fields#technicalDurationHuman"
+        },
+        "signalNotes": {
+          "$ref": "fields#technicalSignalNotes"
+        }
+      }
+    },
+    "source": {
+      "id": "source",
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "object",
+        "physicalDescription",
+        "contentSpecifications",
+        "audioRecording"
+      ],
+      "properties": {
+        "object": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "type",
+            "format",
+            "volumeNumber"
+          ],
+          "properties": {
+            "type": {
+              "enum": [ "video cassette analog" ]
+            },
+            "format": {
+              "enum": [
+                "Betacam",
+                "Betacam SP",
+                "Betamax",
+                "Hi8",
+                "MII",
+                "S-VHS",
+                "S-VHS-C",
+                "U-matic",
+                "U-matic S",
+                "U-matic SP",
+                "VHS",
+                "VHS-C",
+                "Video8"
+              ]
+            },
+            "generation": {
+              "type": "string"
+            },
+            "volumeNumber": {
+              "type": "number",
+              "multipleOf": 1.0
+            }
+          }
+        },
+        "subObject": {
+          "$ref": "fields#subObjectWithoutStreams"
+        },
+        "physicalDescription": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "stockManufacturer",
+            "tapeWidth",
+            "oxideMaterial"
+          ],
+          "properties": {
+            "stockLength": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "type": "number",
+                  "multipleOf": 1.0
+                },
+                "unit": {
+                  "enum": [
+                    "min"
+                  ]
+                }
+              }
+            },
+            "stockManufacturer": {
+              "type": "string"
+            },
+            "stockProductID": {
+              "type": "string"
+            },
+            "tapeWidth": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "type": "number",
+                  "multipleOf": 0.01
+                },
+                "unit": {
+                  "enum": [
+                    "in"
+                  ]
+                }
+              }
+            },
+            "baseMaterial": {
+              "enum": [
+                "acetate",
+                "polyester",
+                "acetate and polyester",
+                "unknown"
+              ]
+            },
+            "oxideMaterial": {
+              "enum": [
+                "ferric oxide",
+                "chromium dioxide",
+                "unknown"
+              ]
+            }
+          }
+        },
+        "contentSpecifications": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "broadcastStandard",
+            "colorBW"
+          ],
+          "properties": {
+            "broadcastStandard": {
+              "enum": [
+                "NTSC",
+                "PAL",
+                "SECAM"
+              ]
+            },
+            "colorBW": {
+              "enum": [
+                "b/w",
+                "color",
+                "color & b/w"
+              ]
+            }
+          }
+        },
+        "audioRecording": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "audioSoundField",
+            "numberOfAudioTracks"
+          ],
+          "properties": {
+            "audioSoundField": {
+              "$ref": "fields#audioSoundFieldForVideo"
+            },
+            "numberOfAudioTracks": {
+              "type": "number",
+              "multipleOf": 1.0
+            }
+          }
+        },
+        "notes": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "physicalConditionPreShipNotes": {
+              "type": "string"
+            },
+            "physicalConditionDigitizationNotes": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "digitizationProcess" : {
+      "id": "digitizationProcess",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "playbackDevice",
+        "timeBaseCorrector",
+        "captureSoftware"
+      ],
+      "properties": {
+        "playbackDevice": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "serialNumber",
+            "manufacturer",
+            "model"
+          ],
+          "properties": {
+            "id":  {
+              "$ref": "fields#playbackDeviceID"
+            },
+            "serialNumber": {
+              "$ref": "fields#playbackDeviceSerialNumber"
+            },
+            "manufacturer": {
+              "$ref": "fields#playbackDeviceManufacturer"
+            },
+            "model": {
+              "$ref": "fields#playbackDeviceModel"
+            }
+          }
+        },
+        "timeBaseCorrector": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "serialNumber",
+            "manufacturer",
+            "model"
+          ],
+          "properties": {
+            "id":  {
+              "$ref": "fields#timeBaseCorrectorID"
+            },
+            "serialNumber": {
+              "$ref": "fields#timeBaseCorrectorSerialNumber"
+            },
+            "manufacturer": {
+              "$ref": "fields#timeBaseCorrectorManufacturer"
+            },
+            "model": {
+              "$ref": "fields#timeBaseCorrectorModel"
+            }
+          }
+        },
+        "analogDigitalConverter": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "serialNumber",
+            "manufacturer",
+            "model"
+          ],
+          "properties": {
+            "id":  {
+              "$ref": "fields#analogDigitalConverterID"
+            },
+            "serialNumber": {
+              "$ref": "fields#analogDigitalConverterSerialNumber"
+            },
+            "manufacturer": {
+              "$ref": "fields#analogDigitalConverterManufacturer"
+            },
+            "model": {
+              "$ref": "fields#analogDigitalConverterModel"
+            }
+          }
+        },
+        "captureSoftware": {
+          "$ref": "fields#captureSoftware"
+        },
+        "takeNumber": {
+          "$ref": "fields#takeNumber"
+        },
+        "notes": {
+          "$ref": "fields#processNotes"
+        }
+      }
+    },
+    "digitizer": { "$ref": "fields#digitizer" }
+  }
+}

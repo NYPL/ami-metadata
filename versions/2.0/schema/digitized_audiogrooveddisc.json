@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "Digitized Audio Grooved Cylinder Schema",
-  "id": "digitized_audiogroovedcylinder",
-  "description": "Definitions for audio grooved cylinder fields",
+  "title": "Digitized Audio Grooved Disc Schema",
+  "id": "digitized_audiogrooveddisc",
+  "description": "Definitions for audio grooved disc fields",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -35,22 +35,16 @@
           "$ref": "fields#technicalFilename"
         },
         "extension": {
-          "enum": [
-             "wav", "WAV"
-           ]
+          "$ref": "fields#technicalExtensionForAudio"
         },
         "dateCreated": {
           "$ref": "fields#technicalDateCreated"
         },
         "fileFormat": {
-          "enum": [
-            "BWF", "bwf"
-          ]
+          "$ref": "fields#technicalFileFormatForAudio"
         },
         "audioCodec": {
-          "enum": [
-            "PCM"
-          ]
+          "$ref": "fields#technicalAudioCodecForAudio"
         },
         "fileSize": {
           "$ref": "fields#technicalFileSize"
@@ -87,15 +81,23 @@
           ],
           "properties": {
             "type": {
-              "enum": [ "audio grooved cylinder" ]
+              "enum": [ "audio grooved disc" ]
             },
             "format": {
               "enum": [
-                "dictabelt",
-                "cylinder",
-                "cylinder, black wax",
-                "cylinder, brown wax",
-                "cylinder, celluloid"
+                "disc, Edison Diamond Disc",
+                "disc, Edison Voicewriter",
+                "disc, flexible",
+                "disc, gelatin",
+                "disc, lacquer, glass base",
+                "disc, lacquer, metal base",
+                "disc, lacquer, paper base",
+                "disc, metal",
+                "disc, metal master",
+                "disc, other",
+                "disc, shellac",
+                "disc, vinyl",
+                "disc, Gray Audograph"
               ]
             },
             "generation": {
@@ -108,25 +110,7 @@
           }
         },
         "subObject": {
-          "type": "object",
-          "additionalProperties": false,
-          "required": [
-            "faceNumber"
-          ],
-          "properties": {
-            "faceNumber": {
-              "type": "number",
-              "multipleOf": 1.0
-            },
-            "regionNumber": {
-              "type": "number",
-              "multipleOf": 1.0
-            },
-            "partNumber": {
-              "type": "number",
-              "multipleOf": 1.0
-            }
-          }
+          "$ref": "fields#subObjectWithoutStreams"
         },
         "physicalDescription": {
           "type": "object",
@@ -134,9 +118,8 @@
           "required": [
             "stockManufacturer",
             "diameter",
-            "length",
-            "baseMaterial",
             "surfaceMaterial",
+            "baseMaterial",
             "grooveWidth",
             "grooveOrientation"
           ],
@@ -156,25 +139,16 @@
               ],
               "properties": {
                 "measure": {
-                  "type": "number"
-                },
-                "unit": {
                   "enum": [
-                    "in"
+                    5.5,
+                    7,
+                    10,
+                    10.75,
+                    12,
+                    16,
+                    17.5,
+                    20
                   ]
-                }
-              }
-            },
-            "length": {
-              "type": "object",
-              "additionalProperties": false,
-              "required": [
-                "measure",
-                "unit"
-              ],
-              "properties": {
-                "measure": {
-                  "type": "number"
                 },
                 "unit": {
                   "enum": [
@@ -185,15 +159,22 @@
             },
             "baseMaterial": {
               "enum": [
-                "wax, brown",
-                "wax, black",
-                "plaster",
-                "unknown"
+                "shellac",
+                "vinyl",
+                "aluminum",
+                "glass",
+                "paper",
+                "nickel-plated copper",
+                "zinc",
+                "unknown metal"
               ]
             },
             "surfaceMaterial": {
               "enum": [
+                "cellulose acetate",
+                "cellulose nitrate",
                 "celluloid",
+                "gelatin",
                 "none",
                 "unknown"
               ]
@@ -216,7 +197,8 @@
           "type": "object",
           "additionalProperties": false,
           "required": [
-            "audioSoundField"
+            "audioSoundField",
+            "designatedSpeed"
           ],
           "properties": {
             "audioSoundField": {
@@ -227,6 +209,33 @@
                 "binaural",
                 "unknown"
               ]
+            },
+            "designatedSpeed": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "enum": [
+                    33,
+                    45,
+                    70,
+                    71.29,
+                    76.59,
+                    78.26,
+                    80,
+                    "unknown"
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "rpm"
+                  ]
+                }
+              }
             }
           }
         },
@@ -250,6 +259,7 @@
       "additionalProperties": false,
       "required": [
         "playbackDevice",
+        "phonoPreamp",
         "analogDigitalConverter",
         "captureSoftware"
       ],
@@ -262,10 +272,9 @@
             "manufacturer",
             "model",
             "speed",
-            "trackingWeight",
             "groovedWallPlayback",
-            "phonoCartridge",
-            "phonoPreamp"
+            "phonoArm",
+            "phonoCartridge"
           ],
           "properties": {
             "id":  {
@@ -280,7 +289,6 @@
             "model": {
               "$ref": "fields#playbackDeviceModel"
             },
-
             "speed": {
               "type": "object",
               "additionalProperties": false,
@@ -290,7 +298,15 @@
               ],
               "properties": {
                 "measure": {
-                  "type": "number"
+                  "enum": [
+                    33,
+                    45,
+                    70,
+                    71.29,
+                    76.59,
+                    78.26,
+                    80
+                  ]
                 },
                 "unit": {
                   "enum": [
@@ -299,60 +315,32 @@
                 }
               }
             },
-            "trackingWeight": {
-              "type": "object",
-              "additionalProperties": false,
-              "required": [
-                "measure",
-                "unit"
-              ],
-              "properties": {
-                "measure": {
-                  "type": "number"
-                },
-                "unit": {
-                  "enum": [
-                    "g"
-                  ]
-                }
-              }
-            },
             "groovedWallPlayback": {
-              "enum": [
-                "left only",
-                "right only",
-                "left + right",
-                "left - right",
-                "left and right discrete"
-              ]
+              "$ref": "fields#groovedWallPlayback"
             },
             "phonoCartridge": {
+              "$ref": "fields#phonoCartridge"
+            },
+            "phonoArm": {
               "type": "object",
               "additionalProperties": false,
               "required": [
+                "serialNumber",
                 "manufacturer",
                 "model",
-                "stylusShape",
-                "stylusSize"
+                "trackingWeight"
               ],
               "properties": {
+                "serialNumber": {
+                  "type": "string"
+                },
                 "manufacturer": {
                   "type": "string"
                 },
                 "model": {
                   "type": "string"
                 },
-                "stylusShape": {
-                  "enum": [
-                    "elliptical",
-                    "truncated elliptical",
-                    "conical",
-                    "truncated conical",
-                    "Edison C",
-                    "spherical"
-                  ]
-                },
-                "stylusSize": {
+                "trackingWeight": {
                   "type": "object",
                   "additionalProperties": false,
                   "required": [
@@ -365,95 +353,7 @@
                     },
                     "unit": {
                       "enum": [
-                        "mils"
-                      ]
-                    }
-                  }
-                }
-              }
-            },
-            "phonoPreamp":{
-              "type": "object",
-              "additionalProperties": false,
-              "properties": {
-                "serialNumber": {
-                  "type": "string"
-                },
-                "manufacturer": {
-                  "type": "string"
-                },
-                "model": {
-                  "type": "string"
-                },
-                "eq": {
-                  "enum": [
-                    "NAB LP",
-                    "RIAA",
-                    "AES LP",
-                    "CCIR LP",
-                    "FFRR LP",
-                    "NAB 78",
-                    "Decca",
-                    "FFRR 78",
-                    "HMV",
-                    "flat"
-                  ]
-                },
-                "eqRolloff": {
-                  "type": "object",
-                  "additionalProperties": false,
-                  "required": [
-                    "measure",
-                    "unit"
-                  ],
-                  "properties": {
-                    "measure": {
-                      "enum": [
-                        0,
-                        -5,
-                        -6,
-                        -7,
-                        -8.5,
-                        -10,
-                        -12,
-                        -14,
-                        -16,
-                        -18
-                      ]
-                    },
-                    "unit": {
-                      "enum": [
-                        "dB"
-                      ]
-                    }
-                  }
-                },
-                "eqTurnover": {
-                  "type": "object",
-                  "additionalProperties": false,
-                  "required": [
-                    "measure",
-                    "unit"
-                  ],
-                  "properties": {
-                    "measure": {
-                      "enum": [
-                        0,
-                        150,
-                        200,
-                        250,
-                        300,
-                        375,
-                        400,
-                        500,
-                        629,
-                        750,
-                        1000
-                      ]
-                    },
-                    "unit": {
-                      "enum": [
-                        "Hz"
+                        "g"
                       ]
                     }
                   }
@@ -461,6 +361,9 @@
               }
             }
           }
+        },
+        "phonoPreamp": {
+          "$ref": "fields#phonoPreamp"
         },
         "analogDigitalConverter": {
           "$ref": "fields#analogDigitalConverter"

@@ -1,0 +1,441 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "AMI Vendor Audio Digital Cassette Schema",
+  "id": "digitized_audiocassettedigital",
+  "description": "Definitions for audio digital cassette fields",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "asset",
+    "bibliographic",
+    "technical",
+    "source",
+    "digitizationProcess",
+    "digitizer"
+  ],
+  "properties": {
+    "asset": { "$ref": "fields#asset" },
+    "bibliographic": { "$ref": "fields#bibliographic" },
+    "technical": {
+      "id": "technical",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "filename",
+        "extension",
+        "dateCreated",
+        "fileFormat",
+        "audioCodec",
+        "fileSize",
+        "durationMilli",
+        "durationHuman"
+      ],
+      "properties": {
+        "filename": {
+          "$ref": "fields#technicalFilename"
+        },
+        "extension": {
+          "$ref": "fields#technicalExtensionForAudio"
+        },
+        "dateCreated": {
+          "$ref": "fields#technicalDateCreated"
+        },
+        "fileFormat": {
+          "$ref": "fields#technicalFileFormatForAudio"
+        },
+        "audioCodec": {
+          "$ref": "fields#technicalAudioCodecForAudio"
+        },
+        "fileSize": {
+          "$ref": "fields#technicalFileSize"
+        },
+        "durationMilli": {
+          "$ref": "fields#technicalDurationMilli"
+        },
+        "durationHuman": {
+          "$ref": "fields#technicalDurationHuman"
+        },
+        "signalNotes": {
+          "$ref": "fields#technicalSignalNotes"
+        }
+      }
+    },
+    "source": {
+      "id": "source",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "object",
+        "subObject",
+        "physicalDescription",
+        "audioRecording"
+      ],
+      "properties": {
+        "object": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "type",
+            "format",
+            "volumeNumber"
+          ],
+          "properties": {
+            "type": {
+              "enum": [ "audio cassette digital" ]
+            },
+            "format": {
+              "enum": [
+                "ADAT",
+                "DAT",
+                "DA-88",
+                "Digital Compact Cassette",
+                "Betamax/PCM",
+                "U-matic/PCM",
+                "VHS/PCM"
+              ]
+            },
+            "generation": {
+              "type": "string"
+            },
+            "volumeNumber": {
+              "type": "number",
+              "multipleOf": 1.0
+            }
+          }
+        },
+        "subObject": {
+          "$ref": "fields#subObjectWithStreams"
+        },
+        "physicalDescription": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "stockManufacturer",
+            "tapeWidth",
+            "oxideMaterial"
+          ],
+          "properties": {
+            "stockLength": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "type": "number",
+                  "multipleOf": 1.0
+                },
+                "unit": {
+                  "enum": [
+                    "min"
+                  ]
+                }
+              }
+            },
+            "stockProductID": {
+              "type": "string"
+            },
+            "stockManufacturer": {
+              "type": "string"
+            },
+            "tapeWidth": {
+              "properties": {
+                "measure": {
+                  "enum": [
+                    0.125,
+                    0.75
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "in"
+                  ]
+                }
+              }
+            },
+            "tapeThickness": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "type": "number",
+                  "multipleOf": 0.5
+                },
+                "unit": {
+                  "enum": [
+                    "mils"
+                  ]
+                }
+              }
+            },
+            "baseMaterial": {
+              "enum": [
+                "acetate",
+                "polyester",
+                "acetate and polyester",
+                "PVC",
+                "unknown"
+              ]
+            },
+            "oxideMaterial": {
+              "enum": [
+                "ferric",
+                "chromium",
+                "ferrichrome",
+                "metal",
+                "unknown"
+              ]
+            }
+          }
+        },
+        "audioRecording": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "audioSoundField",
+            "numberOfAudioTracks",
+            "trackConfiguration",
+            "designatedSpeed",
+            "audioBitDepth",
+            "audioSamplingRate"
+          ],
+          "properties": {
+            "audioSoundField": {
+              "enum": [
+                "stereo",
+                "mono",
+                "surround",
+                "quadrophonic",
+                "binaural"
+              ]
+            },
+            "numberOfAudioTracks": {
+              "enum": [
+                1,
+                2,
+                4,
+                8,
+                16,
+                32,
+                "n/a"
+              ]
+            },
+            "trackConfiguration": {
+              "enum": [
+                "full-track",
+                "half-track",
+                "quarter-track",
+                "2 track",
+                "4 track",
+                "helical",
+                "multi-track"
+              ]
+            },
+            "designatedSpeed": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "enum": [
+                    0.3209,
+                    0.16043,
+                    3.75,
+                    1.875,
+                    0.63,
+                    "none"
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "ips"
+                  ]
+                }
+              }
+            },
+            "audioBitDepth": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "enum": [
+                    8,
+                    16,
+                    18,
+                    20,
+                    24,
+                    32
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "bit"
+                  ]
+                }
+              }
+            },
+            "audioSamplingRate": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "enum": [
+                    22500,
+                    32000,
+                    44056,
+                    44100,
+                    47925,
+                    48000,
+                    64000,
+                    88000,
+                    88112,
+                    88200,
+                    95904,
+                    96000,
+                    128000,
+                    176224,
+                    176400,
+                    191808,
+                    192000
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "hz"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "notes": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "physicalConditionPreShipNotes": {
+              "type": "string"
+            },
+            "physicalConditionDigitizationNotes": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "digitizationProcess" : {
+      "id": "digitizationProcess",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "playbackDevice",
+        "captureSoftware"
+      ],
+      "properties": {
+        "playbackDevice": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "serialNumber",
+            "manufacturer",
+            "model",
+            "speed"
+          ],
+          "properties": {
+            "id":  {
+              "$ref": "fields#playbackDeviceID"
+            },
+            "serialNumber": {
+              "$ref": "fields#playbackDeviceSerialNumber"
+            },
+            "manufacturer": {
+              "$ref": "fields#playbackDeviceManufacturer"
+            },
+            "model": {
+              "$ref": "fields#playbackDeviceModel"
+            },
+            "eq": {
+              "enum": [
+                "with pre-emphasis",
+                "without pre-emphasis"
+              ]
+            },
+            "speed": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "enum": [
+                    0.3209,
+                    0.16043,
+                    3.75,
+                    1.875,
+                    0.63
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "ips"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "captureSoftware": {
+          "$ref": "fields#captureSoftware"
+        },
+        "digitalAudioProcessor": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": ["string", "number"]
+            },
+            "serialNumber": {
+              "type": ["string", "number"]
+            },
+            "manufacturer": {
+              "type": "string"
+            },
+            "model": {
+              "type": "string",
+              "enum":[
+                "PCM-1610",
+                "PCM-1630",
+                "PCM-F1",
+                "DAS-900"
+              ]
+            }
+          }
+        },
+        "takeNumber": {
+          "$ref": "fields#takeNumber"
+        },
+        "notes": {
+          "$ref": "fields#processNotes"
+        }
+      }
+    },
+    "digitizer": { "$ref": "fields#digitizer" }
+  }
+}
