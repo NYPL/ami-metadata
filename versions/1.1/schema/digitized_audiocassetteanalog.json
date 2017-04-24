@@ -94,7 +94,10 @@
                 "8-track",
                 "Compact cassette",
                 "Microcassette",
-                "Minicassette"
+                "Minicassette",
+                "Fidelipac Cartridge",
+                "NAB Cartridge",
+                "Elcaset"
               ]
             },
             "generation": {
