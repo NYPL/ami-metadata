@@ -185,10 +185,10 @@
             },
             "oxideMaterial": {
               "enum": [
-                "ferric",
-                "chromium",
+                "ferric oxide",
+                "chromium dioxide",
                 "ferrichrome",
-                "metal",
+                "metal oxide",
                 "unknown"
               ]
             }
