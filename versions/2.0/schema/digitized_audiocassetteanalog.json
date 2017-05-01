@@ -184,10 +184,11 @@
               ]
             },
             "oxideMaterial": {
-              "enum": ["Type I",
-                "Type II",
-                "Type III",
-                "Type IV",
+              "enum": [
+                "ferric",
+                "chromium",
+                "ferrichrome",
+                "metal",
                 "unknown"
               ]
             }
