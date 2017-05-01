@@ -178,7 +178,8 @@
               "properties": {
                 "measure": {
                   "enum": [
-                    0.125
+                    0.125,
+                    0.25
                   ]
                 },
                 "unit": {
@@ -212,10 +213,15 @@
               ]
             },
             "oxideMaterial": {
-              "enum": ["Type I",
+              "enum": [
+                "Type I",
                 "Type II",
                 "Type III",
                 "Type IV",
+                "ferric oxide",
+                "chromium dioxide",
+                "ferrichrome",
+                "metal oxide",
                 "unknown"
               ]
             }
@@ -305,6 +311,7 @@
                 "Type II",
                 "Type III",
                 "Type IV",
+                "NAB",
                 "n/a",
                 "none",
                 "unknown"
@@ -385,6 +392,7 @@
                 "Type II",
                 "Type III",
                 "Type IV",
+                "NAB",
                 "n/a",
                 "none"
               ]
