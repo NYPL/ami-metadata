@@ -214,6 +214,10 @@
             },
             "oxideMaterial": {
               "enum": [
+                "Type I",
+                "Type II",
+                "Type III",
+                "Type IV",
                 "ferric",
                 "chromium",
                 "ferrichrome",
