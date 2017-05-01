@@ -150,7 +150,8 @@
               "properties": {
                 "measure": {
                   "enum": [
-                    0.125
+                    0.125,
+                    0.25
                   ]
                 },
                 "unit": {
@@ -271,6 +272,7 @@
                 "Type II",
                 "Type III",
                 "Type IV",
+                "NAB",
                 "none"
               ]
             }
@@ -348,6 +350,7 @@
                 "Type II",
                 "Type III",
                 "Type IV",
+                "NAB",
                 "n/a",
                 "none"
               ]
