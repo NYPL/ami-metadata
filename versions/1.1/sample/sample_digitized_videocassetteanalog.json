@@ -42,7 +42,7 @@
 	"source": {
 		"object": {
 			"type": "video cassette analog",
-			"format": "unknown",
+			"format": "Hi8",
 			"volumeNumber": 1
 		},
 		"subObject": {
@@ -58,7 +58,7 @@
 			"stockManufacturer": "Sony",
 			"stockProductID": "KCA-60",
 			"tapeWidth": {
-				"measure": 0.75,
+				"measure": 0.314,
 				"unit": "in"
 			},
 			"baseMaterial": "polyester",
