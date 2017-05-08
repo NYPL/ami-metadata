@@ -28,7 +28,8 @@
         "audioCodec",
         "fileSize",
         "durationMilli",
-        "durationHuman"
+        "durationHuman",
+        "cueFilename"
       ],
       "properties": {
         "filename": {
