@@ -57,6 +57,10 @@
         },
         "signalNotes": {
           "$ref": "fields#technicalSignalNotes"
+        },
+        "cueFilename" : {
+            "type": "string",
+            "pattern": "^[a-zA-Z\\d\\-\\*]+"
         }
       }
     },

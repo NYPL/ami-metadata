@@ -17,10 +17,6 @@
           "type": "string",
           "pattern": "^[a-zA-Z\\d\\-\\*]+"
         },
-        "cueFilename" : {
-          "type": "string",
-          "pattern": "^[a-zA-Z\\d\\-\\*]+"
-        },
         "fileRole" : {
           "type": "string",
           "enum": [
