@@ -47,10 +47,16 @@
           "$ref": "fields#technicalDateCreated"
         },
         "fileFormat": {
-          "$ref": "fields#technicalFileFormatForAudio"
+          "enum": [
+            "WAV",
+            "wav"
+          ]
         },
         "audioCodec": {
-          "$ref": "fields#technicalAudioCodecForAudio"
+          "enum": [
+            "PCM",
+            "ATRAC"
+          ]
         },
         "fileSize": {
           "$ref": "fields#technicalFileSize"
@@ -196,12 +202,7 @@
           "properties": {
             "audioSoundField": {
               "enum": [
-                "stereo",
-                "mono",
-                "surround",
-                "quadrophonic",
-                "binaural",
-                "unknown"
+                "stereo"
               ]
             }
           }
