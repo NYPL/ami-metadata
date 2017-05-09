@@ -36,7 +36,12 @@
           "$ref": "fields#technicalFilename"
         },
         "extension": {
-          "$ref": "fields#technicalExtensionForAudio"
+          "enum": [
+            "bin",
+            "BIN",
+            "WAV",
+            "wav"
+          ]
         },
         "dateCreated": {
           "$ref": "fields#technicalDateCreated"

@@ -129,8 +129,7 @@
         "extensionForAudio": {
           "id": "#technicalExtensionForAudio",
           "enum": [
-            "wav", "WAV",
-            "bin", "BIN"
+            "wav", "WAV"
           ]
         },
         "extensionForVideo": {
