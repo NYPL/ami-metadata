@@ -218,9 +218,7 @@
           "additionalProperties": false,
           "required": [
             "audioSoundField",
-            "numberOfAudioTracks",
-            "audioBitDepth",
-            "audioSamplingRate"
+            "numberOfAudioTracks"
           ],
           "properties": {
             "audioSoundField": {
