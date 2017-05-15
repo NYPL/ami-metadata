@@ -55,7 +55,9 @@
         "audioCodec": {
           "enum": [
             "PCM",
-            "ATRAC"
+            "ATRAC",
+            "Atrac",
+            "Atrac3"
           ]
         },
         "fileSize": {
