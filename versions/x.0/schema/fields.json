@@ -15,7 +15,7 @@
       "properties": {
         "referenceFilename" : {
           "type": "string",
-          "pattern": "^[a-zA-Z\\d\\-\\*]+"
+          "pattern": "^[\\w\\d\\-\\*]+\\.[a-zA-Z]+"
         },
         "fileRole" : {
           "type": "string",
@@ -162,7 +162,7 @@
         "fileFormatForAudio": {
           "id": "#technicalFileFormatForAudio",
           "enum": [
-            "BWF", "bwf"
+            "BWF", "bwf", "Wave"
           ]
         },
         "audioCodecForAudio": {
