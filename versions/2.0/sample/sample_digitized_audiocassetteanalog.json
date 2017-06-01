@@ -67,7 +67,7 @@
 				"unit": "mils"
 			},
 			"baseMaterial": "polyester",
-			"oxideMaterial": "Type II"
+			"oxideMaterial": "ferric oxide"
 		},
 		"audioRecording": {
 			"audioSoundField": "quadrophonic",
