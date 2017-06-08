@@ -15,7 +15,7 @@
       "properties": {
         "referenceFilename" : {
           "type": "string",
-          "pattern": "^[a-zA-Z\\d\\-\\*]+"
+          "pattern": "^[a-zA-Z\\d\\-\\*_]+\\.[a-zA-Z0-9]{3}$"
         },
         "fileRole" : {
           "type": "string",
@@ -124,7 +124,7 @@
         "filename": {
           "id": "#technicalFilename",
           "type": "string",
-          "pattern": "^[\\w]+"
+          "pattern": "^[a-zA-Z\\d\\-\\*_]+$"
         },
         "extensionForAudio": {
           "id": "#technicalExtensionForAudio",
