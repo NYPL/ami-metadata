@@ -28,23 +28,37 @@
         "audioCodec",
         "fileSize",
         "durationMilli",
-        "durationHuman"
+        "durationHuman",
+        "cueFilename"
       ],
       "properties": {
         "filename": {
           "$ref": "fields#technicalFilename"
         },
         "extension": {
-          "$ref": "fields#technicalExtensionForAudio"
+          "enum": [
+            "bin",
+            "BIN",
+            "WAV",
+            "wav"
+          ]
         },
         "dateCreated": {
           "$ref": "fields#technicalDateCreated"
         },
         "fileFormat": {
-          "$ref": "fields#technicalFileFormatForAudio"
+          "enum": [
+            "WAV",
+            "wav"
+          ]
         },
         "audioCodec": {
-          "$ref": "fields#technicalAudioCodecForAudio"
+          "enum": [
+            "PCM",
+            "ATRAC",
+            "Atrac",
+            "Atrac3"
+          ]
         },
         "fileSize": {
           "$ref": "fields#technicalFileSize"
@@ -57,6 +71,10 @@
         },
         "signalNotes": {
           "$ref": "fields#technicalSignalNotes"
+        },
+        "cueFilename" : {
+            "type": "string",
+            "pattern": "^[a-zA-Z\\d\\-\\*]+"
         }
       }
     },
@@ -186,12 +204,7 @@
           "properties": {
             "audioSoundField": {
               "enum": [
-                "stereo",
-                "mono",
-                "surround",
-                "quadrophonic",
-                "binaural",
-                "unknown"
+                "stereo"
               ]
             }
           }

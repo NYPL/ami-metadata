@@ -1,6 +1,6 @@
 {
 	"asset": {
-		"referenceFilename": "myh_abc123_v01_pm.wav",
+		"referenceFilename": "abc_12345_v01_pm.bin",
 		"fileRole": "pm",
 		"schemaVersion": "2.0.0"
 	},
@@ -22,8 +22,8 @@
 		"contentNotes": "media is actually Dance Audio 2 instead of Dance Audio 1"
 	},
 	"technical": {
-		"filename": "abc123",
-		"extension": "wav",
+		"filename": "abc_12345_v01_pm",
+		"extension": "bin",
 		"dateCreated": "2017-07-01",
 		"fileFormat": "BWF",
 		"audioCodec": "PCM",
@@ -36,7 +36,8 @@
 			"unit": "ms"
 		},
 		"durationHuman": "1:00:00.000",
-		"signalNotes": "signal undreadable at point 123"
+		"signalNotes": "signal undreadable at point 123",
+		"cueFilename": "abc_12345_v01_pm.cue"
 	},
 	"source": {
 		"object": {
