@@ -136,8 +136,7 @@
           "id": "#technicalExtensionForVideo",
           "enum": [
             "mkv", "MKV",
-            "mp4", "MP4",
-            "dv", "DV"
+            "mp4", "MP4"
           ]
         },
         "dateCreated": {
