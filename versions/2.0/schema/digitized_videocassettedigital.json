@@ -48,7 +48,24 @@
           "$ref": "fields#technicalAudioCodecForVideo"
         },
         "videoCodec": {
-          "$ref": "fields#technicalVideoCodecForVideo"
+          "enum": [
+            "DV",
+            "dvc",
+            "dvh3",
+            "dvh6",
+            "dvhp",
+            "dvhq",
+            "hdv2",
+            "hdv6",
+            "xd5f",
+            "xdv2",
+            "xdvb",
+            "xdvd",
+            "H264",
+            "h264",
+            "ffv1",
+            "FFV1"
+          ]
         },
         "fileSize": {
           "$ref": "fields#technicalFileSize"
