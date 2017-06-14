@@ -126,6 +126,11 @@
           "type": "string",
           "pattern": "^[a-zA-Z\\d\\-\\*_]+$"
         },
+        "cueFilename" : {
+          "id": "#technicalCueFilename",
+          "type": "string",
+          "pattern": "^[a-zA-Z\\d\\-\\*_]+\\.[a-zA-Z0-9]{3}$"
+        },
         "extensionForAudio": {
           "id": "#technicalExtensionForAudio",
           "enum": [

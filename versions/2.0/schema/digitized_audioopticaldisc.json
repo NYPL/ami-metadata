@@ -22,6 +22,7 @@
       "additionalProperties": false,
       "required": [
         "filename",
+        "cueFilename",
         "extension",
         "dateCreated",
         "fileFormat",
@@ -34,6 +35,9 @@
         "filename": {
           "$ref": "fields#technicalFilename"
         },
+        "cueFilename": {
+        "$ref": "fields#technicalCueFilename"
+      },
         "extension": {
           "$ref": "fields#technicalExtensionForAudio"
         },
