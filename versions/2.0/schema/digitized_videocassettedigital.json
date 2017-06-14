@@ -218,7 +218,10 @@
               "enum": [
                 "NTSC",
                 "PAL",
-                "SECAM"
+                "SECAM",
+                "1080i",
+                "1080p",
+                "720p"
               ]
             },
             "colorBW": {
