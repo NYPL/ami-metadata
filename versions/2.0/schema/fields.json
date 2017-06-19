@@ -15,7 +15,7 @@
       "properties": {
         "referenceFilename" : {
           "type": "string",
-          "pattern": "^[a-zA-Z\\d\\-\\*_]+\\.[a-zA-Z0-9]{3}$"
+          "pattern": "^[a-zA-Z\\d\\-\\*_]+\\.[a-zA-Z0-9]{2,3}$"
         },
         "fileRole" : {
           "type": "string",
@@ -125,6 +125,11 @@
           "id": "#technicalFilename",
           "type": "string",
           "pattern": "^[a-zA-Z\\d\\-\\*_]+$"
+        },
+        "cueFilename" : {
+          "id": "#technicalCueFilename",
+          "type": "string",
+          "pattern": "^[a-zA-Z\\d\\-\\*_]+\\.[a-zA-Z0-9]{3}$"
         },
         "extensionForAudio": {
           "id": "#technicalExtensionForAudio",

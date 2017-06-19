@@ -22,7 +22,8 @@
 		"contentNotes": "media is actually Dance Audio 2 instead of Dance Audio 1"
 	},
 	"technical": {
-		"filename": "abc123",
+		"filename": "myh_abc123_v01_pm",
+		"cueFilename": "myh_abc123_v01_pm.cue",
 		"extension": "wav",
 		"dateCreated": "2017-07-01",
 		"fileFormat": "BWF",

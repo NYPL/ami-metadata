@@ -36,7 +36,11 @@
           "$ref": "fields#technicalFilename"
         },
         "extension": {
-          "$ref": "fields#technicalExtensionForVideo"
+            "enum": [
+              "mkv", "MKV",
+              "mp4", "MP4",
+              "dv", "DV"
+            ]
         },
         "dateCreated": {
           "$ref": "fields#technicalDateCreated"

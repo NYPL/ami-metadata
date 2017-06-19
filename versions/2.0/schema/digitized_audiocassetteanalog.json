@@ -211,7 +211,8 @@
                 "mono",
                 "surround",
                 "quadrophonic",
-                "binaural"
+                "binaural",
+                "multi-track"
               ]
             },
             "numberOfAudioTracks": {
