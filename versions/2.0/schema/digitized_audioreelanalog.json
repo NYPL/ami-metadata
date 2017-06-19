@@ -229,7 +229,7 @@
                 "surround",
                 "quadrophonic",
                 "binaural",
-                "unknown"
+                "multi-track"
               ]
             },
             "numberOfAudioTracks": {
