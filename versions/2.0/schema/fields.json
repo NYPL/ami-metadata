@@ -435,9 +435,6 @@
             "serialNumber"
           ],
           "properties": {
-            "id": {
-              "type": "string"
-            },
             "serialNumber": {
               "type": "string"
             },
