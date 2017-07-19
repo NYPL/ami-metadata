@@ -359,9 +359,6 @@
             "speed"
           ],
           "properties": {
-            "id":  {
-              "$ref": "fields#playbackDeviceID"
-            },
             "serialNumber": {
               "$ref": "fields#playbackDeviceSerialNumber"
             },
