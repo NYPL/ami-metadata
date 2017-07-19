@@ -84,7 +84,6 @@
 			"model": "Model XYZ"
 		},
 		"timeBaseCorrector": {
-			"id": "id12345",
 			"serialNumber": "12345",
       "manufacturer": "Manufacturer C",
       "model": "Model XYZ"
