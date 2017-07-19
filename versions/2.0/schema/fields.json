@@ -451,7 +451,8 @@
                 "Decca",
                 "FFRR 78",
                 "HMV",
-                "flat"
+                "flat",
+                "other"
               ]
             },
             "eqRolloff": {
