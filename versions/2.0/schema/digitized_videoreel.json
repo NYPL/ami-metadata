@@ -344,9 +344,6 @@
             "model"
           ],
           "properties": {
-            "id":  {
-              "$ref": "fields#analogDigitalConverterID"
-            },
             "serialNumber": {
               "$ref": "fields#analogDigitalConverterSerialNumber"
             },

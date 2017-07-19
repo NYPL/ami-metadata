@@ -554,10 +554,6 @@
             "operatingLevel"
           ],
           "properties": {
-            "id": {
-              "id": "#analogDigitalConverterID",
-              "type": ["string", "number"]
-            },
             "serialNumber": {
               "id": "#analogDigitalConverterSerialNumber",
               "type": ["string", "number"]
