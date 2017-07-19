@@ -330,10 +330,6 @@
         "playbackDevice": {
           "type": "object",
           "properties": {
-            "id": {
-              "id": "#playbackDeviceID",
-              "type": ["string", "number"]
-            },
             "serialNumber": {
               "id": "#playbackDeviceSerialNumber",
               "type": ["string", "number"]
@@ -435,9 +431,6 @@
             "serialNumber"
           ],
           "properties": {
-            "id": {
-              "type": "string"
-            },
             "serialNumber": {
               "type": "string"
             },
@@ -458,7 +451,8 @@
                 "Decca",
                 "FFRR 78",
                 "HMV",
-                "flat"
+                "flat",
+                "other"
               ]
             },
             "eqRolloff": {
@@ -525,10 +519,6 @@
         "timeBaseCorrector": {
           "type": "object",
           "properties": {
-            "id": {
-              "id": "#timeBaseCorrectorID",
-              "type": ["string", "number"]
-            },
             "serialNumber": {
               "id": "#timeBaseCorrectorSerialNumber",
               "type": ["string", "number"]
@@ -554,10 +544,6 @@
             "operatingLevel"
           ],
           "properties": {
-            "id": {
-              "id": "#analogDigitalConverterID",
-              "type": ["string", "number"]
-            },
             "serialNumber": {
               "id": "#analogDigitalConverterSerialNumber",
               "type": ["string", "number"]

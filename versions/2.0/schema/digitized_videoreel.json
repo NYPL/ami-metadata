@@ -298,9 +298,6 @@
             "model"
           ],
           "properties": {
-            "id":  {
-              "$ref": "fields#playbackDeviceID"
-            },
             "serialNumber": {
               "$ref": "fields#playbackDeviceSerialNumber"
             },
@@ -321,9 +318,6 @@
             "model"
           ],
           "properties": {
-            "id":  {
-              "$ref": "fields#timeBaseCorrectorID"
-            },
             "serialNumber": {
               "$ref": "fields#timeBaseCorrectorSerialNumber"
             },
@@ -344,9 +338,6 @@
             "model"
           ],
           "properties": {
-            "id":  {
-              "$ref": "fields#analogDigitalConverterID"
-            },
             "serialNumber": {
               "$ref": "fields#analogDigitalConverterSerialNumber"
             },

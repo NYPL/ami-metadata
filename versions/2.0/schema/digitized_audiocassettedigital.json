@@ -359,9 +359,6 @@
             "speed"
           ],
           "properties": {
-            "id":  {
-              "$ref": "fields#playbackDeviceID"
-            },
             "serialNumber": {
               "$ref": "fields#playbackDeviceSerialNumber"
             },
@@ -409,9 +406,6 @@
         "digitalAudioProcessor": {
           "type": "object",
           "properties": {
-            "id": {
-              "type": ["string", "number"]
-            },
             "serialNumber": {
               "type": ["string", "number"]
             },
