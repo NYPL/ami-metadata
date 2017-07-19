@@ -522,10 +522,6 @@
         "timeBaseCorrector": {
           "type": "object",
           "properties": {
-            "id": {
-              "id": "#timeBaseCorrectorID",
-              "type": ["string", "number"]
-            },
             "serialNumber": {
               "id": "#timeBaseCorrectorSerialNumber",
               "type": ["string", "number"]
