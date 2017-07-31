@@ -363,6 +363,26 @@
             }
           }
         },
+        "timeBaseCorrector": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "serialNumber",
+            "manufacturer",
+            "model"
+          ],
+          "properties": {
+            "serialNumber": {
+              "$ref": "fields#timeBaseCorrectorSerialNumber"
+            },
+            "manufacturer": {
+              "$ref": "fields#timeBaseCorrectorManufacturer"
+            },
+            "model": {
+              "$ref": "fields#timeBaseCorrectorModel"
+            }
+          }
+        },
         "captureSoftware": {
           "$ref": "fields#captureSoftware"
         },
