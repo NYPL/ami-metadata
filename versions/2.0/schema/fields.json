@@ -192,7 +192,8 @@
           "properties": {
             "measure": {
               "type": "number",
-              "multipleOf": 1.0
+              "multipleOf": 1.0,
+              "minimum": 1
             },
             "unit": {
               "enum": [
@@ -212,7 +213,8 @@
           "properties": {
             "measure": {
               "type": "number",
-              "multipleOf": 1.0
+              "multipleOf": 1.0,
+              "minimum": 1
             },
             "unit": {
               "enum": [
@@ -245,15 +247,18 @@
           "properties": {
             "faceNumber": {
               "type": "number",
-              "multipleOf": 1.0
+              "multipleOf": 1.0,
+              "minimum": 1
             },
             "regionNumber": {
               "type": "number",
-              "multipleOf": 1.0
+              "multipleOf": 1.0,
+              "minimum": 1
             },
             "partNumber": {
               "type": "number",
-              "multipleOf": 1.0
+              "multipleOf": 1.0,
+              "minimum": 1
             }
           }
         },
@@ -293,31 +298,35 @@
             "Ch1: Timecode; Ch2: Mono",
             "Ch1: None; Ch2: None; Ch3: Timecode"
           ]
-        }
-      },
-      "subObjectWithStreams": {
-        "id": "#subObjectWithStreams",
-        "type": "object",
-        "additionalProperties": false,
-        "required": [
-          "faceNumber"
-        ],
-        "properties": {
-          "faceNumber": {
-            "type": "number",
-            "multipleOf": 1.0
-          },
-          "regionNumber": {
-            "type": "number",
-            "multipleOf": 1.0
-          },
-          "streamNumber": {
-            "type": "number",
-            "multipleOf": 1.0
-          },
-          "partNumber": {
-            "type": "number",
-            "multipleOf": 1.0
+        },
+        "subObjectWithStreams": {
+          "id": "#subObjectWithStreams",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "faceNumber"
+          ],
+          "properties": {
+            "faceNumber": {
+              "type": "number",
+              "multipleOf": 1.0,
+              "minimum": 1
+            },
+            "regionNumber": {
+              "type": "number",
+              "multipleOf": 1.0,
+              "minimum": 1
+            },
+            "streamNumber": {
+              "type": "number",
+              "multipleOf": 1.0,
+              "minimum": 1
+            },
+            "partNumber": {
+              "type": "number",
+              "multipleOf": 1.0,
+              "minimum": 1
+            }
           }
         }
       }
@@ -622,7 +631,8 @@
           "properties": {
             "number" : {
               "type": "number",
-              "multipleOf": 1.0
+              "multipleOf": 1.0,
+              "minimum": 1
             }
           }
         },
@@ -681,21 +691,23 @@
                 "state",
                 "postalCode"
               ],
-              "street1":  {
-                "type": "string"
-              },
-              "street2":  {
-                "type": "string"
-              },
-              "city": {
-                "type": "string"
-              },
-              "state":  {
-                "type": "string",
-                "pattern":  "^[A-Z]{2}$"
-              },
-              "postalCode": {
-                "type": "string"
+              "properties": {
+                "street1":  {
+                  "type": "string"
+                },
+                "street2":  {
+                  "type": "string"
+                },
+                "city": {
+                  "type": "string"
+                },
+                "state":  {
+                  "type": "string",
+                  "pattern":  "^[A-Z]{2}$"
+                },
+                "postalCode": {
+                  "type": "string"
+                }
               }
             }
           }

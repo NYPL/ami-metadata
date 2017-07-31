@@ -89,7 +89,6 @@
       "model": "Model XYZ"
 		},
 		"analogDigitalConverter" : {
-      "id": "id12345",
       "serialNumber": "id12345abc",
       "manufacturer": "Manufacturere D",
       "model": "Model XYZ"
