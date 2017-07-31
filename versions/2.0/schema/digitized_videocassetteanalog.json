@@ -109,7 +109,8 @@
             },
             "volumeNumber": {
               "type": "number",
-              "multipleOf": 1.0
+              "multipleOf": 1.0,
+              "minimum": 1
             }
           }
         },
@@ -135,7 +136,8 @@
               "properties": {
                 "measure": {
                   "type": "number",
-                  "multipleOf": 1.0
+                  "multipleOf": 1.0,
+                  "minimum": 1
                 },
                 "unit": {
                   "enum": [
@@ -160,7 +162,8 @@
               "properties": {
                 "measure": {
                   "type": "number",
-                  "multipleOf": 0.001
+                  "multipleOf": 0.001,
+                  "minimum": 0
                 },
                 "unit": {
                   "enum": [
@@ -223,7 +226,8 @@
             },
             "numberOfAudioTracks": {
               "type": "number",
-              "multipleOf": 1.0
+              "multipleOf": 1.0,
+              "minimum": 0
             }
           }
         },

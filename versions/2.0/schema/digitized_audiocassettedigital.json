@@ -99,7 +99,8 @@
             },
             "volumeNumber": {
               "type": "number",
-              "multipleOf": 1.0
+              "multipleOf": 1.0,
+              "minimum": 1
             }
           }
         },
@@ -125,7 +126,8 @@
               "properties": {
                 "measure": {
                   "type": "number",
-                  "multipleOf": 1.0
+                  "multipleOf": 1.0,
+                  "minimum": 1
                 },
                 "unit": {
                   "enum": [
@@ -165,7 +167,8 @@
               "properties": {
                 "measure": {
                   "type": "number",
-                  "multipleOf": 0.5
+                  "multipleOf": 0.5,
+                  "minimum": 1
                 },
                 "unit": {
                   "enum": [

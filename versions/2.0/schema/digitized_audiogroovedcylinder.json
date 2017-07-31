@@ -97,7 +97,8 @@
             },
             "volumeNumber": {
               "type": "number",
-              "multipleOf": 1.0
+              "multipleOf": 1.0,
+              "minimum": 1
             }
           }
         },
