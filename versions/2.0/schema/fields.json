@@ -156,7 +156,7 @@
         "fileFormatForAudio": {
           "id": "#technicalFileFormatForAudio",
           "enum": [
-            "BWF", "bwf"
+            "BWF", "bwf", "Wave"
           ]
         },
         "audioCodecForAudio": {
