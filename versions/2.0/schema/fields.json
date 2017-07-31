@@ -293,31 +293,31 @@
             "Ch1: Timecode; Ch2: Mono",
             "Ch1: None; Ch2: None; Ch3: Timecode"
           ]
-        }
-      },
-      "subObjectWithStreams": {
-        "id": "#subObjectWithStreams",
-        "type": "object",
-        "additionalProperties": false,
-        "required": [
-          "faceNumber"
-        ],
-        "properties": {
-          "faceNumber": {
-            "type": "number",
-            "multipleOf": 1.0
-          },
-          "regionNumber": {
-            "type": "number",
-            "multipleOf": 1.0
-          },
-          "streamNumber": {
-            "type": "number",
-            "multipleOf": 1.0
-          },
-          "partNumber": {
-            "type": "number",
-            "multipleOf": 1.0
+        },
+        "subObjectWithStreams": {
+          "id": "#subObjectWithStreams",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "faceNumber"
+          ],
+          "properties": {
+            "faceNumber": {
+              "type": "number",
+              "multipleOf": 1.0
+            },
+            "regionNumber": {
+              "type": "number",
+              "multipleOf": 1.0
+            },
+            "streamNumber": {
+              "type": "number",
+              "multipleOf": 1.0
+            },
+            "partNumber": {
+              "type": "number",
+              "multipleOf": 1.0
+            }
           }
         }
       }
