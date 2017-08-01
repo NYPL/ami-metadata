@@ -115,13 +115,20 @@
           "type": "object",
           "additionalProperties": false,
           "required": [
-            "diameter",
-            "stockManufacturer",
-            "tapeWidth",
             "baseMaterial",
-            "oxideMaterial"
+            "diameter",
+            "length",
+            "shrinkage"
           ],
           "properties": {
+            "baseMaterial": {
+              "enum": [
+                "acetate",
+                "polyester",
+                "acetate and polyester",
+                "nitrate"
+              ]
+            },
             "diameter": {
               "type": "object",
               "additionalProperties": false,
@@ -131,9 +138,16 @@
               ],
               "properties": {
                 "measure": {
-                  "type": "number",
-                  "multipleOf": 0.25,
-                  "minimum": 0
+                  "enum": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    10.5,
+                    12.5,
+                    16
+                  ]
                 },
                 "unit": {
                   "enum": [
@@ -142,7 +156,7 @@
                 }
               }
             },
-            "stockLength": {
+            "length": {
               "type": "object",
               "additionalProperties": false,
               "required": [
@@ -157,74 +171,27 @@
                 },
                 "unit": {
                   "enum": [
-                    "min"
+                    "ft"
                   ]
                 }
               }
+            },
+            "oxideMaterial": {
+              "enum": [
+                "ferric oxide",
+                "chromium dioxide",
+                "metal oxide"
+              ]
+            },
+            "shrinkage": {
+              "type": "string",
+              "pattern": "^\\d{2}%$"
             },
             "stockManufacturer": {
               "type": "string"
             },
             "stockProductID": {
               "type": "string"
-            },
-            "tapeWidth": {
-              "type": "object",
-              "additionalProperties": false,
-              "required": [
-                "measure",
-                "unit"
-              ],
-              "properties": {
-                "measure": {
-                  "enum": [
-                    0.25,
-                    0.5,
-                    1,
-                    2
-                  ]
-                },
-                "unit": {
-                  "enum": [
-                    "in"
-                  ]
-                }
-              }
-            },
-            "tapeThickness": {
-              "type": "object",
-              "additionalProperties": false,
-              "required": [
-                "measure",
-                "unit"
-              ],
-              "properties": {
-                "measure": {
-                  "type": "number",
-                  "multipleOf": 0.5,
-                  "minimum": 0
-                },
-                "unit": {
-                  "enum": [
-                    "mils"
-                  ]
-                }
-              }
-            },
-            "baseMaterial": {
-              "enum": [
-                "acetate",
-                "polyester",
-                "acetate and polyester",
-                "unknown"
-              ]
-            },
-            "oxideMaterial": {
-              "enum": [
-                "ferric oxide",
-                "chromium dioxide",
-                "unknown"
-              ]
             }
           }
         },
