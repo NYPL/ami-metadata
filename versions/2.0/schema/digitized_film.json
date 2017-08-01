@@ -232,22 +232,52 @@
           "type": "object",
           "additionalProperties": false,
           "required": [
-            "broadcastStandard",
-            "colorBW"
+            "colorBW",
+            "displayAspectRatio",
+            "frameRate",
+            "print"
           ],
           "properties": {
-            "broadcastStandard": {
-              "enum": [
-                "NTSC",
-                "PAL",
-                "SECAM"
-              ]
-            },
             "colorBW": {
               "enum": [
                 "b/w",
                 "color",
-                "color & b/w"
+                "color & b/w",
+                "color tinted"
+              ]
+            },
+            "displayAspectRatio": {
+              "enum": [
+                "1.33:1",
+                "1.37:1",
+                "1.85:1",
+                "2.39:1"
+              ]
+            },
+            "frameRate": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "type": "number",
+                  "multipleOf": 0.5,
+                  "minimum": 0
+                },
+                "unit": {
+                  "enum": [
+                    "fps"
+                  ]
+                }
+              }
+            },
+            "print": {
+              "enum": [
+                "positive",
+                "negative"
               ]
             }
           }
