@@ -314,12 +314,12 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "playbackDevice",
-        "timeBaseCorrector",
-        "captureSoftware"
+        "filmScanner",
+        "captureSoftware",
+        "editingSoftware"
       ],
       "properties": {
-        "playbackDevice": {
+        "filmScanner": {
           "type": "object",
           "additionalProperties": false,
           "required": [
@@ -336,54 +336,46 @@
             },
             "model": {
               "$ref": "fields#playbackDeviceModel"
-            }
-          }
-        },
-        "timeBaseCorrector": {
-          "type": "object",
-          "additionalProperties": false,
-          "required": [
-            "serialNumber",
-            "manufacturer",
-            "model"
-          ],
-          "properties": {
-            "serialNumber": {
-              "$ref": "fields#timeBaseCorrectorSerialNumber"
             },
-            "manufacturer": {
-              "$ref": "fields#timeBaseCorrectorManufacturer"
+            "lamp": {
+              "enum": [
+                ""
+              ]
             },
-            "model": {
-              "$ref": "fields#timeBaseCorrectorModel"
-            }
-          }
-        },
-        "analogDigitalConverter": {
-          "type": "object",
-          "additionalProperties": false,
-          "required": [
-            "serialNumber",
-            "manufacturer",
-            "model"
-          ],
-          "properties": {
-            "serialNumber": {
-              "$ref": "fields#analogDigitalConverterSerialNumber"
-            },
-            "manufacturer": {
-              "$ref": "fields#analogDigitalConverterManufacturer"
-            },
-            "model": {
-              "$ref": "fields#analogDigitalConverterModel"
+            "transport": {
+              "enum": [
+                ""
+              ]
             }
           }
         },
         "captureSoftware": {
           "$ref": "fields#captureSoftware"
         },
-        "takeNumber": {
-          "$ref": "fields#takeNumber"
+        "editingSoftware": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "manufacturer",
+            "productName",
+            "version",
+            "platform"
+          ],
+          "type": "object",
+          "properties": {
+            "manufacturer": {
+              "type": "string"
+            },
+            "productName": {
+              "type": "string"
+            },
+            "version": {
+              "type": "string"
+            },
+            "platform": {
+              "type": "string"
+            }
+          }
         },
         "notes": {
           "$ref": "fields#processNotes"
