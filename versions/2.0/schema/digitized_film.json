@@ -85,17 +85,17 @@
           ],
           "properties": {
             "type": {
-              "enum": [ "video reel" ]
+              "enum": [ "film" ]
             },
             "format": {
               "enum": [
-                "one-inch open-reel video Type A",
-                "one-inch open-reel video Type C",
-                "one-inch open-reel video EV",
-                "half-inch open-reel video CV",
-                "half-inch open-reel video EIAJ/AV",
-                "half-inch open-reel video other",
-                "two-inch open-reel video Quadruplex"
+                "Regular 8mm",
+                "Super 8mm",
+                "Single 8mm",
+                "Straight 8",
+                "9.5mm",
+                "16mm",
+                "35mm"
               ]
             },
             "generation": {
