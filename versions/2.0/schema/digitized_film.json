@@ -1,0 +1,390 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Digitized Video Reel Schema",
+  "id": "digitized_videoreel",
+  "description": "Definitions for video reel fields",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "asset",
+    "bibliographic",
+    "technical",
+    "source",
+    "digitizationProcess",
+    "digitizer"
+  ],
+  "properties": {
+    "asset": { "$ref": "fields#asset" },
+    "bibliographic": { "$ref": "fields#bibliographic" },
+    "technical": {
+      "id": "technical",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "filename",
+        "extension",
+        "dateCreated",
+        "fileFormat",
+        "audioCodec",
+        "videoCodec",
+        "fileSize",
+        "durationMilli",
+        "durationHuman"
+      ],
+      "properties": {
+        "filename": {
+          "$ref": "fields#technicalFilename"
+        },
+        "extension": {
+          "$ref": "fields#technicalExtensionForVideo"
+        },
+        "dateCreated": {
+          "$ref": "fields#technicalDateCreated"
+        },
+        "fileFormat": {
+          "$ref": "fields#technicalFileFormat"
+        },
+        "audioCodec": {
+          "$ref": "fields#technicalAudioCodecForVideo"
+        },
+        "videoCodec": {
+          "$ref": "fields#technicalVideoCodecForVideo"
+        },
+        "fileSize": {
+          "$ref": "fields#technicalFileSize"
+        },
+        "durationMilli": {
+          "$ref": "fields#technicalDurationMilli"
+        },
+        "durationHuman": {
+          "$ref": "fields#technicalDurationHuman"
+        },
+        "signalNotes": {
+          "$ref": "fields#technicalSignalNotes"
+        }
+      }
+    },
+    "source": {
+      "id": "source",
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "object",
+        "physicalDescription",
+        "contentSpecifications",
+        "audioRecording"
+      ],
+      "properties": {
+        "object": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "type",
+            "format",
+            "volumeNumber"
+          ],
+          "properties": {
+            "type": {
+              "enum": [ "video reel" ]
+            },
+            "format": {
+              "enum": [
+                "one-inch open-reel video Type A",
+                "one-inch open-reel video Type C",
+                "one-inch open-reel video EV",
+                "half-inch open-reel video CV",
+                "half-inch open-reel video EIAJ/AV",
+                "half-inch open-reel video other",
+                "two-inch open-reel video Quadruplex"
+              ]
+            },
+            "generation": {
+              "type": "string"
+            },
+            "volumeNumber": {
+              "type": "number",
+              "multipleOf": 1.0,
+              "minimum": 1
+            }
+          }
+        },
+        "subObject": {
+          "$ref": "fields#subObjectWithoutStreams"
+        },
+        "physicalDescription": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "diameter",
+            "stockManufacturer",
+            "tapeWidth",
+            "baseMaterial",
+            "oxideMaterial"
+          ],
+          "properties": {
+            "diameter": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "type": "number",
+                  "multipleOf": 0.25,
+                  "minimum": 0
+                },
+                "unit": {
+                  "enum": [
+                    "in"
+                  ]
+                }
+              }
+            },
+            "stockLength": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "type": "number",
+                  "multipleOf": 1.0,
+                  "minimum": 1
+                },
+                "unit": {
+                  "enum": [
+                    "min"
+                  ]
+                }
+              }
+            },
+            "stockManufacturer": {
+              "type": "string"
+            },
+            "stockProductID": {
+              "type": "string"
+            },
+            "tapeWidth": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "enum": [
+                    0.25,
+                    0.5,
+                    1,
+                    2
+                  ]
+                },
+                "unit": {
+                  "enum": [
+                    "in"
+                  ]
+                }
+              }
+            },
+            "tapeThickness": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "type": "number",
+                  "multipleOf": 0.5,
+                  "minimum": 0
+                },
+                "unit": {
+                  "enum": [
+                    "mils"
+                  ]
+                }
+              }
+            },
+            "baseMaterial": {
+              "enum": [
+                "acetate",
+                "polyester",
+                "acetate and polyester",
+                "unknown"
+              ]
+            },
+            "oxideMaterial": {
+              "enum": [
+                "ferric oxide",
+                "chromium dioxide",
+                "unknown"
+              ]
+            }
+          }
+        },
+        "contentSpecifications": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "broadcastStandard",
+            "colorBW"
+          ],
+          "properties": {
+            "broadcastStandard": {
+              "enum": [
+                "NTSC",
+                "PAL",
+                "SECAM"
+              ]
+            },
+            "colorBW": {
+              "enum": [
+                "b/w",
+                "color",
+                "color & b/w"
+              ]
+            }
+          }
+        },
+        "audioRecording": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "audioAspect",
+            "audioSoundField",
+            "numberOfAudioTracks"
+          ],
+          "properties": {
+            "audioAspect": {
+              "enum": [
+                "variable density optical",
+                "single variable area optical",
+                "dual variable area optical",
+                "magnetic",
+                "none"
+              ]
+            },
+            "audioSoundField": {
+              "$ref": "fields#audioSoundFieldForVideo"
+            },
+            "designatedNoiseReduction": {
+              "enum": [
+                ""
+              ]
+            },
+            "numberOfAudioTracks": {
+              "type": "number",
+              "multipleOf": 1.0,
+              "minimum": 0
+            },
+            "syncTone": {
+              "enum": [
+                ""
+              ]
+            }
+          }
+        },
+        "notes": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "physicalConditionPreShipNotes": {
+              "type": "string"
+            },
+            "physicalConditionDigitizationNotes": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "digitizationProcess" : {
+      "id": "digitizationProcess",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "playbackDevice",
+        "timeBaseCorrector",
+        "captureSoftware"
+      ],
+      "properties": {
+        "playbackDevice": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "serialNumber",
+            "manufacturer",
+            "model"
+          ],
+          "properties": {
+            "serialNumber": {
+              "$ref": "fields#playbackDeviceSerialNumber"
+            },
+            "manufacturer": {
+              "$ref": "fields#playbackDeviceManufacturer"
+            },
+            "model": {
+              "$ref": "fields#playbackDeviceModel"
+            }
+          }
+        },
+        "timeBaseCorrector": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "serialNumber",
+            "manufacturer",
+            "model"
+          ],
+          "properties": {
+            "serialNumber": {
+              "$ref": "fields#timeBaseCorrectorSerialNumber"
+            },
+            "manufacturer": {
+              "$ref": "fields#timeBaseCorrectorManufacturer"
+            },
+            "model": {
+              "$ref": "fields#timeBaseCorrectorModel"
+            }
+          }
+        },
+        "analogDigitalConverter": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "serialNumber",
+            "manufacturer",
+            "model"
+          ],
+          "properties": {
+            "serialNumber": {
+              "$ref": "fields#analogDigitalConverterSerialNumber"
+            },
+            "manufacturer": {
+              "$ref": "fields#analogDigitalConverterManufacturer"
+            },
+            "model": {
+              "$ref": "fields#analogDigitalConverterModel"
+            }
+          }
+        },
+        "captureSoftware": {
+          "$ref": "fields#captureSoftware"
+        },
+        "takeNumber": {
+          "$ref": "fields#takeNumber"
+        },
+        "notes": {
+          "$ref": "fields#processNotes"
+        }
+      }
+    },
+    "digitizer": { "$ref": "fields#digitizer" }
+  }
+}
