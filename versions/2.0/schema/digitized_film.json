@@ -109,7 +109,15 @@
           }
         },
         "subObject": {
-          "$ref": "fields#subObjectWithoutStreams"
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "regionNumber": {
+              "type": "number",
+              "multipleOf": 1.0,
+              "minimum": 1
+            }
+          }
         },
         "physicalDescription": {
           "type": "object",
