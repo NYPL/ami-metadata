@@ -269,6 +269,8 @@
                 "Dolby B",
                 "Dolby C",
                 "Dolby S",
+                "DBX I",
+                "DBX II",
                 "none"
               ]
             },
@@ -344,6 +346,8 @@
                 "Dolby B",
                 "Dolby C",
                 "Dolby S",
+                "DBX I",
+                "DBX II",
                 "none"
               ]
             },
