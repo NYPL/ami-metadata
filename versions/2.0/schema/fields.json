@@ -707,7 +707,7 @@
                   "pattern":  "^[A-Z]{2}$"
                 },
                 "postalCode": {
-                  "type": "string"
+                  "type": ["string","number"]
                 }
               }
             }
