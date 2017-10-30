@@ -50,7 +50,7 @@
         "audioCodec": {
           "enum": [
             "AAC",
-            "aac "          ]
+            "aac"          ]
         },
         "videoCodec": {
           "enum": [
@@ -78,7 +78,6 @@
       "additionalProperties": true,
       "required": [
         "object",
-        "subObject",
         "physicalDescription",
         "contentSpecifications",
         "audioRecording"
