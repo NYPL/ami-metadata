@@ -50,9 +50,7 @@
         "audioCodec": {
           "enum": [
             "AAC",
-            "aac ",
-            "unknown"
-          ]
+            "aac "          ]
         },
         "videoCodec": {
           "enum": [
