@@ -51,9 +51,7 @@
           "enum": [
             "AAC",
             "aac",
-            "ac3",
             "AC3",
-            "pcm",
             "PCM"
                     ]
         },
@@ -62,7 +60,7 @@
             "ISO 9660",
             "h264",
             "MPEG-1",
-            "MPEG-2"
+            "MPEG-2V"
           ]
         },
         "fileSize": {
