@@ -50,14 +50,17 @@
         "audioCodec": {
           "enum": [
             "AAC",
-            "aac ",
-            "unknown"
-          ]
+            "aac",
+            "AC3",
+            "PCM"
+                    ]
         },
         "videoCodec": {
           "enum": [
             "ISO 9660",
-            "h264"
+            "h264",
+            "MPEG-1",
+            "MPEG-2V"
           ]
         },
         "fileSize": {
@@ -80,7 +83,6 @@
       "additionalProperties": true,
       "required": [
         "object",
-        "subObject",
         "physicalDescription",
         "contentSpecifications",
         "audioRecording"
@@ -235,7 +237,8 @@
                 7,
                 8,
                 "A",
-                "B"
+                "B",
+                "C"
               ]
             }
           }
