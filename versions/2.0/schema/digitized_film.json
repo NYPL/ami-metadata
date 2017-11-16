@@ -210,7 +210,7 @@
             "colorBW",
             "displayAspectRatio",
             "frameRate",
-            "print"
+            "printType"
           ],
           "properties": {
             "colorBW": {
@@ -254,7 +254,7 @@
                 }
               }
             },
-            "print": {
+            "printType": {
               "enum": [
                 "positive",
                 "negative"
@@ -266,17 +266,18 @@
           "type": "object",
           "additionalProperties": false,
           "required": [
-            "audioAspect",
+            "audioFormat",
             "audioSoundField",
             "numberOfAudioTracks"
           ],
           "properties": {
-            "audioAspect": {
+            "audioFormat": {
               "enum": [
                 "variable density optical",
                 "single variable area optical",
                 "dual variable area optical",
                 "magnetic",
+                "wild",
                 "none"
               ]
             },
