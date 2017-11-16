@@ -229,6 +229,13 @@
                 "2.39:1"
               ]
             },
+            "broadcastStandard": {
+              "enum": [
+                "NTSC",
+                "PAL",
+                "SECAM"
+              ]
+            },
             "frameRate": {
               "type": "object",
               "additionalProperties": false,
