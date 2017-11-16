@@ -231,9 +231,7 @@
             },
             "broadcastStandard": {
               "enum": [
-                "NTSC",
-                "PAL",
-                "SECAM"
+                "NTSC"
               ]
             },
             "frameRate": {
