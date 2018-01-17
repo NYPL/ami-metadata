@@ -229,11 +229,6 @@
                 "2.39:1"
               ]
             },
-            "broadcastStandard": {
-              "enum": [
-                "NTSC"
-              ]
-            },
             "frameRate": {
               "type": "object",
               "additionalProperties": false,
