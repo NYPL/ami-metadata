@@ -167,6 +167,7 @@
                 "paper",
                 "nickel-plated copper",
                 "zinc",
+                "wood",
                 "unknown metal"
               ]
             },
@@ -176,6 +177,7 @@
                 "cellulose nitrate",
                 "celluloid",
                 "gelatin",
+                "vinyl",
                 "none",
                 "unknown"
               ]
