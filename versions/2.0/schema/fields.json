@@ -178,7 +178,8 @@
           "id": "#technicalVideoCodecForVideo",
           "enum": [
             "FFV1",
-            "h264"
+            "h264",
+            "AVC"
           ]
         },
         "fileSize": {
