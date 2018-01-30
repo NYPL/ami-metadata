@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "Digitized Video Cassette Schema",
+  "title": "Digitized Digital Video Cassette Schema",
   "id": "digitized_videocassettedigital",
-  "description": "Definitions for audio optical fields",
+  "description": "Definitions for digital video cassette fields",
   "type": "object",
   "additionalProperties": false,
   "required": [
