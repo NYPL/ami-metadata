@@ -192,8 +192,24 @@
               ]
             },
             "shrinkage": {
-              "type": "string",
-              "pattern": "^\\d{2}%$"
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "type": "number",
+                  "multipleOf": 0.01,
+                  "minimum": 0.01
+                },
+                "unit": {
+                  "enum": [
+                    "μm"
+                  ]
+                }
+              }
             },
             "stockManufacturer": {
               "type": "string"
@@ -273,7 +289,7 @@
                 "dual variable area optical",
                 "magnetic",
                 "wild",
-                "none"
+                "silent"
               ]
             },
             "audioSoundField": {
