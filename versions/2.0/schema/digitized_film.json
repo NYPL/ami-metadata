@@ -242,6 +242,7 @@
                 "1.33:1",
                 "1.37:1",
                 "1.85:1",
+                "1.66:1",
                 "2.39:1"
               ]
             },
@@ -288,7 +289,6 @@
                 "single variable area optical",
                 "dual variable area optical",
                 "magnetic",
-                "wild",
                 "silent"
               ]
             },
@@ -307,7 +307,8 @@
             },
             "syncTone": {
               "enum": [
-                ""
+                "Rangertone",
+                "Nagra"
               ]
             }
           }
