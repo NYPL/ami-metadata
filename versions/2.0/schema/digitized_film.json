@@ -226,7 +226,7 @@
             "colorBW",
             "displayAspectRatio",
             "frameRate",
-            "printType"
+            "element"
           ],
           "properties": {
             "colorBW": {
@@ -266,9 +266,10 @@
                 }
               }
             },
-            "printType": {
+            "element": {
               "enum": [
-                "positive",
+                "print",
+                "internegative",
                 "negative"
               ]
             }
