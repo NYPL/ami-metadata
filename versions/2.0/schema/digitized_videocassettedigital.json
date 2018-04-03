@@ -164,8 +164,8 @@
               "properties": {
                 "measure": {
                   "type": "number",
-                  "multipleOf": 1.0,
-                  "minimum": 1
+                  "multipleOf": 0.1,
+                  "minimum": 0.1
                 },
                 "unit": {
                   "enum": [
