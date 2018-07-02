@@ -135,9 +135,6 @@
                 "audio track"
               ]
             },
-            "generation": {
-              "type": "string"
-            },
             "volumeNumber": {
               "type": "number",
               "multipleOf": 1.0,
@@ -172,9 +169,6 @@
                 "acetate & polyester",
                 "nitrate"
               ]
-            },
-            "fps": {
-              "type": "string",
             },
             "length": {
               "type": "object",
@@ -323,12 +317,6 @@
                   ]
                 }
               }
-            },
-            "printType": {
-              "enum": [
-                "positive",
-                "negative"
-              ]
             }
           }
         },
@@ -354,7 +342,7 @@
               "enum": [
                 "stereo",
                 "mono",
-                "surround,"
+                "surround"
               ]
             },
             "designatedNoiseReduction": {
@@ -397,7 +385,6 @@
       "required": [
         "filmScanner",
         "captureSoftware",
-        "editingSoftware"
       ],
       "properties": {
         "filmScanner": {
@@ -417,16 +404,6 @@
             },
             "model": {
               "$ref": "fields#playbackDeviceModel"
-            },
-            "lamp": {
-              "enum": [
-                ""
-              ]
-            },
-            "transport": {
-              "enum": [
-                ""
-              ]
             }
           }
         },
