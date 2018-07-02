@@ -114,7 +114,14 @@
         },
         "accessNotes": {
           "type": "string"
+        },
+        "group": {
+          "type": "string"
+        },
+        "sequence": {
+          "type": "string"
         }
+
       }
     },
     "technical": {
