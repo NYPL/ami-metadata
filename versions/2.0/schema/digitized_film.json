@@ -277,8 +277,8 @@
           "required": [
             "colorBW",
             "displayAspectRatio",
-            "frameRate",
-          ],
+            "frameRate"
+          ]
           "properties": {
             "colorBW": {
               "enum": [
