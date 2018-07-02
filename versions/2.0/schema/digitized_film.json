@@ -230,7 +230,7 @@
             "edgeCode": {
               "type": "string"
             },
-            "condition, fading": {
+            "conditionFading": {
               "enum": [
                 0,
                 1,
@@ -238,7 +238,7 @@
                 3
               ]
             },
-            "condition, scratches": {
+            "conditionScratches": {
               "enum": [
                 0,
                 1,
@@ -246,7 +246,7 @@
                 3
               ]
             },
-            "condition, splices": {
+            "conditionSplices": {
               "enum": [
                 0,
                 1,
@@ -254,7 +254,7 @@
                 3
               ]
             },
-            "condition, perforation damage": {
+            "conditionPerforationDamage": {
               "enum": [
                 0,
                 1,
@@ -262,7 +262,7 @@
                 3
               ]
             },
-            "condition, distortion": {
+            "conditionDistortion": {
               "enum": [
                 0,
                 1,
@@ -278,7 +278,6 @@
             "colorBW",
             "displayAspectRatio",
             "frameRate",
-            "printType"
           ],
           "properties": {
             "colorBW": {
