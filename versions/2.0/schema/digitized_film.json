@@ -108,6 +108,25 @@
                 "Double 8mm film, silent"
               ]
             },
+            "filmElement": {
+              "enum": [
+                "positive",
+                "negative",
+                "reversal",
+                "internegative",
+                "interpositive",
+                "reversal intermediate",
+                "positive work print",
+                "negative out-takes",
+                "positive out-takes",
+                "positive check print",
+                "positive answer print",
+                "positive release print",
+                "intertitle",
+                "intertitle negative",
+                "audio track"
+              ]
+            },
             "generation": {
               "type": "string"
             },
@@ -201,6 +220,9 @@
               "type": "string"
             },
             "stockProductID": {
+              "type": "string"
+            },
+            "edgeCode": {
               "type": "string"
             }
           }
