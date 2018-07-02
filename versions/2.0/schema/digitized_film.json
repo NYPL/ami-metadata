@@ -165,6 +165,9 @@
                 "nitrate"
               ]
             },
+            "fps": {
+              "type": "string",
+            },
             "length": {
               "type": "object",
               "additionalProperties": false,
@@ -224,7 +227,46 @@
             },
             "edgeCode": {
               "type": "string"
-            }
+            },
+            "condition, fading": {
+              "enum": [
+                0,
+                1,
+                2,
+                3
+              ]
+            },
+            "condition, scratches": {
+              "enum": [
+                0,
+                1,
+                2,
+                3
+              ]
+            },
+            "condition, splices": {
+              "enum": [
+                0,
+                1,
+                2,
+                3
+              ]
+            },
+            "condition, perforation damage": {
+              "enum": [
+                0,
+                1,
+                2,
+                3
+              ]
+            },
+            "condition, distortion": {
+              "enum": [
+                0,
+                1,
+                2,
+                3
+              ]
           }
         },
         "contentSpecifications": {
@@ -301,11 +343,16 @@
               ]
             },
             "audioSoundField": {
-              "$ref": "fields#audioSoundFieldForVideo"
+              "enum": [
+                "stereo",
+                "mono",
+                "surround,"
+              ]
             },
             "designatedNoiseReduction": {
               "enum": [
-                ""
+                "Dolby A",
+                "Dolby SR"
               ]
             },
             "numberOfAudioTracks": {
