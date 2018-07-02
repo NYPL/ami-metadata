@@ -172,6 +172,11 @@
                 "metal oxide"
               ]
             },
+            "acetateDecayLevel": {
+              "type": "number",
+              "multipleOf": 1.0,
+              "minimum": 0
+            },
             "shrinkage": {
               "type": "object",
               "additionalProperties": false,
