@@ -134,7 +134,6 @@
           "additionalProperties": false,
           "required": [
             "baseMaterial",
-            "diameter",
             "length",
             "shrinkage"
           ],
@@ -146,33 +145,6 @@
                 "acetate and polyester",
                 "nitrate"
               ]
-            },
-            "diameter": {
-              "type": "object",
-              "additionalProperties": false,
-              "required": [
-                "measure",
-                "unit"
-              ],
-              "properties": {
-                "measure": {
-                  "enum": [
-                    3,
-                    4,
-                    5,
-                    6,
-                    7,
-                    10.5,
-                    12.5,
-                    16
-                  ]
-                },
-                "unit": {
-                  "enum": [
-                    "in"
-                  ]
-                }
-              }
             },
             "length": {
               "type": "object",
@@ -197,7 +169,6 @@
             "oxideMaterial": {
               "enum": [
                 "ferric oxide",
-                "chromium dioxide",
                 "metal oxide"
               ]
             },
