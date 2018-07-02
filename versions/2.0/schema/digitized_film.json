@@ -36,7 +36,11 @@
           "$ref": "fields#technicalFilename"
         },
         "extension": {
-          "$ref": "fields#technicalExtensionForVideo"
+          "enum":[
+            "mov",
+            "mp4",
+            "mkv"
+            ]
         },
         "dateCreated": {
           "$ref": "fields#technicalDateCreated"
@@ -48,7 +52,11 @@
           "$ref": "fields#technicalAudioCodecForVideo"
         },
         "videoCodec": {
-          "$ref": "fields#technicalVideoCodecForVideo"
+          "enum":[
+            "prores",
+            "h264",
+            "ffv1"
+            ]
         },
         "fileSize": {
           "$ref": "fields#technicalFileSize"
