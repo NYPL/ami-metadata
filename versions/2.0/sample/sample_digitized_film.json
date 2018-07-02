@@ -1,6 +1,6 @@
 {
 	"asset": {
-		"referenceFilename": "myh_abc123_v01_pm.mov",
+		"referenceFilename": "myh_abc123_v01_pm.mkv",
 		"fileRole": "pm",
 		"schemaVersion": "2.0.0"
 	},
@@ -45,6 +45,7 @@
 		"object": {
 			"type": "film",
 			"format": "Double 8mm film",
+			"filmElement": "positive",
 			"volumeNumber": 1
 		},
 		"subObject": {
@@ -52,30 +53,45 @@
 			"regionNumber": 1
 		},
 		"physicalDescription": {
-			"stockLength": {
+			"length": {
 				"measure": 60,
-				"unit": "min"
+				"unit": "ft"
 			},
 			"stockManufacturer": "Kodak",
 			"stockProductID": "722"
 			},
 			"baseMaterial": "acetate & polyester",
-			"oxideMaterial": "ferric oxide"
+			"edgeCode": "1992",
+			"oxideMaterial": "ferric oxide",
+			"conditionFading": "0",
+			"conditionScratches": "1",
+			"conditionSplices": "2",
+			"conditionPerforationDamage": "3",
+			"conditionDistortion": "3"
+		  },
+			"shrinkage": {
+				"measure": 1.7,
+				"unit": "%"
 		},
 		"contentSpecifications": {
-			"colorBW": "color tinted"
+			"colorBW": "color tinted",
+			"displayAspectRatio": "1.33:1",
+			"frameRate": {
+				"measure": 18,
+				"unit": "fps"
+			}
 		},
 		"audioRecording": {
 			"audioSoundField": "mono",
-			"numberOfAudioTracks": 1
+			"numberOfAudioTracks": 1,
+			"audioFormat": "silent",
+			"syncTone": "Nagra"
 		},
 		"notes": {
-			"physicalConditionPreShipNotes": "film shows XYZ damage",
-			"physicalConditionDigitizationNotes": "film shows ABC damage"
-		}
+			"physicalConditionPreShipNotes": "film shows XYZ damage"
 	},
 	"digitizationProcess": {
-		"playbackDevice": {
+		"filmScanner": {
 			"serialNumber": "xyz123",
 			"manufacturer": "Manufacturer B",
 			"model": "Model XYZ"
