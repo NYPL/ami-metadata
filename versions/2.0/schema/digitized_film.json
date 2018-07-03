@@ -278,7 +278,7 @@
             "colorBW",
             "displayAspectRatio",
             "frameRate"
-          ]
+          ],
           "properties": {
             "colorBW": {
               "enum": [
@@ -383,7 +383,7 @@
       "additionalProperties": false,
       "required": [
         "filmScanner",
-        "captureSoftware",
+        "captureSoftware"
       ],
       "properties": {
         "filmScanner": {
