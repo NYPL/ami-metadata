@@ -303,6 +303,7 @@
               "enum": [
                 "NAB",
                 "IEC/CCIR",
+                "AES",
                 "none"
               ]
             }
@@ -409,7 +410,8 @@
             "eq": {
               "enum": [
                 "NAB",
-                "IEC"
+                "IEC",
+                "AES
               ]
             },
             "speed": {
