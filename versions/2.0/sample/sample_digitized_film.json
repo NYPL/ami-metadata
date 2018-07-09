@@ -44,12 +44,11 @@
 	"source": {
 		"object": {
 			"type": "film",
-			"format": "Double 8mm film",
+			"format": "Double 8mm film, silent",
 			"filmElement": "positive",
 			"volumeNumber": 1
 		},
 		"subObject": {
-			"faceNumber": 1,
 			"regionNumber": 1
 		},
 		"physicalDescription": {
@@ -58,20 +57,19 @@
 				"unit": "ft"
 			},
 			"stockManufacturer": "Kodak",
-			"stockProductID": "722"
-			},
+			"stockProductID": "722",
 			"baseMaterial": "acetate & polyester",
 			"edgeCode": "1992",
 			"oxideMaterial": "ferric oxide",
-			"conditionFading": "0",
-			"conditionScratches": "1",
-			"conditionSplices": "2",
-			"conditionPerforationDamage": "3",
-			"conditionDistortion": "3"
-		  },
+			"conditionFading": 0,
+			"conditionScratches": 1,
+			"conditionSplices": 2,
+			"conditionPerforationDamage": 3,
+			"conditionDistortion": 3,
 			"shrinkage": {
 				"measure": 1.7,
 				"unit": "%"
+			}
 		},
 		"contentSpecifications": {
 			"colorBW": "color tinted",
@@ -89,6 +87,7 @@
 		},
 		"notes": {
 			"physicalConditionPreShipNotes": "film shows XYZ damage"
+		}
 	},
 	"digitizationProcess": {
 		"filmScanner": {
@@ -113,13 +112,13 @@
 		},
 		"organization": {
 			"name": "Organization XYZ",
-      "address": {
-        "street1": "123 ABC St",
-        "street2": "Suite 1234",
-        "city":    "Anytown",
-        "state":   "ST",
-        "postalCode": "12345"
-      }
+			"address": {
+		 		"street1": "123 ABC St",
+				"street2": "Suite 1234",
+				"city":    "Anytown",
+				"state":   "ST",
+				"postalCode": "12345"
+			}
 		}
 	}
 }
