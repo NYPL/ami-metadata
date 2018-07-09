@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "Digitized Video Reel Schema",
-  "id": "digitized_videoreel",
-  "description": "Definitions for video reel fields",
+  "title": "Digitized Film Schema",
+  "id": "digitized_film",
+  "description": "Definitions for film fields",
   "type": "object",
   "additionalProperties": false,
   "required": [
