@@ -1,0 +1,125 @@
+{
+	"asset": {
+		"referenceFilename": "myh_abc123_v01_pm.mkv",
+		"fileRole": "pm",
+		"schemaVersion": "2.0.0"
+	},
+	"bibliographic": {
+		"primaryID": "abc123",
+		"classmark": "*ABC 123",
+		"formerClassmark": "*NCOW 123",
+		"nonCMSID": "string123",
+		"cmsItemID": "123456",
+		"cmsCollectionID": "string123",
+		"catalogBNumber": "B12345678",
+		"mssID": "12345",
+		"barcode": "33433123456789",
+		"divisionCode": "myh",
+		"vernacularDivisionCode": "DAN",
+		"projectCode": "projectXYZ",
+		"title": "Dance Video 1",
+		"group": "Dance Group Film",
+		"sequence": "Reel 1 of 2",
+		"date": "Late 1970s",
+		"contentNotes": "media is actually Dance Video 2 instead of Dance Video 1"
+	},
+	"technical": {
+		"filename": "myh_abc123_v01_pm",
+		"extension": "mov",
+		"dateCreated": "2017-07-01",
+		"fileFormat": "MKV file",
+		"audioCodec": "PCM",
+		"videoCodec": "prores",
+		"fileSize": {
+			"measure": 100000000000,
+			"unit": "B"
+		},
+		"durationMilli": {
+			"measure": 3600000,
+			"unit": "ms"
+		},
+		"durationHuman": "1:00:00.000",
+		"signalNotes": "signal undreadable at point 123"
+	},
+	"source": {
+		"object": {
+			"type": "film",
+			"format": "Double 8mm film",
+			"filmElement": "positive",
+			"volumeNumber": 1
+		},
+		"subObject": {
+			"faceNumber": 1,
+			"regionNumber": 1
+		},
+		"physicalDescription": {
+			"length": {
+				"measure": 60,
+				"unit": "ft"
+			},
+			"stockManufacturer": "Kodak",
+			"stockProductID": "722"
+			},
+			"baseMaterial": "acetate & polyester",
+			"edgeCode": "1992",
+			"oxideMaterial": "ferric oxide",
+			"conditionFading": "0",
+			"conditionScratches": "1",
+			"conditionSplices": "2",
+			"conditionPerforationDamage": "3",
+			"conditionDistortion": "3"
+		  },
+			"shrinkage": {
+				"measure": 1.7,
+				"unit": "%"
+		},
+		"contentSpecifications": {
+			"colorBW": "color tinted",
+			"displayAspectRatio": "1.33:1",
+			"frameRate": {
+				"measure": 18,
+				"unit": "fps"
+			}
+		},
+		"audioRecording": {
+			"audioSoundField": "mono",
+			"numberOfAudioTracks": 1,
+			"audioFormat": "silent",
+			"syncTone": "Nagra"
+		},
+		"notes": {
+			"physicalConditionPreShipNotes": "film shows XYZ damage"
+	},
+	"digitizationProcess": {
+		"filmScanner": {
+			"serialNumber": "xyz123",
+			"manufacturer": "Manufacturer B",
+			"model": "Model XYZ"
+		},
+		"captureSoftware": {
+			"manufacturer": "Manufacturer E",
+			"productName": "Product XYZ",
+			"version": "Version 123",
+			"platform": "OS XYZ"
+		},
+		"notes": {
+			"processNotes": "required intervention for reason xyz"
+		}
+	},
+	"digitizer": {
+		"operator": {
+			"firstName": "Doe",
+			"lastName": "Jane"
+		},
+		"organization": {
+			"name": "Organization XYZ",
+      "address": {
+        "street1": "123 ABC St",
+        "street2": "Suite 1234",
+        "city":    "Anytown",
+        "state":   "ST",
+        "postalCode": "12345"
+      }
+		}
+	}
+}

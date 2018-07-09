@@ -36,7 +36,11 @@
           "$ref": "fields#technicalFilename"
         },
         "extension": {
-          "$ref": "fields#technicalExtensionForVideo"
+          "enum":[
+            "mov",
+            "mp4",
+            "mkv"
+            ]
         },
         "dateCreated": {
           "$ref": "fields#technicalDateCreated"
@@ -48,7 +52,11 @@
           "$ref": "fields#technicalAudioCodecForVideo"
         },
         "videoCodec": {
-          "$ref": "fields#technicalVideoCodecForVideo"
+          "enum":[
+            "prores",
+            "h264",
+            "ffv1"
+            ]
         },
         "fileSize": {
           "$ref": "fields#technicalFileSize"
@@ -89,17 +97,43 @@
             },
             "format": {
               "enum": [
-                "Regular 8mm",
-                "Super 8mm",
-                "Single 8mm",
-                "Straight 8",
-                "9.5mm",
-                "16mm",
-                "35mm"
+                "8mm film, silent",
+                "8mm film, optical sound",
+                "Super 8 film, silent",
+                "Super 8 film, optical sound",
+                "Super 8 film, magnetic sound",
+                "16mm film, silent",
+                "16mm film, optical track",
+                "16mm film, optical sound",
+                "16mm film, magnetic sound",
+                "16mm film, full-coat magnetic sound",
+                "35mm film, silent",
+                "35mm film, optical track",
+                "35mm film, optical sound",
+                "35mm film, magnetic sound",
+                "35mm film,  full-coat magnetic sound",
+                "9.5mm film, silent",
+                "Double 8mm film, silent"
               ]
             },
-            "generation": {
-              "type": "string"
+            "filmElement": {
+              "enum": [
+                "positive",
+                "negative",
+                "reversal",
+                "internegative",
+                "interpositive",
+                "reversal intermediate",
+                "positive work print",
+                "negative out-takes",
+                "positive out-takes",
+                "positive check print",
+                "positive answer print",
+                "positive release print",
+                "intertitle",
+                "intertitle negative",
+                "audio track"
+              ]
             },
             "volumeNumber": {
               "type": "number",
@@ -124,7 +158,6 @@
           "additionalProperties": false,
           "required": [
             "baseMaterial",
-            "diameter",
             "length",
             "shrinkage"
           ],
@@ -133,36 +166,9 @@
               "enum": [
                 "acetate",
                 "polyester",
-                "acetate and polyester",
+                "acetate & polyester",
                 "nitrate"
               ]
-            },
-            "diameter": {
-              "type": "object",
-              "additionalProperties": false,
-              "required": [
-                "measure",
-                "unit"
-              ],
-              "properties": {
-                "measure": {
-                  "enum": [
-                    3,
-                    4,
-                    5,
-                    6,
-                    7,
-                    10.5,
-                    12.5,
-                    16
-                  ]
-                },
-                "unit": {
-                  "enum": [
-                    "in"
-                  ]
-                }
-              }
             },
             "length": {
               "type": "object",
@@ -187,9 +193,13 @@
             "oxideMaterial": {
               "enum": [
                 "ferric oxide",
-                "chromium dioxide",
                 "metal oxide"
               ]
+            },
+            "acetateDecayLevel": {
+              "type": "number",
+              "multipleOf": 1.0,
+              "minimum": 0
             },
             "shrinkage": {
               "type": "object",
@@ -206,7 +216,7 @@
                 },
                 "unit": {
                   "enum": [
-                    "μm"
+                    "%"
                   ]
                 }
               }
@@ -216,6 +226,49 @@
             },
             "stockProductID": {
               "type": "string"
+            },
+            "edgeCode": {
+              "type": "string"
+            },
+            "conditionFading": {
+              "enum": [
+                0,
+                1,
+                2,
+                3
+              ]
+            },
+            "conditionScratches": {
+              "enum": [
+                0,
+                1,
+                2,
+                3
+              ]
+            },
+            "conditionSplices": {
+              "enum": [
+                0,
+                1,
+                2,
+                3
+              ]
+            },
+            "conditionPerforationDamage": {
+              "enum": [
+                0,
+                1,
+                2,
+                3
+              ]
+            },
+            "conditionDistortion": {
+              "enum": [
+                0,
+                1,
+                2,
+                3
+              ]
             }
           }
         },
@@ -294,11 +347,16 @@
               ]
             },
             "audioSoundField": {
-              "$ref": "fields#audioSoundFieldForVideo"
+              "enum": [
+                "stereo",
+                "mono",
+                "surround"
+              ]
             },
             "designatedNoiseReduction": {
               "enum": [
-                ""
+                "Dolby A",
+                "Dolby SR"
               ]
             },
             "numberOfAudioTracks": {
@@ -334,8 +392,7 @@
       "additionalProperties": false,
       "required": [
         "filmScanner",
-        "captureSoftware",
-        "editingSoftware"
+        "captureSoftware"
       ],
       "properties": {
         "filmScanner": {
@@ -355,16 +412,6 @@
             },
             "model": {
               "$ref": "fields#playbackDeviceModel"
-            },
-            "lamp": {
-              "enum": [
-                ""
-              ]
-            },
-            "transport": {
-              "enum": [
-                ""
-              ]
             }
           }
         },
@@ -380,7 +427,6 @@
             "version",
             "platform"
           ],
-          "type": "object",
           "properties": {
             "manufacturer": {
               "type": "string"
