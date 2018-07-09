@@ -228,7 +228,8 @@
               "type": "string"
             },
             "edgeCode": {
-              "type": "string"
+              "type": "string",
+              "pattern": "(19|20)\\d\\d"
             },
             "conditionFading": {
               "enum": [
@@ -278,8 +279,7 @@
           "required": [
             "colorBW",
             "displayAspectRatio",
-            "frameRate",
-            "element"
+            "frameRate"
           ],
           "properties": {
             "colorBW": {
@@ -318,13 +318,6 @@
                   ]
                 }
               }
-            },
-            "element": {
-              "enum": [
-                "print",
-                "internegative",
-                "negative"
-              ]
             }
           }
         },
