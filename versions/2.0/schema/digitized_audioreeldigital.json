@@ -247,10 +247,7 @@
                 16,
                 24,
                 32,
-                48,
-                "n/a",
-                "unknown"
-              ]
+                48              ]
             },
             "designatedSpeed": {
               "type": "object",
