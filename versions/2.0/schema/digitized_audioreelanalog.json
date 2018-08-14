@@ -409,7 +409,7 @@
               "enum": [
                 "NAB",
                 "IEC",
-                "AES
+                "AES"
               ]
             },
             "speed": {
