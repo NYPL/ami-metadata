@@ -65,10 +65,6 @@
 				"measure": 0.5,
 				"unit": "in"
 			},
-			"tapeThickness": {
-				"measure": 1.5,
-				"unit": "mils"
-			},
 			"baseMaterial": "polyester",
 			"oxideMaterial": "ferric oxide"
 		},
