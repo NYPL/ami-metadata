@@ -243,9 +243,7 @@
                 4,
                 8,
                 16,
-                24,
-                "n/a",
-                "unknown"
+                24
               ]
             },
             "trackConfiguration": {
@@ -411,7 +409,7 @@
               "enum": [
                 "NAB",
                 "IEC",
-                "AES
+                "AES"
               ]
             },
             "speed": {
