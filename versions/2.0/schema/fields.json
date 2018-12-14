@@ -135,6 +135,8 @@
           "id": "#technicalExtensionForAudio",
           "enum": [
             "wav", "WAV"
+            "flac", "FLAC",
+            "mka", "MKA"
           ]
         },
         "extensionForVideo": {
@@ -156,13 +158,14 @@
         "fileFormatForAudio": {
           "id": "#technicalFileFormatForAudio",
           "enum": [
-            "BWF", "bwf", "Wave", ""
+            "BWF", "bwf", "Wave", "", "Matroska", "FLAC"
           ]
         },
         "audioCodecForAudio": {
           "id": "#technicalAudioCodecForAudio",
           "enum": [
-            "PCM"
+            "PCM",
+            "FLAC"
           ]
         },
         "audioCodecForVideo": {
