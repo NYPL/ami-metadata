@@ -57,6 +57,7 @@
           "enum": [
             "ISO 9660",
             "h264",
+            "AVC",
             "MPEG-1",
             "MPEG-2V"
           ]
