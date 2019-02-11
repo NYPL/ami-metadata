@@ -30,13 +30,13 @@ There are a number of tools that can validate JSON data against JSON schema. We 
 To validate a single sample json file against a version of the schema with ajv:
 ```
 cd path/to/schema/base/directory
-ajv validate -s versions/2.0/schema/digitized_audioreel.json -r versions/2.0/schema/fields.json -d /path/to/sample_digitized_audioreel.json
+ajv validate -s /path/to/version/2.0/schema/digitized_audioreel.json -r versions/2.0/schema/fields.json -d /path/to/sample_digitized_audioreel.json
 ```
 
 To validate all of the sample json files against their version of the schema with ajv:
 ```
 cd path/to/schema/base/directory
-ajv validate -s versions/2.0/schema/digitized.json -r "versions/2.0/schema/*.json" -d "versions/2.0/sample/*.json"
+ajv validate -s /path/to/version/2.0/schema/digitized.json -r "versions/2.0/schema/*.json" -d "versions/2.0/sample/*.json"
 ```
 
 To validate all json files in a set of bags with ajv:
