@@ -174,7 +174,8 @@
             "PCM",
             "lpcm",
             "AAC",
-            "aac"
+            "aac",
+            "FLAC"
           ]
         },
         "videoCodecForVideo": {
