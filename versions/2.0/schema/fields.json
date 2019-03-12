@@ -134,7 +134,7 @@
         "extensionForAudio": {
           "id": "#technicalExtensionForAudio",
           "enum": [
-            "wav", "WAV"
+            "wav", "WAV",
             "flac", "FLAC",
             "mka", "MKA"
           ]
