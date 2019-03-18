@@ -90,6 +90,7 @@
                 "Microcassette",
                 "Minicassette",
                 "Fidelipac Cartridge",
+                "RCA Cartridge",
                 "NAB Cartridge",
                 "Elcaset"
               ]
@@ -361,7 +362,6 @@
                 "Type III",
                 "Type IV",
                 "NAB",
-                "n/a",
                 "none"
               ]
             },

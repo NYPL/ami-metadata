@@ -15,7 +15,7 @@
       "properties": {
         "referenceFilename" : {
           "type": "string",
-          "pattern": "^[a-zA-Z\\d\\-\\*_]+\\.[a-zA-Z0-9]{2,3}$"
+          "pattern": "^[a-zA-Z\\d\\-\\*_]+\\.[a-zA-Z0-9]{2,4}$"
         },
         "fileRole" : {
           "type": "string",
@@ -141,7 +141,9 @@
         "extensionForAudio": {
           "id": "#technicalExtensionForAudio",
           "enum": [
-            "wav", "WAV"
+            "wav", "WAV",
+            "flac", "FLAC",
+            "mka", "MKA"
           ]
         },
         "extensionForVideo": {
@@ -163,13 +165,14 @@
         "fileFormatForAudio": {
           "id": "#technicalFileFormatForAudio",
           "enum": [
-            "BWF", "bwf", "Wave", ""
+            "BWF", "bwf", "Wave", "", "Matroska", "FLAC"
           ]
         },
         "audioCodecForAudio": {
           "id": "#technicalAudioCodecForAudio",
           "enum": [
-            "PCM"
+            "PCM",
+            "FLAC"
           ]
         },
         "audioCodecForVideo": {
@@ -178,7 +181,8 @@
             "PCM",
             "lpcm",
             "AAC",
-            "aac"
+            "aac",
+            "FLAC"
           ]
         },
         "videoCodecForVideo": {

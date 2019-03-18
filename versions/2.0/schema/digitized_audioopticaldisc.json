@@ -22,6 +22,7 @@
       "additionalProperties": false,
       "required": [
         "filename",
+        "cueFilename",
         "extension",
         "dateCreated",
         "fileFormat",
