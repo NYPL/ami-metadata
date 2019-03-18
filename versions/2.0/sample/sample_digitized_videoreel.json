@@ -26,7 +26,7 @@
 		"extension": "mkv",
 		"dateCreated": "2017-07-01",
 		"fileFormat": "MKV file",
-		"audioCodec": "PCM",
+		"audioCodec": "FLAC",
 		"videoCodec": "FFV1",
 		"fileSize": {
 			"measure": 100000000000,

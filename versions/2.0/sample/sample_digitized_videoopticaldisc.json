@@ -1,7 +1,7 @@
 {
 	"asset": {
 		"referenceFilename": "myh_abc123_v01_pm.iso",
-		"fileRole": "pm",
+		"fileRole": "sc",
 		"schemaVersion": "2.0.0"
 	},
 	"bibliographic": {
