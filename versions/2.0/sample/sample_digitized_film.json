@@ -17,17 +17,17 @@
 		"divisionCode": "myh",
 		"vernacularDivisionCode": "DAN",
 		"projectCode": "projectXYZ",
-		"title": "Dance Video 1",
+		"title": "Dance film 1",
 		"group": "Dance Group Film",
 		"sequence": "Reel 1 of 2",
 		"date": "Late 1970s",
-		"contentNotes": "media is actually Dance Video 2 instead of Dance Video 1"
+		"contentNotes": "originally in can with associated audio item 654321"
 	},
 	"technical": {
 		"filename": "myh_abc123_v01_pm",
 		"extension": "mov",
 		"dateCreated": "2017-07-01",
-		"fileFormat": "MKV file",
+		"fileFormat": "Quicktime",
 		"audioCodec": "PCM",
 		"videoCodec": "prores",
 		"fileSize": {
@@ -39,11 +39,11 @@
 			"unit": "ms"
 		},
 		"durationHuman": "1:00:00.000",
-		"signalNotes": "signal undreadable at point 123"
+		"signalNotes": "warping causes focus issues thoughout"
 	},
 	"source": {
 		"object": {
-			"type": "film",
+			"type": "motion picture film",
 			"format": "Double 8mm film, silent",
 			"filmElement": "positive",
 			"volumeNumber": 1
@@ -60,7 +60,6 @@
 			"stockProductID": "722",
 			"baseMaterial": "acetate & polyester",
 			"edgeCode": "1992",
-			"oxideMaterial": "ferric oxide",
 			"conditionFading": 0,
 			"conditionScratches": 1,
 			"conditionSplices": 2,
