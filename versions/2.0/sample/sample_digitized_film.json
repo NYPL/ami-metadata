@@ -72,7 +72,7 @@
 			}
 		},
 		"contentSpecifications": {
-			"colorBW": "color tinted",
+			"colorBW": "color",
 			"displayAspectRatio": "1.33:1",
 			"frameRate": {
 				"measure": 18,

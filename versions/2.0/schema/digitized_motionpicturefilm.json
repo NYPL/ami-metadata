@@ -92,7 +92,7 @@
           ],
           "properties": {
             "type": {
-              "enum": [ "film" ]
+              "enum": [ "motion picture film" ]
             },
             "format": {
               "enum": [
@@ -122,12 +122,12 @@
                 "positive work print",
                 "negative out-takes",
                 "positive out-takes",
+                "mixed out-takes"
                 "positive check print",
                 "positive answer print",
                 "positive release print",
                 "intertitle",
-                "intertitle negative",
-                "audio track"
+                "intertitle negative"
               ]
             },
             "volumeNumber": {
@@ -184,12 +184,6 @@
                   ]
                 }
               }
-            },
-            "oxideMaterial": {
-              "enum": [
-                "ferric oxide",
-                "metal oxide"
-              ]
             },
             "acetateDecayLevel": {
               "type": "number",
