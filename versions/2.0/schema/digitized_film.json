@@ -92,7 +92,7 @@
           ],
           "properties": {
             "type": {
-              "enum": [ "motion picture film" ]
+              "enum": [ "film" ]
             },
             "format": {
               "enum": [
