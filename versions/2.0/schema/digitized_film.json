@@ -108,7 +108,11 @@
                 "35mm film, optical sound",
                 "35mm film, magnetic sound",
                 "9.5mm film, silent",
-                "Double 8mm film, silent"
+                "Double 8mm film, silent",
+                "16mm film, optical track",
+                "16mm film, full-coat magnetic sound",
+                "35mm film, optical track",
+                "35mm film,  full-coat magnetic sound"
               ]
             },
             "filmElement": {
