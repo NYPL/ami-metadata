@@ -43,8 +43,8 @@
 	},
 	"source": {
 		"object": {
-			"type": "motion picture film",
-			"format": "Double 8mm film, silent",
+			"type": "film",
+			"format": "16mm film, magnetic sound",
 			"filmElement": "positive",
 			"volumeNumber": 1
 		},
@@ -53,36 +53,36 @@
 		},
 		"physicalDescription": {
 			"length": {
-				"measure": 60,
+				"measure": 400,
 				"unit": "ft"
 			},
 			"stockManufacturer": "Kodak",
 			"stockProductID": "722",
 			"baseMaterial": "acetate & polyester",
-			"edgeCode": "1992",
+			"edgeCode": "1965",
 			"conditionFading": 0,
 			"conditionScratches": 1,
 			"conditionSplices": 2,
 			"conditionPerforationDamage": 3,
 			"conditionDistortion": 3,
 			"shrinkage": {
-				"measure": 1.7,
+				"measure": 1.5,
 				"unit": "%"
 			}
 		},
 		"contentSpecifications": {
 			"colorBW": "color",
-			"displayAspectRatio": "1.33:1",
+			"displayAspectRatio": "1.37:1",
 			"frameRate": {
-				"measure": 18,
+				"measure": 24,
 				"unit": "fps"
 			}
 		},
 		"audioRecording": {
 			"audioSoundField": "mono",
 			"numberOfAudioTracks": 1,
-			"audioFormat": "silent",
-			"syncTone": "Nagra"
+			"audioFormat": "magnetic",
+			"syncTone": "Pilottone"
 		},
 		"notes": {
 			"physicalConditionPreShipNotes": "film shows XYZ damage"

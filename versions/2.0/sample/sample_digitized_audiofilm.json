@@ -1,0 +1,134 @@
+{
+	"asset": {
+		"referenceFilename": "myh_abc123_v01_pm.wav",
+		"fileRole": "pm",
+		"schemaVersion": "2.0.0"
+	},
+	"bibliographic": {
+		"primaryID": "abc123",
+		"classmark": "*ABC 123",
+		"formerClassmark": "*NCOW 123",
+		"nonCMSID": "string123",
+		"cmsItemID": "123456",
+		"cmsCollectionID": "string123",
+		"catalogBNumber": "B12345678",
+		"mssID": "12345",
+		"barcode": "33433123456789",
+		"divisionCode": "myh",
+		"vernacularDivisionCode": "DAN",
+		"projectCode": "projectXYZ",
+		"title": "Dance Audio 1",
+		"date": "Late 1970s",
+		"contentNotes": "media is actually Dance Audio 2 instead of Dance Audio 1"
+	},
+	"technical": {
+		"filename": "myh_abc123_v01_pm",
+		"extension": "flac",
+		"dateCreated": "2017-07-01",
+		"fileFormat": "FLAC",
+		"audioCodec": "FLAC",
+		"fileSize": {
+			"measure": 2000000000,
+			"unit": "B"
+		},
+		"durationMilli": {
+			"measure": 3600000,
+			"unit": "ms"
+		},
+		"durationHuman": "1:00:00.000",
+		"signalNotes": "signal undreadable at point 123"
+	},
+	"source": {
+		"object": {
+			"type": "film",
+			"format": "16mm film, full-coat magnetic sound",
+			"generation": "Original",
+			"volumeNumber": 1
+		},
+		"subObject": {
+			"faceNumber": 1,
+			"regionNumber": 2,
+			"streamNumber": 1,
+			"partNumber": 1
+		},
+		"physicalDescription": {
+			"diameter": {
+				"measure": 7,
+				"unit": "in"
+			},
+			"stockManufacturer": "Manufacturer A",
+			"stockProductID": "idabc123",
+			"baseMaterial": "polyester",
+			"oxideMaterial": "chromium dioxide",
+			"backcoatMaterial": "yes"
+		},
+		"audioRecording": {
+			"audioFormat":"magnetic",
+			"audioSoundField": "mono",
+			"numberOfAudioTracks": 24,
+			"trackConfiguration": "full-track",
+			"designatedSpeed": {
+				"measure": 7.5,
+				"unit": "ips"
+			},
+			"designatedNoiseReduction": "DBX II",
+			"designatedEQ": "NAB"
+		},
+		"notes": {
+			"physicalConditionPreShipNotes": "reel show XYZ damage",
+			"physicalConditionDigitizationNotes": "tape shows XYZ damage"
+		}
+	},
+	"digitizationProcess": {
+		"playbackDevice": {
+			"serialNumber": "xyz123",
+			"manufacturer": "Manufacturer B",
+			"model": "Model XYZ",
+			"tapeHeadType": "full-track",
+			"operatingLevel": {
+				"measure": 315,
+				"unit": "nW/m"
+			},
+			"noiseReduction": "DBX II",
+			"eq": "NAB",
+			"speed": {
+				"measure": 7.5,
+				"unit": "ips"
+			}
+		},
+		"analogDigitalConverter": {
+			"serialNumber": "xyz123",
+			"manufacturer": "Manufacturer D",
+			"model": "Model XYZ",
+			"operatingLevel": {
+				"measure": -20,
+				"unit": "dBFS"
+			}
+		},
+		"captureSoftware": {
+			"manufacturer": "Manufacturer E",
+			"productName": "Product XYZ",
+			"version": "Version 123",
+			"platform": "OS XYZ"
+		},
+		"notes": {
+			"processNotes": "required intervention for reason xyz"
+		}
+	},
+	"digitizer": {
+		"operator": {
+			"firstName": "Doe",
+			"lastName": "Jane"
+		},
+		"organization": {
+			"name": "Organization XYZ",
+      "address": {
+        "street1": "123 ABC St",
+        "street2": "Suite 1234",
+        "city":    "Anytown",
+        "state":   "ST",
+        "postalCode": "12345"
+      }
+		}
+	}
+}

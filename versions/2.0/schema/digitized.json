@@ -16,6 +16,8 @@
     { "$ref": "digitized_videoopticaldisc" },
     { "$ref": "digitized_videocassettedigital" },
     { "$ref": "digitized_videocassetteanalog" },
-    { "$ref": "digitized_videoreel" }
+    { "$ref": "digitized_videoreel" },
+    { "$ref": "digitized_audiofilm" },
+    { "$ref": "digitized_motionpicturefilm" }
   ]
 }

@@ -88,6 +88,7 @@
           "required": [
             "type",
             "format",
+            "filmElement",
             "volumeNumber"
           ],
           "properties": {
@@ -325,6 +326,10 @@
                 "single variable area optical",
                 "dual variable area optical",
                 "magnetic",
+                "Sony Dynamic Digital Sound",
+                "Dolby Digital",
+                "DTS",
+                "quad track",
                 "silent"
               ]
             },
@@ -349,6 +354,7 @@
             "syncTone": {
               "enum": [
                 "Rangertone",
+                "Pilottone",
                 "Nagra"
               ]
             }
