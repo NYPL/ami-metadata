@@ -1,0 +1,425 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Digitized Film Schema",
+  "id": "digitized_film",
+  "description": "Definitions for film fields",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "asset",
+    "bibliographic",
+    "technical",
+    "source",
+    "digitizationProcess",
+    "digitizer"
+  ],
+  "properties": {
+    "asset": { "$ref": "fields#asset" },
+    "bibliographic": { "$ref": "fields#bibliographic" },
+    "technical": {
+      "id": "technical",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "filename",
+        "extension",
+        "dateCreated",
+        "fileFormat",
+        "videoCodec",
+        "fileSize",
+        "durationMilli",
+        "durationHuman"
+      ],
+      "properties": {
+        "filename": {
+          "$ref": "fields#technicalFilename"
+        },
+        "extension": {
+          "enum":[
+            "mov",
+            "mp4",
+            "mkv"
+            ]
+        },
+        "dateCreated": {
+          "$ref": "fields#technicalDateCreated"
+        },
+        "fileFormat": {
+          "$ref": "fields#technicalFileFormat"
+        },
+        "audioCodec": {
+          "$ref": "fields#technicalAudioCodecForVideo"
+        },
+        "videoCodec": {
+          "enum":[
+            "prores",
+            "h264",
+            "ffv1"
+            ]
+        },
+        "fileSize": {
+          "$ref": "fields#technicalFileSize"
+        },
+        "durationMilli": {
+          "$ref": "fields#technicalDurationMilli"
+        },
+        "durationHuman": {
+          "$ref": "fields#technicalDurationHuman"
+        },
+        "signalNotes": {
+          "$ref": "fields#technicalSignalNotes"
+        }
+      }
+    },
+    "source": {
+      "id": "source",
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "object",
+        "physicalDescription",
+        "contentSpecifications",
+        "audioRecording"
+      ],
+      "properties": {
+        "object": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "type",
+            "format",
+            "volumeNumber"
+          ],
+          "properties": {
+            "type": {
+              "enum": [ "film" ]
+            },
+            "format": {
+              "enum": [
+                "16mm film, optical track",
+                "16mm film, full-coat magnetic sound",
+                "35mm film, optical track",
+                "35mm film,  full-coat magnetic sound"
+              ]
+            },
+            "filmElement": {
+              "enum": [
+                "positive",
+                "negative",
+                "reversal",
+                "internegative",
+                "interpositive",
+                "reversal intermediate",
+                "positive work print",
+                "negative out-takes",
+                "positive out-takes",
+                "mixed out-takes",
+                "positive check print",
+                "positive answer print",
+                "positive release print",
+                "intertitle",
+                "intertitle negative"
+              ]
+            },
+            "volumeNumber": {
+              "type": "number",
+              "multipleOf": 1.0,
+              "minimum": 1
+            }
+          }
+        },
+        "subObject": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "regionNumber": {
+              "type": "number",
+              "multipleOf": 1.0,
+              "minimum": 1
+            }
+          }
+        },
+        "physicalDescription": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "baseMaterial",
+            "length",
+            "shrinkage"
+          ],
+          "properties": {
+            "baseMaterial": {
+              "enum": [
+                "acetate",
+                "polyester",
+                "acetate & polyester",
+                "nitrate"
+              ]
+            },
+            "length": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "type": "number",
+                  "multipleOf": 1.0,
+                  "minimum": 1
+                },
+                "unit": {
+                  "enum": [
+                    "ft"
+                  ]
+                }
+              }
+            },
+            "acetateDecayLevel": {
+              "type": "number",
+              "multipleOf": 1.0,
+              "minimum": 0
+            },
+            "shrinkage": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "type": "number",
+                  "multipleOf": 0.01,
+                  "minimum": 0.01
+                },
+                "unit": {
+                  "enum": [
+                    "%"
+                  ]
+                }
+              }
+            },
+            "stockManufacturer": {
+              "type": "string"
+            },
+            "stockProductID": {
+              "type": "string"
+            },
+            "edgeCode": {
+              "type": "string",
+              "pattern": "(19|20)\\d\\d"
+            },
+            "conditionFading": {
+              "enum": [
+                0,
+                1,
+                2,
+                3
+              ]
+            },
+            "conditionScratches": {
+              "enum": [
+                0,
+                1,
+                2,
+                3
+              ]
+            },
+            "conditionSplices": {
+              "enum": [
+                0,
+                1,
+                2,
+                3
+              ]
+            },
+            "conditionPerforationDamage": {
+              "enum": [
+                0,
+                1,
+                2,
+                3
+              ]
+            },
+            "conditionDistortion": {
+              "enum": [
+                0,
+                1,
+                2,
+                3
+              ]
+            }
+          }
+        },
+        "contentSpecifications": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "colorBW",
+            "displayAspectRatio",
+            "frameRate"
+          ],
+          "properties": {
+            "colorBW": {
+              "enum": [
+                "b/w",
+                "color",
+                "color & b/w",
+                "color tinted"
+              ]
+            },
+            "displayAspectRatio": {
+              "enum": [
+                "1.33:1",
+                "1.37:1",
+                "1.85:1",
+                "1.66:1",
+                "2.39:1"
+              ]
+            },
+            "frameRate": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "type": "number",
+                  "multipleOf": 0.5,
+                  "minimum": 0
+                },
+                "unit": {
+                  "enum": [
+                    "fps"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "audioRecording": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "audioFormat",
+            "audioSoundField",
+            "numberOfAudioTracks"
+          ],
+          "properties": {
+            "audioFormat": {
+              "enum": [
+                "variable density optical",
+                "single variable area optical",
+                "dual variable area optical",
+                "magnetic",
+                "silent"
+              ]
+            },
+            "audioSoundField": {
+              "enum": [
+                "stereo",
+                "mono",
+                "surround"
+              ]
+            },
+            "designatedNoiseReduction": {
+              "enum": [
+                "Dolby A",
+                "Dolby SR"
+              ]
+            },
+            "numberOfAudioTracks": {
+              "type": "number",
+              "multipleOf": 1.0,
+              "minimum": 0
+            },
+            "syncTone": {
+              "enum": [
+                "Rangertone",
+                "Nagra"
+              ]
+            }
+          }
+        },
+        "notes": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "physicalConditionPreShipNotes": {
+              "type": "string"
+            },
+            "physicalConditionDigitizationNotes": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "digitizationProcess" : {
+      "id": "digitizationProcess",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "filmScanner",
+        "captureSoftware"
+      ],
+      "properties": {
+        "filmScanner": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "serialNumber",
+            "manufacturer",
+            "model"
+          ],
+          "properties": {
+            "serialNumber": {
+              "$ref": "fields#playbackDeviceSerialNumber"
+            },
+            "manufacturer": {
+              "$ref": "fields#playbackDeviceManufacturer"
+            },
+            "model": {
+              "$ref": "fields#playbackDeviceModel"
+            }
+          }
+        },
+        "captureSoftware": {
+          "$ref": "fields#captureSoftware"
+        },
+        "editingSoftware": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "manufacturer",
+            "productName",
+            "version",
+            "platform"
+          ],
+          "properties": {
+            "manufacturer": {
+              "type": "string"
+            },
+            "productName": {
+              "type": "string"
+            },
+            "version": {
+              "type": "string"
+            },
+            "platform": {
+              "type": "string"
+            }
+          }
+        },
+        "notes": {
+          "$ref": "fields#processNotes"
+        }
+      }
+    },
+    "digitizer": { "$ref": "fields#digitizer" }
+  }
+}
