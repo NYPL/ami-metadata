@@ -79,9 +79,9 @@
 			}
 		},
 		"audioRecording": {
+			"audioFormat": "magnetic",
 			"audioSoundField": "mono",
 			"numberOfAudioTracks": 1,
-			"audioFormat": "magnetic",
 			"syncTone": "Pilottone"
 		},
 		"notes": {
