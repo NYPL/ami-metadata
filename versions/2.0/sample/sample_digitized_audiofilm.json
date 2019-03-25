@@ -42,6 +42,7 @@
 		"object": {
 			"type": "film",
 			"format": "16mm film, full-coat magnetic sound",
+			"filmElement": "audio track",
 			"generation": "Original",
 			"volumeNumber": 1
 		},
