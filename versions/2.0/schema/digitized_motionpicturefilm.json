@@ -113,21 +113,21 @@
             },
             "filmElement": {
               "enum": [
-                "positive",
-                "negative",
-                "reversal",
                 "internegative",
                 "interpositive",
-                "reversal intermediate",
-                "positive work print",
-                "negative out-takes",
-                "positive out-takes",
-                "mixed out-takes",
-                "positive check print",
-                "positive answer print",
-                "positive release print",
                 "intertitle",
-                "intertitle negative"
+                "intertitle negative",
+                "mixed out-takes",
+                "negative",
+                "negative out-takes",
+                "positive",
+                "positive answer print",
+                "positive check print",
+                "positive out-takes",
+                "positive release print",
+                "positive work print",
+                "reversal",
+                "reversal intermediate"
               ]
             },
             "volumeNumber": {
