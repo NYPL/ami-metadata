@@ -165,7 +165,7 @@
         "fileFormatForAudio": {
           "id": "#technicalFileFormatForAudio",
           "enum": [
-            "BWF", "bwf", "Wave", "", "Matroska", "FLAC"
+            "BWF", "bwf", "Wave", "Matroska", "FLAC"
           ]
         },
         "audioCodecForAudio": {
@@ -182,7 +182,8 @@
             "lpcm",
             "AAC",
             "aac",
-            "FLAC"
+            "FLAC",
+            "flac"
           ]
         },
         "videoCodecForVideo": {

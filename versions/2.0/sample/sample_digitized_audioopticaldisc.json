@@ -1,6 +1,6 @@
 {
 	"asset": {
-		"referenceFilename": "myh_abc123_v01_pm.wav",
+		"referenceFilename": "myh_abc123_v01_pm.flac",
 		"fileRole": "pm",
 		"schemaVersion": "2.0.0"
 	},
@@ -24,10 +24,10 @@
 	"technical": {
 		"filename": "myh_abc123_v01_pm",
 		"cueFilename": "myh_abc123_v01_pm.cue",
-		"extension": "wav",
+		"extension": "flac",
 		"dateCreated": "2017-07-01",
-		"fileFormat": "BWF",
-		"audioCodec": "PCM",
+		"fileFormat": "FLAC",
+		"audioCodec": "FLAC",
 		"fileSize": {
 			"measure": 2000000000,
 			"unit": "B"
