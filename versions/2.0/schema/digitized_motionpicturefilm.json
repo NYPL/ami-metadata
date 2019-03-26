@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "Digitized Film Schema",
-  "id": "digitized_film",
+  "id": "digitized_motionpicturefilm",
   "description": "Definitions for film fields",
   "type": "object",
   "additionalProperties": false,
