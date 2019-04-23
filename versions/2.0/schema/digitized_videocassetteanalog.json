@@ -91,6 +91,7 @@
               "enum": [
                 "Betacam",
                 "Betacam SP",
+                "Betacam Oxide",
                 "Betamax",
                 "Hi8",
                 "MII",
