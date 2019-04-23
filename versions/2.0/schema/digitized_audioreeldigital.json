@@ -87,7 +87,8 @@
               "enum": [
                 "ProDigi",
                 "DASH",
-                "NAGRA-D"
+                "NAGRA-D",
+                "half-inch open-reel audio, digital"
               ]
             },
             "generation": {
