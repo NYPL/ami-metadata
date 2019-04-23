@@ -89,6 +89,7 @@
             },
             "format": {
               "enum": [
+                "Audio CD-DA",
                 "Audio CD-R",
                 "Audio CD, pressed",
                 "Audio CD+R",
