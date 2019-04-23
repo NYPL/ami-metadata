@@ -91,6 +91,9 @@
               "enum": [
                 "Audio CD-R",
                 "Audio CD, pressed",
+                "Audio CD+R",
+                "Audio CD+RW",
+                "Audio CD-RW",
                 "Minidisc",
                 "DVD-A"
               ]
