@@ -98,16 +98,9 @@
             "format": {
               "enum": [
                 "8mm film, silent",
-                "8mm film, optical sound",
                 "Super 8 film, silent",
-                "Super 8 film, optical sound",
-                "Super 8 film, magnetic sound",
                 "16mm film, silent",
-                "16mm film, optical sound",
-                "16mm film, magnetic sound",
                 "35mm film, silent",
-                "35mm film, optical sound",
-                "35mm film, magnetic sound",
                 "9.5mm film, silent",
                 "Double 8mm film, silent"
               ]
