@@ -330,7 +330,8 @@
               "enum": [
                 "stereo",
                 "mono",
-                "surround"
+                "surround",
+                "none"
               ]
             },
             "designatedNoiseReduction": {

@@ -81,8 +81,7 @@
 		"audioRecording": {
 			"audioFormat": "magnetic",
 			"audioSoundField": "mono",
-			"numberOfAudioTracks": 1,
-			"syncTone": "Pilottone"
+			"numberOfAudioTracks": 1
 		},
 		"notes": {
 			"physicalConditionPreShipNotes": "film shows XYZ damage"
