@@ -53,7 +53,7 @@
         "videoCodec": {
           "enum":[
             "ProRes",
-            "h264",
+            "AVC",
             "ffv1"
             ]
         },
