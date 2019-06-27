@@ -54,7 +54,8 @@
           "enum":[
             "ProRes",
             "AVC",
-            "ffv1"
+            "ffv1",
+            "FFV1"
             ]
         },
         "fileSize": {
