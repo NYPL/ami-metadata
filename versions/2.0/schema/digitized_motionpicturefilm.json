@@ -189,7 +189,7 @@
             },
             "acetateDecayLevel": {
               "type": "number",
-              "multipleOf": 1.0,
+              "multipleOf": 0.5,
               "minimum": 0
             },
             "shrinkage": {

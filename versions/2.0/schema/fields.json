@@ -10,7 +10,8 @@
       "additionalItems": false,
       "required": [
         "referenceFilename",
-        "schemaVersion"
+        "schemaVersion",
+        "fileRole"
       ],
       "properties": {
         "referenceFilename" : {
