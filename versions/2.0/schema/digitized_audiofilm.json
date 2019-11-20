@@ -142,6 +142,58 @@
             "stockManufacturer": {
               "type": "string"
             },
+            "shrinkage": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
+              "properties": {
+                "measure": {
+                  "type": "number",
+                  "multipleOf": 0.01,
+                  "minimum": 0.01
+                },
+                "unit": {
+                  "enum": [
+                    "%"
+                  ]
+                }
+              }
+            },
+            "conditionScratches": {
+              "enum": [
+                0,
+                1,
+                2,
+                3
+              ]
+            },
+            "conditionSplices": {
+              "enum": [
+                0,
+                1,
+                2,
+                3
+              ]
+            },
+            "conditionPerforationDamage": {
+              "enum": [
+                0,
+                1,
+                2,
+                3
+              ]
+            },
+            "conditionDistortion": {
+              "enum": [
+                0,
+                1,
+                2,
+                3
+              ]
+            },
             "baseMaterial": {
               "enum": [
                 "acetate",
