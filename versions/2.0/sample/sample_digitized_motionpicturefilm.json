@@ -18,8 +18,6 @@
 		"vernacularDivisionCode": "DAN",
 		"projectCode": "projectXYZ",
 		"title": "Dance film 1",
-		"group": "Dance Group Film",
-		"sequence": "Reel 1 of 2",
 		"date": "Late 1970s",
 		"contentNotes": "originally in can with associated audio item 654321"
 	},
@@ -47,9 +45,6 @@
 			"format": "16mm film, magnetic sound",
 			"filmElement": "positive",
 			"volumeNumber": 1
-		},
-		"subObject": {
-			"regionNumber": 1
 		},
 		"physicalDescription": {
 			"length": {
