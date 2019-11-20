@@ -98,9 +98,6 @@
                 "audio track"
               ]
             },
-            "generation": {
-              "type": "string"
-            },
             "volumeNumber": {
               "type": "number",
               "multipleOf": 1.0,
