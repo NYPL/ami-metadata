@@ -133,8 +133,7 @@
             "stockManufacturer",
             "diameter",
             "dyeLayer",
-            "reflectiveLayer",
-            "dataCapacity"
+            "reflectiveLayer"
           ],
           "properties": {
             "stockManufacturer": {
@@ -151,7 +150,8 @@
                 "measure": {
                   "enum": [
                     4.7,
-                    3.1
+                    3.1,
+                    12
                   ]
                 },
                 "unit": {
@@ -210,8 +210,7 @@
           "additionalProperties": false,
           "required": [
             "broadcastStandard",
-            "colorBW",
-            "regionCode"
+            "colorBW"
           ],
           "properties": {
             "broadcastStandard": {
