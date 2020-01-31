@@ -119,7 +119,7 @@
             "oxideMaterial"
           ],
           "properties": {
-            "diameter": {
+            "length": {
               "type": "object",
               "additionalProperties": false,
               "required": [
@@ -129,12 +129,12 @@
               "properties": {
                 "measure": {
                   "type": "number",
-                  "multipleOf": 0.25,
-                  "minimum": 0
+                  "multipleOf": 1.0,
+                  "minimum": 1
                 },
                 "unit": {
                   "enum": [
-                    "in"
+                    "ft"
                   ]
                 }
               }
