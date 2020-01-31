@@ -43,7 +43,6 @@
 			"type": "film",
 			"format": "16mm film, full-coat magnetic sound",
 			"filmElement": "audio track",
-			"generation": "Original",
 			"volumeNumber": 1
 		},
 		"subObject": {
@@ -61,7 +60,15 @@
 			"stockProductID": "idabc123",
 			"baseMaterial": "polyester",
 			"oxideMaterial": "chromium dioxide",
-			"backcoatMaterial": "yes"
+			"backcoatMaterial": "yes",
+			"conditionScratches": 1,
+			"conditionSplices": 2,
+			"conditionPerforationDamage": 3,
+			"conditionDistortion": 3,
+			"shrinkage": {
+				"measure": 1.5,
+				"unit": "%"
+				}
 		},
 		"audioRecording": {
 			"audioFormat":"magnetic",

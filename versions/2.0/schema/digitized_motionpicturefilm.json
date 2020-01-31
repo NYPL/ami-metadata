@@ -156,8 +156,7 @@
           "additionalProperties": false,
           "required": [
             "baseMaterial",
-            "length",
-            "shrinkage"
+            "length"
           ],
           "properties": {
             "baseMaterial": {

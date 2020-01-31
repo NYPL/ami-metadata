@@ -36,7 +36,8 @@
         "extension": {
           "enum": [
             "iso", "ISO",
-            "mp4", "MP4"
+            "mp4", "MP4",
+            "mkv", "MKV"
           ]
         },
         "dateCreated": {
@@ -50,7 +51,8 @@
             "AAC",
             "aac",
             "AC3",
-            "PCM"
+            "PCM",
+            "FLAC"
                     ]
         },
         "videoCodec": {
@@ -59,7 +61,8 @@
             "h264",
             "AVC",
             "MPEG-1",
-            "MPEG-2V"
+            "MPEG-2V",
+            "FFV1"
           ]
         },
         "fileSize": {
@@ -130,8 +133,7 @@
             "stockManufacturer",
             "diameter",
             "dyeLayer",
-            "reflectiveLayer",
-            "dataCapacity"
+            "reflectiveLayer"
           ],
           "properties": {
             "stockManufacturer": {
@@ -148,7 +150,8 @@
                 "measure": {
                   "enum": [
                     4.7,
-                    3.1
+                    3.1,
+                    12
                   ]
                 },
                 "unit": {
@@ -207,8 +210,7 @@
           "additionalProperties": false,
           "required": [
             "broadcastStandard",
-            "colorBW",
-            "regionCode"
+            "colorBW"
           ],
           "properties": {
             "broadcastStandard": {
