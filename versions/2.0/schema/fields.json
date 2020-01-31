@@ -683,7 +683,6 @@
           "type": "object",
           "additionalItems": false,
           "required": [
-            "firstName",
             "lastName"
           ],
           "properties": {
