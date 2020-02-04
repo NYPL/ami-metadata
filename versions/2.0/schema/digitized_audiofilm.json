@@ -112,7 +112,8 @@
           "type": "object",
           "additionalProperties": false,
           "required": [
-            "baseMaterial"
+            "baseMaterial",
+            "length"
           ],
           "properties": {
             "length": {
@@ -198,13 +199,6 @@
                 "acetate",
                 "polyester",
                 "acetate and polyester",
-                "unknown"
-              ]
-            },
-            "oxideMaterial": {
-              "enum": [
-                "ferric oxide",
-                "chromium dioxide",
                 "unknown"
               ]
             },

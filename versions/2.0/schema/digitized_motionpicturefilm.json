@@ -352,7 +352,7 @@
               "type": "number",
               "multipleOf": 1.0,
               "minimum": 0
-              ]
+            }
             }
           }
         },
@@ -433,4 +433,3 @@
     },
     "digitizer": { "$ref": "fields#digitizer" }
   }
-}
