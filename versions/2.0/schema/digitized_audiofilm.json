@@ -300,16 +300,8 @@
                 "Dolby SR",
                 "DBX I",
                 "DBX II",
-                "Tel Com/High Com",
-                "none"
+                "Tel Com/High Com"
               ]
-            },
-            "syncTone": {
-              "enum": [
-                "Rangertone",
-                "Pilottone",
-                "Nagra"
-                  ]
             },
             "designatedEQ": {
               "enum": [
@@ -340,20 +332,17 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "playbackDevice",
+        "filmScanner",
         "captureSoftware"
       ],
       "properties": {
-        "playbackDevice": {
+        "filmScanner": {
           "type": "object",
           "additionalProperties": false,
           "required": [
             "serialNumber",
             "manufacturer",
-            "model",
-            "tapeHeadType",
-            "eq",
-            "speed"
+            "model"
           ],
           "properties": {
             "serialNumber": {
@@ -364,105 +353,35 @@
             },
             "model": {
               "$ref": "fields#playbackDeviceModel"
-            },
-            "tapeHeadType": {
-              "enum": [
-                "full-track",
-                "half-track",
-                "quarter-track",
-                "2 track",
-                "3 track",
-                "4 track",
-                "8 track",
-                "16 track",
-                "24 track"
-              ]
-            },
-            "operatingLevel": {
-              "type": "object",
-              "additionalProperties": false,
-              "required": [
-                "measure",
-                "unit"
-              ],
-              "properties": {
-                "measure": {
-                  "enum": [
-                    185,
-                    200,
-                    224,
-                    250,
-                    280,
-                    315,
-                    320,
-                    355,
-                    400,
-                    450,
-                    500
-                  ]
-                },
-                "unit": {
-                  "enum": [
-                    "nW/m"
-                  ]
-                }
-              }
-            },
-            "noiseReduction": {
-              "enum": [
-                "Dolby A",
-                "Dolby B",
-                "Dolby SR",
-                "DBX I",
-                "DBX II",
-                "Tel Com/High Com",
-                "none"
-              ]
-            },
-            "eq": {
-              "enum": [
-                "NAB",
-                "IEC",
-                "AES"
-              ]
-            },
-            "speed": {
-              "type": "object",
-              "additionalProperties": false,
-              "required": [
-                "measure",
-                "unit"
-              ],
-              "properties": {
-                "measure": {
-                  "enum": [
-                    30,
-                    15,
-                    7.5,
-                    3.75,
-                    1.875,
-                    0.9375,
-                    3.12,
-                    6.25
-                  ]
-                },
-                "unit": {
-                  "enum": [
-                    "ips"
-                  ]
-                }
-              }
             }
           }
-        },
-        "analogDigitalConverter": {
-          "$ref": "fields#analogDigitalConverter"
         },
         "captureSoftware": {
           "$ref": "fields#captureSoftware"
         },
-        "takeNumber": {
-          "$ref": "fields#takeNumber"
+        "editingSoftware": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "manufacturer",
+            "productName",
+            "version",
+            "platform"
+          ],
+          "properties": {
+            "manufacturer": {
+              "type": "string"
+            },
+            "productName": {
+              "type": "string"
+            },
+            "version": {
+              "type": "string"
+            },
+            "platform": {
+              "type": "string"
+            }
+          }
         },
         "notes": {
           "$ref": "fields#processNotes"
