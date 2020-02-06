@@ -353,7 +353,6 @@
               "multipleOf": 1.0,
               "minimum": 0
             }
-            }
           }
         },
         "notes": {
@@ -433,3 +432,4 @@
     },
     "digitizer": { "$ref": "fields#digitizer" }
   }
+}
