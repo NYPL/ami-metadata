@@ -201,12 +201,6 @@
                 "acetate and polyester",
                 "unknown"
               ]
-            },
-            "backcoatMaterial": {
-              "enum": [
-                "yes",
-                "no"
-              ]
             }
           }
         },
