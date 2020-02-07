@@ -216,9 +216,7 @@
           "required": [
             "audioFormat",
             "audioSoundField",
-            "numberOfAudioTracks",
-            "trackConfiguration",
-            "designatedSpeed"
+            "numberOfAudioTracks"
           ],
           "properties": {
             "audioFormat": {
@@ -253,46 +251,6 @@
                 24
               ]
             },
-            "trackConfiguration": {
-              "enum": [
-                "full-track",
-                "half-track",
-                "quarter-track",
-                "2 track",
-                "3 track",
-                "4 track",
-                "8 track",
-                "16 track",
-                "24 track",
-                "multi-track"
-              ]
-            },
-            "designatedSpeed": {
-              "type": "object",
-              "additionalProperties": false,
-              "required": [
-                "measure",
-                "unit"
-              ],
-              "properties": {
-                "measure": {
-                  "enum": [
-                    30,
-                    15,
-                    7.5,
-                    3.75,
-                    1.875,
-                    0.9375,
-                    "unknown"
-                  ]
-                },
-                "unit": {
-                  "enum": [
-                    "ips"
-                  ]
-                }
-              }
-            },
             "designatedNoiseReduction": {
               "enum": [
                 "Dolby A",
@@ -301,14 +259,6 @@
                 "DBX I",
                 "DBX II",
                 "Tel Com/High Com"
-              ]
-            },
-            "designatedEQ": {
-              "enum": [
-                "NAB",
-                "IEC/CCIR",
-                "AES",
-                "none"
               ]
             }
           }

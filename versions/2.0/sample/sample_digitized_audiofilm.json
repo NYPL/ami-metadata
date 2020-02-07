@@ -52,15 +52,13 @@
 			"partNumber": 1
 		},
 		"physicalDescription": {
-			"diameter": {
-				"measure": 7,
-				"unit": "in"
+			"length": {
+				"measure": 400,
+				"unit": "ft"
 			},
 			"stockManufacturer": "Manufacturer A",
 			"stockProductID": "idabc123",
 			"baseMaterial": "polyester",
-			"oxideMaterial": "chromium dioxide",
-			"backcoatMaterial": "yes",
 			"conditionScratches": 1,
 			"conditionSplices": 2,
 			"conditionPerforationDamage": 3,
@@ -73,14 +71,7 @@
 		"audioRecording": {
 			"audioFormat":"magnetic",
 			"audioSoundField": "mono",
-			"numberOfAudioTracks": 24,
-			"trackConfiguration": "full-track",
-			"designatedSpeed": {
-				"measure": 7.5,
-				"unit": "ips"
-			},
-			"designatedNoiseReduction": "DBX II",
-			"designatedEQ": "NAB"
+			"numberOfAudioTracks": 1
 		},
 		"notes": {
 			"physicalConditionPreShipNotes": "reel show XYZ damage",
@@ -88,30 +79,10 @@
 		}
 	},
 	"digitizationProcess": {
-		"playbackDevice": {
+		"filmScanner": {
 			"serialNumber": "xyz123",
 			"manufacturer": "Manufacturer B",
-			"model": "Model XYZ",
-			"tapeHeadType": "full-track",
-			"operatingLevel": {
-				"measure": 315,
-				"unit": "nW/m"
-			},
-			"noiseReduction": "DBX II",
-			"eq": "NAB",
-			"speed": {
-				"measure": 7.5,
-				"unit": "ips"
-			}
-		},
-		"analogDigitalConverter": {
-			"serialNumber": "xyz123",
-			"manufacturer": "Manufacturer D",
-			"model": "Model XYZ",
-			"operatingLevel": {
-				"measure": -20,
-				"unit": "dBFS"
-			}
+			"model": "Model XYZ"
 		},
 		"captureSoftware": {
 			"manufacturer": "Manufacturer E",
@@ -130,13 +101,13 @@
 		},
 		"organization": {
 			"name": "Organization XYZ",
-      "address": {
-        "street1": "123 ABC St",
-        "street2": "Suite 1234",
-        "city":    "Anytown",
-        "state":   "ST",
-        "postalCode": "12345"
-      }
+			"address": {
+		 		"street1": "123 ABC St",
+				"street2": "Suite 1234",
+				"city":    "Anytown",
+				"state":   "ST",
+				"postalCode": "12345"
+			}
 		}
 	}
 }
