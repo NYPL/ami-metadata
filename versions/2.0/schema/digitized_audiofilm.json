@@ -136,9 +136,6 @@
                 }
               }
             },
-            "stockProductID": {
-              "type": "string"
-            },
             "stockManufacturer": {
               "type": "string"
             },
