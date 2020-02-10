@@ -345,7 +345,8 @@
             "designatedNoiseReduction": {
               "enum": [
                 "Dolby A",
-                "Dolby SR"
+                "Dolby SR",
+                "none"
               ]
             },
             "numberOfAudioTracks": {

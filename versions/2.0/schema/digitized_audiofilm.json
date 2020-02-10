@@ -251,7 +251,8 @@
                 "Dolby SR",
                 "DBX I",
                 "DBX II",
-                "Tel Com/High Com"
+                "Tel Com/High Com",
+                "none"
               ]
             }
           }
