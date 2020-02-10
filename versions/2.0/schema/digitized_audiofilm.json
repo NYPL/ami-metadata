@@ -136,9 +136,6 @@
                 }
               }
             },
-            "stockProductID": {
-              "type": "string"
-            },
             "stockManufacturer": {
               "type": "string"
             },
@@ -201,12 +198,6 @@
                 "acetate and polyester",
                 "unknown"
               ]
-            },
-            "backcoatMaterial": {
-              "enum": [
-                "yes",
-                "no"
-              ]
             }
           }
         },
@@ -246,9 +237,8 @@
                 2,
                 3,
                 4,
-                8,
-                16,
-                24
+                6,
+                8
               ]
             },
             "designatedNoiseReduction": {
@@ -258,7 +248,8 @@
                 "Dolby SR",
                 "DBX I",
                 "DBX II",
-                "Tel Com/High Com"
+                "Tel Com/High Com",
+                "none"
               ]
             }
           }

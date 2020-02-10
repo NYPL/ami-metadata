@@ -215,9 +215,6 @@
             "stockManufacturer": {
               "type": "string"
             },
-            "stockProductID": {
-              "type": "string"
-            },
             "edgeCode": {
               "type": "string",
               "pattern": "(19|20)\\d\\d"
@@ -345,7 +342,8 @@
             "designatedNoiseReduction": {
               "enum": [
                 "Dolby A",
-                "Dolby SR"
+                "Dolby SR",
+                "none"
               ]
             },
             "numberOfAudioTracks": {
