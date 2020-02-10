@@ -100,7 +100,7 @@
               "enum": [
                 "8mm film, silent",
                 "8mm film, optical sound",
-                "8mm film, magnetic sound"
+                "8mm film, magnetic sound",
                 "Super 8 film, silent",
                 "Super 8 film, optical sound",
                 "Super 8 film, magnetic sound",
@@ -352,13 +352,6 @@
               "type": "number",
               "multipleOf": 1.0,
               "minimum": 0
-            },
-            "syncTone": {
-              "enum": [
-                "Rangertone",
-                "Pilottone",
-                "Nagra"
-              ]
             }
           }
         },
