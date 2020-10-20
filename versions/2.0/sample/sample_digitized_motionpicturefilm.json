@@ -52,8 +52,8 @@
 				"unit": "ft"
 			},
 			"stockManufacturer": "Kodak",
-			"stockProductID": "722",
 			"baseMaterial": "acetate & polyester",
+			"emulsionPosition": "emulsion in",
 			"edgeCode": "1965",
 			"conditionFading": 0,
 			"conditionScratches": 1,
