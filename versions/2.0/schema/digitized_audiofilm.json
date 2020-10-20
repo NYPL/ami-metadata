@@ -191,6 +191,13 @@
                 3
               ]
             },
+              "emulsionPosition": {
+                "enum": [
+                  "emulsion in",
+                  "emulsion out",
+                  "mixed emulsion positions"
+                ]
+            },
             "baseMaterial": {
               "enum": [
                 "acetate",

@@ -57,8 +57,8 @@
 				"unit": "ft"
 			},
 			"stockManufacturer": "Manufacturer A",
-			"stockProductID": "idabc123",
 			"baseMaterial": "polyester",
+			"emulsionPosition": "emulsion in",
 			"conditionScratches": 1,
 			"conditionSplices": 2,
 			"conditionPerforationDamage": 3,
