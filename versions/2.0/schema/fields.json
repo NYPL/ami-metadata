@@ -158,7 +158,7 @@
         "dateCreated": {
           "id": "#technicalDateCreated",
           "type": "string",
-          "pattern": "20(1[6-9]|20)-(0\\d|1[0-2])-(0\\d|[1-2]\\d|3[0-1])"
+          "pattern": "20(1[6-9]|2[0-1])-(0\\d|1[0-2])-(0\\d|[1-2]\\d|3[0-1])"
         },
         "fileFormat": {
           "id": "#technicalFileFormat",
