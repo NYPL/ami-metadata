@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Digitized Analog Audio Reel Schema",
   "$id": "digitized_audiofilm",
   "description": "Definitions for analog audio reel fields",

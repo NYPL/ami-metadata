@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Digitized Digital Video Cassette Schema",
   "$id": "digitized_videocassettedigital",
   "description": "Definitions for digital video cassette fields",
