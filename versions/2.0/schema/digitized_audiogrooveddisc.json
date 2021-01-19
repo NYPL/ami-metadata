@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "Digitized Audio Grooved Disc Schema",
-  "id": "digitized_audiogrooveddisc",
+  "$id": "digitized_audiogrooveddisc",
   "description": "Definitions for audio grooved disc fields",
   "type": "object",
   "additionalProperties": false,
@@ -17,7 +17,7 @@
     "asset": { "$ref": "fields#asset" },
     "bibliographic": { "$ref": "fields#bibliographic" },
     "technical": {
-      "id": "technical",
+      "$id": "technical",
       "type": "object",
       "additionalProperties": false,
       "required": [
@@ -61,7 +61,7 @@
       }
     },
     "source": {
-      "id": "source",
+      "$id": "source",
       "type": "object",
       "additionalProperties": false,
       "required": [
@@ -258,7 +258,7 @@
       }
     },
     "digitizationProcess" : {
-      "id": "digitizationProcess",
+      "$id": "digitizationProcess",
       "type": "object",
       "additionalProperties": false,
       "required": [

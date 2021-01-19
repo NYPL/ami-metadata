@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "Digitized Digital Video Cassette Schema",
-  "id": "digitized_videocassettedigital",
+  "$id": "digitized_videocassettedigital",
   "description": "Definitions for digital video cassette fields",
   "type": "object",
   "additionalProperties": false,
@@ -17,7 +17,7 @@
     "asset": { "$ref": "fields#asset" },
     "bibliographic": { "$ref": "fields#bibliographic" },
     "technical": {
-      "id": "technical",
+      "$id": "technical",
       "type": "object",
       "additionalProperties": false,
       "required": [
@@ -88,7 +88,7 @@
       }
     },
     "source": {
-      "id": "source",
+      "$id": "source",
       "type": "object",
       "additionalProperties": true,
       "required": [
@@ -339,7 +339,7 @@
       }
     },
     "digitizationProcess" : {
-      "id": "digitizationProcess",
+      "$id": "digitizationProcess",
       "type": "object",
       "additionalProperties": false,
       "required": [
