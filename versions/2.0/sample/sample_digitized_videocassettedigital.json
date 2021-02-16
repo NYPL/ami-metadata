@@ -8,7 +8,7 @@
 		"primaryID": "123456",
 		"classmark": "*ABC 123",
 		"formerClassmark": "*NCOW 123",
-		"nonCMSID": "string123",
+		"nonCMSItemID": "string123",
 		"cmsItemID": "123456",
 		"cmsCollectionID": "string123",
 		"catalogBNumber": "B12345678",

@@ -1,13 +1,13 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "fields",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "fields",
   "title": "AMI Vendor Schema",
   "description": "All fields for AMI digitization workflow metadata",
   "definitions": {
     "asset": {
-      "id": "#asset",
+      "$id": "#asset",
       "type": "object",
-      "additionalItems": false,
+      "additionalProperties": false,
       "required": [
         "referenceFilename",
         "schemaVersion",
@@ -34,9 +34,9 @@
       }
     },
     "bibliographic": {
-      "id": "#bibliographic",
+      "$id": "#bibliographic",
       "type": "object",
-      "additionalItems": false,
+      "additionalProperties": false,
       "required": [
         "primaryID",
         "barcode",
@@ -49,7 +49,7 @@
         "classmark": {
           "type": "string"
         },
-        "danceFormerClassmark": {
+        "formerClassmark": {
           "type": "string"
         },
         "nonCMSItemID": {
@@ -128,21 +128,21 @@
       }
     },
     "technical": {
-      "id": "#technical",
+      "$id": "#technical",
       "type": "object",
       "properties": {
         "filename": {
-          "id": "#technicalFilename",
+          "$id": "#technicalFilename",
           "type": "string",
           "pattern": "^[a-zA-Z\\d\\-\\*_]+$"
         },
         "cueFilename" : {
-          "id": "#technicalCueFilename",
+          "$id": "#technicalCueFilename",
           "type": "string",
           "pattern": "^[a-zA-Z\\d\\-\\*_]+\\.[a-zA-Z0-9]{3}$"
         },
         "extensionForAudio": {
-          "id": "#technicalExtensionForAudio",
+          "$id": "#technicalExtensionForAudio",
           "enum": [
             "wav", "WAV",
             "flac", "FLAC",
@@ -150,36 +150,36 @@
           ]
         },
         "extensionForVideo": {
-          "id": "#technicalExtensionForVideo",
+          "$id": "#technicalExtensionForVideo",
           "enum": [
             "mkv", "MKV",
             "mp4", "MP4"
           ]
         },
         "dateCreated": {
-          "id": "#technicalDateCreated",
+          "$id": "#technicalDateCreated",
           "type": "string",
           "pattern": "20(1[6-9]|2[0-1])-(0\\d|1[0-2])-(0\\d|[1-2]\\d|3[0-1])"
         },
         "fileFormat": {
-          "id": "#technicalFileFormat",
+          "$id": "#technicalFileFormat",
           "type": "string"
         },
         "fileFormatForAudio": {
-          "id": "#technicalFileFormatForAudio",
+          "$id": "#technicalFileFormatForAudio",
           "enum": [
             "BWF", "bwf", "Wave", "Matroska", "FLAC"
           ]
         },
         "audioCodecForAudio": {
-          "id": "#technicalAudioCodecForAudio",
+          "$id": "#technicalAudioCodecForAudio",
           "enum": [
             "PCM",
             "FLAC"
           ]
         },
         "audioCodecForVideo": {
-          "id": "#technicalAudioCodecForVideo",
+          "$id": "#technicalAudioCodecForVideo",
           "enum": [
             "PCM",
             "lpcm",
@@ -190,7 +190,7 @@
           ]
         },
         "videoCodecForVideo": {
-          "id": "#technicalVideoCodecForVideo",
+          "$id": "#technicalVideoCodecForVideo",
           "enum": [
             "FFV1",
             "h264",
@@ -198,7 +198,7 @@
           ]
         },
         "fileSize": {
-          "id": "#technicalFileSize",
+          "$id": "#technicalFileSize",
           "type": "object",
           "additionalProperties": false,
           "required": [
@@ -219,7 +219,7 @@
           }
         },
         "durationMilli": {
-          "id": "#technicalDurationMilli",
+          "$id": "#technicalDurationMilli",
           "type": "object",
           "additionalProperties": false,
           "required": [
@@ -240,12 +240,12 @@
           }
         },
         "durationHuman": {
-          "id": "#technicalDurationHuman",
+          "$id": "#technicalDurationHuman",
           "type": "string",
           "pattern": "([\\d]+:|)[0-5][\\d]:[0-5][\\d](|\\.\\d+)"
         },
         "signalNotes": {
-          "id": "#technicalSignalNotes",
+          "$id": "#technicalSignalNotes",
           "type": "string"
         }
       }
@@ -254,7 +254,7 @@
       "type": "object",
       "properties": {
         "subObjectWithoutStreams": {
-          "id": "#subObjectWithoutStreams",
+          "$id": "#subObjectWithoutStreams",
           "type": "object",
           "additionalProperties": false,
           "required": [
@@ -279,7 +279,7 @@
           }
         },
         "audioSoundField": {
-          "id": "#audioSoundFieldForVideo",
+          "$id": "#audioSoundFieldForVideo",
           "enum": [
             "stereo",
             "mono",
@@ -329,7 +329,7 @@
           ]
         },
         "subObjectWithStreams": {
-          "id": "#subObjectWithStreams",
+          "$id": "#subObjectWithStreams",
           "type": "object",
           "additionalProperties": false,
           "required": [
@@ -361,47 +361,54 @@
       }
     },
     "digitizationProcess" : {
-      "id": "#digitizationProcess",
+      "$id": "#digitizationProcess",
       "type": "object",
-      "additionalItems": false,
+      "additionalProperties": false,
       "properties": {
         "playbackDevice": {
           "type": "object",
           "properties": {
             "serialNumber": {
-              "id": "#playbackDeviceSerialNumber",
-              "type": ["string", "number"]
+              "$id": "#playbackDeviceSerialNumber",
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "string"
+                }
+              ]
             },
             "manufacturer": {
-              "id": "#playbackDeviceManufacturer",
+              "$id": "#playbackDeviceManufacturer",
               "type": "string"
             },
             "model": {
-              "id": "#playbackDeviceModel",
+              "$id": "#playbackDeviceModel",
               "type": "string"
             },
             "tapeHeadType": {
-              "id": "#playbackDeviceTapeHeadType",
+              "$id": "#playbackDeviceTapeHeadType",
               "type": "string"
             },
             "operatingLevel": {
-              "id": "#playbackDeviceOperatingLevel",
+              "$id": "#playbackDeviceOperatingLevel",
               "type": "number"
             },
             "noiseReduction": {
-              "id": "#playbackDeviceNoiseReduction",
+              "$id": "#playbackDeviceNoiseReduction",
               "type": "string"
             },
             "eq": {
-              "id": "#playbackDeviceEQ",
+              "$id": "#playbackDeviceEQ",
               "type": "string"
             },
             "speed": {
-              "id": "#playbackDeviceSpeed",
+              "$id": "#playbackDeviceSpeed",
               "type": "object"
             },
             "groovedWallPlayback": {
-              "id": "#groovedWallPlayback",
+              "$id": "#groovedWallPlayback",
               "enum": [
                 "left only",
                 "right only",
@@ -411,7 +418,7 @@
               ]
             },
             "phonoCartridge": {
-              "id": "#phonoCartridge",
+              "$id": "#phonoCartridge",
               "type": "object",
               "additionalProperties": false,
               "required": [
@@ -460,7 +467,7 @@
           }
         },
         "phonoPreamp":{
-          "id": "#phonoPreamp",
+          "$id": "#phonoPreamp",
           "type": "object",
           "additionalProperties": false,
           "required": [
@@ -560,21 +567,28 @@
           "type": "object",
           "properties": {
             "serialNumber": {
-              "id": "#timeBaseCorrectorSerialNumber",
-              "type": ["string", "number"]
+              "$id": "#timeBaseCorrectorSerialNumber",
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "string"
+                }
+              ]
             },
             "manufacturer": {
-              "id": "#timeBaseCorrectorManufacturer",
+              "$id": "#timeBaseCorrectorManufacturer",
               "type": "string"
             },
             "model": {
-              "id": "#timeBaseCorrectorModel",
+              "$id": "#timeBaseCorrectorModel",
               "type": "string"
             }
           }
         },
         "analogDigitalConverter": {
-          "id": "#analogDigitalConverter",
+          "$id": "#analogDigitalConverter",
           "type": "object",
           "additionalProperties": false,
           "required": [
@@ -585,19 +599,26 @@
           ],
           "properties": {
             "serialNumber": {
-              "id": "#analogDigitalConverterSerialNumber",
-              "type": ["string", "number"]
+              "$id": "#analogDigitalConverterSerialNumber",
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "string"
+                }
+              ]
             },
             "manufacturer": {
-              "id": "#analogDigitalConverterManufacturer",
+              "$id": "#analogDigitalConverterManufacturer",
               "type": "string"
             },
             "model": {
-              "id": "#analogDigitalConverterModel",
+              "$id": "#analogDigitalConverterModel",
               "type": "string"
             },
             "operatingLevel": {
-              "id": "#analogDigitalConverterOperatingLevel",
+              "$id": "#analogDigitalConverterOperatingLevel",
               "type": "object",
               "additionalProperties": false,
               "required": [
@@ -625,7 +646,7 @@
           }
         },
         "captureSoftware": {
-          "id": "#captureSoftware",
+          "$id": "#captureSoftware",
           "type": "object",
           "additionalProperties": false,
           "required": [
@@ -637,25 +658,25 @@
           "type": "object",
           "properties": {
             "manufacturer": {
-              "id": "#captureSoftwareManufacturer",
+              "$id": "#captureSoftwareManufacturer",
               "type": "string"
             },
             "productName": {
-              "id": "#captureSoftwareProductName",
+              "$id": "#captureSoftwareProductName",
               "type": "string"
             },
             "version": {
-              "id": "#captureSoftwareVersion",
+              "$id": "#captureSoftwareVersion",
               "type": "string"
             },
             "platform": {
-              "id": "#captureSoftwarePlatform",
+              "$id": "#captureSoftwarePlatform",
               "type": "string"
             }
           }
         },
         "takeNumber": {
-          "id": "#takeNumber",
+          "$id": "#takeNumber",
           "type": "object",
           "properties": {
             "number" : {
@@ -666,7 +687,7 @@
           }
         },
         "notes": {
-          "id": "#processNotes",
+          "$id": "#processNotes",
           "type": "object",
           "properties": {
             "processNotes": {
@@ -677,9 +698,9 @@
       }
     },
     "digitizer": {
-      "id": "#digitizer",
+      "$id": "#digitizer",
       "type": "object",
-      "additionalItems": false,
+      "additionalProperties": false,
       "required": [
         "operator",
         "organization"
@@ -687,7 +708,7 @@
       "properties": {
         "operator": {
           "type": "object",
-          "additionalItems": false,
+          "additionalProperties": false,
           "required": [
             "lastName"
           ],
@@ -702,7 +723,7 @@
         },
         "organization": {
           "type": "object",
-          "additionalItems": false,
+          "additionalProperties": false,
           "required": [
             "name",
             "address"
@@ -734,7 +755,14 @@
                   "pattern":  "^[A-Z]{2}$"
                 },
                 "postalCode": {
-                  "type": ["string","number"]
+                  "anyOf": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ]
                 }
               }
             }

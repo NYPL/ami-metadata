@@ -1,7 +1,7 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Digitized Magnetic Audio Wire Schema",
-  "id": "digitized_audiomagneticwire",
+  "$id": "digitized_audiomagneticwire",
   "description": "Definitions for audio wire fields",
   "type": "object",
   "additionalProperties": false,
@@ -17,7 +17,7 @@
     "asset": { "$ref": "fields#asset" },
     "bibliographic": { "$ref": "fields#bibliographic" },
     "technical": {
-      "id": "technical",
+      "$id": "technical",
       "type": "object",
       "additionalProperties": false,
       "required": [
@@ -61,7 +61,7 @@
       }
     },
     "source": {
-      "id": "source",
+      "$id": "source",
       "type": "object",
       "additionalProperties": false,
       "required": [
@@ -205,7 +205,7 @@
       }
     },
     "digitizationProcess" : {
-      "id": "digitizationProcess",
+      "$id": "digitizationProcess",
       "type": "object",
       "additionalProperties": false,
       "required": [

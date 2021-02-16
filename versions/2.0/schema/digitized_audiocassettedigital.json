@@ -1,7 +1,7 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "AMI Vendor Audio Digital Cassette Schema",
-  "id": "digitized_audiocassettedigital",
+  "$id": "digitized_audiocassettedigital",
   "description": "Definitions for audio digital cassette fields",
   "type": "object",
   "additionalProperties": false,
@@ -17,7 +17,7 @@
     "asset": { "$ref": "fields#asset" },
     "bibliographic": { "$ref": "fields#bibliographic" },
     "technical": {
-      "id": "technical",
+      "$id": "technical",
       "type": "object",
       "additionalProperties": false,
       "required": [
@@ -61,7 +61,7 @@
       }
     },
     "source": {
-      "id": "source",
+      "$id": "source",
       "type": "object",
       "additionalProperties": false,
       "required": [
@@ -144,6 +144,12 @@
               "type": "string"
             },
             "tapeWidth": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
               "properties": {
                 "measure": {
                   "enum": [
@@ -351,7 +357,7 @@
       }
     },
     "digitizationProcess" : {
-      "id": "digitizationProcess",
+      "$id": "digitizationProcess",
       "type": "object",
       "additionalProperties": false,
       "required": [
@@ -418,7 +424,14 @@
           "type": "object",
           "properties": {
             "serialNumber": {
-              "type": ["string", "number"]
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "string"
+                }
+              ]
             },
             "manufacturer": {
               "type": "string"
