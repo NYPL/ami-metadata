@@ -144,6 +144,12 @@
               "type": "string"
             },
             "tapeWidth": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "measure",
+                "unit"
+              ],
               "properties": {
                 "measure": {
                   "enum": [
@@ -418,7 +424,14 @@
           "type": "object",
           "properties": {
             "serialNumber": {
-              "type": ["string", "number"]
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "string"
+                }
+              ]
             },
             "manufacturer": {
               "type": "string"

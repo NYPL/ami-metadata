@@ -7,7 +7,7 @@
     "asset": {
       "$id": "#asset",
       "type": "object",
-      "additionalItems": false,
+      "additionalProperties": false,
       "required": [
         "referenceFilename",
         "schemaVersion",
@@ -36,7 +36,7 @@
     "bibliographic": {
       "$id": "#bibliographic",
       "type": "object",
-      "additionalItems": false,
+      "additionalProperties": false,
       "required": [
         "primaryID",
         "barcode",
@@ -49,7 +49,7 @@
         "classmark": {
           "type": "string"
         },
-        "danceFormerClassmark": {
+        "formerClassmark": {
           "type": "string"
         },
         "nonCMSItemID": {
@@ -362,14 +362,21 @@
     "digitizationProcess" : {
       "$id": "#digitizationProcess",
       "type": "object",
-      "additionalItems": false,
+      "additionalProperties": false,
       "properties": {
         "playbackDevice": {
           "type": "object",
           "properties": {
             "serialNumber": {
               "$id": "#playbackDeviceSerialNumber",
-              "type": ["string", "number"]
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "string"
+                }
+              ]
             },
             "manufacturer": {
               "$id": "#playbackDeviceManufacturer",
@@ -560,7 +567,14 @@
           "properties": {
             "serialNumber": {
               "$id": "#timeBaseCorrectorSerialNumber",
-              "type": ["string", "number"]
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "string"
+                }
+              ]
             },
             "manufacturer": {
               "$id": "#timeBaseCorrectorManufacturer",
@@ -585,7 +599,14 @@
           "properties": {
             "serialNumber": {
               "$id": "#analogDigitalConverterSerialNumber",
-              "type": ["string", "number"]
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "string"
+                }
+              ]
             },
             "manufacturer": {
               "$id": "#analogDigitalConverterManufacturer",
@@ -678,7 +699,7 @@
     "digitizer": {
       "$id": "#digitizer",
       "type": "object",
-      "additionalItems": false,
+      "additionalProperties": false,
       "required": [
         "operator",
         "organization"
@@ -686,7 +707,7 @@
       "properties": {
         "operator": {
           "type": "object",
-          "additionalItems": false,
+          "additionalProperties": false,
           "required": [
             "lastName"
           ],
@@ -701,7 +722,7 @@
         },
         "organization": {
           "type": "object",
-          "additionalItems": false,
+          "additionalProperties": false,
           "required": [
             "name",
             "address"
@@ -733,7 +754,14 @@
                   "pattern":  "^[A-Z]{2}$"
                 },
                 "postalCode": {
-                  "type": ["string","number"]
+                  "anyOf": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ]
                 }
               }
             }
