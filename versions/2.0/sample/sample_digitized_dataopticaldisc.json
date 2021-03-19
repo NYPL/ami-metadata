@@ -1,0 +1,91 @@
+{
+	"asset": {
+		"referenceFilename": "myh_abc123_v01_pm.iso",
+		"fileRole": "sc",
+		"schemaVersion": "2.0.0"
+	},
+	"bibliographic": {
+		"primaryID": "abc123",
+		"classmark": "*ABC 123",
+		"formerClassmark": "*NCOW 123",
+		"nonCMSItemID": "string123",
+		"cmsItemID": "123456",
+		"cmsCollectionID": "string123",
+		"catalogBNumber": "B12345678",
+		"mssID": "12345",
+		"barcode": "33433123456789",
+		"divisionCode": "myh",
+		"vernacularDivisionCode": "DAN",
+		"projectCode": "projectXYZ",
+		"title": "Super Fun Party Mix 1999",
+		"date": "1999",
+		"contentNotes": "Jane Doe's Mix CD files"
+	},
+	"technical": {
+		"filename": "myh_abc123_v01_pm",
+		"extension": "iso",
+		"dateCreated": "2017-07-01",
+		"fileFormat": "ISO image",
+		"fileSize": {
+			"measure": 100000000000,
+			"unit": "B"
+		}
+	},
+	"source": {
+		"object": {
+			"type": "data optical disc",
+			"format": "CD-R",
+			"generation": "Archive Original",
+			"volumeNumber": 1
+		},
+		"physicalDescription": {
+			"stockManufacturer": "Manufacturer A",
+			"diameter": {
+				"measure": 4.7,
+				"unit": "in"
+			},
+			"dyeLayer": "phthalocyanine",
+			"reflectiveLayer": "silver",
+			"dataCapacity": {
+				"measure": 4.7,
+				"unit": "GB"
+			}
+		},
+		"notes": {
+			"physicalConditionPreShipNotes": "disc scratched",
+			"physicalConditionDigitizationNotes": "damage may have impacted ISO"
+		}
+	},
+	"digitizationProcess": {
+		"playbackDevice": {
+			"serialNumber": "xyz123",
+			"manufacturer": "Manufacturer B",
+			"model": "Model XYZ"
+		},
+		"captureSoftware": {
+			"manufacturer": "Manufacturer E",
+			"productName": "Product XYZ",
+			"version": "Version 123",
+			"platform": "OS XYZ"
+		},
+		"notes": {
+			"processNotes": "Described as audio CD in inventory but actually contained MP3s and JPGs"
+		}
+	},
+	"digitizer": {
+		"operator": {
+			"firstName": "Doe",
+			"lastName": "Jane"
+		},
+		"organization": {
+			"name": "Organization XYZ",
+      "address": {
+        "street1": "123 ABC St",
+        "street2": "Suite 1234",
+        "city":    "Anytown",
+        "state":   "ST",
+        "postalCode": "12345"
+      }
+		}
+	}
+}
