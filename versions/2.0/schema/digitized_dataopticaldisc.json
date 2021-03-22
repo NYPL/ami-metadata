@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Digitized Data Optical Disc Schema",
-  "$id": "digitized_videoopticaldisc",
+  "$id": "digitized_dataopticaldisc",
   "description": "Definitions for video optical fields",
   "type": "object",
   "additionalProperties": false,
@@ -42,19 +42,8 @@
         "fileFormat": {
           "$ref": "fields#technicalFileFormat"
         },
-        "videoCodec": {
-          "enum": [
-            "ISO 9660"
-          ]
-        },
         "fileSize": {
           "$ref": "fields#technicalFileSize"
-        },
-        "durationMilli": {
-          "$ref": "fields#technicalDurationMilli"
-        },
-        "durationHuman": {
-          "$ref": "fields#technicalDurationHuman"
         }
       }
     },
