@@ -71,14 +71,13 @@
             "format": {
               "enum": [
                 "Data DVD-R",
-                "Data DVD, pressed",
                 "Data DVD+R",
                 "Data DVD+RW",
                 "Data DVD-RAM",
                 "Data CD-R",
                 "Data CD+R",
                 "Data CD-RW",
-                "Data CD_ROM"
+                "Data CD-ROM"
               ]
             },
             "generation": {
