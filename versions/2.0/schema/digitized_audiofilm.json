@@ -139,6 +139,10 @@
             "stockManufacturer": {
               "type": "string"
             },
+            "edgeCode": {
+              "type": "string",
+              "pattern": "(19|20)\\d\\d"
+            },
             "shrinkage": {
               "type": "object",
               "additionalProperties": false,
