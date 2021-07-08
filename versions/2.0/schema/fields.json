@@ -325,6 +325,10 @@
             "Ch1: None; Ch2: Mono; Ch3: None; Ch4: Mono",
             "Ch1: None; Ch2: Mono; Ch3: Timecode",
             "Ch1: None; Ch2: None; Ch3: None",
+            "Ch1: Mono; Ch2: None; Ch3: Stereo Left; Ch4: Stereo Right",
+            "Ch1: Stereo Left; Ch2: Stereo Right; Ch3: Mono; Ch4: None",
+            "Ch1: Timecode; Ch2: None",
+            "Ch1: None; Ch2: None; Ch3: Stereo Left; Ch4: Stereo Right",
             "Ch1: Stereo Left; Ch2: Stereo Right; Ch3: Stereo Left; Ch4: Stereo Right; Ch5: Stereo Left; Ch6: Stereo Right; Ch7: Stereo Left; Ch8: Stereo Right"
           ]
         },
