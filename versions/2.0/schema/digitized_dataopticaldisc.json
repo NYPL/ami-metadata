@@ -97,7 +97,6 @@
           "type": "object",
           "additionalProperties": false,
           "required": [
-            "stockManufacturer",
             "diameter",
             "dyeLayer",
             "reflectiveLayer"

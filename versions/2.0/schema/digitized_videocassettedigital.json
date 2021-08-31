@@ -151,7 +151,6 @@
           "type": "object",
           "additionalProperties": false,
           "required": [
-            "stockManufacturer",
             "tapeWidth",
             "oxideMaterial"
           ],

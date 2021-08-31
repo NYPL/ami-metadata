@@ -115,7 +115,6 @@
           "type": "object",
           "additionalProperties": false,
           "required": [
-            "stockManufacturer",
             "diameter"
           ],
           "properties": {
