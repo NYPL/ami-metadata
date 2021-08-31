@@ -118,7 +118,6 @@
           "additionalProperties": false,
           "required": [
             "diameter",
-            "stockManufacturer",
             "tapeWidth",
             "baseMaterial",
             "oxideMaterial"

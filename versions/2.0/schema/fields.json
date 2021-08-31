@@ -183,6 +183,7 @@
           "enum": [
             "PCM",
             "lpcm",
+            "AAC LC",
             "AAC",
             "aac",
             "FLAC",
