@@ -275,7 +275,8 @@
                     3.75,
                     1.875,
                     0.9375,
-                    "unknown"
+                    "unknown",
+                    "multiple"
                   ]
                 },
                 "unit": {
