@@ -239,7 +239,9 @@
                 "surround",
                 "quadrophonic",
                 "binaural",
-                "multi-track"
+                "multi-track",
+                "Ch1: Mono; Ch2: Sync Tone",
+                "Ch1: Mono; Ch2: Silent"
               ]
             },
             "numberOfAudioTracks": {
