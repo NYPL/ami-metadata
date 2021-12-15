@@ -153,8 +153,7 @@
               "properties": {
                 "measure": {
                   "type": "number",
-                  "multipleOf": 0.01,
-                  "minimum": 0.01
+                  "minimum": -1.0
                 },
                 "unit": {
                   "enum": [
