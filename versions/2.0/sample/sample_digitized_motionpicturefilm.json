@@ -61,7 +61,7 @@
 			"conditionPerforationDamage": 3,
 			"conditionDistortion": 3,
 			"shrinkage": {
-				"measure": 1.5,
+				"measure": -1.0,
 				"unit": "%"
 			}
 		},
