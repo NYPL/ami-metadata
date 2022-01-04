@@ -41,5 +41,5 @@ ajv validate -s /path/to/version/2.0/schema/digitized.json -r "versions/2.0/sche
 
 To validate all json files in a set of bags with ajv:
 ```
-ajv validate -s path/to/schema/version/digitized.json -r "path/to/schema/version/*.json" -d "path/to/directory/of/bags/*/data/*/*.json"
+ajv validate --all-errors --multiple-of-precision=2 --verbose -s path/to/schema/version/digitized.json -r "path/to/schema/version/*.json" -d "path/to/directory/of/bags/*/data/*/*.json"
 ```
