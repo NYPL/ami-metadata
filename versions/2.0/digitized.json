@@ -6,6 +6,7 @@
   "type": "object",
   "oneOf": [
     { "$ref": "digitized_audioopticaldisc" },
+    { "$ref": "digitized_dataopticaldisc" },
     { "$ref": "digitized_audioreelanalog" },
     { "$ref": "digitized_audioreeldigital" },
     { "$ref": "digitized_audiocassetteanalog" },
