@@ -85,7 +85,8 @@
             "mae",
             "maf",
             "mao",
-            "axv"
+            "axv",
+            "grd"
           ]
         },
         "vernacularDivisionCode": {
@@ -100,7 +101,8 @@
             "JWS",
             "MSS",
             "NYPLarch",
-            "TOFT"
+            "TOFT",
+            "GRD"
           ]
         },
         "projectCode": {
