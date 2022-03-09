@@ -130,7 +130,17 @@
                 "positive release print",
                 "positive work print",
                 "reversal",
-                "reversal intermediate"
+                "reversal intermediate",
+                "a-roll negative",
+                "a-roll reversal",
+                "b-roll negative",
+                "b-roll reversal",
+                "c-roll negative",
+                "c-roll reversal",
+                "d-roll negative",
+                "d-roll reversal",
+                "duplicate negative",
+                "mixed audio track and positive"
               ]
             },
             "volumeNumber": {

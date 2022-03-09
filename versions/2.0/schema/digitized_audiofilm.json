@@ -95,6 +95,7 @@
             "filmElement": {
               "enum": [
                 "audio out-takes",
+                "mixed audio track and positive",
                 "audio track"
               ]
             },
