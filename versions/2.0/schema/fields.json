@@ -86,7 +86,8 @@
             "maf",
             "mao",
             "axv",
-            "grd"
+            "grd",
+            "mul"
           ]
         },
         "vernacularDivisionCode": {
@@ -103,7 +104,8 @@
             "NYPLarch",
             "TOFT",
             "GRD",
-            "LPA"
+            "LPA",
+            "MUL"
           ]
         },
         "projectCode": {
