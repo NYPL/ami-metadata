@@ -464,7 +464,7 @@
                   ],
                   "properties": {
                     "measure": {
-                      "type": "number"
+                      "type": "string"
                     },
                     "unit": {
                       "enum": [
