@@ -367,6 +367,7 @@
               "enum": [
                 "Dolby A",
                 "Dolby SR",
+                "Dolby SR-D",
                 "none"
               ]
             },
