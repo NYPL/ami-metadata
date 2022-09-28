@@ -25,9 +25,7 @@
         "extension",
         "dateCreated",
         "fileFormat",
-        "fileSize",
-        "durationMilli",
-        "durationHuman"
+        "fileSize"
       ],
       "properties": {
         "filename": {
