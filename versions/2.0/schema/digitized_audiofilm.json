@@ -213,7 +213,7 @@
               "enum": [
                 "acetate",
                 "polyester",
-                "acetate and polyester",
+                "acetate & polyester",
                 "unknown"
               ]
             }
