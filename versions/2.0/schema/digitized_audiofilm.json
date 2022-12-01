@@ -96,7 +96,9 @@
               "enum": [
                 "audio out-takes",
                 "mixed audio track and positive",
-                "audio track"
+                "audio track",
+                "positive",
+                "negative"
               ]
             },
             "volumeNumber": {
@@ -143,6 +145,11 @@
             "edgeCode": {
               "type": "string",
               "pattern": "(19|20)\\d\\d"
+            },
+            "acetateDecayLevel": {
+              "type": "number",
+              "multipleOf": 0.5,
+              "minimum": 0
             },
             "shrinkage": {
               "type": "object",

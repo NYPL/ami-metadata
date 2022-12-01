@@ -177,13 +177,13 @@
                 "nitrate"
               ]
             },
-              "emulsionPosition": {
-                "enum": [
-                  "emulsion in",
-                  "emulsion out",
-                  "mixed emulsion positions"
+            "emulsionPosition": {
+              "enum": [
+                "emulsion in",
+                "emulsion out",
+                "mixed emulsion positions"
                 ]
-              },
+            },
             "length": {
               "type": "object",
               "additionalProperties": false,
