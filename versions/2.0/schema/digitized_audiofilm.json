@@ -206,7 +206,10 @@
                 "enum": [
                   "emulsion in",
                   "emulsion out",
-                  "mixed emulsion positions"
+                  "mixed emulsion positions",
+                  "A-wind",
+                  "B-wind",
+                  "mixed A-wind/B-wind"
                 ]
             },
             "baseMaterial": {
