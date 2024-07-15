@@ -64,7 +64,7 @@
         },
         "catalogBNumber": {
           "type": "string",
-          "pattern": "^(b|B)[\\d]{8}$"
+          "pattern": "^(b|B)[\\d]{8,9}$"
         },
         "mssID": {
           "type": "string",
