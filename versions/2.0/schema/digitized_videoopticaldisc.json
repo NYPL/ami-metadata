@@ -50,8 +50,10 @@
             "AAC LC",
             "aac",
             "AC3",
+            "AC-3",
             "PCM",
-            "FLAC"
+            "FLAC",
+            "MPEG"
                     ]
         },
         "videoCodec": {
@@ -61,6 +63,9 @@
             "AVC",
             "MPEG-1",
             "MPEG-2V",
+            "MPEG Video",
+            "MPEG Video / MPEG Video / MPEG Video",
+            "MPEG Video / MPEG Video / MPEG Video / MPEG Video",
             "FFV1"
           ]
         },
