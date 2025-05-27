@@ -72,11 +72,13 @@
               "enum": [
                 "Data DVD-R",
                 "Data DVD+R",
+                "Data DVD-RW",
                 "Data DVD+RW",
                 "Data DVD-RAM",
                 "Data CD-R",
                 "Data CD+R",
                 "Data CD-RW",
+                "Data CD+RW",
                 "Data CD-ROM"
               ]
             },
