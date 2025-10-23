@@ -70,7 +70,8 @@
             "ffv1",
             "FFV1",
             "AVC",
-            "avc"
+            "avc",
+            "MPEG Video"
           ]
         },
         "fileSize": {

@@ -194,7 +194,8 @@
             "AAC",
             "aac",
             "FLAC",
-            "flac"
+            "flac",
+            "MPEG"
           ]
         },
         "videoCodecForVideo": {
