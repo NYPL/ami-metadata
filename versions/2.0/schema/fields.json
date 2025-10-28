@@ -455,7 +455,8 @@
                     "conical",
                     "truncated conical",
                     "Edison C",
-                    "spherical"
+                    "spherical",
+                    "EFCR"
                   ]
                 },
                 "stylusSize": {
