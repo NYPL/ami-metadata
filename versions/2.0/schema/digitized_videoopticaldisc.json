@@ -53,7 +53,8 @@
             "AC-3",
             "PCM",
             "FLAC",
-            "MPEG"
+            "MPEG",
+            "MPEG Audio"
                     ]
         },
         "videoCodec": {
