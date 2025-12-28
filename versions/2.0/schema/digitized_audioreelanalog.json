@@ -89,8 +89,7 @@
                 "one-inch open-reel audio",
                 "quarter-inch open-reel audio",
                 "quarter-inch open-reel audio with Pilottone",
-                "two-inch open-reel audio",
-                "eighth-inch open-reel audio"
+                "two-inch open-reel audio"
               ]
             },
             "generation": {
@@ -152,7 +151,6 @@
               "properties": {
                 "measure": {
                   "enum": [
-                    0.125,
                     0.25,
                     0.5,
                     1,
