@@ -152,7 +152,8 @@
             "wav", "WAV",
             "flac", "FLAC",
             "mka", "MKA",
-            "aea"
+            "aea", "mp4",
+            "m4a"
           ]
         },
         "extensionForVideo": {
