@@ -25,6 +25,8 @@
         "extension",
         "dateCreated",
         "fileFormat",
+        "audioCodec",
+        "videoCodec",
         "fileSize"
       ],
       "properties": {
