@@ -258,6 +258,19 @@
         "signalNotes": {
           "$id": "#technicalSignalNotes",
           "type": "string"
+        },
+        "sidecarFiles": {
+          "$id": "#technicalSidecarFiles",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["format", "language"],
+            "properties": {
+              "format": { "type": "string" },
+              "language": { "type": "string" }
+            }
+          }
         }
       }
     },
