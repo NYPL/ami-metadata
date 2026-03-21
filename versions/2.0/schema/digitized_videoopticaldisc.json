@@ -86,6 +86,9 @@
         },
         "signalNotes": {
           "$ref": "fields#technicalSignalNotes"
+        },
+        "sidecarFiles": {
+          "$ref": "fields#technicalSidecarFiles"
         }
       }
     },
