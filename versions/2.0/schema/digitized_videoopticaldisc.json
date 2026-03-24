@@ -87,8 +87,8 @@
         "signalNotes": {
           "$ref": "fields#technicalSignalNotes"
         },
-        "sidecarFiles": {
-          "$ref": "fields#technicalSidecarFiles"
+        "timedTextFiles": {
+          "$ref": "fields#technicalTimedTextFiles"
         }
       }
     },
