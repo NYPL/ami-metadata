@@ -259,18 +259,14 @@
           "$id": "#technicalSignalNotes",
           "type": "string"
         },
-        "sidecarFiles": {
-          "$id": "#technicalSidecarFiles",
+        "timedTextFiles": {
+          "$id": "#technicalTimedTextFiles",
           "type": "array",
           "items": {
-            "type": "object",
-            "additionalProperties": false,
-            "required": ["format", "language"],
-            "properties": {
-              "format": { "type": "string" },
-              "language": { "type": "string" }
-            }
-          }
+            "type": "string",
+            "pattern": "^[a-zA-Z\\d\\-\\*_]+_[a-zA-Z]{2,3}\\.(srt|scc|vtt|SRT|SCC|VTT)$"
+          },
+          "uniqueItems": true
         }
       }
     },
